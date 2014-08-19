@@ -31,3 +31,12 @@
 
         PRODUCT_COPY_FILES +=
             $(LOCAL_PATH)/sqlite.sh:system/bin/sqlite.sh
+
+* update.sql
+
+        UPDATE favorites SET intent = "#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.android.dialer/.DialtactsActivity;end" where intent = "#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.android.contacts/.activities.DialtactsActivity;end";
+
+        DELETE from favorites where intent = "#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.google.android.gms/.common.settings.GoogleSettingsActivity;end";
+
+        DELETE from favorites where intent = "#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.google.android.apps.genie.geniewidget/.activities.NewsActivity;end";
+
