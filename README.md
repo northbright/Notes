@@ -1,6 +1,6 @@
 # Development Notes
 
-Record the development notes for further use.
+Record the development notes for future use.
 
 License:  
 Code: Following the License metioned in the source code.   
