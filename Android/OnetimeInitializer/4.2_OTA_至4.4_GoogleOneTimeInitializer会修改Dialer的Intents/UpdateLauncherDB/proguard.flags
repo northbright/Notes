@@ -1,0 +1,4 @@
+-keep public class com.android.updatelauncherdb.OneTimeService
+-keep public class com.android.updatelauncherdb.OneTimeInitializerReceiver
+
+-verbose
