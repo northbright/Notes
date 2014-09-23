@@ -1,7 +1,7 @@
 
 # Default Font Setting
 
-`framework/base/core/java/android/content/res/Configuration.java`
+`frameworks/base/core/java/android/content/res/Configuration.java`
 
     public void setToDefaults() {
         fontScale = 1.15f; // Set font size to large
