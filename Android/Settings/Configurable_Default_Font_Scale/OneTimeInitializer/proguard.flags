@@ -1,0 +1,4 @@
+-keep public class com.android.onetimeinitializer.OneTimeService
+-keep public class com.android.onetimeinitializer.OneTimeInitializerReceiver
+
+-verbose

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.onetimeinitializer">
+
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission
+        android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission
+        android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+
+    <!-- Add android.permission.CHANGE_CONFIGURATION and android.permission.WRITE_SETTINGS to update font scale -->
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"/>
+
+    <application android:label="One Time Init">
+        <receiver
+            android:name=".OneTimeInitializerReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".OneTimeInitializerService">
+        </service>
+    </application>
+</manifest>
