@@ -4,6 +4,9 @@
 set `keyguard.no_require_sim` to `true` in `build.prop`(xx.mk) to disable Keyguard during SetupWizard when SIM is absent.  
 It's set to `true` in Nexus 7 Celluar and it's not set(false) in AOSP by default.
 
+How it Works:  
+`/frameworks/base/packages/Keyguard/src/com/android/keyguard/KeyguardViewMediator.java`:
+
     boolean isLockedOrMissing(IccCardConstants.State state) {
         final boolean requireSim = !SystemProperties.getBoolean("keyguard.no_require_sim",  // read prop
                 false);
