@@ -28,7 +28,7 @@
   * Once the WiFi connection is OK, "Google" app will initialized successfully. `SearchSettings.bin` and `StartupSettings.bin` will be created. This issue will never be duplicated even if the WiFi connections is closed.
 
 * How to Fix  
-Maybe "Force users to compelete WiFi connection(OOBE)" is one solution.
+Maybe "Force users to compelete WiFi setup(OOBE)" is one solution.
 
 * How about Nexus 7  
 Nexus 7 will force users to complete WiFi setup during OOBE(SetupWizard).  
