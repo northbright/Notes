@@ -5,10 +5,10 @@ The first time click on "All Apps" button, it'll show Launcher's "All Apps Cling
 After dismiss the cling and wait for a while, you'll find some icons / widgets are dispalyed abnormally(icons or widgets on other pages will displayed partially on current page).  
 
 All Apps Cling  
-![All Apps Cling](/images/All_apps_show_icons_on_other_pages_after_cling_01.png)
+![All Apps Cling](./images/All_apps_show_icons_on_other_pages_after_cling_01.png)
 
 After Dismiss Cling  
-![Dismiss Cling](/images/All_apps_show_icons_on_other_pages_after_cling_02.png)
+![Dismiss Cling](./images/All_apps_show_icons_on_other_pages_after_cling_02.png)
 
 * How to Fix:  
 Force page to do updatePageCounts() and invalidateOnDataChange() after users dismiss "All Apps" cling.  
