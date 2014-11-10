@@ -11,11 +11,13 @@
 
         LOCAL_CERTIFICATE := platform
 
-3. Import package in Java source code:
+3. If `LOCAL_SDK_VERSION` exists in `Android.mk`, remove it to use @hide internal API: `android.os.SystemProperties`
+
+4. Import package in Java source code:
 
         import android.os.SystemProperties;
 
-4. Property name / value requirements:
+5. Property name / value requirements:
     * Property name length should <= 31:  
       `PROP_NAME_MAX` in `prebuilts/ndk/XX/platforms/android-XX/arch-XX/usr/include/sys/system_properties.h`
     * Property value length should <= 92:  
@@ -67,7 +69,7 @@
                 { NULL, 0, 0 }
             };
 
-5. Set / get properties.  
+6. Set / get properties.  
         
         final String PROP_NAME = "persist.sys.my.prop";
         ....
@@ -78,10 +80,10 @@
         }
 
 
-6. Build apk in AOSP environment:
+7. Build apk in AOSP environment:
 
         make clean-MY_PACKAGE  // if already exists
         make MY_PACKAGE
 
-7. Here's the [sample code(./SetProp)](./SetProp)
-8. Reference:<http://www.cnblogs.com/riskyer/p/3424132.html>
+8. Here's the [sample code(./SetProp)](./SetProp)
+9. Reference:<http://www.cnblogs.com/riskyer/p/3424132.html>
