@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText android:id="@+id/edit_message"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message" />
+    <Button android:id="@+id/button_set"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_message"
+        android:layout_alignParentLeft="true"
+        android:text="@string/button_set"
+        android:onClick="set" />
+    <Button android:id="@+id/button_unset"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_message"
+        android:layout_alignParentRight="true"
+        android:text="@string/button_unset"
+        android:onClick="unset" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/button_set"
+        android:scrollbars="vertical"
+        android:id="@+id/output_text_view" />
+</RelativeLayout>
+
+
