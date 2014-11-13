@@ -118,7 +118,7 @@ adb logcat:
     GoogleSetupWizard w
 
 * How to fix:  
-    * Insert a new record into `/data/data/com.android.providers.settings/databases/settings.db` to set `device_provisioned` to 1:  
+    * Insert a new record into `global` table of `/data/data/com.android.providers.settings/databases/settings.db` to set `device_provisioned` to 1:  
 
             adb root  // need root permission
             adb shell
