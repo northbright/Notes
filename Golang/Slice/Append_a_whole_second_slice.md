@@ -1,7 +1,7 @@
 
 # Append a Whole Second Slice
 
-We can use "..." notation to append a whole second slice to the exist slice by calling Append().
+We can use "..." notation to append a whole second slice to the exist slice by calling append().
 
     package main
     import "fmt"
