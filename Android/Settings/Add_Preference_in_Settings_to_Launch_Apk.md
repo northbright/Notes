@@ -25,9 +25,9 @@ You want to add "My App Preference" in Settings -> Developer Options:
             Preference my_preference = findPreference("my_preference");
             if (my_preference != null) {
                 try {
-                    Intent LaunchIntent = getPackageManager()
-                        .getLaunchIntentForPackage("com.xx.app");  // get launch intent for your package
-                    my_preference.setIntent(LaunchIntent);  // set intent
+                    Intent intent = new Intent();
+                    intent.setComponent(new ComponentName("com.xx.myapp", "com.xx.myapp.main"));
+                    my_preference.setIntent(intent);
 
                     mAllPrefs.add(my_preference);
                 } catch (Exception e) {
