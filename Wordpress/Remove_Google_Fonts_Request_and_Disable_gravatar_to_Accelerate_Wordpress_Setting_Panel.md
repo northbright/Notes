@@ -6,11 +6,7 @@ To reduce the response time, we need to remove the requests of fonts.googleapi.c
 
 * Remove fonts.googleapis.com
 
-        //wp-includes/script-loader.php:602
-
-        // Comment this line to disable fonts.googleapis.com request
-        // ----------------------------------------------------------------
-        //$open_sans_font_url = "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600&subset=$subsets";
+Install [Remove Open Sans font Link from WP core plugin](https://wordpress.org/plugins/remove-open-sans-font-from-wp-core/)
 
 * Disable gravatar
 
