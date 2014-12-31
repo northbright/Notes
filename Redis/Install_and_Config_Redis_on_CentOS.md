@@ -66,7 +66,7 @@
         `dir /home/xx/nodes/2/` for `6380.conf` and so on...
 
 5. Use `chkconfig --add <service_name>` to add redis services  
-   `chkconfig --add redis_6379`
+   `chkconfig --add redis_6379`  
    `chkconfig --add redis_6380`
 
 6. Reboot 
