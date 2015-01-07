@@ -1,5 +1,5 @@
 
-# Install and Config Redis-2.8.19 on CentOS 7
+# Install and Configure Redis-2.8.19 on CentOS 7
 
 #### Install Redis
 
@@ -70,3 +70,10 @@
    `chkconfig --add redis_6380`
 
 6. Reboot 
+
+7. Warning  
+   If configure master-slave replication and master is set to NOT write to disk(comment all `save` lines),  
+   make sure not configure redis as service: 
+     * redis-server will restart on server restart(maybe server crashed, has to reboot it).
+     * slave will sync to master and remove all data on slave's disk(master is empty in memory).
+     * For more, see <http://redis.io/topics/replication>
