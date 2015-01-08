@@ -1,5 +1,5 @@
 
-# Set Default Email Signature - Android 4.4.4
+# Set Default Email Signature - Android 4.4.4 / 5.0
 
 We may use "Sent from" + `ro.product.model` as default Email signature(Ex: Sent from XX Tablet).
 
@@ -10,7 +10,8 @@ Remove `LOCAL_SDK_VERSION` in `packages/apps/Email/src/com/android/email/Android
         # Step 0. Remove LOCAL_SDK_VERSION to use @hide internal API. Ex: import android.os.SystemProperties
         #LOCAL_SDK_VERSION := current 
 
-2. Modify `packages/apps/Email/src/com/android/email/activity/setup/AccountSetupOptions.java`:  
+2. For KK4.4, modify `packages/apps/Email/src/com/android/email/activity/setup/AccountSetupOptions.java`:  
+   For Android 5.0, modify `packages/apps/Email/src/com/android/email/activity/setup/AccountSetupFinal.java`:  
     
     * import android.os.SystemProperties
     
