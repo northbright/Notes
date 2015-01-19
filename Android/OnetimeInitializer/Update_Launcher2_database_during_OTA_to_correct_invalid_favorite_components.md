@@ -35,7 +35,7 @@ It'll pop up a "The app isn't installed" message when click these icons.
                 </intent-filter>
             </receiver>
 
-  * Modify `OneTimeInitializerReceiver.java`  
+  * Modify `OneTimeInitializerService.java`  
     Replace `updateDialtactsLauncher()` to `updateLauncherDB()` and copy the following code:
 
     <pre><code>
