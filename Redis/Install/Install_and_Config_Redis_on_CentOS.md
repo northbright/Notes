@@ -65,15 +65,28 @@
         `dir /home/xx/nodes/1/` for `6379.conf`  
         `dir /home/xx/nodes/2/` for `6380.conf` and so on...
 
-5. Use `chkconfig --add <service_name>` to add redis services  
+5.  If you need to set password for redis
+    * Modify `/etc/redis/<port>.conf`:  
+      Set `requirepass mypassword`
+
+    * Modify `/etc/rc.d/init.d/redis_<port>`:  
+      * Add `PASSWORD=mypassword` at the top of file
+      * Find `stop)`, add `-a $PASSWORD` for `redis-cli -p PORT shutdown` like this:  
+        `$CLIEXEC -a $PASSWORD -p $REDISPORT shutdown`
+        
+        If not, it'll fail to shutdown redis-server and block system reboot / poweroff  
+        
+6. Use `chkconfig --add <service_name>` to add redis services  
    `chkconfig --add redis_6379`  
    `chkconfig --add redis_6380`
 
-6. Reboot 
+7. Reboot 
 
-7. Warning  
+8. Warning  
    If configure master-slave replication and master is set to NOT write to disk(comment all `save` lines),  
    make sure not configure redis as service: 
      * redis-server will restart on server restart(maybe server crashed, has to reboot it).
      * slave will sync to master and remove all data on slave's disk(master is empty in memory).
      * For more, see <http://redis.io/topics/replication>
+
+For convenience, here's an example: [redis_6379](./redis_6379)
