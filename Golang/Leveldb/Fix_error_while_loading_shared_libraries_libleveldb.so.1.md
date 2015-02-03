@@ -8,7 +8,7 @@
    * `su`
    * `echo '/home/XX_ACCOUNT/LEVELDB_PATH' > /etc/ld.so.conf.d/leveldb.conf`
    * `sudo ldconfig`
-   * `sudo ldconfig -l` to check if leveldb library is in cache
+   * `sudo ldconfig -p` to check if leveldb library is in cache
    
 For more, see:  
 <https://groups.google.com/forum/#!topic/golang-nuts/rllHbvhS9nQ>
