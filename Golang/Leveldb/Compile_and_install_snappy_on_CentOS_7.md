@@ -12,7 +12,7 @@
 
 4. `cd snappy-master`
 
-6. Run `./autogen.sh` and you'll find some pkgs were not installed.  
+5. Run `./autogen.sh` and you'll find some pkgs were not installed.  
    Use `yum provides xx` to get the package name.
 
    * Install `automake`:  
@@ -26,4 +26,4 @@
    * `make`
    * `sudo make install`
 
-7. Check `/usr/local/include` and `/usr/local/lib` to see if snappy header and libraries are copied successfully
+6. Check `/usr/local/include` and `/usr/local/lib` to see if snappy header and libraries are copied successfully
