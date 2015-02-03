@@ -11,7 +11,7 @@
      * `echo '/home/XX_ACCOUNT/LEVELDB_PATH' > /etc/ld.so.conf.d/leveldb.conf`
      * `sudo ldconfig`
      * `sudo ldconfig -p` to check if leveldb library is in cache
-     * For more, see [Fix error while loading shared libleveldb.so](./Fix_error_while_loading_shared_libraries_libleveldb.so.1)
+     * For more, see [Fix error while loading shared libleveldb.so](./Fix_error_while_loading_shared_libraries_libleveldb.so.1.md)
 
 * Compile and Install [snappy](https://github.com/google/snappy)
   1. Download [snappy](https://github.com/google/snappy):  
