@@ -4,7 +4,7 @@
 1. Create a new Excel File
 2. Goto "`Data`" page
 3. Click "`From Text`" Button
-4. Select "`Text Files`(`*.txt`;`*.csv`)
+4. Select "`Text Files`(`*.txt`;`*.csv`)"
 5. Make sure "`Delimited`" is checked
 6. Make sure "`File origin`" is `65001:Unicode(UTF-8)`
 7. "Next" -> "`Delimiters`" -> Check "`Comma`" for CSV
