@@ -6,5 +6,8 @@ Use `--exclude=PATH/xx` to exclude them:
 
 `tar -cvf Launcher.tar Launcher/ --exclude=Launcher/.git`
 
-If you want to exclude specified type(Ex: `*.txt`):  
+If you want to also exclude specified type(Ex: `*.txt`):  
 `tar -cvf Launcher.tar Launcher/ --exclude=Launcher/*.txt`
+
+For exclude 2 or more files, just combine `--exclude`:  
+`tar -cvf Launcher.tar Launcher/ --exclude=Launcher/.git --exclude=Launcher/*.txt`
