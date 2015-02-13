@@ -8,7 +8,7 @@
    `sudo apt-get install libsnappy-dev -y`
 
 3. Download `leveldb` from <https://github.com/google/leveldb/archive/master.zip>  
-   `wget https://github.com/google/leveldb/archive/master.zip`
+   `wget https://github.com/google/leveldb/archive/master.zip`  
    `unzip master.zip`
 
 4. Compile & Install `leveldb`:  
