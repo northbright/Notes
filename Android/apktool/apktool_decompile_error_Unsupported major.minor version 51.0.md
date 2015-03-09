@@ -43,5 +43,5 @@ you need to make a bash file(Ex: `export_java7.sh`) to export Java 7 Bin  / Home
         ./apktool d xx.apk
 
 * Reference:  
-  * [installing-openjdk-7-jdk-does-not-update-java-which-is-still-version-1-6]((<http://unix.stackexchange.com/questions/35185/installing-openjdk-7-jdk-does-not-update-java-which-is-still-version-1-6>))
+  * [installing-openjdk-7-jdk-does-not-update-java-which-is-still-version-1-6](<http://unix.stackexchange.com/questions/35185/installing-openjdk-7-jdk-does-not-update-java-which-is-still-version-1-6>)
   * [apktool](https://code.google.com/p/android-apktool/wiki/Install)
