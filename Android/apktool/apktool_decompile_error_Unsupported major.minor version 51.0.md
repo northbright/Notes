@@ -27,7 +27,7 @@ See <http://blog.csdn.net/zangcf/article/details/8930758>
     `sudo apt-get install openjdk-7-jre`
 
   * Redhat / Centos:  
-    `su yum install java-1.7.0-openjdk`
+    `sudo yum install java-1.7.0-openjdk`
 
 * If you don't re-configure java path to open jdk 7,  
 you need to make a bash file(Ex: `export_java7.sh`) to export Java 7 Bin  / Home Path:
