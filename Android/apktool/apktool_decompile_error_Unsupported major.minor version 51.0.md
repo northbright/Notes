@@ -26,7 +26,7 @@ See <http://blog.csdn.net/zangcf/article/details/8930758>
   * Ubuntu:  
     `sudo apt-get install openjdk-7-jre`
 
-  * Redhat / Centos:
+  * Redhat / Centos:  
     `su yum install java-1.7.0-openjdk`
 
 * If you don't re-configure java path to open jdk 7,  
