@@ -1,6 +1,9 @@
 
 # Install levigo on CentOS 7
 
+#### Install GO on Linux
+[Install GO on Linux](https://github.com/northbright/Notes/blob/master/Golang/Install/Install_GO_on_Linux.md)
+
 #### Compile and Install [snappy](https://github.com/google/snappy)
 1. Download [snappy](https://github.com/google/snappy):  
 
