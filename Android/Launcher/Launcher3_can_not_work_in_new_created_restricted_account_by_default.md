@@ -6,7 +6,7 @@
 If Launcher3 is prebuilt and set as preferred launcher,  
 after swtiched to the new created restricted account, Launcher3 can not be displayed(black screen).
 
-You must enable `* HPROF` and `Show Mem` in "Settings" -> "Users" -> New Create Restricted User.  
+You must enable `* HPROF` and `Show Mem` in "Settings" -> "Users" -> New Created Restricted User -> App Settings.  
 `* HPROF` and `Show Mem` are string labels of 2 activities of Launcher3.
 
 #### How to Fix
