@@ -250,5 +250,6 @@
             // Dismiss Dialog
             iatDialog.dismiss();
             
-
-
+## References
+* Source Code of Sample App(VoiceTest):  
+  <https://github.com/northbright/VoiceTest>
