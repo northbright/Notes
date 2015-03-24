@@ -19,14 +19,21 @@
 
         /assets
 
-6. Write `proguard.flags` to keep classes of `Msc.jar`:  
+6. Copy `JsonParser.java` from SDK's `SpeechDemo` to the project folder:
+
+        src/com/iflytek/speech/util/JsonParser.java
+
+        // Import JosnParser in Your Activity:
+        import com.iflytek.speech.util.JsonParser;
+
+7. Write `proguard.flags` to keep classes of `Msc.jar`:  
 
         -keep class com.iflytek.**{*;}
 
         -verbose
 
 
-7. Modify `Android.mk`:  
+8. Modify `Android.mk`:  
 
         LOCAL_PATH := $(call my-dir)
 
@@ -114,11 +121,7 @@
 
         </manifest>
 
-3. Copy `JsonParser.java`(in `SpeechDemo` of iflytek's SDK) to `src/com/iflytek/speech/util/JsonParser.java`:
-
-        import com.iflytek.speech.util.JsonParser;
-
-4. Use `InitListener`:
+3. Use `InitListener`:
 
         import com.iflytek.cloud.InitListener;
 
@@ -134,7 +137,7 @@
         };
 
 
-5. There're 2 ways to use iflytek SDK to do voice recognition:
+4. There're 2 ways to use iflytek SDK to do voice recognition:
 
    * One is `SpeechRecognizer`
 
