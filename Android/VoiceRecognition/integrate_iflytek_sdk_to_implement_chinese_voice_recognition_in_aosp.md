@@ -9,24 +9,20 @@
 
 3. Download iflytek's Android SDK
 
-4. Copy `Msc.jar` and `libmsc.so` from SDK's `SpeechDemo` to the project folder:  
+4. Copy `Msc.jar` and `libmsc.so` from SDK to the project folder:  
 
         /libs/Msc.jar
         /libs/armeabi/libmsc.so
         /libs/armeabi-v7a/libmsc.so
 
-5. Copy `assets` from SDK's `SpeechDemo` to project folder:
-
-        /assets
-
-6. Write `proguard.flags` to keep classes of `Msc.jar`:  
+5. Write `proguard.flags` to keep classes of `Msc.jar`:  
 
         -keep class com.iflytek.**{*;}
 
         -verbose
 
 
-7. Modify `Android.mk`:  
+6. Modify `Android.mk`:  
 
         LOCAL_PATH := $(call my-dir)
 
