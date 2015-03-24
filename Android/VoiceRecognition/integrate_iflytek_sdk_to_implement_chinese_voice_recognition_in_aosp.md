@@ -144,8 +144,18 @@
             import com.iflytek.cloud.SpeechRecognizer;
             import com.iflytek.cloud.RecognizerListener;
 
-            private SpeechRecognizer mIat;  // Use the Recognizer way
+            public class VoiceTest extends Activity {
+                private SpeechRecognizer mIat;  // Use the Recognizer way
+                String finalText = "";  // concat the strings of multiple onResult() calls.
+                ......
+            }
 
+            public void onCreate(Bundle state) {
+                // Recognizer Way
+                mIat = SpeechRecognizer.createRecognizer(this, mInitListener);
+                mIat.setParameter(SpeechConstant.ASR_PTT, "false");  // no punctuation
+                ......
+            }
             
             // Recognizer Way: Use RecognizerListener
             private RecognizerListener recognizerListener=new RecognizerListener(){
@@ -167,11 +177,13 @@
                 @Override
                 public void onResult(RecognizerResult results, boolean isLast) {
                     String text = JsonParser.parseIatResult(results.getResultString());
-                    showMessage(true, "onResult(): ");
+                    finalText += text;
                     if(isLast) {
-                        showMessage(true, "last:");
+                        showMessage(true, "onResult():last: " + text);
+                        showMessage(true, "final: " + finalText);
+                    } else {
+                        showMessage(true, "onResult(): " + text);
                     }
-                    showMessage(true, text);
                 }
 
                 @Override
@@ -201,12 +213,28 @@
             import com.iflytek.cloud.ui.RecognizerDialog;
             import com.iflytek.cloud.ui.RecognizerDialogListener;
 
-            private RecognizerDialog iatDialog;
+            public class VoiceTest extends Activity {
+                private RecognizerDialog iatDialog;  // Dialog way
+                String finalText = "";  // concat the strings of multiple onResult() calls.
+                ......
+            }
+
+            public void onCreate(Bundle state) {
+                // Dialog Way
+                iatDialog = new RecognizerDialog(this, mInitListener);
+                ......
+            }
 
             private RecognizerDialogListener recognizerDialogListener=new RecognizerDialogListener(){
                 public void onResult(RecognizerResult results, boolean isLast) {
                     String text = JsonParser.parseIatResult(results.getResultString());
-                    showMessage(true, "dialog::onResult(): " + text);
+                    finalText += text;
+                    if (isLast) {
+                        showMessage(true, "dialog::onResult():last: " + text);
+                        showMessage(true, "final: " + finalText);
+                    } else {
+                        showMessage(true, "dialog::onResult(): " + text);
+                    }
                 }
 
                 public void onError(SpeechError error) {
