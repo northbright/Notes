@@ -15,7 +15,7 @@
         /libs/armeabi/libmsc.so
         /libs/armeabi-v7a/libmsc.so
 
-5. Copy `assets` folder from SDK's `SpeechDemo` to project folder:
+5. Copy `assets` from SDK's `SpeechDemo` to project folder:
 
         /assets
 
