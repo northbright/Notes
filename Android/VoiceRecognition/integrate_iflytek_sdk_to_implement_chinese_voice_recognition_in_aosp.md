@@ -73,6 +73,9 @@
 
         include $(call all-makefiles-under,$(LOCAL_PATH))
 
+9. iflytek SDK uses port: 1028 to connect server.  
+   Make sure it's not blocked in your network or you'll get network error.
+
 ## Part II: Write a Sample App(VoiceTest)
 
 1. Create `src/com/android/voicetest/TestApp.java` to call `SpeechUtility.createUtility()` with your own `app id` in `onCreate()`:  
