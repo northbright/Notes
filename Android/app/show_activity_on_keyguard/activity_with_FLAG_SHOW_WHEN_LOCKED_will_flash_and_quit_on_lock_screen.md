@@ -1,9 +1,9 @@
 
-# Activity with `FLAG_SHOW_WHEN_LOCKED` will Flash and Quit on Lock Screen(PIN)
+# Activity with `FLAG_SHOW_WHEN_LOCKED` will Flash and Quit on Lock Screen
 
 #### Root Cause
 
-When `FLAG_SHOW_WHEN_LOCKED` is set to show activity on lock screen for secure lock, the activity life cycle looks like:  
+When `FLAG_SHOW_WHEN_LOCKED` is set to show activity on lock screen for secure lock(Ex: PIN), the activity life cycle looks like:  
 
 onCreate -> onStart -> onPause -> onStop -> onRestart -> onStart -> onResume  
 
