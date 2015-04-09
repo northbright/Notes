@@ -18,4 +18,5 @@ onCreate -> onStart -> onPause -> onStop -> onRestart -> onStart -> onResume
 #### References
 
 * <http://stackoverflow.com/questions/25369909/onpause-and-onstop-called-immediately-after-starting-activity>
+* <http://blog.csdn.net/gaowenboms/article/details/8754916>
 
