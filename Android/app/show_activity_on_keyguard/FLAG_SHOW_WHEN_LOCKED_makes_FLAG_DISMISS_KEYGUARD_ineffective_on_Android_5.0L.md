@@ -10,20 +10,21 @@
     `FLAG_SHOW_WHEN_LOCKED` | `FLAG_DISMISS_KEYGUARD` will make `FLAG_DISMISS_KEYGUARD` ineffective.  
     So we need remove `FLAG_SHOW_WHEN_LOCKED` for insecure lock: 
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
 
-        KeyguardManager km = (KeyguardManager)getSystemService(Context.KEYGUARD_SERVICE);
+            KeyguardManager km = (KeyguardManager)getSystemService(Context.KEYGUARD_SERVICE);
 
-        int flags = WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
+            int flags = WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
 
-        if (!km.isKeyguardSecure()) {  // for insecure lock(Ex: Swipe)
-            flags |= WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD;
-        } else {  // for secure lock(Ex: PIN, Password, Pattern)
-            flags |= WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED;
+            if (!km.isKeyguardSecure()) {  // for insecure lock(Ex: Swipe)
+                flags |= WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD;
+            } else {  // for secure lock(Ex: PIN, Password, Pattern)
+                flags |= WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED;
+            }
+
+            getWindow().addFlags(flags);
         }
-
-        getWindow().addFlags(flags);
 
 #### References:
 
