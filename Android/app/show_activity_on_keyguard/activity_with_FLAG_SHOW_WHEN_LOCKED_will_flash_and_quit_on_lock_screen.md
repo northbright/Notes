@@ -13,7 +13,6 @@ onCreate -> onStart -> onPause -> onStop -> onRestart -> onStart -> onResume
 #### Solution
 
 * Do NOT call `finish()` in `onStop()`  
-  You may move `finish()` from `onStop()` to `onDestroy()`
 
 #### References
 
