@@ -13,6 +13,7 @@ onCreate -> onStart -> onPause -> onStop -> onRestart -> onStart -> onResume
 #### Solution
 
 * Do NOT call `finish()` in `onStop()`  
+* If you start a task in `onCreate()`, do NOT stop it in `onStop()`, stop it in `onDestroy()`
 
 #### References
 
