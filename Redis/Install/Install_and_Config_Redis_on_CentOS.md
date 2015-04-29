@@ -72,9 +72,11 @@
     * Modify `/etc/rc.d/init.d/redis_<port>`:  
       * Add `PASSWORD=mypassword` at the top of file
       * Find `stop)`, add `-a $PASSWORD` for `redis-cli -p PORT shutdown` like this:  
-        `$CLIEXEC -a $PASSWORD -p $REDISPORT shutdown`
-        
-        If not, it'll fail to shutdown redis-server and block system reboot / poweroff  
+        `$CLIEXEC -a $PASSWORD -p $REDISPORT shutdown`  
+        If not, it'll fail to shutdown redis-server and block system reboot / poweroff
+      * If you want to start redis in background:  
+        Add '&' after $EXEC $CONF:  
+        `$EXEC $CONF &`  
         
 6. Use `chkconfig --add <service_name>` to add redis services  
    `chkconfig --add redis_6379`  
@@ -82,7 +84,14 @@
 
 7. Reboot 
 
-8. Warning  
+8. Stop / Start Redis Service
+
+         sudo /etc/rc.d/init.d/redis_<port> {start|stop}
+         Ex: Restart
+         sudo /etc/rc.d/init.d/redis_6379 stop
+         sudo /etc/rc.d/init.d/redis_6379 start
+
+9. Warning  
    If configure master-slave replication and master is set to NOT write to disk(comment all `save` lines),  
    make sure not configure redis as service: 
      * redis-server will restart on server restart(maybe server crashed, has to reboot it).
