@@ -18,7 +18,7 @@ case "$1" in
                 echo "$PIDFILE exists, process is already running or crashed"
         else
                 echo "Starting Redis server..."
-                $EXEC $CONF
+                $EXEC $CONF &
         fi
         ;;
     stop)
@@ -39,5 +39,6 @@ case "$1" in
         ;;
     *)
         echo "Please use start or stop as first argument"
+        echo "Usage: sudo /etc/rc.d/init.d/redis_<port> {start|stop}"
         ;;
 esac
