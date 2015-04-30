@@ -15,7 +15,7 @@
     }
 
 #### How to Fix:
-It's already fixed in latest AOSP 5.1 master branch(2015/04/30), we can follow this solution:
+It's already fixed in latest AOSP 5.1 master branch(tag: android-5.1.1_r1), we can follow this solution:
 
 `frameworks/base/packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationPanelView.java:`
 
