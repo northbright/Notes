@@ -59,3 +59,4 @@
 
 * <http://blog.csdn.net/xiaoxiaobian3310903/article/details/7291476>
 * <http://www.eoeandroid.com/blog-110365-21177.html>
+* <https://groups.google.com/forum/#!topic/android-developers/eu-SJPVOurE>
