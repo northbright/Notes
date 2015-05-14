@@ -4,6 +4,47 @@
 #### Android Version
 Tag: android-5.1.1_r1
 
+#### About Device Profile
+
+Device Profile can be used to customize Launcher3:
+
+ * row / column number
+ * icon size
+ * icon text size
+ * hotseat number,
+ * hotseat icon size
+ * default layout id(xml) 
+
+`packages/apps/Launcher3/src/com/android/launcher3/DeviceProfile.java`:
+
+    // DeviceProfile()
+    // See below code to get meaning of input arguments
+    // ---------------------------------------------------------
+    DeviceProfile(String n, float w, float h, float r, float c,
+                  float is, float its, float hs, float his, int dlId) {
+        // Ensure that we have an odd number of hotseat items (since we need to place all apps)
+        if (!LauncherAppState.isDisableAllApps() && hs % 2 == 0) {
+            throw new RuntimeException("All Device Profiles must have an odd number of hotseat spaces");
+        }
+
+        name = n;
+        minWidthDps = w;
+        minHeightDps = h;
+        numRows = r;
+        numColumns = c;
+        iconSize = is;
+        iconTextSize = its;
+        numHotseatIcons = hs;
+        hotseatIconSize = his;
+        defaultLayoutId = dlId;
+        ......
+    }
+
+Launcher3 includes pre-defined device profiles(Phones, Nexus 7, 21 tablet...) in `DynamicGrid.java`.  
+We can add our new device profile to customize Launcher3 UI.  
+It'll check all device profiles and choose the closest profile to current device by calling DeviceProfile::findClosestDeviceProfile().  
+So we should know how to make Launcher3 choose our new added device profile as the closest profile.
+
 #### 1. Add Device Profile in DynamicGrid() in DynamicGrid.java:
 
 `packages/apps/Launcher3/src/com/android/launcher3/DynamicGrid.java`:
