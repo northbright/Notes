@@ -17,7 +17,7 @@ Tag: android-5.1.1_r1
                 1527, 2527,  7, 7,  100, 20,  7, 72, R.xml.default_workspace_4x4));
         // ---------------------------------------------------------------------------------------------------
         // Add our device in deviceProfiles after all default device profiles
-        // We need to provide the exact width and height in DP:
+        // We need to provide the exact min width and height in DP:
         // myDeviceMinWidthDP = dpiFromPx(minWidthPx) --> minWidthPx / (current dpi / default dpi(160))
         // myDeviceMinHeightDP = dpiFromPx(minHeightPx) --> minHeightPx / (current dpi / default dpi(160))
         // DeviceProfile() will find our profile as the closest profile by calling findClosestDeviceProfile()
@@ -77,3 +77,12 @@ Tag: android-5.1.1_r1
         return dynamicGrid;
     }
 
+#### 3. Finally Calculate the `myDeviceMinWidthDP` and `myDeviceMinHeightDP`
+
+    myDeviceMinWidthDP = dpiFromPx(minWidthPx) --> minWidthPx / (current dpi / default dpi(160))
+    myDeviceMinHeightDP = dpiFromPx(minHeightPx) --> minHeightPx / (current dpi / default dpi(160))
+
+#### 4. Now we can pass the exact min width / height in DP into DeviceProfile() in Step 1:
+
+    deviceProfiles.add(new DeviceProfile("MY_DEVICE_NAME",
+                myDeviceMinWidthDP, myDeviceMinHeightDP, ....);
