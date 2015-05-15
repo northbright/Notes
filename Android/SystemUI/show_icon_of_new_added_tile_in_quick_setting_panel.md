@@ -1,6 +1,10 @@
 
 # Show Icon of New Added Tile in Quick Setting Panel
 
+#### Android Version
+Tag: android-5.1.1_r1
+
+#### How to Show Tile Icon
 We can follow `frameworks/base/packages/SystemUI/src/com/android/systemui/qs/tiles/BluetoothTile.java`:  
 Set `state.icon` to the value returned by `ResourceIcon.get()`:
 
