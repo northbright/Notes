@@ -64,5 +64,5 @@ Ex: If you want to use different SMTP port(25):
     <!-- mydomain -->
     <provider id="mydomain" label="mydomain" domain="mydomain.com">
         <incoming uri="imap://mail.mydomain.com"  username="$email" />
-        <outgoing uri="smtp://mail.mydomain:25" username="$email" />
+        <outgoing uri="smtp://mail.mydomain.com:25" username="$email" />
     </provider>
