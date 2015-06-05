@@ -9,10 +9,10 @@
 
 `OVERLAY` is the overlay path for your device
 
-* Put icon in `OVERLAY/res/drawable-xx`  
-Ex: `OVERLAY/res/drawable-sw720dp-nodpi/myapp_icon.png`
+* Put icon in `OVERLAY/packages/apps/Launcher3/res/drawable-xx`  
+Ex: `OVERLAY/packages/apps/Launcher3/res/drawable-sw720dp-nodpi/myapp_icon.png`
 
-* Put string in `OVERLAY/res/values/strings.xml`:
+* Put string in `OVERLAY/packages/apps/Launcher3/res/values/strings.xml`:
 
         <?xml version="1.0" encoding="utf-8"?>
         <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -21,7 +21,7 @@ Ex: `OVERLAY/res/drawable-sw720dp-nodpi/myapp_icon.png`
             <string name="myapp_text">My App</string>
         </resources>
 
-* Modify `OVERLAY/res/xml/default_workspace.xml`(Launcher2) or `OVERLAY/res/xml/default_workspace_XxX.xml`(Launcher3):
+* Modify `OVERLAY/packages/apps/Launcher2/res/xml/default_workspace.xml`(Launcher2) or `OVERLAY/packages/apps/Launcher3/res/xml/default_workspace_XxX.xml`(Launcher3):
 
         <shortcut
             launcher:icon="@drawable/myapp_icon"
