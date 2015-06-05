@@ -2,8 +2,16 @@
 # Add Shortcut(bookmark) for Launcher2 or 3
 
 #### Preparation
-* Icon - The icon of shortcut will be placed on Launcher home.
-* Strings - The text of shortcut. If localization is need, you may need localized strings.
+* Icon  
+  The icon of shortcut will be placed on Launcher home.
+
+* Strings  
+  The text of shortcut. If localization is need, you may need localized strings.
+
+* Uri  
+  Action to take when users click the icon. It can be an URL of website.  
+  It can open Google Play and go to the product home page if the uri is Google Play Store link.  
+  `https://play.google.com/store/apps/details?id=com.MYCOMPANY.MYPRODUCT`
 
 #### Overlay
 
