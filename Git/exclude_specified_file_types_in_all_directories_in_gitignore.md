@@ -3,8 +3,8 @@
 
     *
     !.gitignore
-    !LICENSE
-    !README.md
+    !**/LICENSE
+    !**/README.md
     !**/*.go
     !**/*.csv
 
