@@ -21,3 +21,4 @@ or
     Func MyFunc() {}
 #### References
 * <https://godoc.org/github.com/fluhus/godoc-tricks>
+* <http://golang.org/pkg/go/doc/#ToHTML>
