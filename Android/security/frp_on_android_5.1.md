@@ -3,7 +3,6 @@
 FRP will be take effect in case:  
 
 * Google Account has been logged in
-* Screen Lock is enabled(PIN...)
 * Untrusted factory reset: 
   reboot after erased user data partition via fastboot or recovery mode.
 
