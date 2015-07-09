@@ -2,4 +2,4 @@
 
     yum provides <Feature or File>
     // Ex:
-    yum provides ifconfig
+    yum provides go
