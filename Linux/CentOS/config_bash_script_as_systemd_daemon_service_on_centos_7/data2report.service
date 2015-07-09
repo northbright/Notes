@@ -1,0 +1,10 @@
+[Unit]
+Description=data2report
+
+[Service]
+Type=simple
+ExecStart=/home/xxu/data2report/data2report
+
+[Install]
+WantedBy=multi-user.target
+
