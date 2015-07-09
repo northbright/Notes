@@ -4,7 +4,7 @@
 It stopped at `/dev/root does not exist in CentOS 7`
 
 #### Root Cause
-It maybe caused that the USB disk was created by [YUMI](http://www.pendrivelinux.com/yumi-multiboot-usb-creator/)
+It maybe caused by writting the ISO to the USB disk via [YUMI](http://www.pendrivelinux.com/yumi-multiboot-usb-creator/)
 
 #### How to Fix
 * Use [Win32DiskImager](http://sourceforge.net/projects/win32diskimager/) to create the USB Disk
