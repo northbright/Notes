@@ -46,14 +46,26 @@
         wget https://github.com/google/leveldb/archive/master.zip
         unzip master.zip
 
-2. Compile & Install `leveldb`:  
+2. Compile `leveldb`:  
 
         cd leveldb-master
         make
-        sudo cp libleveldb.* /usr/local/lib
-        sudo cp include/leveldb /usr/local/include -rf
-        sudo ldconfig
 
+3. Install libs
+   * Copy files
+   
+            sudo cp include/leveldb /usr/local/include -rf
+            sudo cp libleveldb.* /usr/local/lib   
+
+   * Create a conf file for `/etc/ld.so.conf`:
+   
+            sudo vi /etc/ld.so.conf.d/usrlocallib.conf
+            ## add below line:
+            /usr/local/bin
+
+   * Reload `ldconfig` cache  
+     
+            sudo ldconfig
 
 * Finally, run `go get` to install `levigo`:  
 `CGO_CFLAGS="-I/usr/local/include" CGO_LDFLAGS="-L/usr/local/lib -lsnappy" go get github.com/jmhodges/levigo`
