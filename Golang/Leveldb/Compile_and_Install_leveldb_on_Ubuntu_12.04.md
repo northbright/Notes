@@ -20,10 +20,20 @@
    `wget https://github.com/google/leveldb/archive/master.zip`  
    `unzip master.zip`
 
-5. Compile & Install `leveldb`:  
+5. Compile `leveldb`:  
 
         cd leveldb-master
         make
-        sudo cp libleveldb.* /usr/local/lib
-        sudo cp include/leveldb /usr/local/include -rf
-        sudo ldconfig
+
+6. Install leveldb libraries
+   * Create a conf file for `/etc/ld.so.conf`:
+   
+            sudo vi /etc/ld.so.conf.d/usrlocallib.conf
+            ## add below line:
+            /usr/local/bin
+ 
+   * Copy libs and run ldconfig to update cache
+   
+            sudo cp include/leveldb /usr/local/include -rf
+            sudo cp libleveldb.* /usr/local/lib
+            sudo ldconfig
