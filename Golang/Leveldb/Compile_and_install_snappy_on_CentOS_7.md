@@ -27,3 +27,13 @@
    * `sudo make install`
 
 6. Check `/usr/local/include` and `/usr/local/lib` to see if snappy header and libraries are copied successfully
+7. Create a conf file to make `/usr/local/lib` path is in ldconfig cache
+
+   * Create a conf file for `/etc/ld.so.conf`:
+   
+            sudo vi /etc/ld.so.conf.d/usrlocallib.conf
+            ## add below line:
+            /usr/local/bin
+
+   * Reload `ldconfig` cache  
+     `sudo ldconfig` 
