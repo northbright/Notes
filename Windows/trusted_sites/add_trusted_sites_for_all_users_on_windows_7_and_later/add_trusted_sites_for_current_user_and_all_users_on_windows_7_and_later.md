@@ -65,7 +65,7 @@ Adding trusted sites for current user is very easy.
 * How to Use
   * Put `add_trusted_sites.bat` to `D:\`(you may also change the path in `trusted_sites_for_all_users.reg`)
   * Import `trusted_sites_for_all_users.reg`(double click or run regedit)
-  * Log out and log in(or restart, switch users)
+  * Log out and log in(or restart)
 
 ## References
 * [Adding Sites to the Enhanced Security Configuration Zones](https://msdn.microsoft.com/en-us/library/ms537181(v=VS.85).aspx)
