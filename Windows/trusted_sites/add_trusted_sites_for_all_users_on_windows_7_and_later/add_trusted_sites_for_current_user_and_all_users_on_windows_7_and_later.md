@@ -67,6 +67,11 @@ Adding trusted sites for current user is very easy.
   * Import `trusted_sites_for_all_users.reg`(double click or run regedit)
   * Log out and log in(or restart)
 
+## Part III - Uncheck Require Server Verification(Optional)
+
+[Uncheck Require Server Verification(https) for All Sites in This Zone](https://github.com/northbright/Notes/blob/master/Windows/trusted_sites/uncheck_require_server_verification(https)_for_all_sites_in_this_zone/uncheck_require_server_verification(https)_for_all_sites_in_this_zone.md)
+
+
 ## References
 * [Adding Sites to the Enhanced Security Configuration Zones](https://msdn.microsoft.com/en-us/library/ms537181(v=VS.85).aspx)
 * [Active Setup Registry Keys and their Purpose](http://bonemanblog.blogspot.com/2004/12/active-setup-registry-keys-and-their.html)
