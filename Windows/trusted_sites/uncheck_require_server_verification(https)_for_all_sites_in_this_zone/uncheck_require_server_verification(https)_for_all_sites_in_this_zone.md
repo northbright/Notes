@@ -26,3 +26,4 @@
 #### References
 * [Group policy to check/uncheck “require HTTPS” in Internet Explorer 11 trusted sites list?](http://serverfault.com/questions/594668/group-policy-to-check-uncheck-require-https-in-internet-explorer-11-trusted-si)
 * [Require Server Verification (https:) for all sites in this zone](http://answers.microsoft.com/en-us/ie/forum/ie9-windows_7/require-server-verification-https-for-all-sites-in/d9691dc6-998d-45e1-b16c-c1039ab195bb?auth=1)
+* [Add Trusted Sites for Current User and All Users on Windows 7 and Later](https://github.com/northbright/Notes/blob/master/Windows/trusted_sites/add_trusted_sites_for_all_users_on_windows_7_and_later/add_trusted_sites_for_current_user_and_all_users_on_windows_7_and_later.md)
