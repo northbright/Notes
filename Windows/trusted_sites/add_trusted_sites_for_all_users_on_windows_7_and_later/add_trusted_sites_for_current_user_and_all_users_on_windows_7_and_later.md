@@ -61,7 +61,7 @@ Adding trusted sites for current user is very easy.
 #### Example
 
 * [Batch File to Add Trusted Sites](./files/add_trusted_sites.bat)
-* [Reg File](trusted_sites_for_all_users.reg)
+* [Reg File](./files/trusted_sites_for_all_users.reg)
 
 ## References
 * [Adding Sites to the Enhanced Security Configuration Zones](https://msdn.microsoft.com/en-us/library/ms537181(v=VS.85).aspx)
