@@ -45,7 +45,7 @@ Adding trusted sites for current user is very easy.
         reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\github.com" /v https /d 2 /t REG_DWORD /f
         reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\cnbeta.com" /v http /d 2 /t REG_DWORD /f
 
-* Create **Unique** Key Under `[HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components]`  
+* Create **Unique** Key under `[HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components]`  
   Ex: `[HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\TrustedSites]`
 
 * Add `StubPath` Value under the key
