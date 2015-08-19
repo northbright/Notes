@@ -1,7 +1,7 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\HPTrustedSites]
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\TrustedSites]
 "Version"="1,0"
 
-[HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\HPTrustedSites]
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\TrustedSites]
 "StubPath"="D:\\add_trusted_sites.bat"
