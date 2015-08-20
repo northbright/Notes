@@ -30,6 +30,7 @@ Here's the example used to:
 * uncheck "Requre Server Verification" in "Internet Settings"->"Security"->"Trusted Sites".  
 
 It works for all users(each time a user logs in, it'll take effect).  
+Registry File:
 
     Windows Registry Editor Version 5.00
 
