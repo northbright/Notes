@@ -49,3 +49,4 @@ Registry File:
 #### References
 * [Active Setup Registry Keys and their Purpose](http://bonemanblog.blogspot.com/2004/12/active-setup-registry-keys-and-their.html)
 * [Windows 7 Trusted Sites for all users - Active Setup](http://didyourestart.blogspot.com/2012/05/windows-7-trusted-sites-for-all-users.html)
+* * [Add Trusted Sites for Current User and All Users on Windows 7 and Later](https://github.com/northbright/Notes/blob/master/Windows/trusted_sites/add_trusted_sites_for_all_users_on_windows_7_and_later/add_trusted_sites_for_current_user_and_all_users_on_windows_7_and_later.md)
