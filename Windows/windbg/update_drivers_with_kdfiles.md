@@ -5,7 +5,7 @@ We can use `.kdfiles` to map new driver on host PC to the old one on the target 
 
 `.kdfiles -m system32\drivers\acpi.sys d:\acpi.sys`
 
-* first path is the driver file path(**relative**) under %systemroot%(almost `c:\`)
+* first path is the old driver file path(**relative**) under %systemroot%(almost `c:\`) on target PC.
 * second path is the **ABS** path of the new driver on host PC.
 * To take effect:
   * "Control Panel" -> "Device Manager" -> "Select The Device" - > "Disable" -> "Enable"
