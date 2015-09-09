@@ -3,7 +3,7 @@
 #### Problem
 Sometimes there's some problem of existing mail account so that we can't open outlook.  
 
-#### solution:  
+#### Solution:  
 * Remove exsiting mail account without openning outlook.
 * Add a new one again.
 
