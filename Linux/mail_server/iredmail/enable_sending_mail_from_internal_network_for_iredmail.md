@@ -40,7 +40,7 @@ To find what happened, check `/var/log/maillog` on the mail server(iRedMail):
         sudo firewall-cmd --reload
         sudo firewall-cmd --zone=iredmail --query-port=25/tcp
 
-
+* [Disable Spam Virus Scanning for Outgoing Mails](https://github.com/northbright/Notes/blob/master/Linux/mail_server/iredmail/disable_spam_virus_scanning_for_outgoing_mails.md)
 
 #### References
 * [A New Zone(`iredmail`) Will Be Added Into `firewalld` and Set as Default Zone After iRedMail is Installed](https://github.com/northbright/Notes/blob/master/Linux/mail_server/iredmail/a_new_zone(iredmail)_will_be_added_into_firewalld_and_set_as_default_zone_after_iredmail_is_installed.md)
