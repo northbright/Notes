@@ -20,4 +20,5 @@ Reboot to take effect.
 #### References
 * [Disable spam virus scanning for outgoing mails](http://www.iredmail.org/docs/disable.spam.virus.scanning.for.outgoing.mails.html)
 * [Enable Sending Mail from Internal Network for iRedMail](https://github.com/northbright/Notes/blob/master/Linux/mail_server/iredmail/enable_sending_mail_from_internal_network_for_iredmail.md)
+* [Completely Disable Amavisd for iRedMail](https://github.com/northbright/Notes/blob/master/Linux/mail_server/iredmail/completely_disable_amavisd_for_iredmail.md)
 
