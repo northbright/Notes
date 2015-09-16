@@ -7,6 +7,10 @@
 
     iredmail
 
+#### Get Active Zones
+
+    sudo firewall-cmd --get-active-zones
+
 #### HTTP, IMAP, POP3, SMTP Serivces will also be added into firewalld
 
      sudo firewall-cmd --list-all-zones
