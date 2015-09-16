@@ -24,11 +24,3 @@
      forward-ports:
      icmp-blocks:
      rich rules:
-
-#### Add port 25/tcp to iredmail zone to enable sending mail from internal network
-
-If you want to send mail from the other PCs on internal network, we can add port 25 to zone iredmail.
-
-    sudo firewall-cmd --zone=iredmail --permanent --add-port=25/tcp
-    sudo firewall-cmd --reload
-    sudo firewall-cmd --zone=iredmail --query-port=25/tcp
