@@ -42,16 +42,6 @@
         // mydomain
         mydomain = mydomain.com
 
-        // mynetworks(Optional)
-        // Add other IP address to allow send mail from this IP on local network.
-        mynetworks = 192.168.10.1, 127.0.0.0/8
-         
-* Config Firewall if You Want to Send Mail From Other PC on the Local Network(**Optional**)
-
-        sudo firewall-cmd --zone=public --permanent --add-port=25/tcp
-        sudo firewall-cmd --reload
-        sudo firewall-cmd --zone=public --query-port=25/tcp
-
 * Check / Start `postfix.service`  
 `postfix.service` is auto-started by default on Centos 7 minial.
 
@@ -101,5 +91,5 @@
 
 ##### References
 
-
 * [LNMP笔记：Centos下安装Postfix，替换sendmail发送邮件](http://www.cmhello.com/lnmp-centos-postfix.html)
+* [Postfix Email Server](http://www.nurdletech.com/linux-notes/mail-server/postfix.html)
