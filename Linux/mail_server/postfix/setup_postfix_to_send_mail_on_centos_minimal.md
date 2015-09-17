@@ -42,6 +42,8 @@
         // mydomain
         mydomain = mydomain.com
 
+* **Optional**: [Allow PC on Local Network Send Mail to Postfix Server](https://github.com/northbright/Notes/blob/master/Linux/mail_server/postfix/allow_pc_on_local_network_send_mail_to_postfix_server.md)
+
 * Check / Start `postfix.service`  
 `postfix.service` is auto-started by default on Centos 7 minial.
 
@@ -93,3 +95,4 @@
 
 * [LNMP笔记：Centos下安装Postfix，替换sendmail发送邮件](http://www.cmhello.com/lnmp-centos-postfix.html)
 * [Postfix Email Server](http://www.nurdletech.com/linux-notes/mail-server/postfix.html)
+* [Allow PC on Local Network Send Mail to Postfix Server](https://github.com/northbright/Notes/blob/master/Linux/mail_server/postfix/allow_pc_on_local_network_send_mail_to_postfix_server.md)
