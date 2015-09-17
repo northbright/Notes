@@ -57,6 +57,11 @@
         // Start postfix.service if it's not running
         sudo systemctl start postfix.service
 
+* Config Firewalld(Centos 7)
+
+        sudo firewall-cmd --permanent --zone=public --add-service=smtp
+        sudo firewall-cmd --reload
+
 * Now We Can Send mail via PHP's mail() function or Golang's `net/smtp` package
 
         // Golang
@@ -89,7 +94,6 @@
                 log.Fatal(err)
             }
         }
-
 
 ##### References
 
