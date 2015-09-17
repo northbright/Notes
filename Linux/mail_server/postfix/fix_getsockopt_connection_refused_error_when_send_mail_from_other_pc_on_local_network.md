@@ -13,9 +13,9 @@ In Postfix config file -- `etc/postfix/main.cf`:
 
 * Modify `/etc/postfix/main.cf`  
 
-  * Set `inet_interfaces = IP of PC runs postfix`
+  * Set `inet_interfaces = IP of PC runs postfix, 127.0.0.1`
         
-        `Ex: inet_interfaces = 192.168.10.1`
+        `Ex: inet_interfaces = 192.168.10.1, 127.0.0.1`
 
   * Set `mynetworks = IP of another PC, 127.0.0.0/8`
 
