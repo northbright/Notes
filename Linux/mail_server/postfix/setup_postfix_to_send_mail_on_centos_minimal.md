@@ -150,3 +150,5 @@ The SPF record:
 * [SPF Record Syntax](http://www.openspf.org/SPF_Record_Syntax)
 * [Sender ID Framework SPF Record Wizard](https://www.microsoft.com/mscorp/safety/content/technologies/senderid/wizard/default.aspx)
 * [Authenticating with SPF: -all or ~all](https://wordtothewise.com/2014/06/authenticating-spf/)
+* [Postfix 关闭open-relay](http://blog.sina.com.cn/s/blog_6eee530801018x2x.html)
+* [RBL服务器列表、介绍和Postfix的配置](http://blog.sina.com.cn/s/blog_6eee530801018x3d.html)
