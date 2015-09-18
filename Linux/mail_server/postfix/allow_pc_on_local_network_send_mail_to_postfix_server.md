@@ -3,13 +3,13 @@
 
 #### Steps
 
-* Run `ifconfig` to get the local IP address(Ex: 15.15.1.2) of the PC runs `Postfix`
+* Run `ifconfig` to get the local IP address(Ex: 15.15.1.1) of the PC runs `Postfix`
 
 * Modify `/etc/postfix/main.cf`  
 
   * Set `inet_interfaces = IP of PC runs postfix`
         
-        `Ex: inet_interfaces = 15.15.1.2`
+        `Ex: inet_interfaces = 15.15.1.1, 127.0.0.1`
 
   * Set `mynetworks = IP of another PC, 127.0.0.1`
 
