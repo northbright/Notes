@@ -58,13 +58,18 @@
            * format: ip/ip_mask or just ip
 
       * Example
-        
+      
+            There're 2 PCs:  
+              15.15.1.1 runs Postfix  
+              15.15.1.2 is another PC on the same local network.     
+           
+
                 // Ex: only localhost can send mail
                 inet_interfaces = localhost
                 mynetworks = 127.0.0.1
             
                 // Ex: only localhost and 15.15.1.2(another PC on local network) can send mail
-                inet_interfaces = 15.15.1.2, localhost
+                inet_interfaces = 15.15.1.1, 127.0.0.1
                 mynetworks = 15.15.1.2, 127.0.0.1
 
 * Check / Start `postfix.service`  
