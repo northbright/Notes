@@ -34,15 +34,38 @@
 
 * Configure `postfix`
 
-        sudo vi /etc/postfix/main.cf
+    `sudo vi /etc/postfix/main.cf`
 
-        // myhostname
-        myhostname = mx.mydomain.com
+    * Hostname and domain  
+    
+            // myhostname
+            myhostname = mx.mydomain.com
 
-        // mydomain
-        mydomain = mydomain.com
+            // mydomain
+            mydomain = mydomain.com
 
-* **Optional**: [Allow PC on Local Network Send Mail to Postfix Server](https://github.com/northbright/Notes/blob/master/Linux/mail_server/postfix/allow_pc_on_local_network_send_mail_to_postfix_server.md)
+    * Disable Open-Relay
+
+      * `inet_interfaces`
+        
+        * postfix will listen on these interfaces
+
+      * `mynetworks`
+           
+        * disable open-relay to avaoid others use this sever to send spam mails
+            
+           * only the newtorks ip range listed in mynetworks can send mail to postfix
+           * format: ip/ip_mask or just ip
+
+      * Example
+        
+                // Ex: only localhost can send mail
+                inet_interfaces = localhost
+                mynetworks = 127.0.0.1
+            
+                // Ex: only localhost and 15.15.1.2(another PC on local network) can send mail
+                inet_interfaces = 15.15.1.2, localhost
+                mynetworks = 15.15.1.2, 127.0.0.1
 
 * Check / Start `postfix.service`  
 `postfix.service` is auto-started by default on Centos 7 minial.
