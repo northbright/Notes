@@ -1,6 +1,14 @@
 
 # Setup Postfix to Send Mail on Centos 7 Minimal
 
+This server is used to send mail **only**.
+
+#### DNS Settings
+
+To avoid the mail sent by our sever won't be rejected as SPAM, we need to add DNS records:
+
+* 
+
 #### Steps
 
 * Add `hostname` in `/etc/hosts`
@@ -8,7 +16,7 @@
         sudo vi /etc/hosts
 
         // Add your mail server hostname before localhost
-        127.0.0.1   mx.mydomain.com localhost
+        127.0.0.1   mail.mydomain.com localhost
 
 * Restart network service
 
@@ -39,7 +47,7 @@
     * Hostname and domain  
     
             // myhostname
-            myhostname = mx.mydomain.com
+            myhostname = mail.mydomain.com
 
             // mydomain
             mydomain = mydomain.com
