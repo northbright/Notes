@@ -149,3 +149,4 @@ The SPF record:
 * [Allow PC on Local Network Send Mail to Postfix Server](https://github.com/northbright/Notes/blob/master/Linux/mail_server/postfix/allow_pc_on_local_network_send_mail_to_postfix_server.md)
 * [SPF Record Syntax](http://www.openspf.org/SPF_Record_Syntax)
 * [Sender ID Framework SPF Record Wizard](https://www.microsoft.com/mscorp/safety/content/technologies/senderid/wizard/default.aspx)
+* [Authenticating with SPF: -all or ~all](https://wordtothewise.com/2014/06/authenticating-spf/)
