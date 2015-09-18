@@ -5,9 +5,20 @@ This server is used to send mail **only**.
 
 #### DNS Settings
 
-To avoid the mail sent by our sever won't be rejected as SPAM, we need to add DNS records:
+To avoid the mail sent by our sever won't be rejected as SPAM, we need to add DNS records:  
 
-* 
+| Name / Host / Alias| Record Type |        Value      | MX Priority |
+| :----------------: | :---------: | :---------------: | :----------:|
+| mail               |  A          | xx.xx.xxx         |   n/a       |
+| @                  |  MX         | mail.mydomain.com |   10        |
+| @                  |  TXT        | v=spf1 mx -all    |   n/a       |
+
+
+The SPF record:
+
+    "v=spf1 mx -all"
+
+    Allow domain's MXes to send mail for the domain, prohibit all others.
 
 #### Steps
 
@@ -136,3 +147,5 @@ To avoid the mail sent by our sever won't be rejected as SPAM, we need to add DN
 * [LNMP笔记：Centos下安装Postfix，替换sendmail发送邮件](http://www.cmhello.com/lnmp-centos-postfix.html)
 * [Postfix Email Server](http://www.nurdletech.com/linux-notes/mail-server/postfix.html)
 * [Allow PC on Local Network Send Mail to Postfix Server](https://github.com/northbright/Notes/blob/master/Linux/mail_server/postfix/allow_pc_on_local_network_send_mail_to_postfix_server.md)
+* [SPF Record Syntax](http://www.openspf.org/SPF_Record_Syntax)
+* [Sender ID Framework SPF Record Wizard](https://www.microsoft.com/mscorp/safety/content/technologies/senderid/wizard/default.aspx)
