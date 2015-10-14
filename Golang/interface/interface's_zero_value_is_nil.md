@@ -17,7 +17,7 @@
         fmt.Printf("h = %v, h is nil: %v\n", h, h == nil)
     }
 
-    func f2() (h *Human) {
+    func f2() (h Human) {
         return  // naked return h which is initialized with zero value(nil).
     }
 
