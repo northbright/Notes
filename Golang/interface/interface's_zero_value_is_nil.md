@@ -30,7 +30,7 @@
 
 #### Go Playground
 
-* <http://play.golang.org/p/ViyPYe43lS>
+* <http://play.golang.org/p/xDuogijsfO>
 
 #### References
 
