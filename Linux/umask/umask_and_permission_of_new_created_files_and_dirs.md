@@ -52,8 +52,8 @@ It can be used to control the default file permission for new files. It is a **f
 
 #### Default umask Value
 
-| OS | Default umask Value |
-| -- | ------------------- |
+|  OS  | Default umask Value |
+| ---- | ------------------- |
 | Centos 7 | 002 |
 | Ubuntu | 022 |
 
