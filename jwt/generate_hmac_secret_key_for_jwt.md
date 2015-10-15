@@ -26,4 +26,5 @@ Since HMAC use [symmetric key algorithm](https://en.wikipedia.org/wiki/Symmetric
 #### References
 * [Golang generating a 32 byte key](http://stackoverflow.com/questions/21160258/golang-generating-a-32-byte-key)
 * [What are requirements for HMAC secret key?](http://security.stackexchange.com/questions/95972/what-are-requirements-for-hmac-secret-key)
+* <https://golang.org/pkg/crypto/rand/#example_Read>
 * [github.com/northbright/keygen](https://github.com/northbright/keygen)
