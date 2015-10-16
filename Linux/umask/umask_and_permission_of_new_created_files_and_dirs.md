@@ -29,7 +29,7 @@ We'll find that the permission of new created file / dir is not same as we expec
 #### umask
 
 The `user file-creation mode mask(umask)` is use to determine the file permission for newly created files.  
-It can be used to control the default file permission for new files. It is a **four-digit octal number**.
+It can be used to control the default file permission for new files. It is a four-digit octal number.
 
 | Octal value | Permission |
 | ----------- | ---------- |
@@ -48,14 +48,15 @@ It can be used to control the default file permission for new files. It is a **f
     umask
 
     // Set umask in bash
-    umask XX
+    umask XXX
 
-#### Default umask Value
+#### Default umask
 
-|  OS  | Default umask Value |
-| ---- | ------------------- |
-| Centos 7 | 002 |
-| Ubuntu | 022 |
+|  OS  |  umask  |
+| ---- | ------- |
+| Centos 7 | 0002 |
+| Ubuntu 12.04 | 0002 |
 
 #### References
 * [What is Umask and How To Setup Default umask Under Linux?](http://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html)
+* [Change the default umask to 0002](https://blueprints.launchpad.net/ubuntu/+spec/umask-to-0002)
