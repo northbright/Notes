@@ -15,6 +15,7 @@
 * Key Generation:
   * Create Private Key
 
+            // note: no ecryption for RSA private key
             openssl genrsa -out "rsa_2048_priv.pem" 2048
 
   * Extract Public Key
