@@ -30,7 +30,7 @@ Use `fmt.Fprintf(os.Stderr, "xxx")` to output message to `os.Stderr` and keep em
         rand.Read(buf)
         // We want to output the random data.
         // Now we can see the random data and also get PASS.
-        fmt.Frintf(os.Stderr, "%v", buf)
+        fmt.Fprintf(os.Stderr, "%v", buf)
         // Output:
     }
 
