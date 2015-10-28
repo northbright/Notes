@@ -2,7 +2,7 @@
 
 #### HMAC Secret Key
 
-Since HMAC use [symmetric key algorithm](https://en.wikipedia.org/wiki/Symmetric-key_algorithm), we can just genreate random bytes as secret key.
+Since HMAC use [symmetric key algorithm](https://en.wikipedia.org/wiki/Symmetric-key_algorithm), we can just generate random bytes as secret key.
 
 #### Generate Random Bytes in Golang
 
