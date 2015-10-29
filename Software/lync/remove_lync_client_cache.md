@@ -9,7 +9,11 @@ Lync client still retrieve information from local cache.
 #### Solution
 Remove Lync client cache and re-add account.
 
-1. Delete the SIP profile
+1. Exit Lync  
+   * Right click the Lync icon on the taskbar
+   * Click "Exit"
+
+2. Delete the SIP profile
   * The SIP folder has the `sip_` prefix
 
   * Lync 2010:  
@@ -21,9 +25,9 @@ Remove Lync client cache and re-add account.
   * Skype for Business:  
     `%UserProfile%\AppData\Local\Microsoft\Office\16.0\Lync`
 
-2. Restart PC and Lync
+3. Restart PC and Lync
 
-3. Re-Add Your Account with Email Address and Password
+4. Re-Add Your Account with Email Address and Password
 
 
 
