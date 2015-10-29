@@ -1,7 +1,7 @@
 # Remove Lync Client Cache
 
 #### Problem
-We can not login Lync while something on Lync server are changed.
+Can't login Lync client while something on Lync server were changed.
 
 #### Root Cause
 Lync client still retrieve information from local cache.
