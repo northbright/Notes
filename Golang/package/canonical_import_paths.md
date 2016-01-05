@@ -24,3 +24,5 @@ If an import is attempted using a path that is **not** canonical, the `go` comma
   * Copy `$GOPATH/src/github.com/golang/net/` to `$GOPATH/src/golang.org/x/net`
   * `go build` 
              
+## References
+* [Canonical import paths in Golang](https://texlution.com/post/golang-canonical-import-paths/)
