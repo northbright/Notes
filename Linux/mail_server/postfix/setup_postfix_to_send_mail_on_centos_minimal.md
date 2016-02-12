@@ -31,7 +31,7 @@ The SPF record:
 
 * Restart network service
 
-  * For remote server(via ssh)
+  * For remote server(E.g. via ssh)
   
             sudo reboot
 
