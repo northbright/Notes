@@ -21,7 +21,7 @@ It failed to start postfix.service:
 ## Root Cause
 * local interface can not be found for **ipv6**
 * `inet_protocols = all`  
-  ipv6 protocal is enabled by default.
+  ipv6 protocol is enabled by default.
 
 ## Solution
 Use ipv4 only for localhost  
