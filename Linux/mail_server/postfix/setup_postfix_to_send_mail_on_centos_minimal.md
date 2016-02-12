@@ -121,6 +121,12 @@ The SPF record:
 
 * Config Firewalld(Centos 7)
 
+        // Enable and start firewalld if need
+        sudo systemctl status firewalld
+        sudo systemctl enable firewalld
+        sudo systemctl start firewalld
+        
+        // Add smtp service and reload firewall
         sudo firewall-cmd --permanent --zone=public --add-service=smtp
         sudo firewall-cmd --reload
 
