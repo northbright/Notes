@@ -163,6 +163,10 @@ The SPF record:
             }
         }
 
+## Check Mail Log
+
+    sudo vi /var/log/maillog
+
 ##### References
 
 * [LNMP笔记：Centos下安装Postfix，替换sendmail发送邮件](http://www.cmhello.com/lnmp-centos-postfix.html)
