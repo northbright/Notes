@@ -31,8 +31,14 @@ The SPF record:
 
 * Restart network service
 
-        sudo service network stop
-        sudo service network start
+  * For remote server(via ssh)
+  
+            sudo reboot
+
+  * For local server
+  
+            sudo service network stop
+            sudo service network start
 
 * Check if `postfix` is installed(it should be install by default on Centos 7 minimal)
 
