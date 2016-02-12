@@ -97,6 +97,12 @@ The SPF record:
                 inet_interfaces = 15.15.1.1, 127.0.0.1
                 mynetworks = 15.15.1.2, 127.0.0.1
 
+      * Use **ipv4** inet protocol only to fix the issue:[Failed to Start Postfix Service](https://github.com/northbright/Notes/blob/master/Linux/mail_server/postfix/failed_to_start_postfix_service.md)
+      
+                # comment this line
+                # inet_protocols = all  // for ipv4 and ipv6
+                inet_protocols = ipv4
+
 * Check / Start `postfix.service`  
 `postfix.service` is auto-started by default on Centos 7 minial.
 
@@ -107,6 +113,9 @@ The SPF record:
         Loaded: loaded (/usr/lib/systemd/system/postfix.service; enabled)
         Active: active (running) since Thu 2015-09-17 15:40:45 CST; 2s ago
         
+        // Enable postfix.service if it's disabled
+        sudo systemctl enable postfix.service
+
         // Start postfix.service if it's not running
         sudo systemctl start postfix.service
 
@@ -158,3 +167,4 @@ The SPF record:
 * [Authenticating with SPF: -all or ~all](https://wordtothewise.com/2014/06/authenticating-spf/)
 * [Postfix 关闭open-relay](http://blog.sina.com.cn/s/blog_6eee530801018x2x.html)
 * [RBL服务器列表、介绍和Postfix的配置](http://blog.sina.com.cn/s/blog_6eee530801018x3d.html)
+* [Failed to Start Postfix Service](https://github.com/northbright/Notes/blob/master/Linux/mail_server/postfix/failed_to_start_postfix_service.md)
