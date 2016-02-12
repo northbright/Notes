@@ -128,7 +128,7 @@ The SPF record:
 
         func main() {
             // Connect to the remote SMTP server.
-            c, err := smtp.Dial("mx.mydomain.com:25")
+            c, err := smtp.Dial("mail.mydomain.com:25")
             if err != nil {
                 log.Fatal(err)
             }
