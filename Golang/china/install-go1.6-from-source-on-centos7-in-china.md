@@ -1,4 +1,4 @@
-# Install Go1.6 from Source on CentOS 7
+# Install Go1.6 from Source on CentOS 7 in China
 
 #### Background
 * Accessing Google services include Golang.org is **blocked** in China.
