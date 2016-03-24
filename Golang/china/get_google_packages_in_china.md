@@ -33,7 +33,7 @@ Can't run `go get golang.org/x/XX` to get Google Golang packages.
   5. Copy `$GOPATH/src/github.com/golang/PATH_TO_PACKAGE` to `$GOPATH/src/golang.org/x/PATH_TO_PACKAGE`.  
 
           // Ex:
-          mkdir $GOPATH/golang.org/x -p
+          mkdir $GOPATH/src/golang.org/x -p
           cp $GOPATH/src/github.com/golang/net $GOPATH/src/golang.org/x/ -r
 
   6. Run `go build` to build the package.
