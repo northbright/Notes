@@ -15,7 +15,7 @@
 * Then build Go1.6 from source with Go1.4 binaries.
 
 #### Steps
-1. If there's old version of Go installed, **unset** `$GOPATH,` `$GOHOME`
+1. If there's old version of Go installed, **unset** `$GOPATH,` `$GOROOT`
 
 2. Make sure [Git](https://git-scm.com/) is installed.
     * Configure `Git`
@@ -78,7 +78,7 @@
 * 使用编译好的Go1.4的二进制文件来编译Go1.6。
 
 #### 步骤
-1. 如果之前已经安装过老版本的Go，清除`$GOPATH,` `$GOHOME`变量。
+1. 如果之前已经安装过老版本的Go，清除`$GOPATH,` `$GOROOT`变量。
 
 2. 安装好[Git](https://git-scm.com/)。
     * 配置 `Git`
