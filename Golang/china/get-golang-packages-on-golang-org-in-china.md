@@ -1,10 +1,10 @@
 # Get Golang Packages on Golang.org in China
 
 #### Background
-Golang.org is blocked in China.
+* Golang.org is blocked in China.
 
 #### Problem
-Can't run `go get golang.org/x/XX` to get Google Golang packages.
+* Can't run `go get golang.org/x/XX` to get Google Golang packages.
 
 #### Solutions
 * Solution A: Use [github mirror](https://github.com/golang)
@@ -48,10 +48,10 @@ Can't run `go get golang.org/x/XX` to get Google Golang packages.
 # 在中国网络环境下获取Golang.org上的Golang Packages
 
 #### 背景
-目前在中国网络环境下无法访问Golang.org。
+* 目前在中国网络环境下无法访问Golang.org。
 
 #### 问题
-不能运行`go get golang.org/x/XX`来获取Golang packages。
+* 不能运行`go get golang.org/x/XX`来获取Golang packages。
 
 #### 解决方案
 * 方案 A: 使用[github 上的镜像](https://github.com/golang)
