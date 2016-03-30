@@ -78,21 +78,25 @@
       * If you want to start redis in background:  
         Add '&' after $EXEC $CONF:  
         `$EXEC $CONF &`  
+
+6. Add "exec bits to the redis_<port> files"
+  * `sudo chmod a+x /etc/rc.d/init.d/redis_6379`
+  * `sudo chmod a+x /etc/rc.d/init.d/redis_6380`
         
-6. Use `chkconfig --add <service_name>` to add redis services  
-   `sudo chkconfig --add redis_6379`  
-   `sudo chkconfig --add redis_6380`
+7. Use `chkconfig --add <service_name>` to add redis services
+  * `sudo chkconfig --add redis_6379`  
+  * `sudo chkconfig --add redis_6380`
 
-7. Reboot 
+8. Reboot 
 
-8. Stop / Start Redis Service
+9. Stop / Start Redis Service
 
          sudo /etc/rc.d/init.d/redis_<port> {start|stop}
          Ex: Restart
          sudo /etc/rc.d/init.d/redis_6379 stop
          sudo /etc/rc.d/init.d/redis_6379 start
 
-9. Warning  
+10. Warning  
    If configure master-slave replication and master is set to NOT write to disk(comment all `save` lines),  
    make sure not configure redis as service: 
      * redis-server will restart on server restart(maybe server crashed, has to reboot it).
