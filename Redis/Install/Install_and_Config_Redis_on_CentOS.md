@@ -15,7 +15,7 @@
 4. Make and Make Install
   * `cd redis-2.8.19`
   * `make`
-  * `make install`  
+  * `sudo make install`  
     This will copy following binaries to `/usr/local/bin`:  
         * redis-benchmark
         * redis-check-aof
