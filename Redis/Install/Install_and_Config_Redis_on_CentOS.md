@@ -3,8 +3,8 @@
 
 #### Install Redis
 
-1. Install gcc and wget  
-`yum install make gcc wget`
+1. Install gcc, wget, tcl(for redis make test)  
+`yum install make gcc wget tcl`
 
 2. Download Source Code  
 `wget http://download.redis.io/releases/redis-2.8.19.tar.gz`
@@ -15,6 +15,7 @@
 4. Make and Make Install
   * `cd redis-2.8.19`
   * `make`
+  * `make test`
   * `sudo make install`  
     This will copy following binaries to `/usr/local/bin`:  
         * redis-benchmark
