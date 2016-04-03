@@ -79,7 +79,7 @@
         Add '&' after $EXEC $CONF:  
         `$EXEC $CONF &`  
 
-6. Add "exec bits to the redis_<port> files"
+6. Add "exec bits" to the redis_<port> files
   * `sudo chmod a+x /etc/rc.d/init.d/redis_6379`
   * `sudo chmod a+x /etc/rc.d/init.d/redis_6380`
         
