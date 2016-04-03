@@ -95,10 +95,8 @@
 
 10. Stop / Start Redis Service
 
-         sudo /etc/rc.d/init.d/redis_<port> {start|stop}
-         Ex: Restart
-         sudo /etc/rc.d/init.d/redis_6379 stop
-         sudo /etc/rc.d/init.d/redis_6379 start
+         sudo systemctl start redis_6379.service
+         sudo systemctl stop redis_6379.service
 
 11. Warning  
    If configure master-slave replication and master is set to NOT write to disk(comment all `save` lines),  
