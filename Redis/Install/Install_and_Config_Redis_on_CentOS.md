@@ -93,7 +93,7 @@
 
          systemctl --all | grep redis
 
-10. Stop / Start Redis Service
+10. Stop / Start Redis Service Manually
 
          sudo systemctl start redis_6379.service
          sudo systemctl stop redis_6379.service
