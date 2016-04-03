@@ -83,9 +83,16 @@
   * `sudo chmod a+x /etc/rc.d/init.d/redis_6379`
   * `sudo chmod a+x /etc/rc.d/init.d/redis_6380`
         
-7. Use `chkconfig --add <service_name>` to add redis services
-  * `sudo chkconfig --add redis_6379`  
-  * `sudo chkconfig --add redis_6380`
+7. Configure Redis Services
+  * Method A - `systemd`
+
+          sudo systemctl enable redis_6379.service
+          sudo systemctl enable redis_6380.service
+
+  * or Method B - `chkconfig`
+  
+          sudo chkconfig --add redis_6379
+          sudo chkconfig --add redis_6380
 
 8. Reboot 
 
