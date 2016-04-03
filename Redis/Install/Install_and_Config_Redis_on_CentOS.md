@@ -91,7 +91,7 @@
 
 9. Check Redis Service Status
 
-         systemctl list-units | grep redis
+         systemctl --all | grep redis
 
 10. Stop / Start Redis Service
 
