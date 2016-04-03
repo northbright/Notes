@@ -89,14 +89,18 @@
 
 8. Reboot 
 
-9. Stop / Start Redis Service
+9. Check Redis Service Status
+
+         systemctl list-units | grep redis
+
+10. Stop / Start Redis Service
 
          sudo /etc/rc.d/init.d/redis_<port> {start|stop}
          Ex: Restart
          sudo /etc/rc.d/init.d/redis_6379 stop
          sudo /etc/rc.d/init.d/redis_6379 start
 
-10. Warning  
+11. Warning  
    If configure master-slave replication and master is set to NOT write to disk(comment all `save` lines),  
    make sure not configure redis as service: 
      * redis-server will restart on server restart(maybe server crashed, has to reboot it).
