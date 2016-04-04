@@ -24,7 +24,7 @@
   
         sudo mkdir /etc/twemproxy
         sudo cp  ~/twemproxy/conf/nutcracker.yml /etc/twemproxy/my.yml
-        sudo vi /etc/systemd/system/twemproxy.service
+        sudo vi /etc/twemproxy/my.yml
         
         // twemproxy.service
         beta:
