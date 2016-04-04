@@ -17,7 +17,7 @@
 
 * Copy binary to `/usr/local/bin`
         
-        sudo cp src/nutcracker /user/local/bin
+        sudo cp src/nutcracker /usr/local/bin
 
 #### Create a twemproxy  configuration file(.yml)
 * We can re-use `~/twemproxy/conf/nutcracker.yml`:
