@@ -26,7 +26,7 @@
         sudo cp  ~/twemproxy/conf/nutcracker.yml /etc/twemproxy/my.yml
         sudo vi /etc/twemproxy/my.yml
         
-        // twemproxy.service
+        // my.yml
         beta:
         listen: 127.0.0.1:22122
           hash: fnv1a_64
