@@ -14,7 +14,7 @@
 
 #### Configure as systemd Daemon Service
 
-    // Reload Daemon Services after add mybash.service
+    // Reload Daemon Services after add my.service
     sudo systemctl daemon-reload
 
     // Start Service
