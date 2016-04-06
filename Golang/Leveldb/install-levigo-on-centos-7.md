@@ -23,7 +23,7 @@
    * Copy files
    
             sudo cp include/leveldb /usr/local/include -rf
-            sudo cp libleveldb.* /usr/local/lib   
+            sudo cp out-shared/libleveldb.* /usr/local/lib   
 
    * Create a conf file for `/etc/ld.so.conf`:
    
