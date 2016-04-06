@@ -1,5 +1,4 @@
-
-# Compile and Install leveldb on Ubuntu 12.04
+# Install leveldb on Ubuntu 12.04
 
 1. Set Proxy for `apt-get` if needed:  
 
@@ -30,7 +29,7 @@
    
             sudo vi /etc/ld.so.conf.d/usrlocallib.conf
             ## add below line:
-            /usr/local/bin
+            /usr/local/lib
  
    * Copy libs and run ldconfig to update cache
    
