@@ -17,7 +17,7 @@
    * `make`
    * `sudo make install`
 
-   If you encountered errors during make because of lacking of some packages(ex: gcc-c++), please run `make clean` then go to step 5 to build snappy again.
+   If you encounter errors during make because of lacking of some packages(ex: gcc-c++), please run `make clean` then go to step 5 to build snappy again.
 
 6. Check `/usr/local/include` and `/usr/local/lib` to see if snappy header and libraries are copied successfully
 7. Create a conf file to make `/usr/local/lib` path is in ldconfig cache
