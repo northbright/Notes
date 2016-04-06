@@ -31,5 +31,5 @@
    * Reload `ldconfig` cache  
      `sudo ldconfig`
 
-   * Check if snappy lib is in ldconfig cache
+   * Check if snappy lib is in ldconfig cache  
      `ldconfig -p | grep snappy`
