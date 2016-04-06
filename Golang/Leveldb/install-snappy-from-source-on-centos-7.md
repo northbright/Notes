@@ -1,26 +1,17 @@
-
-# Compile and install snappy on CentOS 7
+# Install snappy from Source on CentOS 7
 
 1. Download [snappy](https://github.com/google/snappy):  
    `wget https://github.com/google/snappy/archive/master.zip`
 
-2. Install `unzip`:  
-   `sudo yum install unzip`
+2. Install packages:  
+   `sudo yum install unzip automake libtook gcc-c++`
 
 3. Unzip `master.zip`:  
    `unzip master.zip`
 
 4. `cd snappy-master`
 
-5. Run `./autogen.sh` and you'll find some pkgs were not installed.  
-   Use `yum provides xx` to get the package name.
-
-   * Install `automake`:  
-     `sudo yum install automake`
-
-   * Install `libtool`:  
-     `sudo yum install libtool`
-
+5. Build snappy
    * `./autogen.sh`
    * `./configure`
    * `make`
