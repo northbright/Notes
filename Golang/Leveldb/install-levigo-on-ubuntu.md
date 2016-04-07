@@ -11,4 +11,7 @@
 
         CGO_CFLAGS="-I/usr/local/include" CGO_LDFLAGS="-L/usr/local/lib -lsnappy" go get github.com/jmhodges/levigo
 
+#### References
+* [Building levigo](https://github.com/jmhodges/levigo#building)
+
         
