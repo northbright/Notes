@@ -4,8 +4,14 @@ Go 1.5 make it simple for cross compilation
 
 #### Examples
 
-    // Build Windows Executable from Linux
+    // os = windows, arch = 386(x86(
     env GOOS=windows GOARCH=386 go build -v
+
+    // os = linux, arch = amd64
+    env GOOS=linux GOARCH=amd64 go build -v
+
+    // os = mac os x(darwin), arch = amd64
+    env GOOS=darwin GOARCH=amd64 go build -v
 
 #### List of $GOOS and $GOARCH
 * [operating system and architecture](http://golang.org/doc/install/source#environment)
