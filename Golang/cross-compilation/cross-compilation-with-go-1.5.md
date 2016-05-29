@@ -4,7 +4,7 @@ Go 1.5 make it simple for cross compilation
 
 #### Examples
 
-    // os = windows, arch = 386(x86(
+    // os = windows, arch = 386(x86)
     env GOOS=windows GOARCH=386 go build -v
 
     // os = linux, arch = amd64
