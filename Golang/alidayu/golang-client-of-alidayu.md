@@ -1,6 +1,6 @@
 # Golang Client of alidayu(阿里大鱼)
 
-[alidayu](https://github.com/northbright/alidayu) is a Golang SDK for [alidayu(阿里大鱼)](https://www.alidayu.com/).
+<https://github.com/northbright/alidayu> is a Golang SDK for [alidayu(阿里大鱼)](https://www.alidayu.com/).
 
 #### Example
 
