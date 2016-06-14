@@ -10,13 +10,21 @@
         // ---------------------------------------
         // Send Verification Code in SMS(发送短信验证码).
         // ---------------------------------------
-        // Set Parameters.
+        // Set parameters(设置API所需的所有参数，包括公共参数和方法相关参数).
         params := map[string]string{}
-        // It'll use default common parameters if you don't set them.
-        // 如果这些公共参数不设置，那么会自动使用默认值.
-        // params["format"] = "json"
-        // params["v"] = "2.0"
-        // params["sign_method"] = "md5"
+
+        // Common parameters will be filled with default values automatically.
+        // You may also set them to override default ones.
+        // 公共参数会自动使用默认值填充，不需要用户设置.
+        // 当然，用户可以使用自己的设置来覆盖默认值.
+        //   params["format"] = "json"      // "json" or "xml"
+        //   params["v"] = "2.0"            // "2.0" by default
+        //   params["sign_method"] = "md5"  // "md5" or "hmac"
+
+        // No need to set "timestamp"(不需要用户设置"timestamp"参数).
+        //   "timestamp" will be calculated and filled automatically("timestamp"会被自动计算和设置).
+
+        // Set method specified parameters(设置方法相关特定参数).
         params["method"] = "alibaba.aliqin.fc.sms.num.send"           // Set method to send SMS(API接口名称).
         params["sms_type"] = "normal"                                 // Set SMS type(短信类型).
         params["sms_free_sign_name"] = ""                             // Set SMS signature(短信签名).
