@@ -21,8 +21,8 @@
         //   params["v"] = "2.0"            // "2.0" by default
         //   params["sign_method"] = "md5"  // "md5" or "hmac"
 
-        // No need to set "timestamp"(不需要用户设置"timestamp"参数).
-        //   "timestamp" will be calculated and filled automatically("timestamp"会被自动计算和设置).
+        // No need to set "timestamp" and "sign", these parameters will be calculated and filled automatically.
+        // 不需要用户设置"timestamp"和"sign",这些参数会被自动计算和设置.
 
         // Set method specified parameters(设置方法相关特定参数).
         params["method"] = "alibaba.aliqin.fc.sms.num.send"           // Set method to send SMS(API接口名称).
