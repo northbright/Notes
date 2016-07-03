@@ -25,6 +25,11 @@
 4. yum更新和安装软件
 
         yum update
+
+        // CentOS 7(Install MariaDB)
+        yum -y install unzip wget setuptool system-config-firewall-tui httpd mariadb mariadb-server gd gd-devel php php-mysql php-gd vsftpd
+
+        // CentOS 6(Install MySQL)
         yum -y install unzip wget setuptool system-config-firewall-tui httpd mysql mysql-server gd gd-devel php php-mysql php-gd vsftpd
 
 5. 下载wordpress
