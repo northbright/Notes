@@ -18,15 +18,16 @@
         }
 
 * Test
-1. Run the program under the same dir as go project
-* `cd /home/xx/projects-go/src/github.com/northbright/getwd-test`
-* `./getwd-test`
-* the result is: `os.Getwd(): /home/xx/projects-go/src/github.com/northbright/getwd-test`
 
-2. Run the program under user home
-* `cd /home/xx`
-* `./projects-go/src/github.com/northbright/getwd-test/getwd-test`
-* the result is: `os.Getwd(): /home/xx`
+    * Run the program under the same dir as go project
+        * `cd /home/xx/projects-go/src/github.com/northbright/getwd-test`
+        * `./getwd-test`
+        * the result is: `os.Getwd(): /home/xx/projects-go/src/github.com/northbright/getwd-test`
+
+    *  Run the program under user home
+        * `cd /home/xx`
+        * `./projects-go/src/github.com/northbright/getwd-test/getwd-test`
+        * the result is: `os.Getwd(): /home/xx`
 
 #### Solution
 
