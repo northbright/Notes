@@ -19,7 +19,7 @@
 
 * Test
 
-    * Run the program under the same dir as go project
+    * Run the program under project dir
         * `cd /home/xx/projects-go/src/github.com/northbright/getwd-test`
         * `./getwd-test`
         * the result is: `os.Getwd(): /home/xx/projects-go/src/github.com/northbright/getwd-test`
