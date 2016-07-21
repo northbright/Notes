@@ -1,4 +1,3 @@
-
 # Get Current Executable Directory in golang
 
 <pre><code>
@@ -28,4 +27,5 @@ func GetCurrentExecDir() (dir string, err error) {
 }
 </code></pre>
 
-<https://github.com/northbright/goutil/blob/master/path.go>
+#### References
+* [pathhelper](https://github.com/northbright/pathhelper)
