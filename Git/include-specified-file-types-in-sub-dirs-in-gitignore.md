@@ -44,13 +44,13 @@
 
 * `git add -i` and choose add select `4: add untracked` to see the result:
 
-    1: .gitignore
-    2: README.md
-    3: go/ch01/main.go
-    4: go/ch02/main.go
-    5: go/ch03/main.go
-    6: go/tmp/ch04/main.go
-    7: go/util/util.go
+        1: .gitignore
+        2: README.md
+        3: go/ch01/main.go
+        4: go/ch02/main.go
+        5: go/ch03/main.go
+        6: go/tmp/ch04/main.go
+        7: go/util/util.go
 
 
 #### References
