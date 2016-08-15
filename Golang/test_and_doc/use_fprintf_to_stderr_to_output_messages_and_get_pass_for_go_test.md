@@ -13,7 +13,7 @@ We'll get FAIL if the output message from fmt.PrintX() not equals to the message
     }
 
 #### Root Cause
-* fmt.PrintX() will output messages to `os.Stderr`:
+* fmt.PrintX() will output messages to `os.Stdout`:
 
         func Printf(format string, a ...interface{}) (n int, err error) {
             return Fprintf(os.Stdout, format, a...)
