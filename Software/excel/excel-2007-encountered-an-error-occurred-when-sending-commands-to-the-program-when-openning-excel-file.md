@@ -1,4 +1,4 @@
-# Can not Open Execel 2007 File on Win10 with "An error Occurred when Sending commands to the program" Error
+# Excel 2007 Encountered `An error occurred when sending commands to the program` when Openning Excel File on Windows 10
 
 #### Solution
 1. On the Tools menu, click Options.
