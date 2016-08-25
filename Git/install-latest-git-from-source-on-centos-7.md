@@ -1,0 +1,34 @@
+# Install Latest Git from Source on CentOS 7
+
+#### Purpose
+* `sudo yum install git` may install the old version of Git.
+* To get latest version of Git, install git from source is a good idea.
+
+#### Steps
+1. Install "Development Tools"
+    * `sudo yum groupinstall "Development Tools"`
+
+2. Install Extra Dependencies
+    * `sudo yum install zlib-devel perl-ExtUtils-MakeMaker asciidoc xmlto`
+
+3. Get source of git
+    * `wget -O git.zip https://github.com/git/git/archive/master.zip`
+
+4. Install git
+
+        unzip git.zip
+        cd git-master
+        make configure
+        ./configure --prefix=/usr/local
+        make all doc
+        sudo make install install-doc install-html
+
+5 Setup git
+
+        git config --global user.name "Your Name"
+        git config --global user.email "xx@example.com"
+
+#### References
+* [How To Install Git on a CentOS 6.4 VPS](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-a-centos-6-4-vps)
+ 
+
