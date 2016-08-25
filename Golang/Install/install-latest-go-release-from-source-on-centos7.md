@@ -12,6 +12,7 @@
 1. If there's old version of Go installed, **unset** `$GOPATH,` `$GOROOT`
 
 2. Make sure [Git](https://git-scm.com/) is installed.
+    * [Install Latest Git from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/Git/install-latest-git-from-source-on-centos-7.md)
     * Configure `Git`
         * `git config --global user.email "email-for-github"`
         * `git config --global user.name "user name"`
