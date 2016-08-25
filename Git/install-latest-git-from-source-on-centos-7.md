@@ -11,10 +11,13 @@
 2. Install Extra Dependencies
     * `sudo yum install zlib-devel perl-ExtUtils-MakeMaker asciidoc xmlto`
 
-3. Get source of git
+3. Install `libcurl-devel` to add HTTPS support for Git
+    * `sudo yum install libcurl-devel`
+
+4. Get source of git
     * `wget -O git.zip https://github.com/git/git/archive/master.zip`
 
-4. Install git
+5. Install git
 
         unzip git.zip
         cd git-master
