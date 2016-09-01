@@ -1,5 +1,6 @@
 # Install snappy from Source on CentOS 7
 
+#### Steps
 1. Download [snappy](https://github.com/google/snappy):  
    `wget https://github.com/google/snappy/archive/master.zip`
 
