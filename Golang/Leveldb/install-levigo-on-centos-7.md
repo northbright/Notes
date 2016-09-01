@@ -3,7 +3,7 @@
 #### Steps
 * [Install GO on Linux](https://github.com/northbright/Notes/blob/master/Golang/Install/Install_GO_on_Linux.md)
 
-* [Install snappy from Source on CentOS 7](install-snappy-from-source-on-centos-7.md)
+* [Install snappy from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/snappy/install-snappy-from-source-on-centos-7.md)
 
 * [Install LevelDB from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/leveldb/install-leveldb-from-source-on-centos-7.md)
 
