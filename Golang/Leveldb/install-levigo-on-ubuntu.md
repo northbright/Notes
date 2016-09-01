@@ -2,7 +2,7 @@
 
 #### Install leveldb on Ubuntu
 
-[Install leveldb on Ubuntu 12.04](./install-leveldb-on-ubuntu-12.04.md)
+[Install leveldb on Ubuntu 12.04](https://github.com/northbright/Notes/blob/master/leveldb/install-leveldb-on-ubuntu-12.04.md)
 
 #### Install GO
 [Install GO on Linux](https://github.com/northbright/Notes/blob/master/Golang/Install/Install_GO_on_Linux.md)
