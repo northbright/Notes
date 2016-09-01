@@ -1,5 +1,6 @@
-# Install [leveldb](https://github.com/google/leveldb) on CentOS 7
+# Install [LevelDB](https://github.com/google/leveldb) From Source on CentOS 7
 
+#### Steps
 1. Download `leveldb` from <https://github.com/google/leveldb/archive/master.zip>
 
         wget https://github.com/google/leveldb/archive/master.zip
