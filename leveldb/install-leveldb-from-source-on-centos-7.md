@@ -1,17 +1,19 @@
 # Install [LevelDB](https://github.com/google/leveldb) from Source on CentOS 7
 
 #### Steps
-1. Download `leveldb` from <https://github.com/google/leveldb/archive/master.zip>
+1. [Install Snappy from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/snappy/install-snappy-from-source-on-centos-7.md) 
+
+2. Download `leveldb` from <https://github.com/google/leveldb/archive/master.zip>
 
         wget https://github.com/google/leveldb/archive/master.zip
         unzip master.zip
 
-2. Compile `leveldb`:
+3. Compile `leveldb`:
 
         cd leveldb-master
         make
 
-3. Install libs
+4. Install libs
    * Copy files
 
             sudo cp include/leveldb /usr/local/include -rf
