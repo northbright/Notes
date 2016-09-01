@@ -1,4 +1,4 @@
-# Install leveldb on Ubuntu 12.04
+# Install leveldb From Source on Ubuntu 12.04
 
 1. Set Proxy for `apt-get` if needed:  
 
