@@ -1,5 +1,6 @@
 # Install leveldb From Source on Ubuntu 12.04
 
+#### Steps
 1. Set Proxy for `apt-get` if needed:  
 
   * Set http / https / ftp proxy in `/etc/apt/apt.conf.d/01proxy`:
