@@ -5,7 +5,7 @@
 
 * [Install snappy from Source on CentOS 7](install-snappy-from-source-on-centos-7.md)
 
-* [Install LevelDB on CentOS 7](https://github.com/northbright/Notes/blob/master/leveldb/install-leveldb-on-centos-7.md)
+* [Install LevelDB from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/leveldb/install-leveldb-from-source-on-centos-7.md)
 
 * Finally, run `go get` to install `levigo`:  
 
