@@ -55,6 +55,7 @@
         `REDISPORT=6379` for `redis_6379`, `REDISPORT=6380` for `redis_6380` and so on...
 
     * `CONF="/etc/redis/${REDISPORT}.conf"` means you need to copy redis.conf to `/etc/redis/` and rename it to `<port>.conf`
+        * `sudo mkdir /etc/redis`
         * `sudo cp ~/redis-2.8.19/redis.conf /etc/redis/6379.conf`
         * `sudo cp ~/redis-2.8.19/redis.conf /etc/redis/6380.conf`
 
