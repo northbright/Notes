@@ -62,6 +62,14 @@
 4. Modify `/etc/redis/<port>.conf`
     * set `daemonize yes`
     * set `port 6379` for `6379.conf` and `port 6380` for `6380.conf`
+    * set `pidfile` with specified port.
+        
+            // 6379.conf
+            pidfile /var/run/redis_6379.pid
+ 
+            // 6380.conf
+            pidfile /var/run/redis_6380.pid
+
     * set different rdb file paths for each redis instance  
         Ex:  
         `dir /home/xx/nodes/1/` for `6379.conf`  
