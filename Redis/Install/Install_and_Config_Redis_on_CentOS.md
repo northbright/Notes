@@ -61,7 +61,14 @@
 
 4. Modify `/etc/redis/<port>.conf`
     * set `daemonize yes`
-    * set `port 6379` for `6379.conf` and `port 6380` for `6380.conf`
+    * set `port` with specified port
+
+            // 6379.conf
+            port 6379
+            
+            // 6380.conf
+            port 6380
+
     * set `pidfile` with specified port.
         
             // 6379.conf
