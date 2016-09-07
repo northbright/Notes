@@ -7,51 +7,59 @@
 
 #### Example Golang Project Folder
 
-    .
-    ├── go
-    │   ├── ch01
-    │   │   ├── ch01
-    │   │   └── main.go
-    │   ├── ch02
-    │   │   ├── ch02
-    │   │   └── main.go
-    │   ├── ch03
-    │   │   ├── ch03
-    │   │   └── main.go
-    │   ├── tmp
-    │   │   └── ch04
-    │   │       ├── ch04
-    │   │       └── main.go
-    │   └── util
-    │       ├── util.go
-    │       └── util.test
-    └── README.md
+        .
+        ├── go
+        │   ├── ch01
+        │   │   ├── ch01
+        │   │   ├── main.go
+        │   │   └── README.md
+        │   ├── ch02
+        │   │   ├── ch02
+        │   │   ├── main.go
+        │   │   └── README.md
+        │   ├── ch04
+        │   │   ├── ch04
+        │   │   ├── main.go
+        │   │   └── README.md
+        │   └── util
+        │       ├── main.go
+        │       └── README.md
+        ├── LICENSE
+        └── README.md
 
 
-* We want to ignore all binary files(ch01, ch02, ...) but just keep all Golang source file(*.go) in sub dirs.
+#### Requirements
+* Keep `LICENSE`
+* Keep all markdown files(*.md)
+* Ignore all binary files(ch01, ch02, ...) 
+* Keep all Golang source file(*.go)
 
 #### Solution
 
 * `vi .gitignore`
 
-        # Include all .go under ch** folders
-        /go/**/ch*/*
-        !/go/**/ch*/*.go
+        *
+        !.gitignore
+        !LICENSE 
+        !*.md 
+        !*.go 
+        !/go/ 
+        !/go/**/
 
-        # Include all .go under util folder
-        /go/**/util/*
-        !go/**/util/*.go
 
 * `git add -i` and choose add select `4: add untracked` to see the result:
 
         1: .gitignore
-        2: README.md
-        3: go/ch01/main.go
-        4: go/ch02/main.go
-        5: go/ch03/main.go
-        6: go/tmp/ch04/main.go
-        7: go/util/util.go
-
+        2: LICENSE
+        3: README.md
+        4: go/ch01/README.md
+        5: go/ch01/main.go
+        6: go/ch02/README.md
+        7: go/ch02/main.go
+        8: go/ch04/README.md
+        9: go/ch04/main.go
+       10: go/util/README.md
+       11: go/util/main.go
 
 #### References
 * [How do gitignore exclusion rules actually work?(See medge799's answer)](http://stackoverflow.com/questions/3001888/how-do-gitignore-exclusion-rules-actually-work)
