@@ -14,7 +14,7 @@
 
 * There's no entry of static IP-to-MAC table found in Router's DHCP settings.
 
-* The static IP may be assigned to another PC during the weekend.
+* The static IP may be assigned to another PC by DHCP server during the weekend.
 
 #### Solution
 1. Goto Router Settings
