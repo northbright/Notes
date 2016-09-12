@@ -21,7 +21,7 @@
 
     * Release the IP address in DHCP pool.
 
-    * Add a new entry to Static IP-to-MAC table in DHCP settings.
+    * Add a new entry to Static IP-to-MAC table in DHCP settings to reserve the static IP.
 
     * Find an unused IP in DHCP pool to assign static IP.
 
