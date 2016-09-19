@@ -12,7 +12,7 @@
 * Name - Service Name.Service Protocol(Ex: `_sip._tls`)
 * Value
 
-        Priority Weight Port Address
+        // Priority Weight Port Address(split by white space)
         Ex: 100 1 443 sipdir.online.lync.com
 
 #### References
