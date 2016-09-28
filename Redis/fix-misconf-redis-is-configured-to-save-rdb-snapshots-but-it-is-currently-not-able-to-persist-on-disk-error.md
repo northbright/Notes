@@ -1,12 +1,14 @@
 # Fix MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk Error.
 
 #### Problem
-* A large command set(~20000000) was send to Redis pipeline.
-* Redis service was killed by kernel because it caused Out of Memory.
-* The error occurs when run `FLUSHALL` command.
+* Can't do ANY write commands.
 
 #### Root Cause
-* Previous `bgsave` failed(rdb_last_bgsave_status:err)
+* Previous `bgsave` failed.
+
+        redis:6379> INFO Persistence
+        redis:6379> ...
+        redis:6379> rdb_last_bgsave_status:err
 
 #### Solution
 * Run `redis-cli`
