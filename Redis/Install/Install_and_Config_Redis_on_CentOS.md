@@ -78,9 +78,20 @@
             pidfile /var/run/redis_6380.pid
 
     * set different rdb file paths for each redis instance  
-        Ex:  
-        `dir /home/xx/nodes/1/` for `6379.conf`  
-        `dir /home/xx/nodes/2/` for `6380.conf` and so on...
+        
+            // 6379.conf
+            dir /home/xx/redis-db/6379/
+
+            // 6380.conf
+            dir /home/xx/redis-db/6380/
+
+    * set `logfile` for each Redis instance
+
+            // 6379.conf
+            logfile "/home/xx/redis-db/6379/6379.log"
+
+            // 6380.conf
+            logfile "/home/xx/redis-db/6380/6380.log"
 
 5.  If you need to set password for redis
     * Modify `/etc/redis/<port>.conf`:  
