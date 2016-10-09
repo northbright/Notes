@@ -23,7 +23,7 @@
         </VirtualHost>
 
 
-        ## .htaccess file
+        ## wordpress/.htaccess file
 
         # protect xmlrpc
 
