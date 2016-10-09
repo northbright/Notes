@@ -16,6 +16,8 @@
             ServerName mysite.com
             ServerAlias www.mysite.com
             ErrorLog /var/log/httpd/mysite_err.log
+
+            # Fix xmlrpc.php pingback vunerability
             <Directory /var/www/mysite/wordpress>
                 AllowOverride None
                 Include /var/www/mysite/wordpress/.htaccess
