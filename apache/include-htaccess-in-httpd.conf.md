@@ -8,7 +8,7 @@
 * Make sure `AllowOverride None`(by default) in `httpd.conf`
 * Find your `<VirtualHost xx>` settings, add `Include xx/.htaccess` in `<Directory xx> </Directory>`
 
-        ## Example: to disable xmlrpc.xml to fix Wordpress XMLRPC vunerability.
+        ## Example: to disable xmlrpc.xml to fix Wordpress XMLRPC vulnerability.
 
         <VirtualHost *:80>
             ServerAdmin admin@mysite.com
@@ -17,7 +17,7 @@
             ServerAlias www.mysite.com
             ErrorLog /var/log/httpd/mysite_err.log
 
-            # Fix xmlrpc.php pingback vunerability
+            # Fix xmlrpc.php pingback vulnerability
             <Directory /var/www/mysite/wordpress>
                 AllowOverride None
                 Include /var/www/mysite/wordpress/.htaccess
