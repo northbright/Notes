@@ -65,6 +65,12 @@
                 ServerName mysite1.com
                 ServerAlias www.mysite1.com
                 ErrorLog /var/log/httpd/mysite1_error.log
+
+                # Fix xmlrpc.php pingback vulnerability
+                <Directory /var/www/mysite1/wordpress>
+                    AllowOverride None
+                    Include /var/www/mysite1/wordpress/.htaccess
+                </Directory>
             </VirtualHost>
             <VirtualHost *:80>
                 ServerAdmin admin@mysite2.com
@@ -72,7 +78,24 @@
                 ServerName mysite2.com
                 ServerAlias www.mysite2.com
                 ErrorLog /var/log/httpd/mysite2_error.log
+
+                # Fix xmlrpc.php pingback vulnerability
+                <Directory /var/www/mysite2/wordpress>
+                    AllowOverride None
+                    Include /var/www/mysite2/wordpress/.htaccess
+                </Directory>
             </VirtualHost>
+
+    * Wordpress XMLRPC Pingback Vulnerability Fix
+
+            vi /var/www/mysite1/wordpress/.htaccess
+
+                # protect xmlrpc
+
+                <Files xmlrpc.php>
+                Order Deny,Allow
+                Deny from all
+                </Files>
 
     * httpd性能设置
 
