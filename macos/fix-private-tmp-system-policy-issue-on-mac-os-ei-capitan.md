@@ -36,4 +36,4 @@
 
 #### References
 * [Getting an error message on startup (CoreTelephony tracing has failed), can't open Ableton Live? (El Capitan 10.11.16) ](https://www.reddit.com/r/mac/comments/55s9yg/getting_an_error_message_on_startup_coretelephony/)
-* [](https://en.wikipedia.org/wiki/System_Integrity_Protection)
+* [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection)
