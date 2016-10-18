@@ -11,7 +11,7 @@
 
 #### Root Cause
 * [](https://en.wikipedia.org/wiki/System_Integrity_Protection) protects system files and dirs(links) include `/tmp`, `/private/tmp`.
-    * Files inside /private/tmp had the restrict flag.
+    * Files inside `/private/tmp` had the restrict flag.
     * [Wikipedia](https://en.wikipedia.org/wiki/System_Integrity_Protection#Functions) says that only the symbolic link `/tmp` itself should be restricted.
 * `sudo chmod 1777 /private/tmp` and `sudo chflags -R norestricted /private/tmp/` will fail due to [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection#Functions).
 
