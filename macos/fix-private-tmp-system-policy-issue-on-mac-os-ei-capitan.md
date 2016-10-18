@@ -17,7 +17,7 @@
 
 #### Solution
 1. Disable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection#Functions).
-    * Reboot Mac into `Recovery Mode by pressing `Command + R`.
+    * Reboot Mac into Recovery Mode by pressing `Command + R`.
     * Click "Utilities" -> "Terminal".
     * type `csrutil disable`
     * Reboot Mac
@@ -29,7 +29,7 @@
 
 
 3. Enable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection#Functions) again.
-    * Reboot Mac into `Recovery Mode by pressing `Command + R`.
+    * Reboot Mac into Recovery Mode by pressing `Command + R`.
     * Click "Utilities" -> "Terminal".
     * type `csrutil enable`
     * Reboot Mac 
