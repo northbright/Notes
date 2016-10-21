@@ -28,8 +28,10 @@ MSFT said that we need to clear the activation information stored on PC and reac
 3. Close all Office apps.
 
 4. Find the path of Office.
-    * Office 2016 32bit
-        `C:\Program Files(x86)\Microsoft Office\Office16`
+
+    * Office 2016 32bit:
+
+    `C:\Program Files(x86)\Microsoft Office\Office16`
 
 5. Run a `cmd` as administrator
     * Type `cd C:\Program Files(x86)\Microsoft Office\Office16`
