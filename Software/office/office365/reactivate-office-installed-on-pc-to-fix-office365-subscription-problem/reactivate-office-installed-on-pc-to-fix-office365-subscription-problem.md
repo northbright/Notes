@@ -57,5 +57,5 @@ MSFT said that we need to clear the activation information stored on PC and reac
 
         ![](images/07.jpg)
 
- 9. Open a Office app(Excel or word...) and reactivate with Office 365 account.
+9. Open a Office app(Excel or word...) and reactivate with Office 365 account.
 
