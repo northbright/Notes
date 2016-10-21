@@ -33,15 +33,18 @@ MSFT said that we need to clear the activation information stored on PC and reac
 
 5. Run a `cmd` as administrator
     * Type `cd C:\Program Files(x86)\Microsoft Office\Office16`
+
     ![](images/04.jpg)
 
 6. View Office Product Key.
     * Type `cscript ospp.vbs /dstatus` to find the last 5 characters of product key.
     * Ex: in this example, it's C7HTD
+
     ![](images/05.jpg)
 
 7. Remove Office Product Key.
     * Type `cscript ospp.vbs /unpkey: C7HTD`
+
     ![](images/06.jpg)
 
 8. Goto "Control Panel" to remove stored credentials referenceing the Office 365.
@@ -49,6 +52,7 @@ MSFT said that we need to clear the activation information stored on PC and reac
     * In the "Windows Credentials and Generic Credentials" section, remove andy stored credentials referencing the Office 365 account(has MicrosoftOffice prefix).
         * Click "Details".
         * Click "Remove from vault".
+
         ![](images/07.jpg)
 
  9. Open a Office app(Excel or word...) and reactivate with Office 365 account.
