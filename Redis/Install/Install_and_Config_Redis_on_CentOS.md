@@ -6,8 +6,10 @@
 1. Install gcc, wget, tcl(for redis make test)  
 `yum install make gcc wget tcl`
 
-2. Download Source Code  
-`wget http://download.redis.io/releases/redis-2.8.19.tar.gz`
+2. Download Source Code
+* Get latest Redis release from <http://redis.io>
+  
+        wget http://download.redis.io/releases/redis-2.8.19.tar.gz
 
 3. Extract Source Code  
 `tar -xzvf redis-2.8.19.tar.gz`
