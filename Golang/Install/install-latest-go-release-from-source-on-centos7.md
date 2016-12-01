@@ -16,6 +16,7 @@
     * Configure `Git`
         * `git config --global user.email "email-for-github"`
         * `git config --global user.name "user name"`
+        * `git config --global color.ui true`
     * New SSH Key and Add Public Key to Github Account
         * `ssh-keygen -t rsa -b 2048`
         * Copy the public key in `~/.ssh/id_rsa.pub` and go to [github SSH settings](https://github.com/settings/ssh) to add new SSH key.
