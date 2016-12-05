@@ -12,6 +12,13 @@
     [Install]
     WantedBy=multi-user.target
 
+#### After XX Service
+* If the service should be started after some service, add this line under `[Uint]`:
+
+        [Unit]
+        Description=my-service 
+        After=redis_6379.service
+
 #### Configure as systemd Daemon Service
 
     // Reload Daemon Services after add my.service
