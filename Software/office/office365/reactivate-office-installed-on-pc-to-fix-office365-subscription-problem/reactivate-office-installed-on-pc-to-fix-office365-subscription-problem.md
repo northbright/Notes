@@ -31,10 +31,10 @@ MSFT said that we need to clear the activation information stored on PC and reac
 
     * Office 2016 32bit:
 
-    `C:\Program Files(x86)\Microsoft Office\Office16`
+    `C:\Program Files (x86)\Microsoft Office\Office16`
 
 5. Run a `cmd` as administrator
-    * Type `cd C:\Program Files(x86)\Microsoft Office\Office16`
+    * Type `cd C:\Program Files (x86)\Microsoft Office\Office16`
 
     ![](images/04.jpg)
 
