@@ -51,7 +51,7 @@ MSFT said that we need to clear the activation information stored on PC and reac
 
 8. Goto "Control Panel" to remove stored credentials referenceing the Office 365.
     * Goto "Control Panel" -> "User Accounts" -> "Credential Manager"
-    * In the "Windows Credentials and Generic Credentials" section, remove andy stored credentials referencing the Office 365 account(has MicrosoftOffice prefix).
+    * In the "Windows Credentials and Generic Credentials" section, remove all stored credentials referencing the Office 365 account(has MicrosoftOffice prefix).
         * Click "Details".
         * Click "Remove from vault".
 
