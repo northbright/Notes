@@ -1,6 +1,6 @@
 # Setup Golang / Redis Dev Env on CentOS
 
-#### CentoS Account Setup
+#### CentOS Account Setup
 * Creare a new user
 
         adduser xx
