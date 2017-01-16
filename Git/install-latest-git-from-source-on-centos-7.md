@@ -30,6 +30,7 @@
 
         git config --global user.name "Your Name"
         git config --global user.email "xx@example.com"
+        git config --global color.ui true
 
 #### References
 * [How To Install Git on a CentOS 6.4 VPS](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-a-centos-6-4-vps)
