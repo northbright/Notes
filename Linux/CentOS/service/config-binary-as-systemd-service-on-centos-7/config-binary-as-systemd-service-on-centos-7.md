@@ -46,3 +46,4 @@
 #### References
 * [CoreOS实践指南（三）：系统服务管家Systemd](http://www.csdn.net/article/2015-01-08/2823477/1)
 * <http://techarena51.com/index.php/how-to-create-an-init-script-on-centos-6/>
+* [systemd分析](http://www.cnblogs.com/cfox/archive/2013/02/01/2888759.html)
