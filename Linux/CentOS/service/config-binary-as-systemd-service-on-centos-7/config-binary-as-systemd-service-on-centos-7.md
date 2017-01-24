@@ -48,3 +48,4 @@
 * <http://techarena51.com/index.php/how-to-create-an-init-script-on-centos-6/>
 * [systemd分析](http://www.cnblogs.com/cfox/archive/2013/02/01/2888759.html)
 * [systemd.service — Service unit configuration](https://www.freedesktop.org/software/systemd/man/systemd.service.html)
+* [The Story Behind ‘init’ and ‘systemd’: Why ‘init’ Needed to be Replaced with ‘systemd’ in Linux](http://www.tecmint.com/systemd-replaces-init-in-linux/)
