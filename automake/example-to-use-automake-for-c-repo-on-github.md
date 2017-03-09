@@ -43,25 +43,24 @@
 
 3. Remove auto-generated files.
 
-    git clean -dfx
+        git clean -dfx
 
 4. Add Our `autogen.sh` to call `autoreconf --install`
 
-    #!/bin/sh
-    echo "Regenerating autotools files"
-    autoreconf --install --force --symlink || exit 1
-
-    echo "Now run ./configure, make, and make install." 
+        #!/bin/sh
+        echo "Regenerating autotools files"
+        autoreconf --install --force --symlink || exit 1
+        echo "Now run ./configure, make, and make install." 
 
 * Run `chmod +x autogen.sh` to make script excutable.
 
 5. Add `.travis.yml` to integrate build check.
 
-    language: c
+        language: c
 
-    compiler: gcc
+        compiler: gcc
 
-    script: ./autogen.sh && ./configure && make
+        script: ./autogen.sh && ./configure && make
 
 6. `git add & git commit` for new files.
 
