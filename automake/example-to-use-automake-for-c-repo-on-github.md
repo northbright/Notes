@@ -41,11 +41,11 @@
 
 * Run `./make` to compile your binary under `src`.
 
-3. Remove auto-generated files.
+#### Remove auto-generated files.
 
         git clean -dfx
 
-4. Add Our `autogen.sh` to call `autoreconf --install`
+#### Add Our `autogen.sh` to call `autoreconf --install`.
 
         #!/bin/sh
         echo "Regenerating autotools files"
@@ -54,7 +54,7 @@
 
 * Run `chmod +x autogen.sh` to make script excutable.
 
-5. Add `.travis.yml` to integrate build check.
+#### Add `.travis.yml` to integrate build check.
 
         language: c
 
@@ -62,7 +62,10 @@
 
         script: ./autogen.sh && ./configure && make
 
-6. `git add & git commit` for new files.
+#### Usage after `git clone`
+* Run `./autogen.sh`
+* Run `./configure`
+* Run `./make`
 
 #### References
 * [A Small Hello World](https://www.gnu.org/software/automake/manual/automake.html#Creating-amhello)
