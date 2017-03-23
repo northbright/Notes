@@ -8,3 +8,4 @@
 
 #### References
 * [Travis sudo is disabled](http://stackoverflow.com/questions/26299552/travis-sudo-is-disabled)
+* [The Build Environment](https://docs.travis-ci.com/user/ci-environment/)
