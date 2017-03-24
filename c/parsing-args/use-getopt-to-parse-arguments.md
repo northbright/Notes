@@ -70,7 +70,7 @@
             printf("%s\n%s\n", usage, example);
         }
 
-        // Get inpout file name.
+        // Get input file name.
         inFile = argv[optind];
 
         printf("input file: %s, sheetId: %d, output file: %s\n", inFile, sheetId, outFile);
