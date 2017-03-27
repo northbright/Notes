@@ -12,7 +12,7 @@
 #### `script`
 
 * The default build command depends on the project language.
-* Default: `script: go test ./...`
+* Default: `go test -v ./...` if there's no `Makefile` for golang.
 
 #### Example [.travis.yml](https://github.com/northbright/go-yuebao/blob/master/.travis.yml)
 
