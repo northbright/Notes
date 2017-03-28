@@ -14,6 +14,8 @@
 
 * Set `--prefix=$HOME` when run `./configure`.
 
+* Replace `sudo make install` with `make install`.
+
 * Set `LD_LIBRARY_PATH`, `CFLAGS`, `LDFLAGS` before run your script if it needs to load dynamic library.
 
 #### Example `.travis.yml` for C Project which Requires libxls
