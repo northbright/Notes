@@ -18,7 +18,7 @@
 
 * Set `LD_LIBRARY_PATH`, `CFLAGS`, `LDFLAGS` before run your script if it needs to load dynamic library.
 
-#### Example `.travis.yml` for C Project which Requires libxls
+#### Example [.travis.yml](https://github.com/northbright/xls2csv/blob/master/.travis.yml) for C Project which Requires [libxls](http://libxls.sourceforge.net/).
 
     language: c
 
@@ -41,7 +41,7 @@
       - cd ../src
       - gcc -o xls2csv *.c -I$HOME/include -L/$HOME/lib -lxlsreader
 
-#### Example `.travis.yml` for [Go](https://golang.org) Project which Requires libxls
+#### Example [.travis.yml](https://github.com/northbright/xls2csv-go/blob/master/.travis.yml) for [Go](https://golang.org) Project which Requires [libxls](http://libxls.sourceforge.net/).
 
     language: go
 
