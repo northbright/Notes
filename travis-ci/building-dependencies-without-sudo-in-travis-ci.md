@@ -43,3 +43,4 @@
 * [How to build library without sudo?](http://www.howtobuildsoftware.com/index.php/how-do/bSGZ/ld-travis-ci-configure-travis-how-to-build-library-without-sudo)
 * [How can I run Haxe 2.10 on Travis-CI (64-bit Ubuntu)?](http://stackoverflow.com/questions/27137351/how-can-i-run-haxe-2-10-on-travis-ci-64-bit-ubuntu)
 * [Environment Variables](https://docs.travis-ci.com/user/environment-variables/)
+* [The Build Environment](https://docs.travis-ci.com/user/ci-environment/)
