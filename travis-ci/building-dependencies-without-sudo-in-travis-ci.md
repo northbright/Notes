@@ -1,7 +1,7 @@
 # Building Dependencies without `sudo` in Travis CI
 
 #### Why
-* Travis-Ci discourages using `sudo`.
+* Travis CI discourages using `sudo`.
   * Container-Based Envionment:
     * No support for `sudo`, `setuid`, `setgid`
 
