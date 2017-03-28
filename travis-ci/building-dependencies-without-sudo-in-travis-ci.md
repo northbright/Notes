@@ -41,6 +41,38 @@
       - cd ../src
       - gcc -o xls2csv *.c -I$HOME/include -L/$HOME/lib -lxlsreader
 
+#### Example `.travis.yml` for [Go](https://golang.org) Project which Requires libxls
+
+    language: go
+
+    go:
+      - 1.3.3
+      - 1.4.2
+      - 1.5
+      - 1.6
+      - 1.7
+      - 1.8
+      - tip
+
+    before_install:
+
+    install:
+      - wget http://downloads.sourceforge.net/libxls/libxls-0.2.0.tar.gz
+      - tar -xzvf libxls-0.2.0.tar.gz
+      - cd libxls-0.2.0
+      - ./configure --prefix=$HOME
+      - make
+      - make install
+      - go get github.com/northbright/pathhelper
+
+    before_script:
+      - export LD_LIBRARY_PATH="$HOME/lib":$LD_LIBRARY_PATH
+
+    script:
+      - cd ../xls2csv
+      - CGO_CFLAGS="-I$HOME/include" CGO_LDFLAGS="-L$HOME/lib -lxlsreader" go test -c && ./xls2csv.test
+
+
 #### References
 * [How to build library without sudo?](http://www.howtobuildsoftware.com/index.php/how-do/bSGZ/ld-travis-ci-configure-travis-how-to-build-library-without-sudo)
 * [How can I run Haxe 2.10 on Travis-CI (64-bit Ubuntu)?](http://stackoverflow.com/questions/27137351/how-can-i-run-haxe-2-10-on-travis-ci-64-bit-ubuntu)
