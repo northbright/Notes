@@ -1,4 +1,4 @@
-# Building Dependencies without `sudo` in Travis-Ci
+# Building Dependencies without `sudo` in Travis CI
 
 #### Why
 * Travis-Ci discourages using `sudo`.
