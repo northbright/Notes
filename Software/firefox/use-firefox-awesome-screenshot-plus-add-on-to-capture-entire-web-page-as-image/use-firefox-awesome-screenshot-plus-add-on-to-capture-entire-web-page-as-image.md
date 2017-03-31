@@ -6,17 +6,17 @@
 
 2. Install "Awesome Screenshot Plus" Add-on.
 
-    ![](images/01.jpg)
-
     * Open Menu and Click "Add-ons".
-    
-    ![](images/02.jpg)
+
+    ![](images/01.jpg)
 
     * Click "Get Add-ons" and Find & Install "Take screenshots with Awesome Screenshot Plus" Add-on.
 
-    ![](images/03.jpg)    
+    ![](images/02.jpg)
 
     * If you can not find it, go to <https://addons.mozilla.org/zh-CN/firefox/addon/screenshot-capture-annotate/> to install it.
+
+    ![](images/03.jpg)    
 
 3. Open Your Page in Firefox.
 
