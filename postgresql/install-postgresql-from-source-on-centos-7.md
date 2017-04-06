@@ -105,4 +105,5 @@
 
 ## References
 * [Manuals](https://www.postgresql.org/docs/manuals/)
+* [readline, library, not found and so on](https://www.postgresql.org/message-id/19715894.1058735473157.JavaMail.root@moeve)
 
