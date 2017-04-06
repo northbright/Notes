@@ -20,8 +20,10 @@
         // Select One Release Tag and Checkout Source Code. Ex: "REL9_6_2".
         git checkout -b 9.6.2 REL9_6_2
 
-4. Build and Install
+4. Configure and Build
 
+        ./configure --with-systemd
+        make clean
         make
         sudo make install
 
