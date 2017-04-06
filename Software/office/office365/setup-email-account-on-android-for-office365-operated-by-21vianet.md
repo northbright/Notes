@@ -5,6 +5,8 @@
 * Select "Exchange"
 * Input Email Address and Password
 * Exchange Server: `partner.outlook.cn`
+* Encyption Method: SSL/TLS(Accept ALL Certs).
+* Port: 443
 
 -----------------------------------------------
 
@@ -15,3 +17,5 @@
 * 选择 "Exchange" 类型(有的手机显示"公司",比如华为的手机)
 * 输入Email和密码
 * Exchange Server(服务器)输入: `partner.outlook.cn`
+* 加密方式: SSL/TLS(接受所有证书).
+* 端口: 443
