@@ -4,7 +4,7 @@
 
 1. Install Requirements of PostgreSQL.
 
-        sudo yum install readline readline-devel systemd-devel
+        sudo yum install readline-devel systemd-devel
 
 2. Clone Repository of PostgreSQL.
 
