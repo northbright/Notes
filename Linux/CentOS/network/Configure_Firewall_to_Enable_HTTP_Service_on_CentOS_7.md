@@ -4,6 +4,19 @@
 CentOS 7 runs [FirewallD](https://fedoraproject.org/wiki/FirewallD).  
 It uses `firewall-cmd` to config firewall rules. 
 
+#### Check anc Configure `firewalld` Service
+
+    // Check
+    systemctl is-enabled firewalld
+    
+    // Enable if disable
+    sudo systemctl enable firewalld
+
+    // Start and Get Status
+    sudo systemctl start firewalld
+    sudo systemctl status firewalld
+
+
 #### Add HTTP Service with default port:80  
 
 * Add Rule:  
