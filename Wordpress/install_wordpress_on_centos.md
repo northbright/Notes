@@ -184,7 +184,7 @@
             ftp / ssh / http打上勾
 
     * Centos 7  
-      [Configure Firewall to Enable HTTP Service on CentOS 7](https://github.com/northbright/Notes/blob/master/Linux/CentOS/Configure_Firewall_to_Enable_HTTP_Service_on_CentOS_7.md)
+      [Configure Firewall to Enable HTTP Service on CentOS 7](https://github.com/northbright/Notes/blob/master/Linux/CentOS/network/Configure_Firewall_to_Enable_HTTP_Service_on_CentOS_7.md)
 
 11. selinux设置
 
