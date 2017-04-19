@@ -1,5 +1,4 @@
-
-# Exclude Specified File Types in All Directories in `.gitignore`
+# Include Specified File Types in All Directories in `.gitignore`
 
     # Ignore all
     *
