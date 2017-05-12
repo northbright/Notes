@@ -18,3 +18,4 @@
 
 #### References
 * [How can I see the request headers made by curl when sending a request to the server?](http://stackoverflow.com/questions/866946/how-can-i-see-the-request-headers-made-by-curl-when-sending-a-request-to-the-ser)
+* [How can I remove default headers that curl sends](http://stackoverflow.com/questions/31293181/how-can-i-remove-default-headers-that-curl-sends)
