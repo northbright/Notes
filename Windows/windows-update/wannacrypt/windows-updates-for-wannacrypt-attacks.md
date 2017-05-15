@@ -1,7 +1,8 @@
 # Windows Updates for WannaCrypt Attacks
 
 #### Windows Updates Links
-* [Windows XP SP3](www.catalog.update.microsoft.com/Search.aspx?q=KB4012598) [Local Copy](local-copy/WindowsXP-SP3-x86.zip)
+* [Windows XP SP3](www.catalog.update.microsoft.com/Search.aspx?q=KB4012598)
+  * [Local Copy](local-copy/WindowsXP-SP3-x86.zip)
 * [Windows 7 SP1](http://www.catalog.update.microsoft.com/search.aspx?q=4012215)
 
 #### References
