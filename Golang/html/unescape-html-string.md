@@ -17,7 +17,7 @@
 
     func main() {
         	str := html.UnescapeString(`&#36716;&#23398;&#21040;&quot;&#20108;&#24180;&#32423;10&#29677;&quot;`)
-	    fmt.Printf(str)
+     	        fmt.Printf(str)
     }
 
 
