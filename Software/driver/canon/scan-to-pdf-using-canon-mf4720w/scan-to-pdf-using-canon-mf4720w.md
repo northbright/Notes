@@ -22,7 +22,11 @@
 
       ![](img/03.png)
 
-5. Click "Start" Button
+5. Make Sure Canon MF4720w is Ready for Remote Scanning.
+  * Wake up Printer if it's under power safe mode.
+  * Press "Copy/Scan" Button and Select "Remote Scanning."
+
+6. Click "Start" Button
 
 ------------------------------------------------
 
@@ -50,5 +54,9 @@
 
       ![](img/03.png)
 
-5. 点击 "开始"
+5. 确认Cannon MF4720w进入等待远程扫描状态.
+  * 如果打印机进入睡眠模式，唤醒它.
+  * 按下"复印/扫描"按钮，选择"远程扫描"
+
+6. 点击 "开始"
 
