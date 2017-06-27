@@ -1,6 +1,9 @@
 # Use Compass to Explore mongoDB of Unifi
 
 #### Problem
+* Use Unifi API to authorize guest
+    * `/api/s/$site/cmd/stamgr`
+    * the site name is **NOT** the one in Unifi GUI.
 * Need to know the names of sites created in Unifi
 
 #### Solution
