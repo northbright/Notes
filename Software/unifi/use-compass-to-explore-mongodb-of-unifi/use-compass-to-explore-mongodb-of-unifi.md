@@ -16,8 +16,8 @@
 * Click "Connect".
 * Select "ace" db -> "site" on the left side bar.
 * Select "DOCUMENTS" tab to explore all sites.
-    * `name` is the real name can used by Unifi APIs.
-    * `desc` is the description of site that is the "site name" can be set in Unifi GUI.
+    * `name` is the **REAL** name can used by Unifi APIs(`$site`).
+    * `desc` is **ONLY** the description of site that is the "site name" can be set in Unifi GUI.
 
     ![](img/02.png)
 
