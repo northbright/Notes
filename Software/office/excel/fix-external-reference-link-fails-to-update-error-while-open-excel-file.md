@@ -13,7 +13,7 @@
 #### References
 * [How to Find External Links or References in Excel](http://www.exceltrick.com/how_to/how-to-find-external-links-or-references-in-excel/)
 
-=====================================
+----------------------------
 
 # 修复打开Excel文件时的"外部引用更新失败"错误
 
