@@ -123,5 +123,5 @@ func main() {
 #### References
 * [NGINX Reverse Proxy return 502 bad gateway when proxied server is down](https://stackoverflow.com/questions/33206292/nginx-reverse-proxy-return-502-bad-gateway-when-proxied-server-is-down)
 * [NGINX: SELinux Changes when Upgrading to RHEL 6.6 / CentOS 6.6](https://www.nginx.com/blog/nginx-se-linux-changes-upgrading-rhel-6-6/)
-
+* [Using Proxy server to switch between Golang Applications](https://stackoverflow.com/questions/43327793/using-proxy-server-to-switch-between-golang-applications)
 
