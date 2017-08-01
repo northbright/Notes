@@ -1,4 +1,3 @@
-
 # Use switch with Multiple Values in Each case
 
 There is no automatic fall through, but cases can be presented in comma-separated lists.
@@ -37,3 +36,4 @@ There is no automatic fall through, but cases can be presented in comma-separate
 #### References
 * <https://golang.org/doc/effective_go.html#switch>
 * <http://www.dotnetperls.com/switch-go>
+* [switch](https://github.com/golang/go/wiki/Switch#multiple-cases)
