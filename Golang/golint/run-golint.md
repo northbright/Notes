@@ -14,8 +14,23 @@
     export PATH=$PATH:/home/xx/projects-go/src/github.com/golang/lint/golint
 
 #### Run golint
-* `golint DIR_NAME / PACKAGE_NAME`
-* `golint DIR_NAME / PACKAG_NAME/...` to recurse into dirs.
+* `golint DIR`
+  
+        // e.g.
+        cd $GOPATH/src/github.com/xx
+        golint my-project   
+
+* `golint PACKAGE`
+
+        // e.g.
+        golint github.com/xx/my-project
+
+* `golint XX/...` to recurse into dirs.
+
+        // e.g.
+        cd $GOPATH/src/github.com/xx
+        golint my-project/...
+        golint github.com/xx/another-project/...
 
 #### References
 * <https://github.com/golang/lint>
