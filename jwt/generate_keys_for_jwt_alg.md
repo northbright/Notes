@@ -2,7 +2,7 @@
 
 
 #### `"HS256"`,`"HS384"`, `"HS512"`(HMAC using SHA-256 / 384 / 512 hash alg):
-* It's a symmetric key alogrithm.
+* It's a symmetric key algorithm.
 * Signing key is the same as verifying key.
 * Key Generation:
   * It's ok to use random bytes as the secret key.
