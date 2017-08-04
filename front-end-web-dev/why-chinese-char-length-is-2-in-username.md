@@ -10,3 +10,4 @@
 
 #### References
 * [为什么淘宝和京东会员注册的时候用户名一个汉字算两个字符，有什么考虑吗？](https://www.zhihu.com/question/22295828/answer/82576462)
+* <https://github.com/northbright/validate>
