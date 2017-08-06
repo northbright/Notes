@@ -11,8 +11,8 @@
 * Play the video on the page.
 * Click the "Size" column to sort URLs by desc order to find the video URL resource(the largest in most case).
 * Right click on this row and select "Copy as cURL".
-  * Select "Copy URL" and paste it to download the video may fail for some site because the HTTP header data is missing which will be check by the server side.
-  * "Copy as cURL" will copy not only the URL but also HTTP header info to reproduce the HTTP Request).
+  * Select "Copy URL" and paste it to download the video may fail for some site because the HTTP header data missing. The server will reject the HTTP request if HTTP header data are incorrect.
+  * "Copy as cURL" will copy not only the URL but also HTTP header info to reproduce the HTTP Request.
 * Open a shell and paste the [cURL](https://curl.haxx.se/) command and append `> ~/xx.mp4` to download the video file.
 
         // For example
