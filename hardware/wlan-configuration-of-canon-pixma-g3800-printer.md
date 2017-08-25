@@ -26,6 +26,9 @@
     3. It'll scan all printers.
     4. Select the printer and add it.
 
+## Manual
+* [G3800 Guide 2](http://gdlp01.c-wss.com/gds/7/0300021287/01/G3800_GS2_SC-1_V1.pdf)
+
 --------------------------------------
 
 # 佳能PIXMA G3800打印机WLAN设置
@@ -55,3 +58,6 @@
     2. 确认PC和WiFi路由器在同一个网络。
     3. 驱动程序会扫描所有网络中的打印机。
     4. 选中打印机，添加。
+
+## 手册
+* [G3800快速入门指南2](http://gdlp01.c-wss.com/gds/7/0300021287/01/G3800_GS2_SC-1_V1.pdf)
