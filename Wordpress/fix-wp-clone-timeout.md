@@ -11,8 +11,8 @@
 
         sudo vi /etc/php.ini
 
-        // XXX is seconds
-        max_execution_time XXX
+        // Unit is seconds
+        max_execution_time = 900
 
 #### References
 * [How to increase apache timeout directive in .htaccess?](http://stackoverflow.com/questions/9629566/how-to-increase-apache-timeout-directive-in-htaccess)
