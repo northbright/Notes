@@ -71,3 +71,27 @@ Use VLAN based on LAN.
     * Click "Create" to create a new DHCP pool.
       * Name: "VLAN3"
       * DHCP pool IP range: `192.168.3.2` ~ `192.168.3.254`.
+
+* Firewall Settings
+  * Goto "Security" -> "Firewall" -> "Outgoing Policy" Tab.
+  * Add a new firewall:
+    * Source Interface: `VLAN2`.
+    * Source IP: `IP range`: `192.168.2.2 - 192.168.2.254`
+    * Destination IP range: `192.168.1.2 - 192.168.1.254`
+    * Description: `Deny access from VLAN2 -> VLAN1`
+  * Add a new firewall:
+    * Source Interface: `VLAN2`.
+    * Source IP: `IP range`: `192.168.2.2 - 192.168.2.254`
+    * Destination IP range: `192.168.3.2 - 192.168.3.254`
+    * Description: `Deny access from VLAN2 -> VLAN3`
+
+  * Add a new firewall:
+    * Source Interface: `VLAN3`.
+    * Source IP: `IP range`: `192.168.3.2 - 192.168.3.254`
+    * Destination IP range: `192.168.1.2 - 192.168.1.254`
+    * Description: `Deny access from VLAN3 -> VLAN1`
+  * Add a new firewall:
+    * Source Interface: `VLAN3`.
+    * Source IP: `IP range`: `192.168.3.2 - 192.168.3.254`
+    * Destination IP range: `192.168.2.2 - 192.168.2.254`
+    * Description: `Deny access from VLAN3 -> VLAN2`
