@@ -56,10 +56,16 @@
 
 #### Implement and Run Golang HTTP Servers
 * [Install Latest Go Release from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/Golang/Install/install-latest-go-release-from-source-on-centos7.md)
-* Impement server
-* `mkdir $GOPATH/server`
-* `cd $GOPATH/server`
-* `vi main.go` and copy below code:
+* Impement server based on [gin](https://github.com/gin-gonic/gin)
+
+    * Install [gin](https://github.com/gin-gonic/gin):
+
+      `go get -v -u github.com/gin-gonic/gin`
+
+    * `mkdir $GOPATH/server`
+    * `cd $GOPATH/server`
+    * `vi main.go` and copy below code:
+
 ```
 package main
 
