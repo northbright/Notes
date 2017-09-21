@@ -18,3 +18,4 @@
 
 #### References
 * [迅雷极速版吧](https://tieba.baidu.com/f?kw=%E8%BF%85%E9%9B%B7%E6%9E%81%E9%80%9F%E7%89%88&ie=utf-8)
+* [checksum-calc](https://github.com/northbright/checksum-calc)
