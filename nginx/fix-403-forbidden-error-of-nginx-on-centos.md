@@ -14,12 +14,19 @@
       * `sudo cp /usr/share/nginx/html /var/www/ -r`
 
     * Update `/etc/nginx/nginx.conf`:
-      
+
+              ......
+              # Default user is nginx
+              user nginx;
+              ......
+
               server {
                   ......
                   #root         /usr/share/nginx/html;
                   root         /var/www/html;
                   ......
+
+* Nginx service is run as `nginx` user(default setting).
 
 #### Root Cause
 * SELinux Policies.
