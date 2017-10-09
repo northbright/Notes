@@ -116,7 +116,7 @@ func main() {
     * `sudo yum install policycoreutils-python`
 * Use `audit2allow` to generate a set of policy rules that would allow the required actions for Nginx.
 
-    * `grep nginx /var/log/audit/audit.log | audit2allow -M nginx`
+    * `sudo cat /var/log/audit/audit.log | grep nginx | grep denied | audit2allow -M nginx`
     * `semodule -i nginx.pp`
 
 #### Test Again
