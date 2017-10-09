@@ -42,28 +42,28 @@
 
 * Generate and apply a module package with dontaudit rules for Nginx.
  
-1. Check audit.log:
+  1. Check audit.log:
     
-            sudo cat /var/log/audit/audit.log | grep nginx | grep denied
+              sudo cat /var/log/audit/audit.log | grep nginx | grep denied
     
-            // You may find messages like:
-            type=AVC msg=audit(1506398841.964:345): avc:  denied  { getattr } for  pid=20510 comm="nginx" path="/var/www/html/index.html" dev="dm-0" ino=635249 scontext=system_u:system_r:httpd_t:s0 tcontext=unconfined_u:object_r:var_t:s0 tclass=file
+              // You may find messages like:
+              type=AVC msg=audit(1506398841.964:345): avc:  denied  { getattr } for  pid=20510 comm="nginx" path="/var/www/html/index.html" dev="dm-0" ino=635249 scontext=system_u:system_r:httpd_t:s0 tcontext=unconfined_u:object_r:var_t:s0 tclass=file
 
-2. Generate a module package:
+  2. Generate a module package:
     
-            sudo cat /var/log/audit/audit.log | grep nginx | grep denied | sudo audit2allow -M nginx
+              sudo cat /var/log/audit/audit.log | grep nginx | grep denied | sudo audit2allow -M nginx
     
-3. Apply the module package:
+  3. Apply the module package:
     
-            sudo semodule -i nginx.pp
+              sudo semodule -i nginx.pp
 
-4. Test if it works
+  4. Test if it works
 
-            curl localhost
+              curl localhost
 
-5. If it still occurs 403 forbiddden error, **Repeat step 1 - 4** until it return 200 OK.
-    * You may find a new error message after run `sudo cat /var/log/audit/audit.log | grep nginx | grep denied`
-    * It may need repeat **3 times** on CentOS 7 1708 because there're **3 different SELinux Policies**.
+  5. If it still occurs 403 forbiddden error, **Repeat step 1 - 4** until it return 200 OK.
+      * You may find a new error message after run `sudo cat /var/log/audit/audit.log | grep nginx | grep denied`
+      * It may need repeat **3 times** on CentOS 7 1708 because there're **3 different SELinux Policies**.
 
 
 #### References
