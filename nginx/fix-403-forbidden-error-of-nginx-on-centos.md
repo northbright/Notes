@@ -6,8 +6,8 @@
 ##### Background
 * CentOS 7 1708 minimal.
 * Nginx is installed via yum.
-* It works well by default(default Nginx home).
-* It occurs occurs 403(Forbidden) error if we just move default Nginx home from `/usr/share/nginx/html` to `/var/www/html`.
+* It works well by default.
+* It occurs occurs 403(Forbidden) error if we just move default server root from `/usr/share/nginx/html` to `/var/www/html`.
 
     * Copy `/usr/share/nginx/html` to `/var/www/html`:
       * `sudo mkdir /var/www`
