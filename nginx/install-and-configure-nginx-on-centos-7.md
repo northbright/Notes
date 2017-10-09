@@ -4,6 +4,11 @@
 
     sudo yum install -y nginx
 
+#### Enable and Start Nginx Service
+
+    sudo systemctl enable nginx
+    sudo systemctl start nginx
+
 #### Configure Firewall for Nginx
 
     // default HTTP service on port 80:
