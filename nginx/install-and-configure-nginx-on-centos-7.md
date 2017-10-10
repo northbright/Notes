@@ -30,7 +30,7 @@
 * Configuration File
   * `/etc/nginx/nginx.conf`
 
-*  Nginx User
+* Nginx User
   * Nginx worker process is run as the `user` defined in `/etc/nginx/nginx.conf`:
 
           # Default user is nginx.
