@@ -3,7 +3,7 @@
 #### Problem
 * It occurs 403(Forbidden) error when access Nginx on CentOS 7.
 
-##### Background
+##### Details
 * CentOS 7 1708 minimal.
 * Nginx is installed via yum.
 * It works well by default.
