@@ -9,22 +9,40 @@
 * It works well by default.
 * It occurs occurs 403(Forbidden) error if we just move default server root from `/usr/share/nginx/html` to `/var/www/html`.
 
-    * Copy `/usr/share/nginx/html` to `/var/www/html`:
-      * `sudo mkdir /var/www`
-      * `sudo cp /usr/share/nginx/html /var/www/ -r`
+  * Copy `/usr/share/nginx/html` to `/var/www/html`:
+    * `sudo mkdir /var/www`
+    * `sudo cp /usr/share/nginx/html /var/www/ -r`
 
-    * Update `/etc/nginx/nginx.conf`:
+  * Update `/etc/nginx/nginx.conf`:
 
-              ......
-              # Default user is nginx
-              user nginx;
-              ......
+            ......
+            # Default user is nginx
+            user nginx;
+            ......
 
-              server {
-                  ......
-                  #root         /usr/share/nginx/html;
-                  root         /var/www/html;
-                  ......
+            server {
+                ......
+                #root         /usr/share/nginx/html;
+                root         /var/www/html;
+                ......
+
+  * Restart Nginx
+    
+            sudo systemctl restart nginx
+
+  * Test
+
+            curl localhost
+
+            // Output:
+            <center><h1>403 Forbidden</h1></center>
+
+  * Check error log:
+
+            sudo cat /var/log/nginx/error.log
+
+            // Output:
+            [error] 20491#0: *2 open() "/var/www/html/index.html" failed (13: Permission denied), client: ::1, server: _, request: "GET / HTTP/1.1", host: "localhost"
 
 * Nginx service is run as `nginx` user(default setting).
 
