@@ -63,4 +63,4 @@
           sudo chmod o+rx /home/xx
 
 * Configure SELinux
-  * See [Fix 403 Forbidden Error of Nginx on CentOS 7](https://github.com/northbright/Notes/blob/master/nginx/fix-403-forbidden-error-of-nginx-on-centos.md)
+  * See [Fix 403 Forbidden Error of Nginx on CentOS 7](https://github.com/northbright/Notes/blob/master/nginx/configure-selinux-to-fix-403-forbidden-error-of-nginx-on-centos.md)

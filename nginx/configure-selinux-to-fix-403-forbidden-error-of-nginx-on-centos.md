@@ -1,4 +1,4 @@
-# Fix 403 Forbidden Error of Nginx on CentOS 7
+# Configure SELinux to Fix 403 Forbidden Error of Nginx on CentOS 7
 
 #### Problem
 * It occurs 403(Forbidden) error when access Nginx on CentOS 7.
