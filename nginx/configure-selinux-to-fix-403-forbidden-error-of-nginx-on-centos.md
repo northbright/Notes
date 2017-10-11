@@ -81,7 +81,7 @@
 
   5. If it still occurs 403 forbiddden error, **Repeat step 1 - 4** until it return 200 OK.
       * You may find a new error message after run `sudo cat /var/log/audit/audit.log | grep nginx | grep denied`
-      * It may need repeat **3 times** for `/var/www/html` on CentOS 7 1708 because there're **3 different SELinux Policies**.
+      * It may need repeat **N times** because there're **N different SELinux Policies**(e.g. 3 times for `/var/www/html`).
 
 #### References
 * [8.3.8. Allowing Access: audit2allow](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Security-Enhanced_Linux/sect-Security-Enhanced_Linux-Fixing_Problems-Allowing_Access_audit2allow.html)
