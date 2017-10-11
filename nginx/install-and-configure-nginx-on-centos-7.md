@@ -48,7 +48,7 @@
           }
 
 * Default server root is `/usr/share/nginx/html`
-* **All directories(include TOP dir)** of customized server root path should have `rx` attributes for Nginx user or it'll occur 403 forbidden error:
+* **All directories(include TOP dir)** of customized server root path should have `rx` permissions for Nginx user or it'll occur 403 forbidden error:
 
           sudo cat /var/log/nginx/error.log
 
