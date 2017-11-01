@@ -18,15 +18,13 @@
 
 * `vi /var/www/mysite/wordpress/wp-content/uploads/reduce-img.sh`
 
-      ```
-      #!/bin/sh 
-      echo "resize image who is bigger than 200k -> 200k";
-      for i in `find . -size +200k`
-      do
-        convert $i -define jpeg:extent=200kb $i;
-        echo "resize image $i to 200kb";
-      done
-      ```
+        #!/bin/sh 
+        echo "resize image who is bigger than 200k -> 200k";
+        for i in `find . -size +200k`
+        do
+          convert $i -define jpeg:extent=200kb $i;
+          echo "resize image $i to 200kb";
+        done
 
 *  `chmod +x `
 
