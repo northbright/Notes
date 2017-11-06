@@ -1,4 +1,4 @@
-# Golang String Compare Internals
+# Golang String Compare Internals(Go 1.9)
 
 #### Part I. Code in Go Comipler
 * Function [walkexpr()](https://github.com/golang/go/blob/release-branch.go1.9/src/cmd/compile/internal/gc/walk.go#L459) in [go/src/cmd/compile/internal/gc/walk.go](https://github.com/golang/go/blob/release-branch.go1.9/src/cmd/compile/internal/gc/walk.go), which walks go expression.
