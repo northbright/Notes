@@ -20,7 +20,7 @@
 * [Code Block](https://github.com/golang/go/blob/release-branch.go1.9/src/cmd/compile/internal/gc/walk.go#L1367):
 
    ```
-if Op(n.Etype) == OEQ || Op(n.Etype) == ONE {
+   		if Op(n.Etype) == OEQ || Op(n.Etype) == ONE {
 			// prepare for rewrite below
 			n.Left = cheapexpr(n.Left, init)
 			n.Right = cheapexpr(n.Right, init)
@@ -46,14 +46,15 @@ if Op(n.Etype) == OEQ || Op(n.Etype) == ONE {
 			r = mkcall("cmpstring", types.Types[TINT], init, conv(n.Left, types.Types[TSTRING]), conv(n.Right, types.Types[TSTRING]))
 			// TODO(marvin): Fix Node.EType type union.
 			r = nod(Op(n.Etype), r, nodintconst(0))
-}
-                
+		}
+
    ```
    
 #### Part II - Code in Runtime
 For x64: [go/src/runtime/asm_amd64.s ](https://github.com/golang/go/blob/release-branch.go1.9/src/runtime/asm_amd64.s)
 
 *  [`eqstring`](https://github.com/golang/go/blob/release-branch.go1.9/src/runtime/asm_amd64.s#L1351):
+
    ```
    // eqstring tests whether two strings are equal.
    // The compiler guarantees that strings passed
@@ -61,19 +62,20 @@ For x64: [go/src/runtime/asm_amd64.s ](https://github.com/golang/go/blob/release
    // See runtime_test.go:eqstring_generic for
    // equivalent Go code.
    TEXT runtime·eqstring(SB),NOSPLIT,$0-33
-	MOVQ	s1_base+0(FP), SI
-	MOVQ	s2_base+16(FP), DI
-	CMPQ	SI, DI
-	JEQ	eq
-	MOVQ	s1_len+8(FP), BX
-	LEAQ	ret+32(FP), AX
-	JMP	runtime·memeqbody(SB)
-eq:
-	MOVB	$1, ret+32(FP)
-	RET
+	   MOVQ	s1_base+0(FP), SI
+	   MOVQ	s2_base+16(FP), DI
+	   CMPQ	SI, DI
+	   JEQ	eq
+	   MOVQ	s1_len+8(FP), BX
+	   LEAQ	ret+32(FP), AX
+	   JMP	runtime·memeqbody(SB)
+   eq:
+	   MOVB	$1, ret+32(FP)
+	   RET
    ```
 
 * [`cmpstring`](https://github.com/golang/go/blob/release-branch.go1.9/src/runtime/asm_amd64.s#L1484): 
+  
    ```
    TEXT runtime·cmpstring(SB),NOSPLIT,$0-40
 	MOVQ	s1_base+0(FP), SI
