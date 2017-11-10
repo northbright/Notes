@@ -1,4 +1,4 @@
-# url.Values(package [net/url](https://godoc.org/net/url)) should be initialized before use
+# url.Values(package [net/url](https://godoc.org/net/url)) Should be Initialized Before Use
 
 [url.Values](https://godoc.org/net/url#Values) is a map:
 
