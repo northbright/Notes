@@ -86,7 +86,7 @@ For x64: [go/src/runtime/asm_amd64.s ](https://github.com/golang/go/blob/release
 	JMP	runtime·cmpbody(SB)
    ```
 
-You can see `runtime·memeqbody` and `runtime·cmpbody` will be called.
+You can see [`runtime·memeqbody`](https://github.com/golang/go/blob/release-branch.go1.9/src/runtime/asm_amd64.s#L1367) and [`runtime·cmpbody`](https://github.com/golang/go/blob/release-branch.go1.9/src/runtime/asm_amd64.s#L1506) will be called.
 
 #### References
 * [Golang Internals, Part 1: Main Concepts and Project Structure](https://blog.altoros.com/golang-part-1-main-concepts-and-project-structure.html)
