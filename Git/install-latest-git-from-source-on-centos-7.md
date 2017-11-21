@@ -15,7 +15,12 @@
     * `sudo yum install libcurl-devel`
 
 4. Get source of git
-    * `wget -O git.zip https://github.com/git/git/archive/master.zip`
+
+           git clone git@github.com:git/git.git
+           // List remote tags
+           git tag -l
+           // choose the tag of latest release(e.g. v2.15.0)
+           git checkout -b v2.15.0 v2.15.0
 
 5. Install git
 
