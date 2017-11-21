@@ -6,7 +6,11 @@
 
 #### Steps
 1. Install "Development Tools"
-    * `sudo yum groupinstall "Development Tools"`
+
+        sudo yum groupinstall "Development Tools"
+
+* It'll install tools to build Git(e.g. autoconf, gcc, make...)
+* It'll also install an old version git(we need to run `git clone` for [git repo](https://github.com/git/git/)
 
 2. Install Extra Dependencies
     * `sudo yum install zlib-devel perl-ExtUtils-MakeMaker asciidoc xmlto`
