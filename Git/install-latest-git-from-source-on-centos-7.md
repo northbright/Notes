@@ -22,10 +22,8 @@
            // choose the tag of latest release(e.g. v2.15.0)
            git checkout -b v2.15.0 v2.15.0
 
-5. Install git
+5. Make git
 
-        unzip git.zip
-        cd git-master
         make configure
         ./configure --prefix=/usr/local
         make all doc
