@@ -29,11 +29,17 @@
         make all doc
         sudo make install install-doc install-html
 
-5 Setup git
+6. Setup git
 
         git config --global user.name "Your Name"
         git config --global user.email "xx@example.com"
         git config --global color.ui true
+
+7. Set VISUAL and EDITOR env variables
+  
+        // Ex: /etc/profile or ~/.bashrc
+        export VISUAL=vim
+        export EDITOR="$VISUAL"
 
 #### References
 * [How To Install Git on a CentOS 6.4 VPS](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-a-centos-6-4-vps)
