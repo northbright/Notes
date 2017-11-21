@@ -14,9 +14,19 @@
 2. Make sure [Git](https://git-scm.com/) is installed.
     * [Install Latest Git from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/Git/install-latest-git-from-source-on-centos-7.md)
     * Configure `Git`
-        * `git config --global user.email "email-for-github"`
-        * `git config --global user.name "user name"`
-        * `git config --global color.ui true`
+
+            // Set email and user name
+            git config --global user.email "email-for-github"
+            git config --global user.name "user name"
+
+            // Set color.ui
+            git config --global color.ui true
+
+            // Set VISUAL and EDITOR env variables
+            // Ex: /etc/profile or ~/.bashrc
+            export VISUAL=vim
+            export EDITOR="$VISUAL"
+
     * New SSH Key and Add Public Key to Github Account
         * `ssh-keygen -t rsa -b 2048`
         * Copy the public key in `~/.ssh/id_rsa.pub` and go to [github SSH settings](https://github.com/settings/ssh) to add new SSH key.
