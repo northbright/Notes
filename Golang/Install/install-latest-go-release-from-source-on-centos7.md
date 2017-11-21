@@ -43,7 +43,9 @@
   * `./all.bash`
 
 5. Copy `~/go` to `$GOROOT_BOOTSTRAP`(It's `~/go1.4` by default)
-  * `cp ~/go ~/go1.4 -rf`
+
+    mkdir ~/go1.4
+    cp ~/go/* ~/go1.4/* -rf
 
 6.  Build latest Go release from source
   * `cd ~/go`
