@@ -6,7 +6,7 @@
 
 #### Set `vim` for `git` and other programs
 
-    // Set VISUAL and EDITOR env variabls
+    // Set VISUAL and EDITOR env variables
     // Ex: /etc/profile or ~/.bashrc
     export VISUAL=vim
     export EDITOR="$VISUAL"
