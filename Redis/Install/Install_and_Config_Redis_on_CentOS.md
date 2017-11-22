@@ -1,5 +1,4 @@
-
-# Install and Configure Redis-2.8.19 on CentOS 7
+# Install and Configure Redis on CentOS 7
 
 #### Install Redis
 
@@ -9,13 +8,13 @@
 2. Download Source Code
 * Get latest Redis release from <http://redis.io>
   
-        wget http://download.redis.io/releases/redis-2.8.19.tar.gz
+        wget http://download.redis.io/releases/redis-4.0.2.tar.gz
 
 3. Extract Source Code  
-`tar -xzvf redis-2.8.19.tar.gz`
+`tar -xzvf redis-4.0.2.tar.gz`
 
 4. Make and Make Install
-  * `cd redis-2.8.19`
+  * `cd redis-4.0.2`
   * `make`
   * `make test`
   * `sudo make install`  
@@ -34,17 +33,17 @@
     * Redis instance is single threaded
     * Run multi Redis instances - <http://redis.io/topics/partitioning>
 
-2. Copy `redis_init_script` to `/etc/rc.d/init.d/` and Rename it to `redis_<port>`  
+2. Copy `./utils/redis_init_script` to `/etc/rc.d/init.d/` and Rename it to `redis_<port>`  
 
     Ex: We want to run 2 Redis instances on port 6379 and 6380
-    * `cd ~/redis-2.8.19`
-    * `sudo cp ~/redis-2.8.19/utils/redis/redis_init_script /etc/rc.d/init.d/redis_6379`
-    * `sudo cp ~/redis-2.8.19/utils/resis/redis_init_script /etc/rc.d/init.d/redis_6380`
+    * `cd ~/redis-4.0.2`
+    * `sudo cp utils/redis_init_script /etc/rc.d/init.d/redis_6379`
+    * `sudo cp utils/redis_init_script /etc/rc.d/init.d/redis_6380`
 
 3. Modify each `/etc/rc.d/init.d/redis_<port>`
 
     * insert `# chkconfig: 2345 80 90` at 2nd line
-      
+
             #!/bin/sh
             # chkconfig: 2345 80 90
             # Simple Redis init.d script conceived to work on Linux systems
@@ -58,8 +57,8 @@
 
     * `CONF="/etc/redis/${REDISPORT}.conf"` means you need to copy redis.conf to `/etc/redis/` and rename it to `<port>.conf`
         * `sudo mkdir /etc/redis`
-        * `sudo cp ~/redis-2.8.19/redis.conf /etc/redis/6379.conf`
-        * `sudo cp ~/redis-2.8.19/redis.conf /etc/redis/6380.conf`
+        * `sudo cp ~/redis-4.0.2/redis.conf /etc/redis/6379.conf`
+        * `sudo cp ~/redis-4.0.2/redis.conf /etc/redis/6380.conf`
 
 4. Modify `/etc/redis/<port>.conf`
     * set `daemonize yes`
@@ -115,26 +114,27 @@
 7. Configure Redis Services
   * Method A - `systemd`
 
-          sudo systemctl enable redis_6379.service
-          sudo systemctl enable redis_6380.service
+          sudo systemctl enable redis_6379
+          sudo systemctl enable redis_6380
+
+          sudo systemctl start redis_6379
+          sudo systemctl start redis_6380
 
   * or Method B - `chkconfig`
   
           sudo chkconfig --add redis_6379
           sudo chkconfig --add redis_6380
 
-8. Reboot 
-
-9. Check Redis Service Status
+8. Check Redis Service Status
 
          systemctl --all | grep redis
 
-10. Stop / Start Redis Service Manually
+9. Stop / Start Redis Service Manually
 
          sudo systemctl start redis_6379.service
          sudo systemctl stop redis_6379.service
 
-11. Warning  
+10. Warning  
    If configure master-slave replication and master is set to NOT write to disk(comment all `save` lines),  
    make sure not configure redis as service: 
      * redis-server will restart on server restart(maybe server crashed, has to reboot it).
