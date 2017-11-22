@@ -18,14 +18,7 @@
   * `make`
   * `make test`
   * `sudo make install`  
-    This will copy following binaries to `/usr/local/bin`:  
-        * redis-benchmark
-        * redis-check-aof
-        * redis-check-dump
-        * redis-cli
-        * redis-sentinel
-        * redis-server
-
+    This will copy redis binaries to `/usr/local/bin`:  
 
 #### Config Redis as a Service
 
