@@ -40,7 +40,7 @@
   * `cd go`
   * `git checkout -b 1.4.3 go1.4.3`
   * `cd src`
-  * `./all.bash`
+  * `./make.bash`
 
 5. Copy `~/go` to `$GOROOT_BOOTSTRAP`(It's `~/go1.4` by default)
 
