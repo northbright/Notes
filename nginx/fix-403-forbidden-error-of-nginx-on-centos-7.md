@@ -5,15 +5,24 @@
 2. SELinux Polices.
 
 #### How to determine the root cause?
-Check if **"open()"** exists in the error messages in `/var/log/nginx/error.log`:
+* Method A: Disable `SELinux` to see if `curl localhost` works:
+        // Disable SElinux for temp
+        sudo setenforce 0
+        curl localhost
 
-* **NO "open()"** --> Root Cause 1: The nginx user which owns nginx worker process has **NO** `rx` permissions on **ALL** dirs of server root.
+    * If it does not work -> Root Cause 1: The nginx user which owns nginx worker process has **NO** `rx` permissions on **ALL** dirs of server root.
+
+    * If it works -> Root Cause 2: SELinux Polices.
+
+* Method B: Check if **"open()"** exists in the error messages in `/var/log/nginx/error.log`:
+
+    * **NO "open()"** --> Root Cause 1: The nginx user which owns nginx worker process has **NO** `rx` permissions on **ALL** dirs of server root.
  
-        [error] 20491#0: *1 "/var/www/html/index.html" is forbidden (13: Permission denied), client: ::1, server: _, request: "GET / HTTP/1.1", host: "localhost"
+              [error] 20491#0: *1 "/var/www/html/index.html" is forbidden (13: Permission denied), client: ::1, server: _, request: "GET / HTTP/1.1", host: "localhost"
 
-* **Has "open()"** --> Root Cause 2: SELinux Polices".
+    * **Has "open()"** --> Root Cause 2: SELinux Polices.
         
-        [error] 20491#0: *2 open() "/home/xx/html/index.html" failed (13: Permission denied), client: ::1, server: _, request: "GET / HTTP/1.1", host: "localhost"
+                [error] 20491#0: *2 open() "/home/xx/html/index.html" failed (13: Permission denied), client: ::1, server: _, request: "GET / HTTP/1.1", host: "localhost"
 
 #### Solution for Root Cause 1
 * Make sure Nginx user has `rx` permissions on **ALL** dirs(include TOP dir) of server root.
