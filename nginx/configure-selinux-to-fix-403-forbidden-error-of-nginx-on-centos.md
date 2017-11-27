@@ -86,5 +86,5 @@
 #### References
 * [8.3.8. Allowing Access: audit2allow](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Security-Enhanced_Linux/sect-Security-Enhanced_Linux-Fixing_Problems-Allowing_Access_audit2allow.html)
 * [centos7 中关于 nginx 的权限问题](https://www.v2ex.com/t/171804)
-
+* [(13: Permission denied) while connecting to upstream:[nginx]](https://stackoverflow.com/questions/23948527/13-permission-denied-while-connecting-to-upstreamnginx)
 
