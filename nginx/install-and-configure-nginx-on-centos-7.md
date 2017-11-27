@@ -60,7 +60,7 @@
           drwx------.  3 xx  xx   95 9月  26 12:50 xx
 
           // Add 'rx' for other(user nginx):
-          sudo chmod o+rx /home/xx
+          sudo chmod o+rx -R /home/xx
 
 * Configure SELinux
   * See [Fix 403 Forbidden Error of Nginx on CentOS 7](https://github.com/northbright/Notes/blob/master/nginx/configure-selinux-to-fix-403-forbidden-error-of-nginx-on-centos.md)
