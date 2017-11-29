@@ -50,8 +50,8 @@
 
     * `CONF="/etc/redis/${REDISPORT}.conf"` means you need to copy redis.conf to `/etc/redis/` and rename it to `<port>.conf`
         * `sudo mkdir /etc/redis`
-        * `sudo cp ~/redis-4.0.2/redis.conf /etc/redis/6379.conf`
-        * `sudo cp ~/redis-4.0.2/redis.conf /etc/redis/6380.conf`
+        * `sudo cp redis.conf /etc/redis/6379.conf`
+        * `sudo cp redis.conf /etc/redis/6380.conf`
 
 4. Modify `/etc/redis/<port>.conf`
     * set `daemonize yes`
