@@ -21,8 +21,9 @@ Windows Updates installed:
     <https://support.microsoft.com/en-us/help/4055038/november-21-2017-kb4055038>
 
 * Windows 10
-  * Microsoft's patch is not ready(2017/11/23).
-  * Uninstall Windows Updates.
+  * Update 2017/12/08: Windows Updates for Windows 10 to fix this problem are released. Get latest Windows Updates.
+  * ~~Microsoft's patch is not ready(2017/11/23).~~
+  * ~~Uninstall Windows Updates.~~
 
         wusa /uninstall /kb:4048952 /quiet /warnrestart
         wusa /uninstall /kb:4048953 /quiet /warnrestart
