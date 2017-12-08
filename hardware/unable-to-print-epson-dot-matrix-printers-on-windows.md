@@ -34,3 +34,4 @@ Windows Updates installed:
 * [Unable to Print to Epson Dot Matrix printers after Windows Updates](https://www.tachytelic.net/2017/11/unable-print-dot-matrix-printers-windows-updates/)
 * [Microsoft confirms Epson Printer bug caused by November 2017 updates](https://www.ghacks.net/2017/11/17/microsoft-confirms-epson-printer-bug-caused-by-november-2017-updates/)
 * <https://support.microsoft.com/en-us/help/4055038/november-21-2017-kb4055038>
+* [关于部分针式打印机及微型打印机突然无法正常工作的解决方法 ](http://www1.epson.com.cn/notice/notification-20171116.html)
