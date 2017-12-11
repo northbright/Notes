@@ -4,7 +4,7 @@
 * Need to sort Golang map by keys or values.
 
 #### Solution
-* Use [sort.Slice(require Go1.8)](https://godoc.org/sort#Slice)
+* Use [sort.Slice(require Go1.8 and later)](https://godoc.org/sort#Slice)
 
 #### Example
 
