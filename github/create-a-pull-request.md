@@ -61,4 +61,5 @@ Use Pull Request to make a bug fix for someone else's project.
 * [Fork A Repo](https://help.github.com/articles/fork-a-repo/)
 * [working-with-forks](https://help.github.com/articles/working-with-forks/)
 * [Mastering Issues](https://guides.github.com/features/issues/)
+* [Github上git commit 提交注释的规范](https://segmentfault.com/q/1010000000395039)
 
