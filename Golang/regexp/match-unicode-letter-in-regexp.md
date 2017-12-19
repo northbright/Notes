@@ -26,7 +26,10 @@ func main() {
 	usernames := []string{
 		"世界空明大千",
 		"Michael_01",
+                "punc:@,/*&!^~",
+                "中文标点：？，》。",
 		"TrueBlueFragment-色褪せぬ蒼青の欠片",
+                "来试试try_<script>alert('hello');</script>",
 	}
 
 	for _, v := range usernames {
@@ -35,7 +38,10 @@ func main() {
         // Output:
         // 世界空明大千: true
         // Michael_01: true
+        // punc:@,/*&!^~: false
+        // 中文标点：？，》。: false
         // TrueBlueFragment-色褪せぬ蒼青の欠片: true
+        // 来试试try_<script>alert('hello');</script>: false
 }
 
 ```
