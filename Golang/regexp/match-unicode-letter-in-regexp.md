@@ -33,7 +33,7 @@ func main() {
 		fmt.Printf("%v: %v\n", v, ValidUsername(v))
 	}
         // Output:
-        / /世界空明大千: true
+        // 世界空明大千: true
         // Michael_01: true
         // TrueBlueFragment-色褪せぬ蒼青の欠片: true
 }
