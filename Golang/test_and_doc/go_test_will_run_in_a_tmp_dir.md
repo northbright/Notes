@@ -24,4 +24,5 @@ For example:
 #### Reference
 * [Golang: tests and working directory](http://stackoverflow.com/questions/23847003/golang-tests-and-working-directory)
 * [read conf file under testing enviroment](https://groups.google.com/forum/#!topic/golang-nuts/-PQ_E0biZCo)
-    
+* [Unable to use the same relative path in my program AND my unit tests](https://stackoverflow.com/questions/31990342/unable-to-use-the-same-relative-path-in-my-program-and-my-unit-tests)
+
