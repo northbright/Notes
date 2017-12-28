@@ -52,3 +52,20 @@ As you can see, it'll generate:
 * `.test` executable test file
 * **No** go source files and other **assets** under your original package dir will be copied to the temporary dir
 
+#### Read / open files under package dir for test
+* Problem
+  * Sometimes we need to read files(e.g.`test/key.pem`) under the package dir in test functions(`_test.go`)
+  * It'll failed to read the file if use absolute path of the file
+
+* Root Cause
+  * We get the absolute file path by join these 2 paths:
+     *  Get test executable path by [`runtime/exec.LookPath`](https://godoc.org/os/exec#LookPath) 
+     *  The relative file path
+   * The path will be `/tmp/go-buildxxxxx/github.com/xx/xx/test/key.pem`
+   * `go test` won't copy the files under the package dir to temporary dir
+
+* Solution
+  * Just put **relative** paths for the files will be OK
+    e.g. `ioutil.ReadFile("test/key.pem")` or `os.Open("test/key.pem")`
+  * The current working dir is package dir(where you run `go test`)
+
