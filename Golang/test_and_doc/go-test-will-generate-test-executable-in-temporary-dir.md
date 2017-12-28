@@ -66,7 +66,8 @@ As you can see, it'll generate:
 
 * Solution
   * Just put **relative** paths for the files will be OK
-    e.g. `ioutil.ReadFile("test/key.pem")` or `os.Open("test/key.pem")`
+    
+    e.g. `ioutil.ReadFile("test/key.pem")`, `os.Open("test/key.pem")`
   * The current working dir is package dir(where you run `go test`)
 
 #### References
