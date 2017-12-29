@@ -54,13 +54,14 @@ As you can see, it'll generate:
 
 #### Read / open files under package dir for test
 * Problem
-  * Need to read files(e.g.`test/key.pem`) under the package dir in test functions(`_test.go`)
-  * It'll failed to read the file if use absolute path of the file
+  * Need to read files under the package dir in test functions(`_test.go`)
+  * File path are relative. (e.g.`test/key.pem`) 
+  * Before calling ioutil.ReadAll(), we try to get the absolute path of the file:
+    * Get absolute path of the dir which contains test executable by [`runtime/exec.LookPath`](https://godoc.org/os/exec#LookPath)
+    * Append relative path
+  * ioutil.ReadAll(absFilePath) failed: file not found.
 
 * Root Cause
-  * We get the absolute file path by join these 2 paths:
-     *  Get test executable path by [`runtime/exec.LookPath`](https://godoc.org/os/exec#LookPath) 
-     *  The relative file path
    * The path will be `/tmp/go-buildxxxxx/github.com/xx/xx/test/key.pem`
    * `go test` won't copy the files under the package dir to temporary dir
 
