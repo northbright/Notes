@@ -54,7 +54,7 @@ As you can see, it'll generate:
 
 #### Read / open files under package dir for test
 * Problem
-  * Sometimes we need to read files(e.g.`test/key.pem`) under the package dir in test functions(`_test.go`)
+  * Need to read files(e.g.`test/key.pem`) under the package dir in test functions(`_test.go`)
   * It'll failed to read the file if use absolute path of the file
 
 * Root Cause
