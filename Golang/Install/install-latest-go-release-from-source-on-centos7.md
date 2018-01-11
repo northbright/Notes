@@ -63,8 +63,7 @@
             export PATH=$PATH:/home/xx/go/bin
             export GOPATH=/home/xx/go-projects
 
-8. Reboot and test
-  * `sudo reboot`
+  * `source /etc/profile`
   * `go version`
                         
             go version go1.6.1 linux/amd64
