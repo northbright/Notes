@@ -43,7 +43,6 @@
 
 #### Install Golang from Source on CentOS
 * [Install Latest Go Release from Source on CentOS 7](install-latest-go-release-from-source-on-centos7.md)
-* [Add vim-go Plugin for vim on CentOS 7](https://github.com/northbright/Notes/blob/master/Golang/Editor/Add_vim-go_for_vim_on_CentOS_7.md)
 
 #### Install Redis on CentOS
 * [Install and Configure Redis-2.8.19 on CentOS 7](https://github.com/northbright/Notes/blob/master/Redis/Install/Install_and_Config_Redis_on_CentOS.md)
