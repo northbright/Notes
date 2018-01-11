@@ -41,9 +41,6 @@
     
             sudo service network restart
 
-#### Setup `vim`
-* [Setup Vim for CentOS Minimal](https://github.com/northbright/Notes/blob/master/Linux/vim/setup_vim_for_centos_minimal.md)
-
 #### Install Golang from Source on CentOS
 * [Install Latest Go Release from Source on CentOS 7](install-latest-go-release-from-source-on-centos7.md)
 * [Add vim-go Plugin for vim on CentOS 7](https://github.com/northbright/Notes/blob/master/Golang/Editor/Add_vim-go_for_vim_on_CentOS_7.md)
