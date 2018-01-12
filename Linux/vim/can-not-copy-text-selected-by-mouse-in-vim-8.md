@@ -13,14 +13,12 @@ After Install VIM 8 from Source, it can not copy text selected by mouse in VIM 8
    ```
 
 #### Solution
-Create a customized `~/.vimrc`:
+Comment `set mouse=a`
 
 ```
-set nocompatible
-filetype plugin indent on
-set mouse=v                "text selected by mouse can be copied(e.g. Mac OS Terminal)
-syntax on
-
+"if has('mouse')
+"set mouse=a  "this will make VIM select the text but not terminal
+"endif
 ```
 
 #### References
