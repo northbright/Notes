@@ -69,5 +69,5 @@
             go version go1.6.1 linux/amd64
 
 8. Setup VIM as Go Editor
-* [Setup Vim for CentOS Minimal](https://github.com/northbright/Notes/blob/master/Linux/vim/setup_vim_for_centos_minimal.md)
+* [Install VIM 8 from Source on Centos 7](https://github.com/northbright/Notes/blob/master/Linux/vim/install-vim-8-from-source-on-centos-7.md)
 * [Add vim-go Plugin for vim on CentOS 7](https://github.com/northbright/Notes/blob/master/Golang/Editor/Add_vim-go_for_vim_on_CentOS_7.md)
