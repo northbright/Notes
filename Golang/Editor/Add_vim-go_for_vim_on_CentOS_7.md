@@ -3,15 +3,7 @@
 
 #### Part I - Install vim
 
-* Install vim on CentOS 7  
-  vim isn't installed by default on CentOS 7.  
-  `sudo yum install -y vim-enhanced`  
-  Check version:  
-  `vim --version`
-
-* Set alias for `vi` in `~/.bashrc`  
-  `alias vi=vim`  
-  Run `source ~/.bashrc` in current terminal to take affect
+* [Install VIM 8 from Source on Centos 7](https://github.com/northbright/Notes/blob/master/Linux/vim/install-vim-8-from-source-on-centos-7.md)
 
 #### Part II - Install Vundle and vim-go
 
