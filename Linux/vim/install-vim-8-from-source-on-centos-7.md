@@ -52,19 +52,8 @@ vim --version
 
 * `source /etc/profile`
 
-#### Default VIM 8 Settings
-* See `/usr/local/share/vim/vim80/defaults.vim`
-
-#### Create a `~/.vimrc` for Customized Settings
-
-`vi ~/.vimrc`
-
-```
-set nocompatible
-filetype plugin indent on
-set mouse=v                "text selected by mouse can be copied(e.g. Mac OS Terminal)
-syntax on
-```
+#### Make it Can Copy Text Selected by Mouse
+* See [Can not Copy Text Selected by Mouse in VIM 8](can-not-copy-text-selected-by-mouse-in-vim-8.md)
 
 #### References
 * [Howto Enable Vi and Vim Syntax Highlighting on Fedora / CentOS / Red Hat (RHEL)](http://www.if-not-true-then-false.com/2012/vi-vim-syntax-highlighting-on-fedora-centos-red-hat-rhel/)
