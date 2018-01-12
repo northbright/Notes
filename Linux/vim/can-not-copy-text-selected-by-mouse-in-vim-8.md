@@ -13,7 +13,7 @@ After Install VIM 8 from Source, it can not copy text selected by mouse in VIM 8
    ```
 
 #### Solution
-Comment `set mouse=a`
+Comment out `set mouse=a`
 
 ```
 "if has('mouse')
