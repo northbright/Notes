@@ -15,7 +15,9 @@
 * Devices of SSID for guests should **NOT** access other devices.
 
 #### Solution
-Use VLAN based on LAN.
+Use VLAN.
+Configure port-based VLAN on H3C router.
+Configure tag-based VLAN on UBNT UAP-AC-Lite APs.
 
 * VLAN 1(default created)
   * IP: `192.168.1.1`.
