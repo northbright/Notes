@@ -19,21 +19,22 @@ Use VLAN.
 Configure port-based VLAN on H3C router.
 Configure tag-based VLAN on UBNT UAP-AC-Lite APs.
 
-* VLAN 1(default created)
-  * IP: `192.168.1.1`.
-  * DHCP pool IP range: `192.168.1.2` ~ `192.168.1.254`.
-  * for PCs, Wireless Printers, Devices of SSID for employees.
+* VLAN Plan
+  * VLAN 1(default created)
+    * IP: `192.168.1.1`.
+    * DHCP pool IP range: `192.168.1.2` ~ `192.168.1.254`.
+    * for PCs, Wireless Printers, Devices of SSID for employees.
 
-* VLAN 2
-  * IP: `192.168.2.1`.
-  * DHCP pool IP range: `192.168.2.2` ~ `192.168.2.254`.
-  * for Devices of SSID for guests.
-  * UBNT UAP-AC-Lite will provide VLAN settings(tag: VLAN -> 2).
+  * VLAN 2
+    * IP: `192.168.2.1`.
+    * DHCP pool IP range: `192.168.2.2` ~ `192.168.2.254`.
+    * for Devices of SSID for guests.
+    * UBNT UAP-AC-Lite will provide VLAN settings(tag: VLAN -> 2).
 
-* VLAN 3
-  * IP: `192.168.3.1`
-  * DHCP pool IP range: `192.168.3.2` ~ `192.168.3.254`
-  * for Hikvision recorder and cameras.
+  * VLAN 3
+    * IP: `192.168.3.1`
+    * DHCP pool IP range: `192.168.3.2` ~ `192.168.3.254`
+    * for Hikvision recorder and cameras.
 
 #### Steps
 * Create and configure VLAN 2
