@@ -17,9 +17,9 @@
 #### Solution
 Use VLAN.
 Configure port-based VLAN on H3C router.
-Configure tag-based VLAN on UBNT UAP-AC-Lite APs.
+Configure tag-based VLAN on UBNT Unifi Controller for UBNT UAP-AC-Lite APs.
 
-* VLAN Plan
+1. VLAN Plan
   * VLAN 1(default created)
     * IP: `192.168.1.1`.
     * DHCP pool IP range: `192.168.1.2` ~ `192.168.1.254`.
@@ -36,65 +36,68 @@ Configure tag-based VLAN on UBNT UAP-AC-Lite APs.
     * DHCP pool IP range: `192.168.3.2` ~ `192.168.3.254`
     * for Hikvision recorder and cameras.
 
-#### Steps
-* Create and configure VLAN 2
-  * Goto `192.168.1.1` to login admin page of H3C router.
-  * Goto "Interface Setings" -> "VLAN Settings".
-    * Click "Create" to create a new VLAN.
-    * VLAN ID: `2`.
-    * IP: `192.168.2.1`.
-    * Subnet Mask: `255.255.255.0`.
-  * Goto "Interface Settings" -> "VLAN Settings" -> "Trunk Settings" Tab
-    * Edit the LAN ID binding to the VLAN2.
-      * PVID: `1`.
-      * Permitted VLAN: `1,2`.
+2. Configure port-based VLAN on H3C router
+  * Create and configure VLAN 2
+    * Goto `192.168.1.1` to login admin page of H3C router.
+    * Goto "Interface Setings" -> "VLAN Settings".
+      * Click "Create" to create a new VLAN.
+      * VLAN ID: `2`.
+      * IP: `192.168.2.1`.
+      * Subnet Mask: `255.255.255.0`.
+    * Goto "Interface Settings" -> "VLAN Settings" -> "Trunk Settings" Tab
+      * Set the LAN ID binding to the VLAN2(e.g. LAN 2).
+        * PVID: `1`.
+        * Permitted VLAN: `1,2`.
 
-  * Goto "Interface Settings" -> "DHCP Settings".
-    * Click "Create" to create a new DHCP pool.
-      * Name: "VLAN2"
-      * DHCP pool IP range: `192.168.2.2` ~ `192.168.2.254`.
+    * Goto "Interface Settings" -> "DHCP Settings".
+      * Click "Create" to create a new DHCP pool.
+        * Name: "VLAN2"
+        * DHCP pool IP range: `192.168.2.2` ~ `192.168.2.254`.
 
-* Configure Wireless Network of UBNT UAP
-  * Open "Unifi Controller" and goto "https://localhost:8443" to login admin page of Unifi Controller.
-  * Click "Settings" -> "Wireless Network" -> Select the wireless network for guests.
-  * Click "Advanced" -> Set VLAN to `2`(this will add VLAN tag: 2 for the packets in the network).
-
-* Create and configure VLAN 3
-  * Goto "Interface Setings" -> "VLAN Settings".
-    * Click "Create" to create a new VLAN.
-    * VLAN ID: `3`.
-    * IP: `192.168.3.1`.
-    * Subnet Mask: `255.255.255.0`.
-  * Goto "Interface Settings" -> "VLAN Settings" -> "Trunk Settings" Tab
-    * Edit the LAN ID binding to the VLAN3.
+  * Create and configure VLAN 3
+    * Goto "Interface Setings" -> "VLAN Settings".
+      * Click "Create" to create a new VLAN.
+      * VLAN ID: `3`.
+      * IP: `192.168.3.1`.
+      * Subnet Mask: `255.255.255.0`.
+    * Goto "Interface Settings" -> "VLAN Settings" -> "Trunk Settings" Tab
+      * Set the LAN ID binding to the VLAN3(e.g. LAN 3).
       * PVID: `1`.
       * Permitted VLAN: `1,3`.
 
-  * Goto "Interface Settings" -> "DHCP Settings".
-    * Click "Create" to create a new DHCP pool.
-      * Name: "VLAN3"
-      * DHCP pool IP range: `192.168.3.2` ~ `192.168.3.254`.
+    * Goto "Interface Settings" -> "DHCP Settings".
+      * Click "Create" to create a new DHCP pool.
+        * Name: "VLAN3"
+        * DHCP pool IP range: `192.168.3.2` ~ `192.168.3.254`.
 
-* Firewall Settings
-  * Goto "Security" -> "Firewall" -> "Outgoing Policy" Tab.
-  * Add a new firewall:
-    * Source Interface: `VLAN2`.
-    * Source IP: `IP range`: `192.168.2.2 - 192.168.2.254`
-    * Destination IP range: `192.168.1.2 - 192.168.1.254`
-    * Description: `Deny access from VLAN2 -> VLAN1`
-  * Add a new firewall:
-    * Source Interface: `VLAN2`.
-    * Source IP: `IP range`: `192.168.2.2 - 192.168.2.254`
-    * Destination IP range: `192.168.3.2 - 192.168.3.254`
-    * Description: `Deny access from VLAN2 -> VLAN3`
+  * Firewall Settings
+    * Goto "Security" -> "Firewall" -> "Outgoing Policy" Tab.
+    * Add a new firewall:
+      * Source Interface: `VLAN2`.
+      * Source IP: `IP range`: `192.168.2.2 - 192.168.2.254`
+      * Destination IP range: `192.168.1.2 - 192.168.1.254`
+      * Description: `Deny access from VLAN2 -> VLAN1`
 
-  * Add a new firewall:
-    * Source Interface: `VLAN3`.
-    * Source IP: `IP range`: `192.168.3.2 - 192.168.3.254`
-    * Destination IP range: `192.168.1.2 - 192.168.1.254`
-    * Description: `Deny access from VLAN3 -> VLAN1`
-  * Add a new firewall:
-    * Source Interface: `VLAN3`.
-    * Source IP: `IP range`: `192.168.3.2 - 192.168.3.254`
-    * Destination IP range: `192.168.2.2 - 192.168.2.254`
-    * Description: `Deny access from VLAN3 -> VLAN2`
+    * Add a new firewall:
+      * Source Interface: `VLAN2`.
+      * Source IP: `IP range`: `192.168.2.2 - 192.168.2.254`
+      * Destination IP range: `192.168.3.2 - 192.168.3.254`
+      * Description: `Deny access from VLAN2 -> VLAN3`
+
+    * Add a new firewall:
+      * Source Interface: `VLAN3`.
+      * Source IP: `IP range`: `192.168.3.2 - 192.168.3.254`
+      * Destination IP range: `192.168.1.2 - 192.168.1.254`
+      * Description: `Deny access from VLAN3 -> VLAN1`
+
+    * Add a new firewall:
+      * Source Interface: `VLAN3`.
+      * Source IP: `IP range`: `192.168.3.2 - 192.168.3.254`
+      * Destination IP range: `192.168.2.2 - 192.168.2.254`
+      * Description: `Deny access from VLAN3 -> VLAN2`
+
+3. Configure tag-based VLAN on UBNT Unifi Controller for UBNT UAP-AC-Lite APs(wireless network)
+  * Make sure the PC installed Unifi Controller is in the native or untagged VLAN(e.g. H3C ER routers use VLAN 1 by default).
+  * Open "Unifi Controller" and goto "https://localhost:8443" to login admin page of Unifi Controller.
+  * Click "Settings" -> "Wireless Network" -> Select the wireless network for guests.
+  * Click "Advanced" -> Set VLAN to `2`(this will add VLAN tag: 2 for the packets in the network).
