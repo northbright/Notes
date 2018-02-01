@@ -59,7 +59,9 @@ func main() {
 	//type: User, value: {Frank xx@xx.com}
 	//other type: float64, value: 1
 }
-
 ```
+
+[Playground](https://wide.b3log.org/playground/52fa87621ff37989542ea6bc0a7e21a2.go)
+
 #### References
 * [How to find a type of a object in golang?(see Grzegorz Luczywo's answer)](http://stackoverflow.com/questions/20170275/how-to-find-a-type-of-a-object-in-golang)
