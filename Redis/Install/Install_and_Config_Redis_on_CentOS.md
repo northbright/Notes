@@ -72,7 +72,7 @@
             pidfile /var/run/redis_6380.pid
 
     * set different rdb file paths for each redis instance  
-        
+
             // 6379.conf
             dir /home/xx/redis-db/6379/
 
@@ -105,7 +105,7 @@
   * `sudo chmod a+x /etc/rc.d/init.d/redis_6380`
         
 7. Configure Redis Services
-  * Method A - `systemd`
+  * Method A - `systemd`(CentOS 7 and later)
 
           sudo systemctl enable redis_6379
           sudo systemctl enable redis_6380
@@ -113,7 +113,7 @@
           sudo systemctl start redis_6379
           sudo systemctl start redis_6380
 
-  * or Method B - `chkconfig`
+  * or Method B - `chkconfig`(CentOS 6.XX and older)
   
           sudo chkconfig --add redis_6379
           sudo chkconfig --add redis_6380
