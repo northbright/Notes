@@ -20,6 +20,11 @@
   * `sudo make install`  
     This will copy redis binaries to `/usr/local/bin`:  
 
+#### Create Dirs to Store Redis Data Files
+
+    mkdir -p /home/xx/redis-db/6379
+    mkdir -p /home/xx/redis-db/6380
+
 #### Config Redis as a Service
 
 1. How Many Redis Instances You Want to Run?
