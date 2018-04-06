@@ -4,7 +4,7 @@
 
 1. Install Requirements of PostgreSQL.
 
-        sudo yum install readline-devel systemd-devel
+        sudo yum install readline-devel systemd-devel zlib-devel bison flex
 
 2. Clone Repository of PostgreSQL.
 
@@ -17,8 +17,8 @@
         // List All Release Tags.
         git tag -l
         
-        // Select One Release Tag and Checkout Source Code. Ex: "REL9_6_2".
-        git checkout -b 9.6.2 REL9_6_2
+        // Select One Release Tag and Checkout Source Code. e.g. "REL_10_3".
+        git checkout -b 10.3 REL_10_3
 
 4. Configure and Build
 
