@@ -13,6 +13,9 @@
 3. Checkout Source Code of Specified Release Tag.
 
         cd postgresql
+
+        // Update Remote.
+        git remote update
         
         // List All Release Tags.
         git tag -l
@@ -21,6 +24,9 @@
         git checkout -b 10.3 REL_10_3
 
 4. Configure and Build
+
+        // Use "git clean -dfx" to clean existing build
+        git clean -dfx
 
         ./configure --with-systemd
         make clean
