@@ -1,6 +1,6 @@
 # Reallocatedf Sector Count
 
-##### Problem
+#### Problem
 * Get a message that says "Windows detected a hard disk problem" on disk(WD 3T)
 * Run [HD Tune](http://hdtune.com/) to see the health of the disk
 * [HD Tune](http://hdtune.com/) highlighted the "Reallocated Sector Count" SMART attribute
