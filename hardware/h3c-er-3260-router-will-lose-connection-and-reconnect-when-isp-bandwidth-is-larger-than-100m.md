@@ -1,4 +1,4 @@
-# H3C ER3260 Router Re-Connect(PPPOE) when ISP Bandwidth is Larger than 100m
+# H3C ER3260 Router Will Lose Connection and Reconnect(PPPOE) when ISP Bandwidth is Larger than 100m
 
 #### Problem
 * ISP speeded up the bandwidth from 100m to 200m
