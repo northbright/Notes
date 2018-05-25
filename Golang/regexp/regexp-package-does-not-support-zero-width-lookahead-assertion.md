@@ -71,3 +71,10 @@ func main() {
 	//Abc1234!: true
 }
 ```
+
+* <https://wide.b3log.org/playground/45eff67b518064cf2b810528dff14158.go>
+
+#### References
+* [Panic when compiling a regular expression](https://stackoverflow.com/questions/25159236/panic-when-compiling-a-regular-expression)
+* [Regular expression to check if password is “8 characters including 1 uppercase letter, 1 special character, alphanumeric characters”](https://stackoverflow.com/questions/9477906/regular-expression-to-check-if-password-is-8-characters-including-1-uppercase-l)
+* [Password Strength Validation with Regular Expressions](https://www.zorched.net/2009/05/08/password-strength-validation-with-regular-expressions/)
