@@ -1,7 +1,7 @@
 # regexp Package does NOT Support Zero-width Lookahead Assertion
 
 #### Problem
-* Use `?=re`(Zero-width Positive Lookahead Assertion) to validate password
+* Use `(?=re)`(Zero-width Positive Lookahead Assertion) to validate password
 * Got error: invalid or unsupported Perl syntax: `(?=` when compile the code
 
 #### Root Cause
