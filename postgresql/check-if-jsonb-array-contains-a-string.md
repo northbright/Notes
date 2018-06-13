@@ -15,7 +15,7 @@ INSERT INTO task (data) VALUES ('{"title":"task_1", "assigner":"1", "assignees":
 INSERT INTO task (data) VALUES ('{"title":"task_2", "assigner":"1", "assignees":["2"]}');
 ```
 
-* Want to get all tasks that which assignees contains "2"  
+* Want to get all tasks which assignees contains "2"  
 
 ```
 SELECT * FROM task WHERE (data->'assignees')::jsonb ? '2';
