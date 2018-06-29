@@ -26,7 +26,7 @@
           echo "resize image $i to 200kb";
         done
 * `chmod +x /var/www/mysite/wordpress/wp-content/uploads/reduce-img.sh`
-* `su /var/www/mysite/wordpress/wp-content/uploads/reduce-img.sh`
+* `sudo /var/www/mysite/wordpress/wp-content/uploads/reduce-img.sh`
 
 #### References
 * [ImageMagick: scale JPEG image with a maximum file-size](https://stackoverflow.com/questions/6917219/imagemagick-scale-jpeg-image-with-a-maximum-file-size)
