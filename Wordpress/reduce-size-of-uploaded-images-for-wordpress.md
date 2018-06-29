@@ -22,11 +22,11 @@
         echo "resize image who is bigger than 200k -> 200k";
         for i in `find . -size +200k`
         do
-          convert $i -define jpeg:extent=200kb $i;
+          /usr/local/bin/convert $i -define jpeg:extent=200kb $i;
           echo "resize image $i to 200kb";
         done
-
-*  `chmod +x `
+* `chmod +x /var/www/mysite/wordpress/wp-content/uploads/reduce-img.sh`
+* `su /var/www/mysite/wordpress/wp-content/uploads/reduce-img.sh`
 
 #### References
 * [ImageMagick: scale JPEG image with a maximum file-size](https://stackoverflow.com/questions/6917219/imagemagick-scale-jpeg-image-with-a-maximum-file-size)
