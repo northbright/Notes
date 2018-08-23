@@ -10,6 +10,8 @@
        This indicates that print is using wireless connection using WiFi router.
        There will be a new WiFi SSID - `Canon_ij_XXXX`
 
+    ![](img/01.jpg)
+
 ## WiFi Setting via iOS App
     1. Open App Store and search `Canon Print`. Download and install it.
     2. Go to iOS Settings -> WLAN -> Select `Canon_ij_XXXX` SSID(see Hardware Settings if there's no such SSID).
@@ -42,6 +44,8 @@
   
        这表示打印机使用WiFi路由器来无线连接。
        打印机会产生一个`Canon_ij_XXXX`的SSID。
+
+    ![](img/01.jpg)
 
 ## 通过iOS App来设置WiFi
     1. 打开App Store，搜索`Canon Print`。下载并且安装。
