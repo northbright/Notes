@@ -1,6 +1,6 @@
 # Auto Connect to Network Drive after Startup
 
-## Step
+## Steps
 1. Open a new `CMD` window
 2. Use `CMDKEY` command to add server credential to `Credential Manager`
 
