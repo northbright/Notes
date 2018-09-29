@@ -27,6 +27,7 @@
 * Copy and paste souce code of [`UTF16ToString()`](https://github.com/golang/go/blob/release-branch.go1.11/src/syscall/syscall_windows.go#L48) into your code is the **simplest** way
 * Import `golang.org/x/sys/windows` and call `UTF16ToString()` is **NOT** recommended
    * It works for the apps build for **Windows** platform **ONLY**
-      `env GOOS=windows GOARCH=amd64 go build -v`
+
+     `env GOOS=windows GOARCH=amd64 go build -v`
    * Packages under `golang.org/x/` can not be download / install via `go get` successfully without V*P*N in China
       But there's a workaround: [Get Golang Packages on Golang.org in China](https://github.com/northbright/Notes/blob/master/Golang/china/get-golang-packages-on-golang-org-in-china.md)  
