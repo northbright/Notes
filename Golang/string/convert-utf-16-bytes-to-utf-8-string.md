@@ -24,8 +24,8 @@
   * It'll generate the code under `x/sys/windows` package via [`Generate()`](https://github.com/golang/go/blob/release-branch.go1.11/src/syscall/mksyscall_windows.go#L718)
 
 ## Solution
-* Copy and paste souce code of [`UTF16ToString()`](https://github.com/golang/go/blob/release-branch.go1.11/src/syscall/syscall_windows.go#L48) into your code is the **simplest** way
-* Import `golang.org/x/sys/windows` and call `UTF16ToString()` is **NOT** recommended
+* Method A: Copy and paste souce code of [`UTF16ToString()`](https://github.com/golang/go/blob/release-branch.go1.11/src/syscall/syscall_windows.go#L48) into your code is the **simplest** way
+* Method B: Import `golang.org/x/sys/windows` and call `UTF16ToString()`
    * It works for the apps build for **Windows** platform **ONLY**
 
      `env GOOS=windows GOARCH=amd64 go build -v`
