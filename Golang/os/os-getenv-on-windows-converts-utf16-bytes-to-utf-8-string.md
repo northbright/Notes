@@ -7,6 +7,8 @@
 
 * Windows calls `GetEnvironmentVariableW` and pass the env variable in `uint16` buffer(`UTF-16` bytes)
 * It calls [utf16.Decode()](https://godoc.org/unicode/utf16#Decode) to do the conversion
+  * [utf16.Decode()](https://godoc.org/unicode/utf16#Decode) returns `[]rune`
+  * `string([]rune)` converts `[]rune` to a `UTF-8` string
 
 ## References
 * [Convert UTF-16 Bytes to UTF-8 String](https://github.com/northbright/Notes/blob/master/Golang/string/convert-utf-16-bytes-to-utf-8-string.md)
