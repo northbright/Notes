@@ -31,3 +31,6 @@
      `env GOOS=windows GOARCH=amd64 go build -v`
    * Packages under `golang.org/x/` can not be download / install via `go get` successfully without V*P*N in China
       But there's a workaround: [Get Golang Packages on Golang.org in China](https://github.com/northbright/Notes/blob/master/Golang/china/get-golang-packages-on-golang-org-in-china.md)  
+
+## References
+* [os.Getenv() on Windows Converts the UTF-16 Bytes to UTF-8 String](https://github.com/northbright/Notes/blob/master/Golang/os/os-getenv-on-windows-converts-utf16-bytes-to-utf-8-string.md)
