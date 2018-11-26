@@ -2,9 +2,12 @@
 
 #### Problem
 * ISP speeded up the bandwidth from 100m to 200m
-* Changed WAN mode to "AUTO" from "100M"
+* Set WAN mode to "AUTO"(it was set to 100M previously for 100Mbps)
 * The router will lose connection and re-connect via PPPOE
 
+#### Root Cause
+* The gateway(Raisecom MSG2200-T4) has the known issue(lose connection)
+
 #### Solution
-* Set WAN mode to "100M" again
+* Replace the Raisecom MSG2200-T4 with modem(only 1 LAN interface)
 
