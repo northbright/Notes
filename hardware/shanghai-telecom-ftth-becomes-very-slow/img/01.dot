@@ -1,0 +1,53 @@
+digraph {
+    edge [style="dashed"];
+    node [shape="box", style="rounded,filled", fillcolor="skyblue"]
+        gateway[label="Gateway: Raisecom MSG2200-T4\nprovided by Shanghai Telecom"];
+
+    node [shape="box", style="rounded,filled", fillcolor="aliceblue"]
+        router[label="Router: H3C ER3260"];
+
+    node [shape="box", style="rounded,filled", fillcolor="bisque"]
+        switch_1[label="H3C Switch"];
+        switch_2[label="H3C Switch"];
+        switch_3[label="H3C Switch"];
+
+    node [shape="box", style="rounded,filled", fillcolor="aquamarine"]
+        uap_1[label="UBNT UAP AC-Lite"];
+        uap_2[label="UBNT UAP AC-Lite"];
+        
+    node [shape="box", style="rounded,filled", fillcolor="lightblue"]
+        pc_1[label="PC"];
+        pc_2[label="PC"];    
+        pc_3[label="PC"];
+        pc_4[label="PC"];
+
+    node [shape="box", style="rounded,filled", fillcolor="beige"]
+        mobile_phone_1[label="Mobile Phone"];
+        mobile_phone_2[label="Mobile Phone"];
+        mobile_phone_3[label="Mobile Phone"];
+        wireless_printer[label="Wireless Printer"];
+
+    gateway->router;
+
+    router->switch_1;
+    router->switch_2;
+    router->switch_3;
+
+    switch_1->uap_1;
+    switch_1->uap_2;
+
+    uap_1->mobile_phone_1;
+    uap_1->mobile_phone_2;
+    uap_2->mobile_phone_3;
+    uap_2->wireless_printer;
+
+    switch_2->pc_1;
+    switch_2->pc_2;
+    switch_3->pc_3;
+    switch_3->pc_4;
+
+    {rank=same switch_1 switch_2 switch_3}
+    {rank=same uap_1 uap_2}
+    {rank=same mobile_phone_1 mobile_phone_2 mobile_phone_3 wireless_printer pc_1 pc_2 pc_3 pc_4}
+    {rank=max mobile_phone_1}
+}
