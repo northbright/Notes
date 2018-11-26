@@ -61,5 +61,8 @@
 5. 向上海电信报修要求更换Raisecom MSG2200-T4为单口光猫（不是网关，只有1个LAN口的单口光猫）
 6. 再次运行[Wireshark](https://www.wireshark.org/)，发现流入的流量正常，且没有UDP的组播的包了
 
+## 原因
+* Raisecom MSG2200-T4出现问题
+
 ## 解决方案
 * 更换Raisecom MSG2200-T4为单口光猫（不是网关，只有1个LAN口的单口光猫）
