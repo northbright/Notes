@@ -2,14 +2,14 @@
 
 ## 问题
 * 阿里云一台运行CentOS 7的ECS突然不能访问。`ping`, `ssh`, 80端口均失败。
-* 运行`sudo cat /etc/sysconfig/network-scripts/ifcfg-xx`查看是使用DHCP分配IP
+* 使用阿里云的控制台进行远程登录
+  * 运行`ifconfig`，发现网卡的没有分配到内网的IP地址(inet)。
+  * 运行`sudo cat /etc/sysconfig/network-scripts/ifcfg-xx`查看是使用DHCP分配IP
    
-      DEVICE=eth0
-      BOOTPROTO=dhcp
-      ONBOOT=yes
-      ZONE=public
-
-* 使用阿里云的控制台进行远程登录，运行`ifconfig`，发现网卡的没有分配到内网的IP地址(inet)。
+        DEVICE=eth0
+        BOOTPROTO=dhcp
+        ONBOOT=yes
+        ZONE=public
    
 ## 原因
 * [使用CentOS 7镜像的VPC网络类型的ECS实例可能存在IP地址无法自动刷新的风险预警](https://help.aliyun.com/noticelist/articleid/1000051501.html)
