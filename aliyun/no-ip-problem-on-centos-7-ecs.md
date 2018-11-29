@@ -17,7 +17,8 @@
 
 ## 解决方法
 * 重启网络服务
-   `sudo systemctl restart network`
+
+  `sudo systemctl restart network`
 * 再次运行`ifconfig`检查网卡是否DHCP分配到新的内网地址
 * ping / ssh 公网地址
 
