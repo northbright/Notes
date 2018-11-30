@@ -1,4 +1,4 @@
-# 阿里云运行CentOS 7的ECS内网IP丢失
+# 阿里云运行CentOS 7的ECS不能通过DHCP获取IP
 
 ## 问题
 * 阿里云一台运行CentOS 7的ECS突然不能访问。`ping`, `ssh`, 80端口均失败。
