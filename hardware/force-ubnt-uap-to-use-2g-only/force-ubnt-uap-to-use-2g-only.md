@@ -18,6 +18,6 @@
 1. Goto "WLAN Group" of 5G and select one (`Default` by default)
 2. You may see the WLANs listed
 3. Click the "Override" icon(Pencil) of specific WLAN
-4. Cancel check for "Enabled on this AP"
+4. Uncheck "Enabled on this AP" option
 
     ![](img/03.png)
