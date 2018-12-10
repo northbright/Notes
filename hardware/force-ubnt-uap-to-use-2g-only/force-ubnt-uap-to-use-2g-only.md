@@ -30,8 +30,8 @@
 1. 下载和运行[Unifi Controller(SDN)](https://www.ubnt.com.cn/download/unifi)
 2. 进入"设备" -> 选择相应的UAP -> "配置" -> "WLANS"
 3. 可以看见2个WLANS:
-    ＊ WLAN 2G
-    ＊ WLAN 5G
+     * WLAN 2G
+     * WLAN 5G
 
     ![](img/01.png)
 
