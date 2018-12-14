@@ -16,7 +16,7 @@
    * It'll install [WePE](http://www.wepe.com.cn/)  and store Win10 image on the USB disk
    * 64GB or larger is recommended
 *  Run [WePE](http://www.wepe.com.cn/)  on the **selected** PC
-   * Install  USB disk with `Legacy/UEFI boot` support
+   * Install WePE on USB disk with `Legacy/UEFI boot` support
      ![](img/01.png)
      ![](img/02.png)
    
