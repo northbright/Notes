@@ -47,16 +47,16 @@
 * Apply settings and you'll be notified that IP of the router will be changed due to DHCP
 
   ![](img/12.png)
-* Remove the ethernet cable from the computer and connect the cable to the switch and wait for a while
-* Use another ethernet cable to connect from the computer to the swich
+* Remove the ethernet cable from the computer and connect the cable to the main router(or switch) and wait for a while
+* Use another ethernet cable to connect from the computer to the main router(or swich)
    ```
-   +--------+  cable 1 +--------+     
-   | switch |----------|Computer|
-   |        |          +--------+
-   |        |
-   |        |  cable 2 +----------------------------+
-   |        |----------|ASUS RT-N18U Wireless Router|
-   +--------+          +----------------------------+
+   +-------------+  cable 1 +--------+     
+   | Main Router |----------|Computer|
+   |     or      |          +--------+
+   |  Switch     |
+   |             |  cable 2 +----------------------------+
+   |             |----------|ASUS RT-N18U Wireless Router|
+   +-------------+          +----------------------------+
   ```
 ## Part III - Set DHCP Back for Computer
 * Goto "Control Panel" -> "Network and Sharing Center" -> "Local  Area Connection"
