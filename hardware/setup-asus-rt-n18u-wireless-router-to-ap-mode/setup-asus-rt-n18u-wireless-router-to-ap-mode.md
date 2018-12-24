@@ -48,7 +48,7 @@
 
   ![](img/12.png)
 * Remove the ethernet cable from the computer and connect the cable to the main router(or switch) and wait for a while
-* Use another ethernet cable to connect from the computer to the main router(or swich)
+* Use another ethernet cable to connect from the computer to the main router(or switch)
    ```
    +-------------+  cable 1 +--------+     
    | Main Router |----------|Computer|
