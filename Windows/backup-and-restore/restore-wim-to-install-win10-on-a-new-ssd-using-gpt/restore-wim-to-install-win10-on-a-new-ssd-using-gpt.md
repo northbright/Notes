@@ -63,7 +63,7 @@
 
 * Run "Dism++" icon to run [`Dism++`](https://www.chuyu.me)
    * Select the Windows 10 on local disk / drive(e.g. `C:\`)
-   * Goto "Menu" -> "System Restore" -> "System Restore"
+   * Goto "Menu" -> "Recovery Tools(恢复功能)" -> "System Recovery(系统还原)"
       * Select the Win10 image on the USB disk(e.g. `F:\Win10.wim`)
       * Select the local drive path to extract the Win10 image(e.g. `C:\`)
       * Click "OK" to restore Win10 image
@@ -71,6 +71,6 @@
          ![](img/01.png)
          ![](img/02.png)
 
-   * After WIM restored successfully, Goto "Menu" -> "System Restore" -> "Fix Boot(引导修复)"
+   * After WIM restored successfully, Goto "Menu" -> "Recovery Tools(恢复功能)" -> "Boot Recovery(引导修复)"
 
 * Remove USB disk and reboot PC
