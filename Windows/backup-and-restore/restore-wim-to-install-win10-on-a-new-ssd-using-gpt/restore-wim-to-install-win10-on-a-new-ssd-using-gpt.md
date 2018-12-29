@@ -70,6 +70,6 @@
          ![](img/01.png)
          ![](img/02.png)
 
-   * After WIM restored successfully, Goto "Menu" -> "System Restore" -> "Fix Boot(修复引导)"
+   * After WIM restored successfully, Goto "Menu" -> "System Restore" -> "Fix Boot(引导修复)"
 
 * Remove USB disk and reboot PC
