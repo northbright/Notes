@@ -25,7 +25,7 @@
 * Boot PC from USB Disk(`UEFI`)
 * After Win10 PE loaded, click "Dism++" icon to run `Dism++`
    * Select the Windows 10 on local disk / drive(e.g. `C:\`) 
-   * Goto "Menu" -> "System Restore" -> "System Backup"
+   * Goto "Menu" -> "Recovery Tools(恢复功能)" -> "System Backup(系统备份)"
       * Input the path of Win10 image to store on the USB disk(e.g. `F:\Win10.WIM`)
       * Click "OK" and the Win10 image will be generated to the USB disk
 
@@ -36,7 +36,7 @@
 * Boot **rest** PCs from USB Disk(`UEFI`)
 * After Win10 PE loaded, click "Dism++" icon to run `Dism++`
    * Select the Windows 10 on local disk / drive(e.g. `C:\`) 
-   * Goto "Menu" -> "System Restore" -> "System Restore"
+   * Goto "Menu" -> "Recovery Tools(恢复功能)" -> "System Recovery(系统还原)"
       * Select the Win10 image on the USB disk(e.g. `F:\Win10.wim`)
       * Select the local drive path to extract the Win10 image(e.g. `C:\`)
       * Click "OK" to restore Win10 image
