@@ -53,13 +53,22 @@
   // Format Recovery Tools Partition
   format quick fs=ntfs label="Recovery tools"
 
+  // Clean the Hard Disk if need(optional)
+  // !!!! Backup data before clean !!!!!
+  // Y is the ID of Hard Disk
+  select disk Y
+  clean
+  create partition primary
+  format quick fs=ntfs label="Data"
+
   // Exit
   exit
 
   ```
 
-* Assign Drive Letter on SSD
-  e.g `C` for `Windows` on SSD
+* Assign Drive Letters
+  * `C` for `Windows` on SSD
+  * `D` for `Data` on Hard Disk
 
 * Run "Dism++" icon to run [`Dism++`](https://www.chuyu.me)
    * Select the Windows 10 on local disk / drive(e.g. `C:\`)
