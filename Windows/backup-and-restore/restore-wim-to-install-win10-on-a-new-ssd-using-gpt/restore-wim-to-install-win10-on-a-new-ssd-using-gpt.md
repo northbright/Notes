@@ -67,6 +67,7 @@
       * Select the Win10 image on the USB disk(e.g. `F:\Win10.wim`)
       * Select the local drive path to extract the Win10 image(e.g. `C:\`)
       * Click "OK" to restore Win10 image
+
          ![](img/01.png)
          ![](img/02.png)
 
