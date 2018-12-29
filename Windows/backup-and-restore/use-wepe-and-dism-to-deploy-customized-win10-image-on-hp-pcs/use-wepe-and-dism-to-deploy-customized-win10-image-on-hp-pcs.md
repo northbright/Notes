@@ -18,6 +18,7 @@
    * 64GB or larger is recommended
 *  Run [WePE](http://www.wepe.com.cn/)  on the **selected** PC
    * Install WePE on USB disk with `Legacy/UEFI boot` support
+
      ![](img/01.png)
      ![](img/02.png)
    
@@ -27,6 +28,7 @@
    * Goto "Menu" -> "System Restore" -> "System Backup"
       * Input the path of Win10 image to store on the USB disk(e.g. `F:\Win10.WIM`)
       * Click "OK" and the Win10 image will be generated to the USB disk
+
          ![](img/03.png)
          ![](img/04.png)
 
@@ -38,6 +40,7 @@
       * Select the Win10 image on the USB disk(e.g. `F:\Win10.wim`)
       * Select the local drive path to extract the Win10 image(e.g. `C:\`)
       * Click "OK" to restore Win10 image
+
          ![](img/05.png)
          ![](img/06.png)
 * Remove the USB disk and reboot PC
