@@ -1,7 +1,8 @@
 # Use [WePE](http://www.wepe.com.cn/) and [Dism++](http://www.chuyu.me/zh-Hans/index.html) to Deploy Customized Win10 Image on HP PCs
 
 ## Problem
-* We purchased 10+  HP PCs(Win10 Home) for employees
+* We purchased 10+  HP PCs for employees
+* OS: Win10 Home pre-installed by HP
 * Need some customizations on Win10
    * Pre-install some apps
    * Connect shared folders / printers on local network
