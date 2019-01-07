@@ -81,3 +81,6 @@ func main() {
 }
 ```
 * [Golang Playground](https://wide.b3log.org/playground/531e645c706204aa1fd7606010f57f9e.go)
+
+## References
+* [roundTrip() in net/http package](https://github.com/golang/go/blob/release-branch.go1.11/src/net/http/transport.go#L385)
