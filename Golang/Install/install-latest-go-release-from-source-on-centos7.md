@@ -60,7 +60,7 @@
   * `sudo vi /etc/profile`
 
             # Golang Env
-            export PATH=$PATH:/home/xx/go/bin
+            export PATH=/home/xx/go/bin:$PATH
             export GOPATH=/home/xx/go-projects
 
   * `source /etc/profile`
