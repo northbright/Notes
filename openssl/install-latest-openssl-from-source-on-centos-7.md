@@ -22,6 +22,8 @@
       # Checkout latest release
       git checkout -b 1.1.1 OpenSSL_1_1_1
             
+* Compile and Install
+
       # configure, make & make install
       ./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl
       make
