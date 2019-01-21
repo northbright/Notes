@@ -89,6 +89,7 @@
       ps aux | grep nginx
 
     The output should looks like this:
+
     | User | Process |
     | :--: | :--: |
     | root | master process(`/usr/local/nginx/sbin/nginx`) |
