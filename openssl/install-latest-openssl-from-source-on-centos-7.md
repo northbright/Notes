@@ -11,7 +11,7 @@
       yum group list
       sudo yum group install "Development Tools" -y
 
-* Git Clone [Offical Repo on Github](https://github.com/openssl/openssl)
+* Git Clone [Official Repo on Github](https://github.com/openssl/openssl)
       
       git clone https://github.com/openssl/openssl.git
       cd openssl
