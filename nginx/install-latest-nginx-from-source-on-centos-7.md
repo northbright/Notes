@@ -94,3 +94,6 @@
     | :--: | :--: |
     | root | master process(`/usr/local/nginx/sbin/nginx`) |
     | nobody | worker process |
+
+## References
+* [烂泥：nginx、php-fpm、mysql用户权限解析](http://blog.51cto.com/ilanni/1561097)
