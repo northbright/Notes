@@ -42,10 +42,12 @@ Look into [`./cmake/submodules.cmake`](https://github.com/MariaDB/server/blob/10
 
 ## Solutions
 * Solution A - recommended
-   Download **FULL** source code on <https://downloads.mariadb.org/> which include submodules: `./libmariadb`...
+
+  Download **FULL** source code on <https://downloads.mariadb.org/> which include submodules: `./libmariadb`...
 
 * Solution B
-   Use `git clone` to the the source code
+
+  Use `git clone` to the the source code
    
       // git 1.7 or above supports "--single-branch" to fetch only 1 branch
       git clone --single-branch --branch 10.3 https://github.com/MariaDB/server.git
