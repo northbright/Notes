@@ -2,7 +2,7 @@
 
 ## Problem
 * 1st `git clone` succeeded
-* When run another `git clone`, got "index-pack failed" Error when Run `git clone`
+* When run another `git clone`, got "index-pack failed" error
 
 ## Root Cause
 * Insufficient memory
