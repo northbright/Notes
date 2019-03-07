@@ -81,8 +81,8 @@
 
       [Service]
       Type=forking
-      ExecStart=/etc/init.d/redis_6379 start
-      ExecStop=/etc/init.d/redis_6379 stop
+      ExecStart=/etc/rc.d/init.d/redis_6379 start
+      ExecStop=/etc/rc.d/init.d/redis_6379 stop
 
       [Install]
       WantedBy=multi-user.target
