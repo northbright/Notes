@@ -19,5 +19,5 @@
     echo '/usr/local/zlib/lib/' > /etc/ld.so.conf.d/zlib.conf
     ldconfig
       
-    # Check if libssl.so.x is in the output
+    # Check if libz.so.x is in the output
     ldconfig -p | grep libz
