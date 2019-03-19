@@ -11,16 +11,11 @@
       yum group list
       sudo yum group install "Development Tools" -y
 
-* Git Clone [Official Repo on Github](https://github.com/openssl/openssl)
-      
-      git clone https://github.com/openssl/openssl.git
-      cd openssl
-            
-      # List tags to find latest stable release(e.g. OpenSSL_1_1_1)
-      git tag -l
-            
-      # Checkout latest release
-      git checkout -b 1.1.1 OpenSSL_1_1_1
+* Download Latest Source on <https://github.com/openssl/openssl/releases>
+
+     wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1b.tar.gz
+     tar -xzvf OpenSSL_1_1_1b.tar.gz
+     cd OpenSSL_1_1_1b
             
 * Compile and Install
 
