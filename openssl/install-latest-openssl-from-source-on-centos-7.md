@@ -13,9 +13,9 @@
 
 * Download Latest Source on <https://github.com/openssl/openssl/releases>
 
-     wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1b.tar.gz
-     tar -xzvf OpenSSL_1_1_1b.tar.gz
-     cd OpenSSL_1_1_1b
+      wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1b.tar.gz
+      tar -xzvf OpenSSL_1_1_1b.tar.gz
+      cd OpenSSL_1_1_1b
             
 * Compile and Install
 
