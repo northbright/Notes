@@ -37,6 +37,8 @@ sudo chown -R mysql:mysql /var/lib/mysql
 
       sudo yum install -y ncurses-devel  bison libxml2-devel libevent-devel
 
+   * Install `libxml2-devel` will also install `zlib` as dependency
+
 * [CMake](https://cmake.org)
    * Download latest release on https://github.com/Kitware/CMake/releases
    
@@ -56,7 +58,9 @@ sudo chown -R mysql:mysql /var/lib/mysql
       
 * [zlib](https://www.zlib.net/)
    * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md) 
-      It'll install latest zlib to a new path: `/usr/local/zlib` which is the value of [`-DWITH_ZLIB`](https://github.com/MariaDB/server/blob/10.3/cmake/zlib.cmake#L37) option for `cmake`
+      * It'll install latest zlib to a new path: `/usr/local/zlib` which is the value of `-DZLIB_ROOT` option
+      * CMake will search `ZLIB_ROOT` firstly, see [FindZLIB.cmake](https://github.com/Kitware/CMake/blob/v3.13.4/Modules/FindZLIB.cmake#L54)
+      * If you want to use system zlib, use `-DWITH_ZIB=system` instead
 
 * [OpenSSL](https://www.openssl.org/)
    * [Install Latest Release of OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos-7.md)
@@ -78,8 +82,7 @@ Download latest release on <https://downloads.mariadb.org/>
 
     cmake . \
     -DWITH_SSL=/usr/local/openssl \
-    -DWITH_ZLIB=1 \
-    -DZLIB_INCLUDE_DIR=/usr/local/zlib \
+    -DZLIB_ROOT=/usr/local/zlib \
     -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
     -DDEFAULT_CHARSET=utf8 \
     -DDEFAULT_COLLATION=utf8_general_ci \
