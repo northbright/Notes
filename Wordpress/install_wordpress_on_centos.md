@@ -131,7 +131,7 @@
 
     * 创建WordPress的数据库
 
-            mysqld -u root -p
+            mysql -u root -p
             create database mysite1;
             create database mysite2;
 
