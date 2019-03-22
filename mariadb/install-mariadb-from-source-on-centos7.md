@@ -146,3 +146,4 @@ Download latest release on <https://downloads.mariadb.org/>
 ## References
 * [CentOS 7.5 编译安装 MariaDB 10.3.9](https://blog.csdn.net/qq_32828933/article/details/82720018)
 * [CentOS 7 源码编译MariaDB](https://www.cnblogs.com/bigdevilking/p/9452686.html)
+* [Building MariaDB on CentOS](https://mariadb.com/kb/en/library/source-building-mariadb-on-centos/)
