@@ -121,6 +121,8 @@ Download latest release on <https://downloads.mariadb.org/>
     
       sudo vi /etc/my.cnf
 
+* Copy and paste the following settings to the file
+
       [mysqld]
       bind-address=127.0.0.1
 
