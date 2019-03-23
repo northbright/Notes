@@ -118,10 +118,8 @@ Download latest release on <https://downloads.mariadb.org/>
 
     sudo vi /etc/my.cnf
 
-    // Goto [mysqld] section, and set datadir, socket and bind-address
+    // Goto [mysqld] and set bind-address
     [mysqld]
-    datadir=/var/lib/mysql
-    socket=/tmp/mysql.sock
     bind-address=127.0.0.1
         
 ## Initialize MariaDB
