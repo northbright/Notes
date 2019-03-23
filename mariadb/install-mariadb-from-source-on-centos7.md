@@ -115,20 +115,20 @@ Download latest release on <https://downloads.mariadb.org/>
 
 * Backup old `/etc/my.cnf`
   
-     sudo cp /etc/my.cnf /etc/my.cnf.bak
+        sudo cp /etc/my.cnf /etc/my.cnf.bak
 
 * Create a new `/etc/my.cnf`
     
-     sudo vi /etc/my.cnf
+        sudo vi /etc/my.cnf
 
-     [mysqld]
-     bind-address=127.0.0.1
+        [mysqld]
+        bind-address=127.0.0.1
 
-     [mysqld_safe]
-     log-error=/var/lib/mysql/mysql.log
+        [mysqld_safe]
+        log-error=/var/lib/mysql/mysql.log
 
-     # include all files from the config directory
-     !includedir /etc/my.cnf.d
+        # include all files from the config directory
+        !includedir /etc/my.cnf.d
         
 ## Initialize MariaDB
 
