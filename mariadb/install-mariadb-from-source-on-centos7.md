@@ -37,8 +37,6 @@ sudo chown -R mysql:mysql /var/lib/mysql
 
       sudo yum install -y ncurses-devel  bison libxml2-devel libevent-devel
 
-   * Install `libxml2-devel` will also install `zlib` as dependency
-
 * [CMake](https://cmake.org)
    * Download latest release on https://github.com/Kitware/CMake/releases
    
