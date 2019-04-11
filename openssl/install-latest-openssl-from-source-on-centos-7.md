@@ -1,14 +1,16 @@
 # Install Latest Release of [OpenSSL](https://www.openssl.org/) from Source on CentOS 7
 
 ## Install Dependencies
+* "Development Tools"
 
-    sudo yum install -y wget zlib-devel
+      # Find the name of "Development Tools" Group under "Optional Group" in the output
+      # Pass the group name to `yum group install`
+      # The group name may be translated string(e.g. "开发工具" in Chinese)
+      yum group list
+      sudo yum group install -y "Development Tools"
 
-    # Find the name of "Development Tools" Group under "Optional Group" in the output
-    # Pass the group name to `yum group install` 
-    # The group name may be translated string(e.g. "开发工具" in Chinese)
-    yum group list
-    sudo yum group install "Development Tools" -y
+* [zlib](https://www.zlib.net/)
+   * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md) 
 
 ## Download Latest Source on <https://github.com/openssl/openssl/releases>
 
