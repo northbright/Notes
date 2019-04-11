@@ -37,7 +37,8 @@
       
       su
       echo '/usr/local/pcre/lib/' > /etc/ld.so.conf.d/pcre.conf
-      ldconfig
+      exit
+      sudo ldconfig
             
       # Check if libpcre*.so.x is in the output
       ldconfig -p | grep libpcre

@@ -8,8 +8,11 @@
    `LD_LIBRARY_PATH=/home/xx/MY_LIB_PATH ./MY_APP` to see if it works
 
 2. If it works, add library path:  
-   * `su`
-   * `echo '/home/xx/MY_LIB_PATH' > /etc/ld.so.conf.d/mylib.conf`
-   * `ldconfig`
-   * `ldconfig -p | grep xx.so` to check if our library(xx.so) is in cache
+
+       su
+       echo '/home/xx/MY_LIB_PATH' > /etc/ld.so.conf.d/mylib.conf
+       exit
+
+       sudo ldconfig
+       ldconfig -p | grep xx.so
    

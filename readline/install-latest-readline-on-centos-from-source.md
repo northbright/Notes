@@ -16,7 +16,8 @@
 
     su
     echo '/usr/local/readline/lib/' > /etc/ld.so.conf.d/readline.conf
-    ldconfig
+    exit
+    sudo ldconfig
       
     # Check if libreadline.so.x is in the output
     ldconfig -p | grep libreadline

@@ -17,7 +17,8 @@
 
     su
     echo '/usr/local/zlib/lib/' > /etc/ld.so.conf.d/zlib.conf
-    ldconfig
+    exit
+    sudo ldconfig
       
     # Check if libz.so.x is in the output
     ldconfig -p | grep libz
