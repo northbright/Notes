@@ -39,7 +39,7 @@
     su
     echo '/usr/local/openssl/lib/' > /etc/ld.so.conf.d/openssl.conf
     exit
-    ldconfig
+    sudo ldconfig
             
     # Check if libssl.so.x is in the output
     ldconfig -p | grep libssl.so
