@@ -39,10 +39,11 @@
 
 * `source /etc/profile`
 
-* Add New Shared Libraries Path of cURL
+## Add New Shared Libraries Path of cURL
       
        su
        echo '/usr/local/curl/lib/' > /etc/ld.so.conf.d/curl.conf
+       exit
        ldconfig
             
        # Check if libcurl* is in the output
