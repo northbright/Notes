@@ -44,13 +44,10 @@
        su
        echo '/usr/local/curl/lib/' > /etc/ld.so.conf.d/curl.conf
        exit
-       ldconfig
+       sudo ldconfig
             
        # Check if libcurl* is in the output
        ldconfig -p | grep libcurl
-
-       # exit root
-       exit
          
 * Check cURL Version
    
