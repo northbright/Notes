@@ -21,6 +21,9 @@ Use [ImageMagick](http://www.imagemagick.org) command-line tools: [convert](http
             magick convert "%%i" -density 72 -resize 413x551! "%%i-resized.jpg"
         )
 
+## Turn Off Windows Defender SmartScreen when Run the BAT on Win10(optional)
+* [Failed to Run BAT on Win10 Due to Windows Defender SmartScreen](https://github.com/northbright/Notes/blob/master/Windows/bat/failed-to-run-bat-on-win10-due-to-windows-defender-smartscreen.md)
+
 ## References
 * [ImageMagick change image width and height](https://stackoverflow.com/questions/26560393/imagemagick-change-image-width-and-height)
 * [In ImageMagick, how can I scale an image down just enough so it's cropped to particular dimensions?](https://stackoverflow.com/questions/12222839/in-imagemagick-how-can-i-scale-an-image-down-just-enough-so-its-cropped-to-par)
