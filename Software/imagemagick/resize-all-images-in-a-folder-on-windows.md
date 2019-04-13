@@ -31,3 +31,4 @@ Use [ImageMagick](http://www.imagemagick.org) command-line tools: [convert](http
 * [A Batch Script To Resize Images [closed]](https://stackoverflow.com/questions/40456998/a-batch-script-to-resize-images)
 * [Iterate all files in a directory using a 'for' loop](https://stackoverflow.com/questions/138497/iterate-all-files-in-a-directory-using-a-for-loop)
 * [Image Geometry](https://www.imagemagick.org/script/command-line-processing.php#geometry)
+* [Add Double Quote for File Names in BAT File](https://github.com/northbright/Notes/blob/master/Windows/bat/add-double-quote-for-file-names-in-bat-file.md)
