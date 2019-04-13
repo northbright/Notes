@@ -12,13 +12,13 @@ Use [ImageMagick](http://www.imagemagick.org) command-line tools: [convert](http
   * Resize original images directly without generating new files 
      
         for /r %%i in (*.jpg *.jpeg *.png) do (
-            magick mogrify -density 72 -resize 413x551! %%i
+            magick mogrify -density 72 -resize 413x551! "%%i"
         )
 
   * Generate new resized images
 
         for /r %%i in (*.jpg *.jpeg *.png) do (
-            magick convert %%i -density 72 -resize 413x551! "%%i-resized.jpg"
+            magick convert "%%i" -density 72 -resize 413x551! "%%i-resized.jpg"
         )
 
 ## References
