@@ -2,6 +2,7 @@
 
 ## Problem
 * Need resize all images in a folder to fixed width and height
+* Need a fixed **Density** as well
 * If the image's original width or height is smaller, it should be streched 
 
 ## Solutions
@@ -11,13 +12,13 @@ Use [ImageMagick](http://www.imagemagick.org) command-line tools: [convert](http
   * Resize original images directly without generating new files 
      
          for /r %%i in (*.jpg *.jpeg *.png) do (
-             magick mogrify -resize 413x551! %%i
+             magick mogrify -resize 413x551! -density 72 %%i
          )
 
   * Generate new resized images
 
          for /r %%i in (*.jpg *.jpeg *.png) do (
-             magick convert %%i -resize 413x551! "%%i-resized.jpg"
+             magick convert %%i -resize 413x551! -density 72 "%%i-resized.jpg"
          )
 
 ## References
