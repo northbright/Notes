@@ -1,4 +1,4 @@
-# Install Latest [pycURL](http://pycurl.io/)  from Source On CentOS 7
+# Install Latest [pycURL](http://pycurl.io/) from Source On CentOS 7
 
 ## Install Dependencies
 * Install `python-devel`
