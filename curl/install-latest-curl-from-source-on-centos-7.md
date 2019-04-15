@@ -39,6 +39,12 @@
 
 * `source /etc/profile`
 
+## Install(update) Latest [pycURL](http://pycurl.io/) from Source
+* Problem
+  * [yum Failed after Install cURL from Source on CentOS 7](yum Failed after Install cURL from Source on CentOS 7)
+* Solution
+  * [Install Latest pycURL from Source On CentOS 7](https://github.com/northbright/Notes/blob/master/python/install-latest-pycurl-from-source-on-centos-7.md)
+
 ## Add New Shared Libraries Path of cURL
       
        su
