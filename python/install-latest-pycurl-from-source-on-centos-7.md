@@ -41,4 +41,4 @@
 
 ## References
 * [PycURL Installation](http://pycurl.io/docs/latest/install.html)
-
+* [yum Failed after Install cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/Linux/CentOS/yum/yum-failed-after-install-curl-from-source-on-centos-7.md)
