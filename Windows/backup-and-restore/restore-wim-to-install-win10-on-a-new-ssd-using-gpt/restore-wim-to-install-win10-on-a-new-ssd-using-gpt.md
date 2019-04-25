@@ -66,7 +66,7 @@
 
   ```
 
-* Assign Drive Letters
+* Assign Drive Letters use Windows Disk Manager or run `assign letter=X` in `diskpart`
   * `C` for `Windows` on SSD
   * `D` for `Data` on Hard Disk
 
