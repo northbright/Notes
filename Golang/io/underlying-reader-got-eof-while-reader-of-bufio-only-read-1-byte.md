@@ -54,3 +54,5 @@ func main() {
 // i: 0, b: FF
 // i: 1, b: 48
 ```
+
+* [Run Example Code on Playground](https://wide.b3log.org/playground/73f55e713fe1db239922180bf385c8d5.go)
