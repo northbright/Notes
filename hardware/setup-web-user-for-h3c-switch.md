@@ -48,4 +48,4 @@
 * Open a browser(e.g. Firefox) on PC and go to the IP
 
 ## References
-* [[H3C S5130S-EI系列以太网交换机 - 配置指导 - 01基础配置指导](http://www.h3c.com/cn/d_201710/1038061_30005_0.htm)
+* [H3C S5130S-EI系列以太网交换机 - 配置指导 - 01基础配置指导](http://www.h3c.com/cn/d_201710/1038061_30005_0.htm)
