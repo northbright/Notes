@@ -64,4 +64,4 @@
 
 ## References
 * [h3c交换机配置ssh密码验证登录方式](https://blog.csdn.net/skyxmstar/article/details/83828313)
-* [[H3C S5130S-EI系列以太网交换机 - 配置指导 - 08安全配置指导](http://www.h3c.com/cn/d_201710/1038136_30005_0.htm)
+* [H3C S5130S-EI系列以太网交换机 - 配置指导 - 08安全配置指导](http://www.h3c.com/cn/d_201710/1038136_30005_0.htm)
