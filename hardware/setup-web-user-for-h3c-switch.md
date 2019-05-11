@@ -3,8 +3,7 @@
 ## Setup IP Address
 * Select VLAN Interface(e.g. VLAN Interface 1)
 
-       // Caution: V of VLAN is Capitalized
-       interface Vlan-interface 1
+       interface vlan 1
        ip address 192.168.1.240 24
 
         // Check
