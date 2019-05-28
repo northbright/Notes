@@ -16,19 +16,18 @@ unzip v8.0.1428.zip
 ```
 cd vim-vim-8.0.1428/src
 
-// Default install path: /usr/local/bin
-./configure
+./configure --prefix=/usr/local/vim
 make
 sudo make install
 ```
 
-## Add `/usr/local/bin` in `secure_path` for `sudo vim xx`
+## Add `/usr/local/vim/bin` in `secure_path` for `sudo vim xx`
 
 `sudo visudo`
 
 ```
-// Find "secure_path" and add your own path(ex: /usr/local/bin)
-Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/usr/local/bin:
+// Find "secure_path" and add your own path(ex: /usr/local/vim/bin)
+Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/usr/local/vim/bin:
 ```
 
 #### Check Version
