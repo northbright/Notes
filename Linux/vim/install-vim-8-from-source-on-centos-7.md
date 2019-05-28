@@ -1,6 +1,6 @@
 # Install VIM 8 from Source on Centos 7
   
-#### Get Latest VIM Release from <https://github.com/vim/vim/releases>
+## Get Latest VIM Release from <https://github.com/vim/vim/releases>
 
 ```
 cd ~/download
@@ -8,7 +8,7 @@ wget https://github.com/vim/vim/archive/v8.0.1428.zip
 unzip v8.0.1428.zip
 ```
 
-#### Build and Install VIM from Source
+## Build and Install VIM from Source
 ```
 cd vim-vim-8.0.1428/src
 
@@ -18,7 +18,7 @@ make
 sudo make install
 ```
 
-#### Add `/usr/local/bin` in `secure_path` for `sudo vim xx`
+## Add `/usr/local/bin` in `secure_path` for `sudo vim xx`
 
 `sudo visudo`
 
@@ -36,7 +36,7 @@ vim --version
 // VIM - Vi IMproved X.X
 ```
 
-#### Add Alias(vi = vim) and Set `VISUAL` and `EDITOR` env variables 
+## Add Alias(vi = vim) and Set `VISUAL` and `EDITOR` env variables 
 
 * `vi /etc/profile`
 
@@ -52,10 +52,10 @@ vim --version
 
 * `source /etc/profile`
 
-#### Make it Can Copy Text Selected by Mouse
+## Make it Can Copy Text Selected by Mouse
 * See [Can not Copy Text Selected by Mouse in VIM 8](can-not-copy-text-selected-by-mouse-in-vim-8.md)
 
-#### References
+## References
 * [Howto Enable Vi and Vim Syntax Highlighting on Fedora / CentOS / Red Hat (RHEL)](http://www.if-not-true-then-false.com/2012/vi-vim-syntax-highlighting-on-fedora-centos-red-hat-rhel/)
 * [Example vimrc](http://vim.wikia.com/wiki/Example_vimrc)
 * [sudo: xx command not found](https://github.com/northbright/Notes/blob/master/Linux/Commands/sudo-command-not-found.md)
