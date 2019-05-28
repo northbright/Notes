@@ -20,26 +20,34 @@
 
 4. Get source of git
 
-           git clone git@github.com:git/git.git
-           // List remote tags
-           git tag -l
-           // choose the tag of latest release(e.g. v2.15.0)
-           git checkout -b v2.15.0 v2.15.0
+   Goto <https://github.com/git/git/releases> to download latest release
+
+         // e.g. v2.21.0
+         wget https://github.com/git/git/archive/v2.21.0.tar.gz
 
 5. Make git
 
         make configure
-        ./configure --prefix=/usr/local
-        make all doc
-        sudo make install install-doc install-html
+        ./configure --prefix=/usr/local/git
+        make all
+        sudo make install
 
-6. Setup git
+6. Add New Binary Path of Git
+* `sudo vi /etc/profile`
+
+      # Append these lines:
+      # Use New Version of Git
+      export PATH=/usr/local/git/bin:$PATH
+* `source /etc/profile`
+* Run `git --version` to check
+
+7. Setup git
 
         git config --global user.name "Your Name"
         git config --global user.email "xx@example.com"
         git config --global color.ui true
 
-7. Set VISUAL and EDITOR env variables
+8. Set VISUAL and EDITOR env variables
   
         // Ex: /etc/profile or ~/.bashrc
         export VISUAL=vim
