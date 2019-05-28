@@ -21,6 +21,15 @@ make
 sudo make install
 ```
 
+## Add New Binary Path of Vim
+* `sudo vi /etc/profile`
+
+      # Append these lines:
+      # Use New Version of Vim
+      export PATH=/usr/local/Vim/bin:$PATH
+
+* `source /etc/profile`
+
 ## Add `/usr/local/vim/bin` in `secure_path` for `sudo vim xx`
 
 `sudo visudo`
