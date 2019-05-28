@@ -1,5 +1,9 @@
 # Install VIM 8 from Source on Centos 7
   
+## Install Dependencies
+
+    sudo yum install -y ncurses-devel
+
 ## Get Latest VIM Release from <https://github.com/vim/vim/releases>
 
 ```
