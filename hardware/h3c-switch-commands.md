@@ -137,7 +137,7 @@
     // e.g. Set Trunk Ports: GE1/0/1 to GE1/0/47
     interface range GE1/0/1 to GE1/0/47
     port link-type trunk
-    port trunk permite vlan 1 2
+    port trunk permit vlan 1 2
 
 ## Set IP Address of VLAN Interface
 
