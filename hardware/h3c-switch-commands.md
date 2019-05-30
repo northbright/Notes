@@ -132,6 +132,13 @@
    | SW1 | G1/0/29 | Trunk | VLAN 20 30 |
    | SW2 | G1/0/48 | Trunk | VLAN 20 30 |
 
+## Batch Interfaces(Ports) Settings
+
+    // e.g. Set Trunk Ports: GE1/0/1 to GE1/0/47
+    interface range GE1/0/1 to GE1/0/47
+    port link-type trunk
+    port trunk permite vlan 1 2
+
 ## Set IP Address of VLAN Interface
 
     // 1. Select VLAN interface(e.g. 20)
@@ -180,20 +187,3 @@
     // under system-view
     // ip route-static IP MASK NextHOP_IP_Address
     ip route-static 0.0.0.0 0.0.0.0 192.168.100.2
-
-## Connect H3C Router
-
-| Device | Use |
-| :--: | :--: |
-| H3C ER8300G2-X Router | Create PPPOE Dial Connection |
-| H3C S5500 Switch | Connect Switches, PCs, Printers |
-
-### Hardware Setup
-* Connect Router's WAN port to Modem which provided by ISP
-* Connect Switch LAN port to Router's LAN port
-
-### H3C ER Series Router Setup
-* Prepare a PC and set IP to `192.168.1.x`(e.g. `192.168.1.10`)
-* Connect PC to Router's LAN
-* Open a browser and input the router's IP address(VLAN 1), it's `192.168.1.1` by default
-* Set WAN to PPPOE
