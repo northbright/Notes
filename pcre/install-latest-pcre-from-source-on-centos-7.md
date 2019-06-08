@@ -20,7 +20,7 @@
 * Compile and Install
 
       # configure, make & make install
-      ./config --prefix=/usr/local/pcre
+      ./configure --prefix=/usr/local/pcre
       make
       sudo make install
 
