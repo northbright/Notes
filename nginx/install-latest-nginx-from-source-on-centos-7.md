@@ -16,66 +16,76 @@
       yum group list
       sudo yum group install "Development Tools" -y
 
-* Install Other Dependencies
-      
-      sudo yum install -y wget zlib-devel
+* zlib
+  * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md)
 
-* [Install Latest PCRE from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/pcre/install-latest-pcre-from-source-on-centos-7.md) 
-* [Install Latest OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos-7.md)
+* PCRE
+  * [Install Latest PCRE from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/pcre/install-latest-pcre-from-source-on-centos-7.md) 
+
+* OpenSSL
+  * [Install Latest OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos-7.md)
    
-## Install [Nginx](http://nginx.org/) from Source
-* Download source on [github](https://github.com/nginx/nginx/releases)
+## Download source on [github](https://github.com/nginx/nginx/releases)
 
-      cd download
-      wget https://github.com/nginx/nginx/archive/release-1.17.0.tar.gz
+    cd download
+    wget https://github.com/nginx/nginx/archive/release-1.17.0.tar.gz
 
-* Compile and Install [Nginx](http://nginx.org/)
+## Configure [Nginx](http://nginx.org/)
 
-      # Configure nginx
-      # Use absolute path for PCRE, OpenSSL libraries
-      ./auto/configure --with-pcre=/home/xx/PATH/TO/pcre-8.42 --with-openssl=/home/xx/PATH/TO/openssl/
+    # Configure nginx
+    # 1. Specify prefix to install nginx
+    # 2. Specify PCRE SOURCE dir(NOT install dir). It'll use STATIC link of PCRE library.
+    # 3. Specify zlib SOURCE dir(NOT install dir). It'll use STATIC link of zlib library.
+    # 4. Specify OpenSSL library dir(NOT source).
 
-      # Make and Install
-      make
-      sudo make install
+    ./auto/configure \
+    --prefix=/usr/local/nginx \
+    --with-pcre=/home/xx/download/pcre-8.43 \
+    --with-zlib=/home/xx/download/zlib-1.2.11 \
+    --with-openssl=/usr/local/openssl \
+
+## Make and Install
+
+    make
+    sudo make install
       
-* Add New Binary Path of Nginx
-  * `sudo vi /etc/profile`
+## Add New Binary Path of Nginx
+* `sudo vi /etc/profile`
 
-        # Append these lines:
-        # Use New Version of Nginx
-        export PATH=/usr/local/nginx/sbin:$PATH
+      # Append these lines:
+      # Use New Version of Nginx
+      export PATH=/usr/local/nginx/sbin:$PATH
 
-  * `source /etc/profile`
+* `source /etc/profile`
 
-* Configure Nginx as `systemd` Service
-  * Create `/var/lib/systemd/nginx.service` File
+## Configure Nginx as `systemd` Service
+* Create `/var/lib/systemd/nginx.service` File
 
-        sudo vi /var/lib/systemd/nginx.service
+      sudo vi /var/lib/systemd/nginx.service
 
-        [Unit]
-        Description=The NGINX HTTP and reverse proxy server
-        After=syslog.target network.target remote-fs.target nss-lookup.target
+      [Unit]
+      Description=The NGINX HTTP and reverse proxy server
+      After=syslog.target network.target remote-fs.target nss-lookup.target
 
-        [Service]
-        Type=forking
-        PIDFile=/usr/local/nginx/logs/nginx.pid
-        ExecStartPre=/usr/local/nginx/sbin/nginx -t
-        ExecStart=/usr/local/nginx/sbin/nginx
-        ExecReload=/usr/local/nginx/sbin/nginx -s reload
-        ExecStop=/bin/kill -s QUIT $MAINPID
-        PrivateTmp=true
+      [Service]
+      Type=forking
+      PIDFile=/usr/local/nginx/logs/nginx.pid
+      ExecStartPre=/usr/local/nginx/sbin/nginx -t
+      ExecStart=/usr/local/nginx/sbin/nginx
+      ExecReload=/usr/local/nginx/sbin/nginx -s reload
+      ExecStop=/bin/kill -s QUIT $MAINPID
+      PrivateTmp=true
 
-        [Install]
-        WantedBy=multi-user.target
+      [Install]
+      WantedBy=multi-user.target
 
-  * Enable and Start Nginx Service
+* Enable and Start Nginx Service
   
-        sudo systemctl enable nginx.service
-        sudo systemctl start nginx.service
+      sudo systemctl enable nginx.service
+      sudo systemctl start nginx.service
         
-        # Check nginx service stastus
-        systemctl status nginx.service
+      # Check nginx service stastus
+      systemctl status nginx.service
 
 * Check Users of Running Nginx Processes
 
