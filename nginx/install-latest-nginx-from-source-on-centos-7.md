@@ -24,17 +24,10 @@
 * [Install Latest OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos-7.md)
    
 ## Install [Nginx](http://nginx.org/) from Source
-* Git clone [Official Repo on Github](https://github.com/nginx/nginx)
-      
-      git clone https://github.com/nginx/nginx.git
-      cd nginx
+* Download source on [github](https://github.com/nginx/nginx/releases)
 
-      # List tags and select stable release
-      git tag -l
-      
-      # Checkout selected release
-      # e.g.  1.14.2
-      git checkout -b 1.14.2 release-1.14.2
+      cd download
+      wget https://github.com/nginx/nginx/archive/release-1.17.0.tar.gz
 
 * Compile and Install [Nginx](http://nginx.org/)
 
