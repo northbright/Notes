@@ -59,9 +59,9 @@
 * `source /etc/profile`
 
 ## Configure Nginx as `systemd` Service
-* Create `/var/lib/systemd/nginx.service` File
+* Create `/lib/systemd/system/nginx.service` File
 
-      sudo vi /var/lib/systemd/nginx.service
+      sudo vi /lib/systemd/system/nginx.service
 
       [Unit]
       Description=The NGINX HTTP and reverse proxy server
