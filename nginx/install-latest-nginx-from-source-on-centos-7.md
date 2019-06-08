@@ -34,8 +34,8 @@
 
     # Configure nginx
     # 1. Specify prefix to install nginx
-    # 2. Specify PCRE SOURCE dir(NOT "make install" dir). It'll use STATIC link of PCRE library.
-    # 3. Specify zlib SOURCE dir(NOT "make install" dir). It'll use STATIC link of zlib library.
+    # 2. Specify PCRE SOURCE dir(NOT "make install" dir). It'll use STATIC link to PCRE library.
+    # 3. Specify zlib SOURCE dir(NOT "make install" dir). It'll use STATIC link to zlib library.
     # 4. Specify OpenSSL library dir(NOT source).
 
     ./auto/configure \
