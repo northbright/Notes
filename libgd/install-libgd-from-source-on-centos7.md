@@ -22,15 +22,17 @@
 
 ## Bootstrap
 
-     ./bootstrap.sh
+    ./bootstrap.sh
      
 ## Configure
 
-     ./configure --prefix=/usr/local/libgd \
-     --with-zlib=/usr/local/zlib \
-     --with-jpeg=/usr/local/libjpeg \
-     --with-png=/usr/local/libpng \
-     --with-webp=/usr/local/libwebp \
+    // Set zlib, libjpeg, libpng, libwebp dirs if using non-standard dirs
+
+    ./configure --prefix=/usr/local/libgd \
+    --with-zlib=/usr/local/zlib \
+    --with-jpeg=/usr/local/libjpeg \
+    --with-png=/usr/local/libpng \
+    --with-webp=/usr/local/libwebp \
 
 ## Make and Install
 
