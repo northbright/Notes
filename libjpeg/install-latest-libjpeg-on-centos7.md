@@ -15,5 +15,15 @@
     make
     sudo make install
 
+## Add New Shared Libraries Path
+
+    su
+    echo '/usr/local/libjpeg/lib/' > /etc/ld.so.conf.d/libjpeg.conf
+    exit
+    sudo ldconfig
+      
+    # Check
+    ldconfig -p | grep libjpeg
+
 ## References
 * <http://www.ijg.org/>
