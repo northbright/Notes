@@ -30,12 +30,12 @@
     * Unix Socket path: `/tmp/mysql.sock` which is the value of `--with-mysql-sock` 
 
 ## Get Source
-* Download latest stable release on <https://github.com/php/php-src/releases>
+* Download latest stable release on [github](https://github.com/php/php-src/releases)
 
        cd download
-       wget https://github.com/php/php-src/archive/php-7.3.4.tar.gz
-       tar -xzvf php-7.3.4.tar.gz
-       cd php-src-php-7.3.4
+       wget https://github.com/php/php-src/archive/php-7.3.6.tar.gz
+       tar -xzvf php-7.3.6.tar.gz
+       cd php-src-php-7.3.6
 
 ## Configure
 * Generate Configue File
