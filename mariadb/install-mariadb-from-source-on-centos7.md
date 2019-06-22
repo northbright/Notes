@@ -69,7 +69,7 @@ sudo chown -R mysql:mysql /var/lib/mysql
 Download latest release on <https://downloads.mariadb.org/>
 
     cd ~/download
-    wget https://downloads.mariadb.org/interstitial/mariadb-10.4.6/source/mariadb-10.4.6.tar.gz/from/http%3A//mirrors.tuna.tsinghua.edu.cn/mariadb/
+    wget https://mirrors.tuna.tsinghua.edu.cn/mariadb//mariadb-10.4.6/source/mariadb-10.4.6.tar.gz
     tar -xzvf mariadb-10.4.6.tar.gz
     cd server-mariadb-10.4.6
 
