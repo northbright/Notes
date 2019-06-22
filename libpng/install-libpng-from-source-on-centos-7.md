@@ -7,11 +7,17 @@
 ## Download Latest Source from <https://sourceforge.net/projects/libpng/files/>
 
     cd download
-    wget https://nchc.dl.sourceforge.net/project/libpng/libpng16/1.6.36/libpng-1.6.36.tar.gz
-    tar -xzvf libpng-1.6.36.tar.gz
-    cd libpng-1.6.36
+    wget https://nchc.dl.sourceforge.net/project/libpng/libpng16/1.6.37/libpng-1.6.37.tar.gz
+    tar -xzvf libpng-1.6.37.tar.gz
+    cd libpng-1.6.37
 
 ## Configure
+
+    // export CPPFLAGS and LDFLAGS before run ./configure
+    // if zlib is installed in the **non-standard** directory
+
+    export CPPFLAGS="-I/usr/local/zlib/include"
+    export LDFLAGS="-L/usr/local/zlib/lib"
 
     ./configure --prefix=/usr/local/libpng
 
