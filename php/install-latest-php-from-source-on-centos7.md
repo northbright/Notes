@@ -21,6 +21,9 @@
    * [Install Latest cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos-7.md) 
    * It'll install latest cURL to a new path: `/usr/local/curl` which is the value of `--with-curl`
 
+* [libgd](https://libgd.github.io/)
+   * [Install libgd from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libgd/install-libgd-from-source-on-centos7.md)
+
 ## Install [Nginx](https://nginx.org)(optional)
 * [Install Latest Nginx from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/nginx/install-latest-nginx-from-source-on-centos-7.md)
    * Nginx worker process will be run as `nobody`(user and group) which are the values of `--with-fpm-user` and `--with-fpm-group` 
@@ -56,6 +59,7 @@
        --with-zlib-dir=/usr/local/zlib \
        --with-openssl-dir=/usr/local/openssl \
        --with-curl=/usr/local/curl \
+       --with-gd=/usr/local/libgd \
        \
        --enable-mbstring \
        --enable-opcache \
