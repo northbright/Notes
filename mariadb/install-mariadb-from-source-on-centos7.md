@@ -1,4 +1,4 @@
-# Install MariaDB from Source on CentOS 7
+# Install MariaDB(10.3 series) from Source on CentOS 7
 
 ## Create `mysql`Group and User
 ```
@@ -38,7 +38,7 @@ sudo chown -R mysql:mysql /var/lib/mysql
       sudo yum install -y ncurses-devel  bison libxml2-devel libevent-devel
 
 * [CMake](https://cmake.org)
-   * Download latest release on https://github.com/Kitware/CMake/releases
+   * Download latest release(10.3 series) on https://github.com/Kitware/CMake/releases
    
          cd ~/download
          wget https://github.com/Kitware/CMake/releases/download/v3.13.4/cmake-3.13.4.tar.gz
