@@ -38,7 +38,7 @@ sudo chown -R mysql:mysql /var/lib/mysql
       sudo yum install -y ncurses-devel  bison libxml2-devel libevent-devel
 
 * [CMake](https://cmake.org)
-   * Download latest release(10.3 series) on https://github.com/Kitware/CMake/releases
+   * Download latest release on https://github.com/Kitware/CMake/releases
    
          cd ~/download
          wget https://github.com/Kitware/CMake/releases/download/v3.13.4/cmake-3.13.4.tar.gz
@@ -66,7 +66,7 @@ sudo chown -R mysql:mysql /var/lib/mysql
       It'll install latest OpenSSL to a new path: `/usr/local/openssl` which is the value of [`-DWITH_SSL`](https://github.com/MariaDB/server/blob/10.3/cmake/ssl.cmake#L23) option for `cmake`
 
 ## Get Latest Source Code
-Download latest release on <https://downloads.mariadb.org/>
+Download latest release(10.3 series) on <https://downloads.mariadb.org/>
 
     cd ~/download
     wget https://mirrors.tuna.tsinghua.edu.cn/mariadb//mariadb-10.3.16/source/mariadb-10.3.16.tar.gz
