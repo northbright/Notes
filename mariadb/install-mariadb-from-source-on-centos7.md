@@ -168,3 +168,4 @@ Download latest release on <https://downloads.mariadb.org/>
 * [CentOS 7.5 编译安装 MariaDB 10.3.9](https://blog.csdn.net/qq_32828933/article/details/82720018)
 * [CentOS 7 源码编译MariaDB](https://www.cnblogs.com/bigdevilking/p/9452686.html)
 * [Building MariaDB on CentOS](https://mariadb.com/kb/en/library/source-building-mariadb-on-centos/)
+* [Fix Cannot change ownership of the 'auth_pam_tool_dir' Error while Run mysql_install_db after Installed MariaDB(10.4.6) from Source](https://github.com/northbright/Notes/blob/master/mariadb/fix-cannot-change-ownership-of-the-auth_pam_tool_dir-error-while-run-mysql_install_db-after-installed-mariadb-10.4.6-from-source.md)
