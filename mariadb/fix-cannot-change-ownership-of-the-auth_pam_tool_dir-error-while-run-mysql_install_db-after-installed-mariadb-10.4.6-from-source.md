@@ -66,6 +66,8 @@
 
        yum install -y pam-devel
 
+* Recompile Source Code
+
 * Run `scripts/mysql_install_db` with `--auth-root-authentication-method=normal` option for 10.4.6 and later
 
        sudo /usr/local/mysql/scripts/mysql_install_db \
@@ -73,3 +75,6 @@
        --basedir=/usr/local/mysql/ \
        --datadir=/var/lib/mysql \
        --auth-root-authentication-method=normal \
+
+## References
+* [Install MariaDB from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/mariadb/install-mariadb-from-source-on-centos7.md)
