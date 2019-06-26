@@ -1,4 +1,4 @@
-# Install MariaDB(10.3 series) from Source on CentOS 7
+# Install MariaDB from Source on CentOS 7
 
 ## Create `mysql`Group and User
 ```
@@ -37,6 +37,9 @@ sudo chown -R mysql:mysql /var/lib/mysql
 
       sudo yum install -y ncurses-devel  bison libxml2-devel libevent-devel
 
+      // It requires pam-devel starting from 10.4
+      sudo yum install -y pam-devel
+
 * [CMake](https://cmake.org)
    * Download latest release on https://github.com/Kitware/CMake/releases
    
@@ -66,12 +69,12 @@ sudo chown -R mysql:mysql /var/lib/mysql
       It'll install latest OpenSSL to a new path: `/usr/local/openssl` which is the value of [`-DWITH_SSL`](https://github.com/MariaDB/server/blob/10.3/cmake/ssl.cmake#L23) option for `cmake`
 
 ## Get Latest Source Code
-Download latest release(10.3 series) on <https://downloads.mariadb.org/>
+Download latest release on <https://downloads.mariadb.org/>
 
     cd ~/download
-    wget https://mirrors.tuna.tsinghua.edu.cn/mariadb//mariadb-10.3.16/source/mariadb-10.3.16.tar.gz
-    tar -xzvf mariadb-10.3.16.tar.gz
-    cd server-mariadb-10.3.16
+    wget https://mirrors.tuna.tsinghua.edu.cn/mariadb//mariadb-10.4.6/source/mariadb-10.4.6.tar.gz
+    tar -xzvf mariadb-10.4.6.tar.gz
+    cd server-mariadb-10.4.6
 
 ## Configure
 
@@ -131,8 +134,20 @@ Download latest release(10.3 series) on <https://downloads.mariadb.org/>
       !includedir /etc/my.cnf.d
         
 ## Initialize MariaDB
+* Before 10.4.x(e.g. 10.3 series)
 
-    sudo /usr/local/mysql/scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql/  --datadir=/var/lib/mysql
+      sudo /usr/local/mysql/scripts/mysql_install_db \
+      --user=mysql \
+      --basedir=/usr/local/mysql/ \
+      --datadir=/var/lib/mysql \
+
+* 10.4.x and later
+
+      sudo /usr/local/mysql/scripts/mysql_install_db \
+      --user=mysql \
+      --basedir=/usr/local/mysql/ \
+      --datadir=/var/lib/mysql \
+      --auth-root-authentication-method=normal \
 
 ## Configure `mysqld` as a `systemd` Service
 * Copy `mysql.server` to `/etc/rc.d/init.d/mysqld`
