@@ -13,9 +13,6 @@
 * [WebP](https://github.com/webmproject/libwebp)
    * [Install WebP from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/webp/install-webp-from-source-on-centos7.md)
 
-* [FreeType](https://www.freetype.org)
-  * [Install FreeType from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/freetype/install-freetype-from-source-on-centos7.md)
-
 ## Download Latest Source from [github](https://github.com/libgd/libgd/releases)
 
     cd download
