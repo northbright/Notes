@@ -16,11 +16,15 @@
 
 ## Configure
 
+    // Specify zlib, libpng dirs if need(non-standard dirs)
+    // --enable-freetype-config will generate freetype-config
+
     ZLIB_CFLAGS="-I/usr/local/zlib/include" \
     ZLIB_LIBS="-L/usr/local/zlib/lib" \
     LIBPNG_CFLAGS="-I/usr/local/libpng/include" \
     LIBPNG_LIBS="-L/usr/local/libpng/lib" \
     ./configure --prefix=/usr/local/freetype \
+    --enable-freetype-config \
     
 ## Make and Install
 
