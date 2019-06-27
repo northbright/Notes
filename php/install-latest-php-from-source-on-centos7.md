@@ -59,7 +59,11 @@
        --with-zlib-dir=/usr/local/zlib \
        --with-openssl-dir=/usr/local/openssl \
        --with-curl=/usr/local/curl \
+       --with-jpeg-dir=/usr/local/libjpeg \
+       --with-png-dir=/usr/local/libpng \
+       --with-webp-dir=/usr/local/libwebp \
        --with-gd=/usr/local/libgd \
+       --with-libxml-dir=/usr/local/libxml2 \
        \
        --enable-mbstring \
        --enable-opcache \
