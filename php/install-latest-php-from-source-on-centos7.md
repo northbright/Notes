@@ -7,7 +7,7 @@
 
 * 3rd Party Packages provided by yum
 
-      sudo yum install -y bison libxml2-devel
+      sudo yum install -y bison
 
 * [zlib](https://www.zlib.net/)
    * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md) 
@@ -20,6 +20,9 @@
 * [cURL](https://curl.haxx.se/)
    * [Install Latest cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos-7.md) 
    * It'll install latest cURL to a new path: `/usr/local/curl` which is the value of `--with-curl`
+
+* [libxml2](http://www.xmlsoft.org)
+  * [Install libxml2 from Source on CentOS 7](https://github.com/northbright/Notes/blob/38198dcc848ae729c6e61627c1797044b84f13b1/libxml2/install-libxml2-from-source-on-centos7.md)
 
 * [libgd](https://libgd.github.io/)
    * [Install libgd from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libgd/install-libgd-from-source-on-centos7.md)
