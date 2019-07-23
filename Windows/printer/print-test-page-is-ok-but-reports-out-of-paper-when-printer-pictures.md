@@ -4,7 +4,7 @@
 * Canon 2204N printer has plenty paper(A4)
 * Printing test page is OK
 * Select a picture, right click > print
-* Report "Out of Paper" error
+* Report "Out of Paper" error on printer
 
 ## Root Cause
 * Paper size is set incorrectly(NOT A4)
