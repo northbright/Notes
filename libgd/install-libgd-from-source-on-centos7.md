@@ -2,8 +2,7 @@
 
 ## Install Dependencies
 * [libXpm](https://www.x.org/wiki/Releases/Download/)
-
-      sudo yum install -y libXpm-devel
+  * [Install libXpm on CentOS 7](https://github.com/northbright/Notes/blob/master/libxpm/install-libxpm-devel-on-centos7.md)
 
 * [zlib](https://www.zlib.net/)
    * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md)
