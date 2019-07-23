@@ -7,7 +7,7 @@
 * Report "Out of Paper" error
 
 ## Root Cause
-* Paper size is set incorrectly before(NOT A4)
+* Paper size is set incorrectly(NOT A4)
 
 ## Solution
 * Set the correct paper size and print again
