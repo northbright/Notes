@@ -1,6 +1,10 @@
 # Install libgd from Source on CentOS 7
 
 ## Install Dependencies
+* [libXpm](https://www.x.org/wiki/Releases/Download/)
+
+      sudo yum install -y libXpm-devel
+
 * [zlib](https://www.zlib.net/)
    * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md)
 
@@ -33,6 +37,7 @@
     --with-jpeg=/usr/local/libjpeg \
     --with-png=/usr/local/libpng \
     --with-webp=/usr/local/libwebp \
+    --with-xpm \
 
 ## Make and Install
 
