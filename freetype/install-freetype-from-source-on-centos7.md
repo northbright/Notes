@@ -1,6 +1,9 @@
 # Install [FreeType](https://www.freetype.org/) from Source on CentOS 7
 
 ## Install Dependencies
+* [bzip2](http://www.bzip.org)
+  * [Install bzip2-devel on CentOS 7](https://github.com/northbright/Notes/blob/master/bzip2/install-bzip2-devel-on-centos7.md)
+
 * [zlib](https://www.zlib.net/)
    * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md)
 
@@ -24,6 +27,7 @@
     LIBPNG_CFLAGS="-I/usr/local/libpng/include" \
     LIBPNG_LIBS="-L/usr/local/libpng/lib" \
     ./configure --prefix=/usr/local/freetype \
+    --with-bzip2=yes \
     --enable-freetype-config \
     
 ## Make and Install
