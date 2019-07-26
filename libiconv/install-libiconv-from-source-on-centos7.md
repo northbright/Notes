@@ -17,6 +17,15 @@
     make
     sudo make install
 
+## Add New Binary Path
+* `sudo vi /etc/profile`
+
+      # Append these lines:
+      # Use New Version of libiconv
+      export PATH=/usr/local/libiconv/bin:$PATH
+
+* `source /etc/profile`
+
 ## Add New Shared Libraries Path
 
     su
