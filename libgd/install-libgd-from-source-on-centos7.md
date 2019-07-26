@@ -19,6 +19,9 @@
 * [freetype](https://www.freetype.org/)
   * [Install FreeType from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/freetype/install-freetype-from-source-on-centos7.md)
 
+* [libtiff](http://www.simplesystems.org/libtiff/)
+  * [Install libtiff from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libtiff/install-libtiff-from-source-on-centos7.md)
+
 ## Download Latest Source from [github](https://github.com/libgd/libgd/releases)
 
     cd download
@@ -40,6 +43,7 @@
     --with-png=/usr/local/libpng \
     --with-webp=/usr/local/libwebp \
     --with-freetype=/usr/local/freetype \
+    --with-tiff=/usr/local/libtiff \
     --with-xpm \
 
 ## Make and Install
