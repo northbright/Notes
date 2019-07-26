@@ -16,9 +16,6 @@
 * [WebP](https://github.com/webmproject/libwebp)
    * [Install WebP from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/webp/install-webp-from-source-on-centos7.md)
 
-* [freetype](https://www.freetype.org/)
-  * [Install FreeType from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/freetype/install-freetype-from-source-on-centos7.md)
-
 * [libtiff](http://www.simplesystems.org/libtiff/)
   * [Install libtiff from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libtiff/install-libtiff-from-source-on-centos7.md)
 
@@ -42,7 +39,6 @@
     --with-jpeg=/usr/local/libjpeg \
     --with-png=/usr/local/libpng \
     --with-webp=/usr/local/libwebp \
-    --with-freetype=/usr/local/freetype \
     --with-tiff=/usr/local/libtiff \
     --with-xpm \
 
