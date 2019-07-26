@@ -27,6 +27,9 @@
 * [libgd](https://libgd.github.io/)
    * [Install libgd from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libgd/install-libgd-from-source-on-centos7.md)
 
+* [libiconv](https://www.gnu.org/software/libiconv/)
+  * [Install libiconv from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libiconv/install-libiconv-from-source-on-centos7.md)
+
 ## Install [Nginx](https://nginx.org)(optional)
 * [Install Latest Nginx from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/nginx/install-latest-nginx-from-source-on-centos-7.md)
    * Nginx worker process will be run as `nobody`(user and group) which are the values of `--with-fpm-user` and `--with-fpm-group` 
@@ -67,6 +70,7 @@
        --with-webp-dir=/usr/local/libwebp \
        --with-gd=/usr/local/libgd \
        --with-libxml-dir=/usr/local/libxml2 \
+       --with-iconv-dir=/usr/local/libiconv \
        \
        --enable-mbstring \
        --enable-opcache \
