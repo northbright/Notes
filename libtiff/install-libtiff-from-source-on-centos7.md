@@ -10,6 +10,14 @@
 * [WebP](https://github.com/webmproject/libwebp)
    * [Install WebP from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/webp/install-webp-from-source-on-centos7.md)
 
+## Download Source Code
+* Get source code from [offical site](http://download.osgeo.org/libtiff/)
+
+      cd download
+      wget http://download.osgeo.org/libtiff/tiff-4.0.10.tar.gz
+      tar -xzvf tiff-4.0.10.tar.gz
+      cd tiff-4.0.10
+
 ## Configure
 
     // Specify include / lib path if need
