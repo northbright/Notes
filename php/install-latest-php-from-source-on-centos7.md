@@ -42,9 +42,9 @@
 * Download latest stable release on [official site](https://www.php.net/downloads.php) or [github](https://github.com/php/php-src/releases)
 
        cd download
-       wget https://www.php.net/distributions/php-7.3.6.tar.gz
-       tar -xzvf php-7.3.6.tar.gz
-       cd php-src-php-7.3.6
+       wget https://github.com/php/php-src/archive/php-7.3.8.tar.gz
+       tar -xzvf php-7.3.8.tar.gz
+       cd php-src-php-7.3.8
 
 ## Configure
 * Generate Configue File
@@ -76,3 +76,18 @@
        --enable-opcache \
        --disable-fileinfo \
        --disable-rpath \
+
+## Make and Install
+
+    make
+    make test
+    sudo make install
+
+## Add New Binary Path of cURL
+* `sudo vi /etc/profile`
+
+       # Append these lines:
+       # Use New Version of php
+       export PATH=/usr/local/php/bin:$PATH
+
+* `source /etc/profile`
