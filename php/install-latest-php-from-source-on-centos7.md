@@ -88,6 +88,96 @@
 
        # Append these lines:
        # Use New Version of php
-       export PATH=/usr/local/php/bin:$PATH
+       export PATH=/usr/local/php/bin:/usr/local/php/sbin/:$PATH
 
 * `source /etc/profile`
+
+## Create Directories and Set Owner
+Create `/var/run/php-fpm/` to store php-fpm related files. e.g. PID, sock, log...
+
+    sudo mkdir -p /var/run/php-fpm
+    sudo chown nobody:nobody /var/run/php-fpm
+
+## Configuration Files
+* `php.ini`
+  * Copy File
+
+    Copy `php.ini` from source dir to `--with-config-file-path` specified in `./configure`.
+    It's `PREFIX/lib` by default(e.g. `/usr/local/php/lib`).
+
+        sudo cp php.ini-production /usr/local/php/lib/php.ini
+
+* `php-fpm.conf`
+  * Copy File
+
+    php-fpm will search `php-fpm.conf` in `--sysconfdir` specified in `./configure`.
+    It's `PREFIX/etc` by default(e.g. `/usr/local/php/etc`).
+
+        sudo cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
+
+
+  * Configure
+
+        sudo vi /usr/local/php/etc/php-fpm.conf
+
+        // Set PID
+        pid = /var/run/php-fpm/php-fpm.pid
+
+        // Set session save path
+        session.save_path = "/tmp"
+
+* `www.conf`
+  * Copy File
+
+    Goto last line of `php-fpm.conf` to check include relative path for *.conf:
+
+        // For example in this case
+        include=/usr/local/php/etc/php-fpm.d/*.conf
+
+        // Copy file
+        sudo cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf
+
+  * Configure
+
+        // user and group should be the same as nginx's
+        user = nobody
+        group = nobody
+
+        // listen on a unix socket if php-fpm and nginx are on the same server
+        listen = /var/run/php-fpm/php-fpm.sock
+
+## Configure `php-fpm` as systemd Service
+* Create systemd unit file
+
+      sudo vi /etc/systemd/system/php-fpm.service
+
+      [Unit]
+      Description=The PHP 7 FastCGI Process Manager
+      After=network.target
+
+      [Service]
+      Type=simple
+      PIDFile=/var/run/php-fpm/php-fpm.pid
+      ExecStart=/usr/local/php/sbin/php-fpm --nodaemonize --fpm-config /usr/local/php/etc/php-fpm.conf
+      ExecReload=/bin/kill -USR2 $MAINPID
+
+      [Install]
+      WantedBy=multi-user.target
+
+* Enable and Start `php-fpm.service`
+
+      sudo systemctl enable php-fpm
+      sudo systemctl start php-fpm
+      sudo systemctl status php-fpm
+
+* Check
+
+      ps aux | grep php-fpm
+
+      // check process and user
+      root ...... php-fpm: master process (/usr/local/php/etc/php-fpm.conf)
+      nobody ...... php-fpm: pool www
+      nobody ...... php-fpm: pool www
+
+## References
+* [2015博客升级记(五)：CentOS 7.1编译安装PHP7](https://typecodes.com/web/centos7compilephp7.html)
