@@ -107,6 +107,9 @@ Create `/var/run/php-fpm/` to store php-fpm related files. e.g. PID, sock, log..
 
         sudo cp php.ini-production /usr/local/php/lib/php.ini
 
+        // Set session save path
+        session.save_path = "/tmp"
+
 * `php-fpm.conf`
   * Copy File
 
@@ -122,9 +125,6 @@ Create `/var/run/php-fpm/` to store php-fpm related files. e.g. PID, sock, log..
 
         // Set PID
         pid = /var/run/php-fpm/php-fpm.pid
-
-        // Set session save path
-        session.save_path = "/tmp"
 
 * `www.conf`
   * Copy File
