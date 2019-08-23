@@ -96,7 +96,7 @@
 Create `/var/run/php-fpm/` to store php-fpm related files. e.g. PID, sock, log...
 
     sudo mkdir -p /var/run/php-fpm
-    sudo chown nobody:nobody /var/run/php-fpm
+    sudo chown -R nobody:nobody /var/run/php-fpm
 
 ## Configuration Files
 * `php.ini`
@@ -139,12 +139,18 @@ Create `/var/run/php-fpm/` to store php-fpm related files. e.g. PID, sock, log..
 
   * Configure
 
+        // Unix user/group of processes
         // user and group should be the same as nginx's
         user = nobody
         group = nobody
 
         // listen on a unix socket if php-fpm and nginx are on the same server
         listen = /var/run/php-fpm/php-fpm.sock
+
+        // Set permissions for unix socket...
+        listen.owner = nobody
+        listen.group = nobody
+        listen.mode = 0660
 
 ## Configure `php-fpm` as systemd Service
 * Create systemd unit file
