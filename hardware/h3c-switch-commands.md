@@ -3,6 +3,9 @@
 ## Help
 * Type `?` to show help
 
+## Enter System-View
+
+    system-view
 
 ## Display Current VLANs
 
