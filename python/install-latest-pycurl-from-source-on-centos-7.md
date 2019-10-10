@@ -20,7 +20,7 @@
 * Make and Generate Files(e.g. `pycurl.so`, `*.pyc`)
 
        // Clean
-       make clean
+       sudo make clean
 
        // Specify curl-config and openssl
        PYCURL_CURL_CONFIG=/usr/local/curl/bin/curl-config PYCURL_SSL_LIBRARY=openssl CPPFLAGS="-I/usr/local/openssl/include" LDFLAGS="-L/usr/local/openssl/lib" make
