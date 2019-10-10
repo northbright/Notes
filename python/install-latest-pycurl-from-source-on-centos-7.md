@@ -27,7 +27,7 @@
 
 * Install
    
-       sudo python setup.py install --curl-config=/usr/local/curl/bin/curl-config --with-openssl=/usr/local/openssl/
+       sudo python setup.py install --curl-config=/usr/local/curl/bin/curl-config --with-openssl
 
 ## Add New Shared Libraries Path of cURL
  
