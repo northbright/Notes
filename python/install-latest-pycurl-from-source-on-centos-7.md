@@ -42,3 +42,4 @@
 ## References
 * [PycURL Installation](http://pycurl.io/docs/latest/install.html)
 * [yum Failed after Install cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/Linux/CentOS/yum/yum-failed-after-install-curl-from-source-on-centos-7.md)
+* [编译安装curl后，使用yum报错 pycurl.so: undefined symbol: CRYPTO_num_locks](https://xvcat.com/post/1429)
