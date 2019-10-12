@@ -22,6 +22,9 @@
        // Clean
        sudo make clean
 
+       // Generate files
+       make gen
+
        // Specify curl-config and openssl
        PYCURL_CURL_CONFIG=/usr/local/curl/bin/curl-config PYCURL_SSL_LIBRARY=openssl CPPFLAGS="-I/usr/local/openssl/include" LDFLAGS="-L/usr/local/openssl/lib" make
 
