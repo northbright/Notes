@@ -25,5 +25,5 @@ sudo PYCURL_CURL_CONFIG=/usr/local/curl/bin/curl-config PYCURL_SSL_LIBRARY=opens
 ## References
 * [stopping setup.py from installing as egg](https://stackoverflow.com/questions/6301003/stopping-setup-py-from-installing-as-egg/33791008#33791008)
 * [How to write setup.py for installing python module without making .egg file](https://stackoverflow.com/questions/28827933/how-to-write-setup-py-for-installing-python-module-without-making-egg-file)
-
+* [`pip install` Failed with "Cannot uninstall x" Error](pip-install-failed-with-cannot-uninstall-x-error.md)
 
