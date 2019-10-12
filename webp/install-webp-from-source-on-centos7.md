@@ -16,6 +16,10 @@
 
 ## Configure
 
+    // Generate files
+
+    ./autogen.sh
+
     // Set libpng, libjpeg dirs if the libraries are installed in **non-standard** directories
 
     ./configure --prefix=/usr/local/libwebp \
