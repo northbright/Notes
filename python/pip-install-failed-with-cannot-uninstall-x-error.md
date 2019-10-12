@@ -4,7 +4,7 @@
 * Want to compile and install [pycurl](https://github.com/pycurl/pycurl) from source
 * Run `pip install` and got error message:
 
-  > RROR: Cannot uninstall 'pycurl'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.
+  > ERROR: Cannot uninstall 'pycurl'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.
 
 ## Solution
 * Use `--ignore-installed` for `pip install`
