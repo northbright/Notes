@@ -17,20 +17,16 @@
     cd pycurl-REL_7_43_0_2
 
 ## Configure and Install
-* Make and Generate Files(e.g. `pycurl.so`, `*.pyc`)
+```
+// Clean
+sudo make clean
 
-       // Clean
-       sudo make clean
+// Generate files
+make gen
 
-       // Generate files
-       make gen
-
-       // Specify curl-config and openssl
-       PYCURL_CURL_CONFIG=/usr/local/curl/bin/curl-config PYCURL_SSL_LIBRARY=openssl CPPFLAGS="-I/usr/local/openssl/include" LDFLAGS="-L/usr/local/openssl/lib" make
-
-* Install
-   
-       sudo python setup.py install --curl-config=/usr/local/curl/bin/curl-config --with-openssl
+// Run PIP install with --ignore-installed option
+sudo PYCURL_CURL_CONFIG=/usr/local/curl/bin/curl-config PYCURL_SSL_LIBRARY=openssl CPPFLAGS="-I/usr/local/openssl/include" LDFLAGS="-L/usr/local/openssl/lib" pip install . --ignore-installed
+```
 
 ## Add New Shared Libraries Path of cURL
  
