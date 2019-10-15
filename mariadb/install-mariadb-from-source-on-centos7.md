@@ -41,22 +41,7 @@ sudo chown -R mysql:mysql /var/lib/mysql
       sudo yum install -y pam-devel
 
 * [CMake](https://cmake.org)
-   * Download latest release on https://github.com/Kitware/CMake/releases
-   
-         cd ~/download
-         wget https://github.com/Kitware/CMake/releases/download/v3.13.4/cmake-3.13.4.tar.gz
-         tar -xzvf cmake-3.13.4.tar.gz
-         cd cmake-3.13.4
-
-   * Configure, compile and install
-      
-         ./configure
-         gmake
-         sudo make install
-
-         // Check version
-         cmake --version
-      
+  * [Install CMake from Source on CentOS](https://github.com/northbright/Notes/blob/master/cmake/install-cmake-from-source-on-centos.md)
 * [zlib](https://www.zlib.net/)
    * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md) 
       * It'll install latest zlib to a new path: `/usr/local/zlib` which is the value of `-DZLIB_ROOT` option
