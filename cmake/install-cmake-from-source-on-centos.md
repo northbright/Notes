@@ -23,6 +23,16 @@ gmake
 sudo make install
 ```
 
+## Add New Binary Path
+* `sudo vi /etc/profile`
+
+      # Append these lines:
+      # Use New Version of CMake
+      export PATH=/usr/local/cmake/bin:$PATH
+
+* `source /etc/profile`
+
+
 ## Check
 ```
 // Check version
