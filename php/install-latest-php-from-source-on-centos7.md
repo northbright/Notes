@@ -93,10 +93,17 @@
 * `source /etc/profile`
 
 ## Create Directories and Set Owner
-Create `/var/run/php-fpm/` to store php-fpm related files. e.g. PID, sock, log...
+* Create `/var/run/php-fpm/` to store php-fpm related files. e.g. PID, sock, log...
 
-    sudo mkdir -p /var/run/php-fpm
-    sudo chown -R nobody:nobody /var/run/php-fpm
+      sudo mkdir -p /var/run/php-fpm
+      sudo chown -R nobody:nobody /var/run/php-fpm
+
+* Create `vi /usr/lib/tmpfiles.d/php-fpm.conf` to create `/var/run/php-fpm` after each reboots.
+  
+      sudo vi /usr/lib/tmpfiles.d/php-fpm.conf
+
+      // Copy this line
+      d /var/run/php-fpm 0755 nobody nobody -
 
 ## Configuration Files
 * `php.ini`
