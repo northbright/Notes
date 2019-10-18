@@ -20,6 +20,9 @@ Open a `CMD` window to copy it from DVD to local disk
     * Right click the media file > "Open with..."
     * Select a 3rd party player(e.g. [MPC HC](https://mpc-hc.org/))  to play the media
     * Goto [MPC HC](https://mpc-hc.org/) menu > "File" > "Properties" > "Media Info" > "Complete File Name" to get the full path of the media file(e.g. `e:\videos\02.mp4`)
+  * Option C: Use [Sysinternals Suit](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite) to monitor file system to get the full path
+    * [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon)
+
 * Press "Windows" Key + "R" to open a `CMD` Window
 * Run `copy` command
    
