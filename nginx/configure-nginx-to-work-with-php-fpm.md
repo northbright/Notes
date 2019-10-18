@@ -24,15 +24,21 @@
       user = nobody
       group = nobody
 
-* Set Unix Socket
-      
-      ; The address on which to accept FastCGI requests.
-      listen = /var/run/php-fpm/php-fpm.sock
+* Listen on TCP socket or Unix socket
 
-      ; Set permissions for unix socket, if one is used. In Linux, read/write
-      listen.owner = nobody
-      listen.group = nobody
-      listen.mode = 0660
+  * Option A: listen on TCP socket(by default)
+
+        listen = 127.0.0.1:9000
+
+  * Option B: Set Unix Socket(optional)
+      
+        ; The address on which to accept FastCGI requests.
+        listen = /var/run/php-fpm/php-fpm.sock
+
+        ; Set permissions for unix socket, if one is used. In Linux, read/write
+        listen.owner = nobody
+        listen.group = nobody
+        listen.mode = 0660
 
 ## Nginx Configuration
 * Follow the nginx [offical configuration for WordPress](https://www.nginx.com/resources/wiki/start/topics/recipes/wordpress/)
@@ -42,10 +48,10 @@
 ```
 # Upstream to abstract backend connection(s) for php
 upstream php {
-        # Bind Unix Socket to communicate with PHP-FPM
+        # Listen on Unix Socket to communicate with PHP-FPM
         #server unix:/var/run/php-fpm/php-fpm.sock;
 
-        # Bind TCP Socket to communicate with PHP-FPM(by default)
+        # Listen on TCP Socket to communicate with PHP-FPM(by default)
         server 127.0.0.1:9000;
 }
 
