@@ -127,14 +127,6 @@ If Using Unix socket instead of TCP socket(by default) to communicate with Nginx
 
         sudo cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
 
-
-  * Configure
-
-        sudo vi /usr/local/php/etc/php-fpm.conf
-
-        // Set PID
-        pid = /var/run/php-fpm/php-fpm.pid
-
 * `www.conf`
   * Copy File
 
