@@ -43,7 +43,9 @@
 ## Nginx Configuration
 * Follow the nginx [offical configuration for WordPress](https://www.nginx.com/resources/wiki/start/topics/recipes/wordpress/)
 
-      sudo vi /usr/local/nginx/conf/nginx.conf
+  * sudo vi /usr/local/nginx/conf/nginx.conf
+
+  * Copy below code block **INSIDE** **http** block: `http{}` to create `upstream php` and update `server`:
 
 ```
 # Upstream to abstract backend connection(s) for php
