@@ -48,16 +48,16 @@
   * Copy below code block **INSIDE** **http** block: `http{}` to create `upstream php` and update `server`:
 
 ```
-# Upstream to abstract backend connection(s) for php
-upstream php {
+    # Upstream to abstract backend connection(s) for php
+    upstream php {
         # Listen on Unix Socket to communicate with PHP-FPM
         #server unix:/var/run/php-fpm/php-fpm.sock;
 
         # Listen on TCP Socket to communicate with PHP-FPM(by default)
         server 127.0.0.1:9000;
-}
+    }
 
-server {
+    server {
         ## Your website name goes here.
         server_name domain.tld;
         ## Your only path reference.
@@ -93,7 +93,7 @@ server {
                 expires max;
                 log_not_found off;
         }
-}
+    }
 ```
 
 ## References
