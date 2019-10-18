@@ -92,7 +92,9 @@
 
 * `source /etc/profile`
 
-## Create Directories and Set Owner
+## Create Directories and Set Owner if using Unix Socket(Optional)
+If Using Unix socket instead of TCP socket(by default) to communicate with Nginx, need to create dirs and config file.
+
 * Create `/var/run/php-fpm/` to store php-fpm related files. e.g. PID, sock, log...
 
       sudo mkdir -p /var/run/php-fpm
@@ -138,26 +140,30 @@
 
     Goto last line of `php-fpm.conf` to check include relative path for *.conf:
 
-        // For example in this case
+        ; For example in this case
         include=/usr/local/php/etc/php-fpm.d/*.conf
 
-        // Copy file
+        ; Copy file
         sudo cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf
 
   * Configure
 
-        // Unix user/group of processes
-        // user and group should be the same as nginx's
+        ; Unix user/group of processes
+        ; user and group should be the same as nginx's
         user = nobody
         group = nobody
 
-        // listen on a unix socket if php-fpm and nginx are on the same server
-        listen = /var/run/php-fpm/php-fpm.sock
+        ; Listen on unix socket or tcp socket
+        ; Option A: listen on a TCP socket(by default).
+        listen = localhost:9000
 
-        // Set permissions for unix socket...
-        listen.owner = nobody
-        listen.group = nobody
-        listen.mode = 0660
+        ; Option B: listen on a unix socket if php-fpm and nginx are on the same server
+        ;listen = /var/run/php-fpm/php-fpm.sock
+
+        ;Set permissions for unix socket...
+        ;listen.owner = nobody
+        ;listen.group = nobody
+        ;listen.mode = 0660
 
 ## Configure `php-fpm` as systemd Service
 * Create systemd unit file
