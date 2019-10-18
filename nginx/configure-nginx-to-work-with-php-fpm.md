@@ -7,15 +7,6 @@
 
     sudo chown -R nobody:nobody /var/www/wordpress
 
-## Create directories and set ownder
-* Create directory for Unix socket
-
-  If nginx and php-fpm are intalled on the same server, nginx can communicate php-fpm via Unix socket(Optional).
-
-      // e.g. /var/run/php-fpm/php-fpm.sock
-      sudo mkdir -p /var/run/php-fpm
-      sudo chown -R nobody:nobody /var/run/php-fpm
-
 ## php.ini Configuration
 
     sudo vi /usr/local/php/lib/php.ini
@@ -51,8 +42,11 @@
 ```
 # Upstream to abstract backend connection(s) for php
 upstream php {
-        #server 127.0.0.1:9000;
-        server unix:/var/run/php-fpm/php-fpm.sock;
+        # Bind Unix Socket to communicate with PHP-FPM
+        #server unix:/var/run/php-fpm/php-fpm.sock;
+
+        # Bind TCP Socket to communicate with PHP-FPM(by default)
+        server 127.0.0.1:9000;
 }
 
 server {
