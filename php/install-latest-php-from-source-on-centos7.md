@@ -147,7 +147,7 @@ If Using Unix socket instead of TCP socket(by default) to communicate with Nginx
 
         ; Listen on unix socket or tcp socket
         ; Option A: listen on a TCP socket(by default).
-        listen = localhost:9000
+        listen = 127.0.0.1:9000
 
         ; Option B: listen on a unix socket if php-fpm and nginx are on the same server
         ;listen = /var/run/php-fpm/php-fpm.sock
