@@ -148,7 +148,7 @@
     interface vlan 20
 
     // 2. Set IP address with subnet mask
-    ip address 192.168.20.1
+    ip address 192.168.20.1 24
 
     // 3. Check
     display interface Vlan-interface brief
