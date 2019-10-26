@@ -1,9 +1,9 @@
 # Control Number of Concurrent Worker Goroutines
 
-#### Pattern
+## Pattern
 Use a channel of empty structs to control the number of concurrent worker goroutines.
 
-#### Example
+## Example
 
 <https://wide.b3log.org/playground/7ca38a580cda9f3b3926da1e6b8a1e96.go>:
 
@@ -38,7 +38,7 @@ Use a channel of empty structs to control the number of concurrent worker gorout
         }
     }
 
-#### References
+## References
 * [Limiting Concurrency in Go](http://jmoiron.net/blog/limiting-concurrency-in-go/)
 * [Go: Always have x number of goroutines running at any time(see artyom's answer)](https://stackoverflow.com/questions/25306073/go-always-have-x-number-of-goroutines-running-at-any-time)
 
