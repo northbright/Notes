@@ -29,5 +29,6 @@
 ## References
 * [rundll32 printui.dll,PrintUIEntry](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/rundll32-printui)
 * [Prnport.vbs](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754352(v=ws.10))
+* [Prndrvr.vbs](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754632(v=ws.11))
 * [How do I add a standard TCP/IP printer port from a command line?](https://superuser.com/questions/61659/how-do-i-add-a-standard-tcp-ip-printer-port-from-a-command-line/235405)
 * [Printer Install Script - prndrvr.vbs, prnport.vbs, and prnmngr.vbs just comes up with "useage" - how do I properly execute?](https://social.technet.microsoft.com/Forums/windows/en-US/aabb9a4a-6e02-49b3-8af5-aeb7c43f1ed3/printer-install-script-prndrvrvbs-prnportvbs-and-prnmngrvbs-just-comes-up-with)
