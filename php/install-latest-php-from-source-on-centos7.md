@@ -116,8 +116,14 @@ If Using Unix socket instead of TCP socket(by default) to communicate with Nginx
 
         sudo cp php.ini-production /usr/local/php/lib/php.ini
 
-        // Set session save path
+  * Set session save path
+    
         session.save_path = "/tmp"
+
+  * Set `max_execution_time`
+
+        ; set max execution time(in seconds)
+        max_execution_time=300
 
 * `php-fpm.conf`
   * Copy File
