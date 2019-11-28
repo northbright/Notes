@@ -27,7 +27,7 @@ sudo make install
 * `sudo vi /etc/profile`
   
       # Append these lines:
-      # Use New Version of OpenSSL
+      # Use New Version of node
       export PATH=/usr/local/node/bin:$PATH
 
 * `source /etc/profile`
