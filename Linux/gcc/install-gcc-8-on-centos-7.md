@@ -21,3 +21,5 @@ Install `gcc` / `g++` 8 from Developer Toolset.
   
       scl enable devtoolset-8 -- bash
 
+## References
+* [How to install GCC/G++ 8 on CentOS](https://stackoverflow.com/questions/55345373/how-to-install-gcc-g-8-on-centos)
