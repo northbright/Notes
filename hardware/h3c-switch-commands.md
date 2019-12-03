@@ -3,6 +3,11 @@
 ## Help
 * Type `?` to show help
 
+## Disable Logs to Terminal
+* Under `user-view`
+
+      undo terminal monitor
+
 ## Enter System-View
 
     system-view
