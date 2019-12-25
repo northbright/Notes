@@ -195,3 +195,14 @@
     // under system-view
     // ip route-static IP MASK NextHOP_IP_Address
     ip route-static 0.0.0.0 0.0.0.0 192.168.100.2
+
+## Search Port by Client MAC
+
+    // go to system view
+    sys
+
+    // MAC: 00:a1:b2:c3:d4:f5
+    display mac-address | in d4f5
+
+    // Output
+    // 00:a1:b2:c3:d4:f5 xx LEARNED GigabitEthernet1/0/1
