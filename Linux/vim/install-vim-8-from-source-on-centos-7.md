@@ -26,7 +26,7 @@ sudo make install
 
       # Append these lines:
       # Use New Version of Vim
-      export PATH=/usr/local/Vim/bin:$PATH
+      export PATH=/usr/local/vim/bin:$PATH
 
 * `source /etc/profile`
 
