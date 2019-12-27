@@ -71,6 +71,8 @@ vim --version
 ## Make it Can Copy Text Selected by Mouse
 * See [Can not Copy Text Selected by Mouse in VIM 8](can-not-copy-text-selected-by-mouse-in-vim-8.md)
 
+## [Use vim-plug to Install Vim Plugins on CentOS 7](https://github.com/northbright/Notes/blob/master/Linux/vim/use-vim-plug-to-install-vim-plugins.md)
+
 ## References
 * [Howto Enable Vi and Vim Syntax Highlighting on Fedora / CentOS / Red Hat (RHEL)](http://www.if-not-true-then-false.com/2012/vi-vim-syntax-highlighting-on-fedora-centos-red-hat-rhel/)
 * [Example vimrc](http://vim.wikia.com/wiki/Example_vimrc)
