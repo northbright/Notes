@@ -64,6 +64,10 @@ vim --version
 
 * `source /etc/profile`
 
+## Copy `/etc/vimrc` to `~/.vimrc` and customize `~/.vimrc` if need
+
+    cp /etc/vimrc ~/.vimrc
+
 ## Make it Can Copy Text Selected by Mouse
 * See [Can not Copy Text Selected by Mouse in VIM 8](can-not-copy-text-selected-by-mouse-in-vim-8.md)
 
