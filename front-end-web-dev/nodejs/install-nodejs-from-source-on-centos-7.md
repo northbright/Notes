@@ -34,15 +34,14 @@ sudo make install
 
 ## Add New Binary Path for `sudo` command
 
-    // Run visudo as root
-    su
-    visudo
+* Insert `/usr/local/node/bin` to `secure_path` 
 
-    # Add these lines
-    # Add new version of Node / NPM
-    Defaults    secure_path += /usr/local/node/bin
-  
-Use vim-plug to Install Vim Plugins on CentOS 7
+      sudo visudo
+
+      # Find "secure_path" and insert "/usr/local/node/bin" to it
+      # XX is the default value of secure_path
+
+      Defaults    secure_path = /usr/local/node/bin:XX
 
 ## Check
 ```
