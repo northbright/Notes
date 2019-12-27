@@ -23,7 +23,7 @@ make
 sudo make install
 ```
 
-## Add New Binary Path
+## Add New Binary Path for Local Users
 * `sudo vi /etc/profile`
   
       # Append these lines:
@@ -31,6 +31,18 @@ sudo make install
       export PATH=/usr/local/node/bin:$PATH
 
 * `source /etc/profile`
+
+## Add New Binary Path for `sudo` command
+
+    // Run visudo as root
+    su
+    visudo
+
+    # Add these lines
+    # Add new version of Node / NPM
+    Defaults    secure_path += /usr/local/node/bin
+  
+Use vim-plug to Install Vim Plugins on CentOS 7
 
 ## Check
 ```
