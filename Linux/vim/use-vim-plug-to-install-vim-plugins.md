@@ -31,3 +31,4 @@
 
 ## References
 * [Automatic installation](https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation)
+* [How do I install a plugin in Vim/vi?](https://vi.stackexchange.com/questions/613/how-do-i-install-a-plugin-in-vim-vi)
