@@ -25,6 +25,9 @@
     // Run dev server
     quasar dev
 
+## Config ESlint(Optional)
+* [Fix Unexpected Console Statement in ESLint](https://github.com/northbright/Notes/blob/master/front-end-web-dev/eslint/fix-unexpected-console-statement-in-eslint.md)
+
 ## Check
 * Open a browser and goto `http://localhost:8080`
 
