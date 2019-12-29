@@ -23,7 +23,7 @@ make
 sudo make install
 ```
 
-## Add New Binary Path for Local Users
+## Add New Binary Path of node, npm for Local Users
 * `sudo vi /etc/profile`
   
       # Append these lines:
@@ -32,7 +32,7 @@ sudo make install
 
 * `source /etc/profile`
 
-## Add New Binary Path for `sudo` command
+## Add New Binary Path of node, npm for `sudo` command
 
 * Insert `/usr/local/node/bin` to `secure_path` 
 
