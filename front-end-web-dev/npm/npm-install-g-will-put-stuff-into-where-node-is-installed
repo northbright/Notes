@@ -1,0 +1,19 @@
+# `npm install -g` Will Put Stuff into Where Node is Installed
+
+## Problem
+* Want to know the folder that `npm install -g` put the stuff into
+
+## Solution
+* Check the path of current npm
+
+      which npm
+      // output:
+      /usr/local/node/bin/npm
+
+      // You may see $PREFIX=/usr/local/node
+
+* It'll put stuff into `$PREFIX/lib/node_modules` for `npm install -g`
+
+## References
+* [npm-folders](https://docs.npmjs.com/files/folders)
+* [npmrc](https://docs.npmjs.com/files/npmrc)
