@@ -36,7 +36,7 @@ sudo make install
 
 ```
 // Find "secure_path" and add your own path(ex: /usr/local/vim/bin)
-Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/usr/local/vim/bin:
+Defaults    secure_path = /usr/local/vim/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:
 ```
 
 #### Check Version
