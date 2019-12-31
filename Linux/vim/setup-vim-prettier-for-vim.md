@@ -17,3 +17,6 @@ Open `~/.vimrc`, find `call plug#begin` ... `call plug#end()`, insert `Plug 'pre
     \ 'do': 'npm install',
     \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown',      'vue', 'yaml', 'html'] }
     call plug#end()
+
+## Usage
+* Run `:Prettier` to format `.js, .vue, .html, .css...` files 
