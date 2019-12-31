@@ -64,9 +64,15 @@ vim --version
 
 * `source /etc/profile`
 
-## Copy `/etc/vimrc` to `~/.vimrc` and customize `~/.vimrc` if need
+## Configuration
 
-    cp /etc/vimrc ~/.vimrc
+    vi ~/.vimrc
+
+    ......
+    set nocompatible                " Use Vim defaults (much better!)
+    set bs=indent,eol,start         " allow backspacing over everything in insert mode
+    ......
+    
 
 ## Make it Can Copy Text Selected by Mouse
 * See [Can not Copy Text Selected by Mouse in VIM 8](can-not-copy-text-selected-by-mouse-in-vim-8.md)
