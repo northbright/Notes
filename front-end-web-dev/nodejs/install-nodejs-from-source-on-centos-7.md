@@ -47,7 +47,9 @@ sudo make install
 ```
 // Check node version
 node --version
+sudo node --version
 
 // Check npm version
 npm --version
+sudo npm --version
 ```
