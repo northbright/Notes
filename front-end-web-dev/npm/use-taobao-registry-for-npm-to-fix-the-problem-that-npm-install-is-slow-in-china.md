@@ -39,7 +39,12 @@ Use taobao registry
 
 - check
 
+      // Check for current user
       npm config get registry
+
+      // Check for sudo user
+      sudo npm config get registry
+
 
 ## References
 
