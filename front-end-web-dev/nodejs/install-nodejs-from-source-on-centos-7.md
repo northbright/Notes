@@ -53,3 +53,6 @@ sudo node --version
 npm --version
 sudo npm --version
 ```
+
+## Set `taobao` registry for China users(optional)
+* [Use taobao Registry for npm to Fix the Problem that npm install is Slow in China](https://github.com/northbright/Notes/blob/master/front-end-web-dev/npm/use-taobao-registry-for-npm-to-fix-the-problem-that-npm-install-is-slow-in-china.md)
