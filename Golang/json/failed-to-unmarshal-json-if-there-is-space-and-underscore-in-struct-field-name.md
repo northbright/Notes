@@ -68,3 +68,6 @@ func main() {
 }
 ```
 
+
+## References
+* [Unmarshalling Json with fields with underscores in their names](https://grokbase.com/t/gg/golang-nuts/139rdwmrgn/go-nuts-unmarshalling-json-with-fields-with-underscores-in-their-names)
