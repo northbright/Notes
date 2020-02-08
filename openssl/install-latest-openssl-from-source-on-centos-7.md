@@ -12,7 +12,7 @@
 * [zlib](https://www.zlib.net/)
    * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md) 
 
-## Download Latest Source on [github](https://github.com/openssl/openssl/releases)
+## Download Latest Source on [github](https://github.com/openssl/openssl/releases) or [offical site](https://www.openssl.org/source/)
 
     wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1b.tar.gz
     tar -xzvf OpenSSL_1_1_1b.tar.gz
