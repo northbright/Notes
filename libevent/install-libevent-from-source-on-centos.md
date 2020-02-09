@@ -7,6 +7,14 @@
 * [OpenSSL](https://www.openssl.org/)
   * [Install Latest Release of OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos-7.md)
 
+## Download Source from [github](https://github.com/libevent/libevent/releases)
+
+```
+cd download
+wget https://github.com/libevent/libevent/releases/download/release-2.1.11-stable/libevent-2.1.11-stable.tar.gz
+tar -xzvf libevent-2.1.11-stable.tar.gz
+```
+
 ## Configure
 
 ```
