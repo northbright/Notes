@@ -34,6 +34,15 @@
 
 * `source /etc/profile`
 
+## Add New Binary Path of OpenSSL for `sudo`
+```
+su
+visudo
+
+# Find "secure_path", insert "/usr/local/openssl/bin"
+Defaults    secure_path = /usr/local/openssl/bin:/sbin:/bin:/usr/sbin:/usr/bin
+```
+
 ## Add New Shared Libraries Path of OpenSSL
       
     su
