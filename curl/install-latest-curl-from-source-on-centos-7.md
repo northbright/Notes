@@ -13,17 +13,22 @@
 ## Download Latest Source from <https://github.com/curl/curl/releases>
 
     cd download
-    wget https://github.com/curl/curl/releases/download/curl-7_64_1/curl-7.64.1.tar.gz
-    tar -xzvf curl-7.64.1.tar.gz
-    cd curl-7.64.1
+    wget https://github.com/curl/curl/archive/curl-7_68_0.tar.gz
+    tar -xzvf curl-7_68_0.tar.gz
+    cd curl-curl-7_68_0
 
 ## Configure
+```
+./buildconf
+```
 
-    ./configure \
-    --prefix=/usr/local/curl \
-    --enable-shared \
-    --with-ssl=/usr/local/openssl \
-    --with-zlib=/usr/local/zlib \
+```
+./configure \
+--prefix=/usr/local/curl \
+--enable-shared \
+--with-ssl=/usr/local/openssl \
+--with-zlib=/usr/local/zlib \
+```
 
 ## Make & Make Install
 
