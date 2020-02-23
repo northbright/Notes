@@ -1,4 +1,4 @@
-# Install Latest cURL from Source on CentOS 7
+# Install Latest cURL from Source on CentOS
 
 ## Install Dependencies
 
@@ -23,6 +23,9 @@
 ```
 
 ```
+LDFLAGS="-Wl,-rpath=/usr/local/zlib/lib \
+-Wl,-rpath=/usr/local/openssl/lib" \
+\
 ./configure \
 --prefix=/usr/local/curl \
 --enable-shared \
@@ -31,11 +34,24 @@
 ```
 
 ## Make & Make Install
+```
+make
+sudo make install
+```
 
-    make
-    sudo make install
+## Check RPATH using `readelf`
+```
+readelf -d /usr/local/curl/bin/curl
+readelf -d /usr/local/curl/lib/libcurl.so
+```
 
-## Add New Binary Path of cURL
+## Check linked libraries using `ldd`
+```
+ldd /usr/local/curl/bin/curl
+ldd /usr/local/curl/lib/libcurl.so
+```
+
+## Add New Binary Path of cURL(Optional)
 * `sudo vi /etc/profile`
 
        # Append these lines:
@@ -43,23 +59,8 @@
        export PATH=/usr/local/curl/bin:$PATH
 
 * `source /etc/profile`
-
-## Install(update) Latest [pycURL](http://pycurl.io/) from Source
-* Problem
-  * [yum Failed after Install cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/Linux/CentOS/yum/yum-failed-after-install-curl-from-source-on-centos-7.md)
-* Solution
-  * [Install Latest pycURL from Source On CentOS 7](https://github.com/northbright/Notes/blob/master/python/install-latest-pycurl-from-source-on-centos-7.md)
-
-## Add New Shared Libraries Path of cURL
-      
-       su
-       echo '/usr/local/curl/lib/' > /etc/ld.so.conf.d/curl.conf
-       exit
-       sudo ldconfig
-            
-       # Check if libcurl* is in the output
-       ldconfig -p | grep libcurl
          
-* Check cURL Version
-   
-       curl --version
+## Check cURL Version
+```
+curl --version
+```

@@ -1,7 +1,7 @@
 # Stop `setup.py` from Installing as Egg
 
 ## Problem
-* [Install Latest cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos-7.md)
+* [Install Latest cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md)
 * [yum Failed after Install cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/Linux/CentOS/yum/yum-failed-after-install-curl-from-source-on-centos-7.md)
 * Solution is: compile and install [pycurl](https://github.com/pycurl/pycurl) with the same [OpenSSL](https://www.openssl.org/) libraries as compiled with [cURL](https://github.com/curl/curl/).
 * It'll install as the Egg using `python setup.py install` and updated `pycurl.so` will NOT recognized by `yum`. So yum still does not work.
