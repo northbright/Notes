@@ -2,7 +2,7 @@
 
 ## Install Dependencies
 * [OpenSSL](https://www.openssl.org/)
-  * [Install Latest Release of OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
+  * [Install Latest Release of OpenSSL from Source on CentOS](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
 * [libevent](http://libevent.org/)
   * [Install libevent from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libevent/install-libevent-from-source-on-centos.md) 
 
