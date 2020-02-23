@@ -5,7 +5,7 @@
 
        sudo yum install -y python-devel
 
-* [Install Latest cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md)
+* [Install Latest cURL from Source on CentOS](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md)
    * It'll install latest [OpenSSL](https://www.openssl.org/) and compile cURL with it
    * Make sure compile [pycURL](http://pycurl.io/)  using the same version of [OpenSSL](https://www.openssl.org/) 
 

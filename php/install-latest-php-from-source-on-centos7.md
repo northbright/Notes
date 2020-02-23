@@ -18,7 +18,7 @@
    * It'll install latest OpenSSL to a new path: `/usr/local/openssl` which is the value of `--with-openssl-dir` option
 
 * [cURL](https://curl.haxx.se/)
-   * [Install Latest cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md) 
+   * [Install Latest cURL from Source on CentOS](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md) 
    * It'll install latest cURL to a new path: `/usr/local/curl` which is the value of `--with-curl`
 
 * [libxml2](http://www.xmlsoft.org)

@@ -1,7 +1,7 @@
 # yum Failed after Install cURL from Source on CentOS 7
 
 ## Problems
-* [Install Latest cURL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md)
+* [Install Latest cURL from Source on CentOS](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md)
 * All `yum` commands(e.g. `yum list installed)` failed with these error messages:
 
    > There was a problem importing one of the Python modules
