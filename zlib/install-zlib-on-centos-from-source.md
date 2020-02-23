@@ -12,13 +12,3 @@
     ./configure --prefix=/usr/local/zlib
     make
     sudo make install
-
-## Add New Shared Libraries Path of zlib
-
-    su
-    echo '/usr/local/zlib/lib/' > /etc/ld.so.conf.d/zlib.conf
-    exit
-    sudo ldconfig
-      
-    # Check if libz.so.x is in the output
-    ldconfig -p | grep libz
