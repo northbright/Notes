@@ -1,4 +1,4 @@
-# Install Latest Release of [OpenSSL](https://www.openssl.org/) from Source on CentOS 7
+# Install Latest Release of [OpenSSL](https://www.openssl.org/) from Source on CentOS
 
 ## Install Dependencies
 * "Development Tools"
@@ -19,13 +19,30 @@
     cd openssl-OpenSSL_1_1_1b
             
 ## Configure, Make and Install
+```
+# configure, make & make install
+# use `rpath` to make openssl binary and libraries search specific path at runtime
 
-    # configure, make & make install
-    ./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl
-    make
-    sudo make install
+LDFLAGS="-Wl,-rpath=/usr/local/openssl" ./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl
+make
+sudo make install
+```
 
-## Add New Binary Path of OpenSSL
+## Check `rpath` in binary and libraries using `readelf`
+```
+readelf -d /usr/local/openssl/bin/openssl
+readelf -d /usr/local/openssl/lib/libssl.so
+readelf -d /usr/local/openssl/lib/libcrypto.so
+```
+
+## Check linked libraries using `ldd`
+```
+ldd /usr/local/openssl/bin/openssl
+ldd /usr/local/openssl/lib/libssl.so
+ldd /usr/local/openssl/lib/libcrypto.so
+```
+
+## Add New Binary Path of OpenSSL(Optional)
 * `sudo vi /etc/profile`
 
       # Append these lines:
@@ -34,7 +51,7 @@
 
 * `source /etc/profile`
 
-## Add New Binary Path of OpenSSL for `sudo`
+## Add New Binary Path of OpenSSL for `sudo`(Optional)
 ```
 su
 visudo
@@ -42,17 +59,7 @@ visudo
 # Find "secure_path", insert "/usr/local/openssl/bin"
 Defaults    secure_path = /usr/local/openssl/bin:/sbin:/bin:/usr/sbin:/usr/bin
 ```
-
-## Add New Shared Libraries Path of OpenSSL
-      
-    su
-    echo '/usr/local/openssl/lib/' > /etc/ld.so.conf.d/openssl.conf
-    exit
-    sudo ldconfig
-            
-    # Check if libssl.so.x is in the output
-    ldconfig -p | grep libssl.so
-         
+        
 ## Check OpenSSL Version
    
     openssl version -a

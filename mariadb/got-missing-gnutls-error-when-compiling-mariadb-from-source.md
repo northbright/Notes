@@ -29,7 +29,7 @@ Call Stack (most recent call first):
 ## Solutions
 Build MariaDB with latest [OpenSSL](https://www.openssl.org/)
 
-* [Install Latest Release of OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos-7.md)
+* [Install Latest Release of OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
 
 * Goto [cmake/ssl.cmake](https://github.com/MariaDB/server/blob/10.3/cmake/ssl.cmake#L23) to see all possible values of `-DWITH_SSL`
 * We choose `cmake -DWITH_SSL=</path/to/custom/openssl>`

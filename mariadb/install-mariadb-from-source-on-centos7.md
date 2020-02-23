@@ -49,7 +49,7 @@ sudo chown -R mysql:mysql /var/lib/mysql
       * If you want to use system zlib, use `-DWITH_ZIB=system` instead
 
 * [OpenSSL](https://www.openssl.org/)
-   * [Install Latest Release of OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos-7.md)
+   * [Install Latest Release of OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
    
       It'll install latest OpenSSL to a new path: `/usr/local/openssl` which is the value of [`-DWITH_SSL`](https://github.com/MariaDB/server/blob/10.3/cmake/ssl.cmake#L23) option for `cmake`
 

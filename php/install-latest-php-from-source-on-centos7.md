@@ -14,7 +14,7 @@
       * It'll install latest zlib to a new path: `/usr/local/zlib` which is the value of `--with-zlib-dir` option
 
 * [OpenSSL](https://www.openssl.org/)
-   * [Install Latest Release of OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos-7.md)
+   * [Install Latest Release of OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
    * It'll install latest OpenSSL to a new path: `/usr/local/openssl` which is the value of `--with-openssl-dir` option
 
 * [cURL](https://curl.haxx.se/)
