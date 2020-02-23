@@ -1,7 +1,7 @@
 # yum Failed after Install cURL from Source on CentOS 7
 
 ## Problems
-* [Install Latest cURL from Source on CentOS](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md)
+* Compile latest cURL lib and add the lib path to system library search path(`ldconfig`)
 * All `yum` commands(e.g. `yum list installed)` failed with these error messages:
 
    > There was a problem importing one of the Python modules
@@ -21,8 +21,7 @@
        sudo ldconfig
        // Make sure `/usr/local/curl/lib` does not exist in the library search path
        ldconfig -p | grep libcurl
-* Install latest [pycURL](http://pycurl.io/) 
-   * [Install Latest pycURL from Source On CentOS 7](https://github.com/northbright/Notes/blob/master/python/install-latest-pycurl-from-source-on-centos-7.md)
+* Use `rpath` to specify the lib to load when compile latest cURL
 
 ## References
 * [Error while using libcrypto.so](https://github.com/openssl/openssl/issues/8573)
