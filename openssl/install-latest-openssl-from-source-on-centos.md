@@ -21,10 +21,11 @@
 ## Configure, Make and Install
 ```
 # configure, make & make install
-# use `rpath` to make openssl and libraries 
-# search specific path at runtime
+# use `rpath` to make sure our latest zlib, OpenSSL libs are loaded
+# it won't upgrade system default zlib, OpenSSL libs 
+# to avoid incompatible issues(ldconfig)
 
-LDFLAGS="-Wl,-rpath=/usr/local/openssl" \
+LDFLAGS="-Wl,-rpath=/usr/local/zlib:/usr/local/openssl" \
 ./config --prefix=/usr/local/openssl \
 --openssldir=/usr/local/openssl
 
