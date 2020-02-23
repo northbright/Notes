@@ -20,14 +20,18 @@
             
 ## Configure, Make and Install
 ```
-# configure, make & make install
-# use `rpath` to make sure our latest zlib, OpenSSL libs are loaded
-# it won't upgrade system default zlib, OpenSSL libs 
+# configure
+# use `rpath` to make sure our latest OpenSSL libs are loaded
+# it won't upgrade system default OpenSSL libs 
 # to avoid incompatible issues(ldconfig)
+# OpenSSL links zlib statically by default
 
-LDFLAGS="-Wl,-rpath=/usr/local/zlib:/usr/local/openssl" \
+LDFLAGS="-Wl,-rpath=/usr/local/openssl/lib" \
+\
 ./config --prefix=/usr/local/openssl \
---openssldir=/usr/local/openssl
+--openssldir=/usr/local/openssl \
+--with-zlib-include=/usr/local/zlib/include \
+--with-zlib-lib=/usr/local/zlib/lib \
 
 make
 sudo make install
