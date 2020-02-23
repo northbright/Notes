@@ -21,9 +21,13 @@
 ## Configure, Make and Install
 ```
 # configure, make & make install
-# use `rpath` to make openssl binary and libraries search specific path at runtime
+# use `rpath` to make openssl and libraries 
+# search specific path at runtime
 
-LDFLAGS="-Wl,-rpath=/usr/local/openssl" ./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl
+LDFLAGS="-Wl,-rpath=/usr/local/openssl" \
+./config --prefix=/usr/local/openssl \
+--openssldir=/usr/local/openssl
+
 make
 sudo make install
 ```
