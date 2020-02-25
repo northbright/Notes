@@ -20,7 +20,7 @@
   * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md)
 
 * PCRE
-  * [Install Latest PCRE from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/pcre/install-latest-pcre-from-source-on-centos-7.md) 
+  * [Install Latest PCRE from Source on CentOS](https://github.com/northbright/Notes/blob/master/pcre/install-latest-pcre-from-source-on-centos.md) 
 
 * OpenSSL
   * [Install Latest OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
