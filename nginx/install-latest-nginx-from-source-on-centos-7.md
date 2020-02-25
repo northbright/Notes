@@ -23,7 +23,7 @@
   * [Install Latest PCRE from Source on CentOS](https://github.com/northbright/Notes/blob/master/pcre/install-latest-pcre-from-source-on-centos.md) 
 
 * OpenSSL
-  * [Install Latest OpenSSL from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
+  * [Install Latest Release of OpenSSL from Source on CentOS](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
    
 ## Download source on [github](https://github.com/nginx/nginx/releases)
 
