@@ -26,28 +26,36 @@
   * [Install Latest Release of OpenSSL from Source on CentOS](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
    
 ## Download source on [github](https://github.com/nginx/nginx/releases)
-
-    cd download
-    wget https://github.com/nginx/nginx/archive/release-1.17.0.tar.gz
+```
+cd download
+wget https://github.com/nginx/nginx/archive/release-1.17.8.tar.gz
+tar -xzvf release-1.17.8.tar.gz
+cd nginx-release-1.17.8
+```
 
 ## Configure [Nginx](http://nginx.org/)
-
-    # Configure nginx
-    # 1. Specify prefix to install nginx
-    # 2. Specify PCRE SOURCE dir(NOT "make install" dir). It'll use STATIC link to PCRE library.
-    # 3. Specify zlib SOURCE dir(NOT "make install" dir). It'll use STATIC link to zlib library.
-    # 4. Specify OpenSSL library dir(NOT source).
-
-    ./auto/configure \
-    --prefix=/usr/local/nginx \
-    --with-pcre=/home/xx/download/pcre-8.43 \
-    --with-zlib=/home/xx/download/zlib-1.2.11 \
-    --with-openssl=/usr/local/openssl \
+```
+./auto/configure \
+--prefix=/usr/local/nginx \
+--with-cc-opt="-I /usr/local/pcre/include \
+-I /usr/local/zlib/include \
+-I /usr/local/openssl/include" \
+\
+--with-ld-opt="-L /usr/local/pcre/lib \
+-L /usr/local/zlib/lib \
+-L /usr/local/openssl/lib \
+-Wl,-rpath=/usr/local/pcre/lib \
+-Wl,-rpath=/usr/local/zlib/lib \
+-Wl,-rpath=/usr/local/openssl/lib" \
+\
+--with-http_ssl_module
+```
 
 ## Make and Install
-
-    make
-    sudo make install
+```
+make
+sudo make install
+```
       
 ## Add New Binary Path of Nginx
 * `sudo vi /etc/profile`
