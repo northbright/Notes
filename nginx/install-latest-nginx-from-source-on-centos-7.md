@@ -45,8 +45,8 @@ There're 2 configure methods to make nginx use latest or specified versions of z
     ```
     ./auto/configure \
     --prefix=/usr/local/nginx \
-    --with-zlib=/home/xxu/download/zlib-1.2.11/ \
-    --with-pcre=/home/xxu/download/pcre-8.44 \
+    --with-zlib=/home/USER/download/zlib-1.2.11/ \
+    --with-pcre=/home/USER/download/pcre-8.44 \
     --with-openssl=/home/xxu/download/openssl-OpenSSL_1_1_1d/ \
     --with-http_ssl_module \
     ```
