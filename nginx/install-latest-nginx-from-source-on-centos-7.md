@@ -35,24 +35,25 @@ cd nginx-release-1.17.8
 
 ## Configure [Nginx](http://nginx.org/)
 There're 2 configure methods to make nginx use latest or specified versions of zlib, pcre and OpenSSL.
-* Method A - Use `--with-zlib`, `--with-pcre`, `--with-openssl`
+* Method A: Use `--with-zlib`, `--with-pcre`, `--with-openssl`
 
-  * Set `--with-xx` to the source code directories and make nginx compile the library from source by itself
+  * Set `--with-xx` to the source directories and make nginx compile the library from source by itself
   * To add options for compiling zlib, pcre, OpenSSL, you may need to add additional `--with-zlib-opt`, `--with-pcre-opt`, `--with-openssl-opt`
   * Nginx will link the libraries(libz, libpcre, libssl, libcrypto) statically
   * Example Configuration
 
     ```
-    ./auto/configure --prefix=/usr/local/nginx \
+    ./auto/configure \
+    --prefix=/usr/local/nginx \
     --with-zlib=/home/xxu/download/zlib-1.2.11/ \
     --with-pcre=/home/xxu/download/pcre-8.44 \
     --with-openssl=/home/xxu/download/openssl-OpenSSL_1_1_1d/ \
     --with-http_ssl_module \
     ```
 
-* Method B - Use `--with-cc-opt`, `--with-ld-opt`(**recommended**)
+* Method B: Use `--with-cc-opt`, `--with-ld-opt`(**recommended**)
 
-  * We compiled and installed specfied version of zlib, pcre, openssl on system(e.g. `/usr/local/zlib`, `/usr/local/pcre`, `usr/local/openssl`)
+  * We compiled and installed specified version of zlib, pcre, openssl on system(e.g. `/usr/local/zlib`, `/usr/local/pcre`, `usr/local/openssl`)
   * If NO `--with-zlib`, `--with-pcre` and `--with-openssl` specified, nginx will use "System" ones.
   * Set `--with--cc-opt`, `--with-ld-opt` to the install directories of specified version of zlib, pcre, OpenSSL
   * When nginx compiles source / link libraries, overrided paths in `CFLAGS`, `LDFLAGS` will make nginx use specified version of zlib, pcre, openssl(installed) instead of system default ones.
