@@ -1,8 +1,5 @@
 # Install Latest Nginx from Source on CentOS 7
 
-## Security Setup
-* [Disable root SSH Login](https://github.com/northbright/Notes/blob/master/Linux/ssh/disable-root-ssh-login.md)
-
 ## Install Dependencies
 * Update `yum`
    
