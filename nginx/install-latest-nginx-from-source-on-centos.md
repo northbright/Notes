@@ -1,4 +1,8 @@
-# Install Latest Nginx from Source on CentOS 7
+# Install Latest Nginx from Source on CentOS
+
+## Supported CentOS Versions
+* CentOS 7
+* CentoS 8
 
 ## Install Dependencies
 * Install "Development Tools"

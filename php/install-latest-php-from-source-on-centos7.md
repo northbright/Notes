@@ -31,7 +31,7 @@
   * [Install libiconv from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libiconv/install-libiconv-from-source-on-centos7.md)
 
 ## Install [Nginx](https://nginx.org)(optional)
-* [Install Latest Nginx from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/nginx/install-latest-nginx-from-source-on-centos-7.md)
+* [Install Latest Nginx from Source on CentOS](https://github.com/northbright/Notes/blob/master/nginx/install-latest-nginx-from-source-on-centos.md)
    * Nginx worker process will be run as `nobody`(user and group) which are the values of `--with-fpm-user` and `--with-fpm-group` 
 
 ## Install [MariaDB](https://mariadb.org/)(optional)
