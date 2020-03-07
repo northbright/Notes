@@ -1,16 +1,8 @@
 # Install Latest Nginx from Source on CentOS 7
 
 ## Install Dependencies
-* Update `yum`
-   
-      sudo yum update -y
-
 * Install "Development Tools"
    
-      # Find the name of "Development Tools" Group under "Optional Group" in the output
-      # Pass the group name to `yum group install` 
-      # The group name may be translated string(e.g. "开发工具" in Chinese)
-      yum group list
       sudo yum group install "Development Tools" -y
 
 * zlib
