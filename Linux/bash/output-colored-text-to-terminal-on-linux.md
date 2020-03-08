@@ -1,8 +1,8 @@
 # Output Colored Text to Terminal on Linux
 
 ## Solution
-Use ANSI Color Codes to control the terminal text color
-There're 2 types of Codes: Format Codes and Color Codes
+Use ANSI Color Codes to control the terminal text color.
+There're 2 types of Codes: Format Codes and Color Codes.
 
 1. Select format code
 
