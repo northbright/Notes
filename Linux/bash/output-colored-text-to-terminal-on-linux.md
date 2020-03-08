@@ -29,7 +29,7 @@ There're 2 types of Codes: Format Codes and Color Codes.
 | cyan | 36 | 46 |
 | white | 37 | 47 |
 
-3. Put one or more codes(use `;` as separator) between `\033]` and `m` to make a string
+3. Put one or more codes(use `;` as separator) between `\033[` and `m` to make a string
 4. Run `printf` + `STRING` in terminal
 
 ## Example
