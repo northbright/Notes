@@ -78,7 +78,7 @@ There're 2 configure methods to make nginx use latest or specified versions of z
 * `configure` will set default values if options values are not set
 
 | Description | Variable | Option | Default Value |
-| :--: | :--: | :-- : | :--: |
+| :--: | :--: | :--: | :--: |
 | binary path | `NGX_SBIN_PATH` | `--sbin-path` | `$PREFIX/sbin/nginx` |
 | `nginx.conf` path | `NGX_CONF_PATH` | `--conf-path` | `$PREFIX/conf/nginx.conf` |
 | PID file path | `NGX_PID_PATH` | `--pid-path` | `$PREFIX/logs/nginx.pid` |
