@@ -4,7 +4,7 @@
 CentOS 7 runs [FirewallD](https://fedoraproject.org/wiki/FirewallD).  
 It uses `firewall-cmd` to config firewall rules. 
 
-#### Check anc Configure `firewalld` Service
+## Check anc Configure `firewalld` Service
 
     // Check
     systemctl is-enabled firewalld
@@ -17,7 +17,7 @@ It uses `firewall-cmd` to config firewall rules.
     sudo systemctl status firewalld
 
 
-#### Add HTTP(S) Service with default ports:80,443
+## Add HTTP(S) Service with default ports:80,443
 
 * Add Rules: 
   ```
@@ -31,7 +31,7 @@ It uses `firewall-cmd` to config firewall rules.
 * Check:  
   `sudo firewall-cmd --zone=public --query-service=http`
 
-#### Add HTTP Service with customized port(ex: 8080)
+## Add HTTP Service with customized port(ex: 8080)
 
 Ports below `1024` can be opened only by `root`.  
 To run our HTTP service / app(Ex: golang app) as a normal user, we need to use another port(ex: `8080`).
@@ -45,9 +45,9 @@ To run our HTTP service / app(Ex: golang app) as a normal user, we need to use a
 * Check:  
   `sudo firewall-cmd --zone=public --query-port=8080/tcp`
 
-#### List everything added for or enabled in a zone
+## List everything added for or enabled in a zone
 
     sudo firewall-cmd --list-all
 
-#### References:  
+## References:  
 * <http://stackoverflow.com/questions/24729024/centos-7-open-firewall-port>
