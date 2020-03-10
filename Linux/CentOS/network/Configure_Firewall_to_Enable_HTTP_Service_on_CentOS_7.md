@@ -17,10 +17,13 @@ It uses `firewall-cmd` to config firewall rules.
     sudo systemctl status firewalld
 
 
-#### Add HTTP Service with default port:80  
+#### Add HTTP(S) Service with default ports:80,443
 
-* Add Rule:  
-  `sudo firewall-cmd --permanent --zone=public --add-service=http`  
+* Add Rules: 
+  ```
+  sudo firewall-cmd --permanent --zone=public --add-service=http
+  sudo firewall-cmd --permanent --zone=public --add-service=https
+
 
 * Reload:  
   `sudo firewall-cmd --reload`
