@@ -58,6 +58,8 @@ There're 2 configure methods to make nginx use latest or specified versions of z
     ```
     ./auto/configure \
     --prefix=/usr/local/nginx \
+    --group=nobody \
+    --user=nobody \
     --with-cc-opt="-I /usr/local/pcre/include \
     -I /usr/local/zlib/include \
     -I /usr/local/openssl/include" \
@@ -71,6 +73,19 @@ There're 2 configure methods to make nginx use latest or specified versions of z
     \
     --with-http_ssl_module \
     ```
+
+## Default Values of Unspecified Options
+* `configure` will set default values if options values are not set
+
+| Description | Variable | Option | Default Value |
+| :--: | :--: | :-- : | :--: |
+| binary path | `NGX_SBIN_PATH` | `--sbin-path` | `$PREFIX/sbin/nginx` |
+| `nginx.conf` path | `NGX_CONF_PATH` | `--conf-path` | `$PREFIX/conf/nginx.conf` |
+| PID file path | `NGX_PID_PATH` | `--pid-path` | `$PREFIX/logs/nginx.pid` |
+| error log path  | `NGX_ERROR_LOG_PATH` | `--error-log-path` | `$PREFIX/logs/error.log` |
+| HTTP log path | `NGX_HTTP_LOG_PATH` | `--http-log-path` | `$PREFIX/logs/access.log` |
+
+* Check the default option values in [./auto/options](https://github.com/nginx/nginx/blob/release-1.17.9/auto/options#L597)
 
 ## Make and Install
 ```
