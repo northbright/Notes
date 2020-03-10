@@ -40,6 +40,8 @@ There're 2 configure methods to make nginx use latest or specified versions of z
 
     ./auto/configure \
     --prefix=/usr/local/nginx \
+    --group=nobody \
+    --user=nobody \
     --with-zlib=/PATH/to/zlib-1.2.11/ \
     --with-pcre=/PATH/to/pcre-8.44 \
     --with-openssl=/PATH/to/openssl-OpenSSL_1_1_1d/ \
