@@ -87,6 +87,20 @@ There're 2 configure methods to make nginx use latest or specified versions of z
 
 * Check the default option values in [./auto/options](https://github.com/nginx/nginx/blob/release-1.17.9/auto/options#L597)
 
+* These options are set to the same default values in `$PREFIX/conf/nginx.conf`(e.g. `/usr/local/conf/nginx.conf`) and commented
+
+  ```
+  #error_log  logs/error.log;
+  #pid        logs/nginx.pid;
+
+  http {
+      ...
+      #access_log  logs/access.log  main;
+  }
+  ```
+
+  If you are OK with the default values, NO need to uncomment the lines, it works fine.
+
 ## Make and Install
 ```
 make
