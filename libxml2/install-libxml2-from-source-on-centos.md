@@ -1,4 +1,8 @@
-# Install libxml2 from Source on CentOS 7
+# Install libxml2 from Source on CentOS
+
+## CentOS Versions
+* CentOS 7
+* CentOS 8
 
 ## Install Dependencies
 * [zlib](https://www.zlib.net/)

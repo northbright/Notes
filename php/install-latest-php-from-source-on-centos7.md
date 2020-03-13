@@ -22,7 +22,7 @@
    * It'll install latest cURL to a new path: `/usr/local/curl` which is the value of `--with-curl`
 
 * [libxml2](http://www.xmlsoft.org)
-  * [Install libxml2 from Source on CentOS 7](https://github.com/northbright/Notes/blob/38198dcc848ae729c6e61627c1797044b84f13b1/libxml2/install-libxml2-from-source-on-centos7.md)
+  * [Install libxml2 from Source on CentOS](https://github.com/northbright/Notes/blob/master/libxml2/install-libxml2-from-source-on-centos.md)
 
 * [libgd](https://libgd.github.io/)
    * [Install libgd from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libgd/install-libgd-from-source-on-centos7.md)

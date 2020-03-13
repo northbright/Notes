@@ -54,7 +54,7 @@ sudo chown -R mysql:mysql /var/lib/mysql
       It'll install latest OpenSSL to a new path: `/usr/local/openssl` which is the value of [`-DWITH_SSL`](https://github.com/MariaDB/server/blob/10.3/cmake/ssl.cmake#L23) option for `cmake`
 
 * [libxml2](http://www.xmlsoft.org)
-  * [Install libxml2 from Source on CentOS 7](https://github.com/northbright/Notes/blob/38198dcc848ae729c6e61627c1797044b84f13b1/libxml2/install-libxml2-from-source-on-centos7.md)
+  * [Install libxml2 from Source on CentOS](https://github.com/northbright/Notes/blob/master/libxml2/install-libxml2-from-source-on-centos.md)
 
 ## Get Latest Source Code
 Download latest release on <https://downloads.mariadb.org/>
