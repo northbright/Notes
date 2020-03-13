@@ -14,20 +14,25 @@
 
 ## Configure
 
-    ./autogen.sh
-    ./configure --prefix=/usr/local/libxml2 --with-zlib=/usr/local/zlib
+```
+./autogen.sh
+```
+
+```
+LDFLAGS="-Wl,-rpath=/usr/local/zlib/lib" \
+\
+./configure --prefix=/usr/local/libxml2 \
+--with-zlib=/usr/local/zlib
+```
 
 ## Make and Install
+```
+make
+sudo make install
+```
 
-    make
-    sudo make install
-
-## Add New Shared Libraries Path of zlib
-
-    su
-    echo '/usr/local/libxml2/lib/' > /etc/ld.so.conf.d/libxml2.conf
-    exit
-    sudo ldconfig
-      
-    # Check
-    ldconfig -p | grep libxml2
+## Check RPATH and linked libraries
+```
+readelf -d /usr/local/libxml2/lib/libxml2.so
+ldd /usr/local/libxml2/lib/libxml2.so
+```
