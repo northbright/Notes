@@ -1,5 +1,9 @@
 # Install [CMake](https://cmake.org/) from Source on CentOS
 
+## Install Dependencies
+* [OpenSSL](https://www.openssl.org/)
+   * [Install Latest Release of OpenSSL from Source on CentOS](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
+
 ## Get Source Code
 * A. From [Offical Site](https://cmake.org/download/)
 * B. From [GitHub](https://github.com/Kitware/CMake/releases)
@@ -13,6 +17,7 @@ cd cmake-3.15.4
 
 ## Configure
 ```
+OPENSSL_ROOT_DIR=/usr/local/openssl \
 ./configure --prefix=/usr/local/cmake
 ```
 
