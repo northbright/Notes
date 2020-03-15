@@ -1,8 +1,10 @@
 # Install [CMake](https://cmake.org/) from Source on CentOS
 
 ## Install Dependencies
-* [OpenSSL](https://www.openssl.org/)
-   * [Install Latest Release of OpenSSL from Source on CentOS](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
+* [zlib](https://www.zlib.net/)
+  * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md)
+* [cURL](https://curl.haxx.se/) 
+  * [Install Latest cURL from Source on CentOS](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md)
 
 ## Get Source Code
 * A. From [Offical Site](https://cmake.org/download/)
@@ -17,15 +19,24 @@ cd cmake-3.15.4
 
 ## Configure
 ```
-OPENSSL_ROOT_DIR=/usr/local/openssl \
-./configure --prefix=/usr/local/cmake
+ZLIB_ROOT=/usr/local/zlib/ \
+CURL_ROOT=/usr/local/curl/ \
+./bootstrap --prefix=/usr/local/cmake \
+--system-zlib \
+--system-curl
 ```
 
 ## Make and Install
 ```
-gmake
+make
 
 sudo make install
+```
+
+## Check RPATH and linked libraries
+```
+readelf -d /usr/local/cmake/bin/cmake
+ldd /usr/local/cmake/bin/cmake
 ```
 
 ## Add New Binary Path
