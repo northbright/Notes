@@ -14,6 +14,7 @@
   > configure CMake with -DCMAKE_USE_OPENSSL=OFF to build without OpenSSL.
 
 ## Root Cause
+* CMake needs cURL which use OpenSSL libraries(libcrypto, libssl)
 * Need to install OpenSSL development package or set OpenSSL root path when run `configure`
 
 ## Solution
@@ -22,6 +23,6 @@
 * Set `OPENSSL_ROOT_DIR`
 ```
 OPENSSL_ROOT_DIR=/usr/local/openssl \
+LDFLAGS="-Wl,-rpath=/usr/local/openssl/lib" \
 ./configure --prefix=/usr/local/cmake \
-
 ```
