@@ -1,7 +1,7 @@
 # Fix `Cannot change ownership of the 'auth_pam_tool_dir'` Error while Run `mysql_install_db` after Installed MariaDB(10.4.6) from Source
 
 ## How to Reproduce
-* Install MariaDB Source(10.4.6) following [Install MariaDB from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/mariadb/install-mariadb-from-source-on-centos7.md)
+* Install MariaDB Source(10.4.6) following [Install MariaDB from Source on CentOS](https://github.com/northbright/Notes/blob/master/mariadb/install-mariadb-from-source-on-centos.md)
 * Initialize MariaDB following the command metiond in the article
 
        sudo /usr/local/mysql/scripts/mysql_install_db \
@@ -77,4 +77,4 @@
        --auth-root-authentication-method=normal \
 
 ## References
-* [Install MariaDB from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/mariadb/install-mariadb-from-source-on-centos7.md)
+* [Install MariaDB from Source on CentOS](https://github.com/northbright/Notes/blob/master/mariadb/install-mariadb-from-source-on-centos.md)

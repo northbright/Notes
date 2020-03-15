@@ -1,4 +1,8 @@
-# Install MariaDB from Source on CentOS 7
+# Install MariaDB from Source on CentOS
+
+## CentOS Versions
+* CentOS 7
+* CentOS 8
 
 ## Create `mysql`Group and User
 ```

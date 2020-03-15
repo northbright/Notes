@@ -35,7 +35,7 @@
    * Nginx worker process will be run as `nobody`(user and group) which are the values of `--with-fpm-user` and `--with-fpm-group` 
 
 ## Install [MariaDB](https://mariadb.org/)(optional)
- * [Install MariaDB from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/mariadb/install-mariadb-from-source-on-centos7.md) 
+ * [Install MariaDB from Source on CentOS](https://github.com/northbright/Notes/blob/master/mariadb/install-mariadb-from-source-on-centos.md) 
     * Unix Socket path: `/tmp/mysql.sock` which is the value of `--with-mysql-sock` 
 
 ## Get Source
