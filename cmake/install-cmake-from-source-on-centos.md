@@ -54,3 +54,6 @@ ldd /usr/local/cmake/bin/cmake
 // Check version
 cmake --version
 ```
+
+## References
+* [Specify `--system-zlib` or `--system-curl` Will Enable `RPATH` When Compiling CMake from Source](specify-system-zlib-or-curl-will-enable-rpath-when-build-cmake-from-source.md)
