@@ -8,19 +8,19 @@
 * CMake will enable RPATH only if `CMAKE_USE_SYSTEM_CURL` or `CMAKE_USE_SYSTEM_ZLIB` is set to TRUE
 * Check [CMakeLists.txt](https://github.com/Kitware/CMake/blob/v3.16.5/CMakeLists.txt#L750)
 
-  ># The same might be true on other systems for other libraries.
-  ># Then only enable RPATH if we have are building at least with cmake 2.4,
-  ># since this one has much better RPATH features than cmake 2.2.
-  ># The executables are then built with the RPATH for the libraries outside
-  ># the build tree, which is both the build and the install RPATH.
-  >if (UNIX)
-  >  if(   CMAKE_USE_SYSTEM_CURL   OR  CMAKE_USE_SYSTEM_ZLIB
+  > # The same might be true on other systems for other libraries.
+  > # Then only enable RPATH if we have are building at least with cmake 2.4,
+  > # since this one has much better RPATH features than cmake 2.2.
+  > # The executables are then built with the RPATH for the libraries outside
+  > # the build tree, which is both the build and the install RPATH.
+  > if (UNIX)
+  >    if(   CMAKE_USE_SYSTEM_CURL   OR  CMAKE_USE_SYSTEM_ZLIB
   >        OR  CMAKE_USE_SYSTEM_EXPAT  OR  CURSES_NEED_RPATH  OR  QT_NEED_RPATH)
   >    set(CMAKE_SKIP_RPATH OFF CACHE INTERNAL "CMake built with RPATH.")
   >    set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
   >    set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
   >  endif()
-  >endif ()   
+  > endif ()   
 
 ## Steps
 * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md)
