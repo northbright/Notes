@@ -1,4 +1,4 @@
-# Install [libtiff](http://www.simplesystems.org/libtiff/) from Source on CentOS 7
+# Install libtiff from Source on CentOS 7
 
 ## Install Dependencies
 * [zlib](https://www.zlib.net/)
