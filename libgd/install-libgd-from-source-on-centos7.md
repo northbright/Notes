@@ -20,39 +20,56 @@
   * [Install libtiff from Source on CentOS](https://github.com/northbright/Notes/blob/master/libtiff/install-libtiff-from-source-on-centos7.md)
 
 ## Download Latest Source from [github](https://github.com/libgd/libgd/releases)
-
-    cd download
-    wget https://github.com/libgd/libgd/archive/gd-2.2.5.tar.gz
-    tar -xzvf gd-2.2.5.tar.gz
-    cd libgd-gd-2.2.5
+```
+cd download
+wget https://github.com/libgd/libgd/archive/gd-2.2.5.tar.gz
+tar -xzvf gd-2.2.5.tar.gz
+cd libgd-gd-2.2.5
+```
 
 ## Bootstrap
-
-    ./bootstrap.sh
+```
+./bootstrap.sh
+```
      
 ## Configure
+```
+// Set zlib, libjpeg, libpng, libwebp dirs if using non-standard dirs
+// Warn: it's special for libpng
+// It will link against -lpng15 automatically even if you specify --with-png and rpath for libpng
+// Solution: set LIBPNG_CFLAGS and LIBPNG_LIBS
 
-    // Set zlib, libjpeg, libpng, libwebp dirs if using non-standard dirs
-
-    ./configure --prefix=/usr/local/libgd \
-    --with-zlib=/usr/local/zlib \
-    --with-jpeg=/usr/local/libjpeg \
-    --with-png=/usr/local/libpng \
-    --with-webp=/usr/local/libwebp \
-    --with-tiff=/usr/local/libtiff \
-    --with-xpm \
+LIBPNG_CFLAGS="-I/usr/local/libpng/include" \
+LIBPNG_LIBS="-lpng" \
+\
+LDFLAGS="-L/usr/local/libpng/lib \
+-Wl,-rpath=/usr/local/zlib/lib \
+-Wl,-rpath=/usr/local/libpng/lib \
+-Wl,-rpath=/usr/local/libjpeg/lib \
+-Wl,-rpath=/usr/local/libwebp/lib \
+-Wl,-rpath=/usr/local/libtiff/lib \
+-Wl,-rpath=/usr/local/libgd/lib" \
+\
+./configure --prefix=/usr/local/libgd \
+--with-zlib=/usr/local/zlib \
+--with-png=/usr/local/libpng \
+--with-jpeg=/usr/local/libjpeg \
+--with-webp=/usr/local/libwebp \
+--with-tiff=/usr/local/libtiff \
+--with-xpm
+```
 
 ## Make and Install
+```
+make
+sudo make install
+```
 
-    make
-    sudo make install
+## Check RPATH and linked libraries
+```
+readelf -d /usr/local/libgd/bin/gd2topng
+ldd /usr/local/libgd/bin/gd2topng
 
-## Add New Shared Libraries Path
-
-    su
-    echo '/usr/local/libgd/lib/' > /etc/ld.so.conf.d/libgd.conf
-    exit
-    sudo ldconfig
-      
-    # Check
-    ldconfig -p | grep libgd
+readelf -d /usr/local/libgd/lib/libgd.so
+ldd /usr/local/libgd/lib/libgd.so
+```
