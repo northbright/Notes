@@ -19,29 +19,33 @@
       cd tiff-4.0.10
 
 ## Configure
-
-    // Specify include / lib path if need
-
-    ./configure --prefix=/usr/local/libtiff \
-    --with-zlib-include-dir=/usr/local/zlib/include \
-    --with-zlib-lib-dir=/usr/local/zlib/lib \
-    --with-jpeg-include-dir=/usr/local/libjpeg/include \
-    --with-jpeg-lib-dir=/usr/local/libjpeg/lib \
-    --with-webp-include-dir=/usr/local/libwebp/include \
-    --with-webp-lib-dir=/usr/local/libwebp/lib \
+```
+LDFLAGS="-Wl,-rpath=/usr/local/zlib/lib \
+-Wl,-rpath=/usr/local/libjpeg/lib \
+-Wl,-rpath=/usr/local/libwebp/lib \
+-Wl,-rpath=/usr/local/libtiff/lib" \
+\
+./configure --prefix=/usr/local/libtiff \
+\
+--with-zlib-include-dir=/usr/local/zlib/include \
+--with-zlib-lib-dir=/usr/local/zlib/lib \
+--with-jpeg-include-dir=/usr/local/libjpeg/include \
+--with-jpeg-lib-dir=/usr/local/libjpeg/lib \
+--with-webp-include-dir=/usr/local/libwebp/include \
+--with-webp-lib-dir=/usr/local/libwebp/lib
+```
 
 ## Make and Install
 
     make
     sudo make install
 
-## Add New Shared Libraries Path
 
-    su
-    echo '/usr/local/libtiff/lib/' > /etc/ld.so.conf.d/libtiff.conf
-    exit
-    sudo ldconfig
-    
-    # Check
-    ldconfig -p | grep libtiff
+## Check RPATH and linked libraries
+```
+readelf -d /usr/local/libtiff/bin/tiffcmp
+ldd /usr/local/libtiff/bin/tiffcmp
 
+readelf -d /usr/local/libtiff/lib/libtiff.so
+ldd /usr/local/libtiff/lib/libtiff.so
+```
