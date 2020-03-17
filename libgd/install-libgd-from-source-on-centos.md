@@ -1,4 +1,4 @@
-# Install libgd from Source on CentOS 7
+# Install libgd from Source on CentOS
 
 ## Install Dependencies
 * [libXpm](https://www.x.org/wiki/Releases/Download/)
