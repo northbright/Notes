@@ -1,4 +1,8 @@
-# Install libjpeg from Source on CentOS 7
+# Install libjpeg from Source on CentOS
+
+## Tested CentOS Versions
+* CentOS 7
+* CentOS 8
 
 ## Download Latest Source from <http://www.ijg.org/files/>
 

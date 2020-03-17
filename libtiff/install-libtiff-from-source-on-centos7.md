@@ -5,7 +5,7 @@
    * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md)
 
 * [libjpeg](http://www.ijg.org/)
-   * [Install libjpeg from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libjpeg/install-latest-libjpeg-on-centos7.md) 
+   * [Install libjpeg from Source on CentOS](https://github.com/northbright/Notes/blob/master/libjpeg/install-latest-libjpeg-on-centos.md) 
 
 * [WebP](https://github.com/webmproject/libwebp)
    * [Install WebP from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/webp/install-webp-from-source-on-centos7.md)

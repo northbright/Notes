@@ -5,7 +5,7 @@
    * [Install libpng from Source on CentOS](https://github.com/northbright/Notes/blob/master/libpng/install-libpng-from-source-on-centos.md)
 
 * [libjpeg](http://www.ijg.org/)
-   * [Install libjpeg from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libjpeg/install-latest-libjpeg-on-centos7.md) 
+   * [Install libjpeg from Source on CentOS](https://github.com/northbright/Notes/blob/master/libjpeg/install-latest-libjpeg-on-centos.md) 
 
 ## Download Source on [Github Mirror](https://github.com/webmproject/libwebp/releases)
 
