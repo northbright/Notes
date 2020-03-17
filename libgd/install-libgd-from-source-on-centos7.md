@@ -8,7 +8,7 @@
    * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md)
 
 * [libpng](http://www.libpng.org/pub/png/libpng.html)
-   * [Install libpng from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libpng/install-libpng-from-source-on-centos-7.md)
+   * [Install libpng from Source on CentOS](https://github.com/northbright/Notes/blob/master/libpng/install-libpng-from-source-on-centos.md)
 
 * [libjpeg](http://www.ijg.org/)
    * [Install libjpeg from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libjpeg/install-latest-libjpeg-on-centos7.md) 
