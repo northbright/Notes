@@ -16,9 +16,11 @@
     // export CPPFLAGS and LDFLAGS before run ./configure
     // if zlib is installed in the **non-standard** directory
 
-    export CPPFLAGS="-I/usr/local/zlib/include"
-    export LDFLAGS="-L/usr/local/zlib/lib"
-
+    CPPFLAGS="-I/usr/local/zlib/include" \
+    LDFLAGS="-L/usr/local/zlib/lib \
+    -Wl,-rpath=/usr/local/zlib/lib \
+    -Wl,-rpath=/usr/local/libpng/lib" \
+    \
     ./configure --prefix=/usr/local/libpng
 
 ## Make & Make Install
@@ -26,15 +28,11 @@
     make
     sudo make install
 
-## Add New Shared Libraries Path of libpng
-
-    su
-    echo '/usr/local/libpng/lib/' > /etc/ld.so.conf.d/libpng.conf
-    exit
-    sudo ldconfig
-          
-    # Check
-    ldconfig -p | grep libpng
+## Check RPATH and linked libraries
+```
+readelf -d /usr/local/libpng/lib/libpng.so
+ldd /usr/local/libpng/lib/libpng.so
+```
 
 ## References
 * [libpng](http://www.libpng.org/pub/png/libpng.html)
