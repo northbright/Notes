@@ -1,4 +1,8 @@
-# Install libtiff from Source on CentOS 7
+# Install libtiff from Source on CentOS
+
+## Tested CentOS Versions
+* CentOS 7
+* CentOS 8
 
 ## Install Dependencies
 * [zlib](https://www.zlib.net/)

@@ -17,7 +17,7 @@
    * [Install WebP from Source on CentOS](https://github.com/northbright/Notes/blob/master/webp/install-webp-from-source-on-centos.md)
 
 * [libtiff](http://www.simplesystems.org/libtiff/)
-  * [Install libtiff from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libtiff/install-libtiff-from-source-on-centos7.md)
+  * [Install libtiff from Source on CentOS](https://github.com/northbright/Notes/blob/master/libtiff/install-libtiff-from-source-on-centos7.md)
 
 ## Download Latest Source from [github](https://github.com/libgd/libgd/releases)
 

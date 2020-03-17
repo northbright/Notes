@@ -25,7 +25,7 @@
   * [Install libxml2 from Source on CentOS](https://github.com/northbright/Notes/blob/master/libxml2/install-libxml2-from-source-on-centos.md)
 
 * [libgd](https://libgd.github.io/)
-   * [Install libgd from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libgd/install-libgd-from-source-on-centos7.md)
+   * [Install libgd from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libgd/install-libgd-from-source-on-centos.md)
 
 * [libiconv](https://www.gnu.org/software/libiconv/)
   * [Install libiconv from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/libiconv/install-libiconv-from-source-on-centos7.md)
