@@ -1,4 +1,4 @@
-# Install WebP from Source on CentOS 7
+# Install WebP from Source on CentOS
 
 ## Download Source on [Github Mirror](https://github.com/webmproject/libwebp/releases)
 ```
