@@ -1,4 +1,4 @@
-# Install [libiconv](https://www.gnu.org/software/libiconv/) from Source on CentOS 7
+# Install libiconv from Source on CentOS 7
 
 ## Download
 * Get source code on [offical site](https://ftp.gnu.org/pub/gnu/libiconv/)
