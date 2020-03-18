@@ -1,4 +1,8 @@
-# Install PHP from Source on CentOS 7
+# Install PHP from Source on CentOS
+
+## Tested CentOS Versions
+* CentOS 7
+* CentOS 8
 
 ## Install Dependencies
 * "Development Tools"
