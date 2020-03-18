@@ -9,13 +9,15 @@
        cd libiconv-1.16
 
 ## Configure
-
-    ./configure --prefix=/usr/local/libiconv
+```
+./configure --prefix=/usr/local/libiconv
+```
 
 ## Make and Install
-
-    make
-    sudo make install
+```
+make
+sudo make install
+```
 
 ## Add New Binary Path
 * `sudo vi /etc/profile`
@@ -25,13 +27,3 @@
       export PATH=/usr/local/libiconv/bin:$PATH
 
 * `source /etc/profile`
-
-## Add New Shared Libraries Path
-
-    su
-    echo '/usr/local/libiconv/lib/' > /etc/ld.so.conf.d/libiconv.conf
-    exit
-    sudo ldconfig
-      
-    # Check
-    ldconfig -p | grep libiconv
