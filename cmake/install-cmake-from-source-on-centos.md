@@ -7,8 +7,7 @@
   * [Install Latest cURL from Source on CentOS](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md)
 
 ## Get Source Code
-* A. From [Offical Site](https://cmake.org/download/)
-* B. From [GitHub](https://github.com/Kitware/CMake/releases)
+* Download from [GitHub](https://github.com/Kitware/CMake/releases)
 
 ```
 cd ~/download
