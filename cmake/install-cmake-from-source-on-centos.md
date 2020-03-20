@@ -1,4 +1,4 @@
-# Install [CMake](https://cmake.org/) from Source on CentOS
+# Install CMake from Source on CentOS
 
 ## Install Dependencies
 * [zlib](https://www.zlib.net/)
