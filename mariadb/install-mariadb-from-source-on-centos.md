@@ -77,6 +77,7 @@ Download latest release on <https://downloads.mariadb.org/>
     -DWITH_SSL=/usr/local/openssl \
     -DZLIB_ROOT=/usr/local/zlib \
     -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+    -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE \
     -DDEFAULT_CHARSET=utf8 \
     -DDEFAULT_COLLATION=utf8_general_ci \
     -DEXTRA_CHARSETS=all \
