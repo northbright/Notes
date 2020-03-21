@@ -4,6 +4,9 @@
 * CentOS 7
 * CentOS 8
 
+## Hardware Requirements
+* 2GB or larger RAM
+
 ## Create `mysql`Group and User
 ```
 // Check if `mysql` group exists
@@ -162,3 +165,4 @@ Download latest release on <https://downloads.mariadb.org/>
 * [CentOS 7 源码编译MariaDB](https://www.cnblogs.com/bigdevilking/p/9452686.html)
 * [Building MariaDB on CentOS](https://mariadb.com/kb/en/library/source-building-mariadb-on-centos/)
 * [Fix Cannot change ownership of the 'auth_pam_tool_dir' Error while Run mysql_install_db after Installed MariaDB(10.4.6) from Source](https://github.com/northbright/Notes/blob/master/mariadb/fix-cannot-change-ownership-of-the-auth_pam_tool_dir-error-while-run-mysql_install_db-after-installed-mariadb-10.4.6-from-source.md)
+* [Got Out of Memory Allocating Error When Compiling MariaDB](got-out-of-memory-allocating-error-when-compiling-mariadb.md)
