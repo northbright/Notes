@@ -33,6 +33,9 @@ sudo mkdir -p /var/lib/mysql
 
 // Set owner of data dir
 sudo chown -R mysql:mysql /var/lib/mysql
+
+// Create config dir
+sudo mkdir -p /etc/my.cnf.d
 ```
 
 ## Install Dependencies
@@ -166,3 +169,4 @@ Download latest release on <https://downloads.mariadb.org/>
 * [Building MariaDB on CentOS](https://mariadb.com/kb/en/library/source-building-mariadb-on-centos/)
 * [Fix Cannot change ownership of the 'auth_pam_tool_dir' Error while Run mysql_install_db after Installed MariaDB(10.4.6) from Source](https://github.com/northbright/Notes/blob/master/mariadb/fix-cannot-change-ownership-of-the-auth_pam_tool_dir-error-while-run-mysql_install_db-after-installed-mariadb-10.4.6-from-source.md)
 * [Got Out of Memory Allocating Error When Compiling MariaDB](got-out-of-memory-allocating-error-when-compiling-mariadb.md)
+* [How do I find the MySQL my.cnf location](https://stackoverflow.com/questions/2482234/how-do-i-find-the-mysql-my-cnf-location)
