@@ -33,9 +33,6 @@ sudo mkdir -p /var/lib/mysql
 
 // Set owner of data dir
 sudo chown -R mysql:mysql /var/lib/mysql
-
-// Create config dir
-sudo mkdir -p /etc/my.cnf.d
 ```
 
 ## Install Dependencies
@@ -129,9 +126,7 @@ Download latest release on <https://downloads.mariadb.org/>
       [mysqld_safe]
       log-error=/var/lib/mysql/mysql.log
 
-      # include all files from the config directory
-      !includedir /etc/my.cnf.d
-        
+
 ## Initialize MariaDB
 * Before 10.4.x(e.g. 10.3 series)
 
