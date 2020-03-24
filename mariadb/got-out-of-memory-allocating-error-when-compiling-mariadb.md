@@ -7,4 +7,4 @@
   > Out of Memory Allocating......
 
 ## Solution
-* Upgrade RAM(e.g. 2GB)
+* Upgrade RAM(e.g. 4GB)

@@ -5,7 +5,7 @@
 * CentOS 8
 
 ## Hardware Requirements
-* 2GB or larger RAM
+* 4GB or larger RAM
 
 ## Create `mysql`Group and User
 ```
