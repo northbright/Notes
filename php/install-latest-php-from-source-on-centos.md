@@ -57,6 +57,9 @@
 
 * Configure
 
+       LIBXML_CFLAGS="-I/usr/local/libxml2/include/" \
+       LIBXML_LIBS="-L/usr/local/libxml2/lib/" \
+       \
        ./configure \
        --prefix=/usr/local/php \
        --enable-fpm \
