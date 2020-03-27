@@ -19,3 +19,13 @@ cd re2c-1.3/
 make
 sudo make install
 ```
+
+## Add Binary Path
+```
+sudo vi /etc/profile
+```
+
+```
+# Use New Version of re2c
+export PATH=/usr/local/re2c/bin:$PATH
+```
