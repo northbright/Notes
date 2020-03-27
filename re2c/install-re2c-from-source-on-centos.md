@@ -29,3 +29,7 @@ sudo vi /etc/profile
 # Use New Version of re2c
 export PATH=/usr/local/re2c/bin:$PATH
 ```
+
+```
+source /etc/profile
+```
