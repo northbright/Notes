@@ -27,7 +27,8 @@ cd pcre2-10.34
 // It sets '-Wl,-rpath=$PREFIX' by default.
 // No need to specify RPATH in configure.
 
-./configure --prefix=/usr/local/pcre2
+./configure --prefix=/usr/local/pcre2 \
+--enable-jit
 
 make
 sudo make install
