@@ -233,3 +233,7 @@ If Using Unix socket instead of TCP socket(by default) to communicate with Nginx
 ## References
 * [2015博客升级记(五)：CentOS 7.1编译安装PHP7](https://typecodes.com/web/centos7compilephp7.html)
 * [Other Changes](https://www.php.net/manual/en/migration74.other-changes.php)
+* [checking whether to build with LIBXML support](https://bugs.php.net/bug.php?id=79135)
+* [--with-openssl no longer accepts a directory](https://bugs.php.net/bug.php?id=79401)
+* [Migration to pkg-config](https://www.php.net/manual/en/migration74.other-changes.php#migration74.other-changes.pkg-config)
+* [--with-curl switch behaviour change in PHP 7.4](https://bugs.php.net/bug.php?id=79313)
