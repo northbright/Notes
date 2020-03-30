@@ -12,6 +12,8 @@ sudo mkdir -p /var/www/wordpress
 
     sudo chown -R nobody:nobody /var/www/wordpress
 
+    sudo chmod 755 -R /var/www/wordpress
+
 ## php.ini Configuration
 
     sudo vi /usr/local/php/lib/php.ini
