@@ -1,5 +1,10 @@
 # Configure Nginx to Work with php-fpm
 
+## Create `/var/www/wordpress`
+```
+sudo mkdir -p /var/www/wordpress
+```
+
 ## Set owner of web root
 
     // e.g. for wordpress
