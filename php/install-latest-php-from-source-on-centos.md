@@ -1,7 +1,9 @@
 # Install PHP from Source on CentOS
 
+## PHP Versions
+* 7.4.4
+
 ## Tested CentOS Versions
-* CentOS 7
 * CentOS 8
 
 ## Install Dependencies
@@ -15,24 +17,33 @@
 
 * [zlib](https://www.zlib.net/)
    * [Install zlib on CentOS from Source](https://github.com/northbright/Notes/blob/master/zlib/install-zlib-on-centos-from-source.md) 
-      * It'll install latest zlib to a new path: `/usr/local/zlib` which is the value of `--with-zlib-dir` option
 
 * [OpenSSL](https://www.openssl.org/)
    * [Install Latest Release of OpenSSL from Source on CentOS](https://github.com/northbright/Notes/blob/master/openssl/install-latest-openssl-from-source-on-centos.md)
-   * It'll install latest OpenSSL to a new path: `/usr/local/openssl` which is the value of `--with-openssl-dir` option
 
 * [cURL](https://curl.haxx.se/)
    * [Install Latest cURL from Source on CentOS](https://github.com/northbright/Notes/blob/master/curl/install-latest-curl-from-source-on-centos.md) 
-   * It'll install latest cURL to a new path: `/usr/local/curl` which is the value of `--with-curl`
 
 * [libxml2](http://www.xmlsoft.org)
   * [Install libxml2 from Source on CentOS](https://github.com/northbright/Notes/blob/master/libxml2/install-libxml2-from-source-on-centos.md)
 
-* [libgd](https://libgd.github.io/)
-   * [Install libgd from Source on CentOS](https://github.com/northbright/Notes/blob/master/libgd/install-libgd-from-source-on-centos.md)
+* [libXpm](https://www.x.org/wiki/Releases/Download/)
+  * [Install libXpm on CentOS 7](https://github.com/northbright/Notes/blob/master/libxpm/install-libxpm-devel-on-centos7.md)
 
-* [libiconv](https://www.gnu.org/software/libiconv/)
-  * [Install libiconv from Source on CentOS](https://github.com/northbright/Notes/blob/master/libiconv/install-libiconv-from-source-on-centos.md)
+* [libpng](http://www.libpng.org/pub/png/libpng.html)
+   * [Install libpng from Source on CentOS](https://github.com/northbright/Notes/blob/master/libpng/install-libpng-from-source-on-centos.md)
+
+* [libjpeg](http://www.ijg.org/)
+   * [Install libjpeg from Source on CentOS](https://github.com/northbright/Notes/blob/master/libjpeg/install-latest-libjpeg-on-centos.md)
+
+* [WebP](https://github.com/webmproject/libwebp)
+   * [Install WebP from Source on CentOS](https://github.com/northbright/Notes/blob/master/webp/install-webp-from-source-on-centos.md)
+
+* [pcre2](http://www.pcre.org/)
+  * [Install Latest PCRE2 from Source on CentOS](https://github.com/northbright/Notes/blob/master/pcre/install-latest-pcre2-from-source-on-centos.md)
+
+* [oniguruma](https://github.com/kkos/oniguruma)
+  * [Install oniguruma from Source on CentOS](https://github.com/northbright/Notes/blob/master/oniguruma/install-oniguruma-from-source-on-centos.md)
 
 ## Install [Nginx](https://nginx.org)(optional)
 * [Install Latest Nginx from Source on CentOS](https://github.com/northbright/Notes/blob/master/nginx/install-latest-nginx-from-source-on-centos.md)
@@ -43,61 +54,75 @@
     * Unix Socket path: `/tmp/mysql.sock` which is the value of `--with-mysql-sock` 
 
 ## Get Source
-* Download latest stable release on [official site](https://www.php.net/downloads.php) or [github](https://github.com/php/php-src/releases)
 
-       cd download
-       wget https://github.com/php/php-src/archive/php-7.3.8.tar.gz
-       tar -xzvf php-7.3.8.tar.gz
-       cd php-src-php-7.3.8
+Download latest stable release on [official site](https://www.php.net/downloads.php) or [github](https://github.com/php/php-src/releases)
+
+```
+wget https://github.com/php/php-src/archive/php-7.4.4.tar.gz
+tar -xzvf php-7.4.4.tar.gz
+cd php-src-php-7.4.4
+```
 
 ## Configure
-* Generate Configue File
-    
-       ./buildconf --force
+```
+./buildconf --force
+```
 
-* Configure
-
-       LIBXML_CFLAGS="-I/usr/local/libxml2/include/" \
-       LIBXML_LIBS="-L/usr/local/libxml2/lib/" \
-       \
-       ./configure \
-       --prefix=/usr/local/php \
-       --enable-fpm \
-       --with-fpm-user=nobody \
-       --with-fpm-group=nobody \
-       --enable-mysqlnd \
-       --with-pdo-mysql=mysqlnd \
-       --with-mysqli=mysqlnd \
-       --with-mysql-sock=/tmp/mysql.sock \
-       --with-zlib-dir=/usr/local/zlib \
-       --with-openssl-dir=/usr/local/openssl \
-       --with-curl=/usr/local/curl \
-       --with-jpeg-dir=/usr/local/libjpeg \
-       --with-png-dir=/usr/local/libpng \
-       --with-webp-dir=/usr/local/libwebp \
-       --with-gd=/usr/local/libgd \
-       --with-libxml-dir=/usr/local/libxml2 \
-       --with-iconv-dir=/usr/local/libiconv \
-       \
-       --enable-mbstring \
-       --enable-opcache \
-       --disable-fileinfo \
-       --disable-rpath \
+```
+PKG_CONFIG_PATH=/usr/local/openssl/lib/pkgconfig/:/usr/local/sqlite/lib/pkgconfig/:/usr/local/zlib/lib/pkgconfig/:/usr/local/curl/lib/pkgconfig/:/usr/local/libpng/lib/pkgconfig/:/usr/local/oniguruma/lib/pkgconfig/:/usr/local/libxml2/lib/pkgconfig/:/usr/local/libgd/lib/pkgconfig/:/usr/local/pcre2/lib/pkgconfig/:/usr/local/libwebp/lib/pkgconfig/:/usr/local/libjpeg/lib/pkgconfig/ \
+./configure \
+--prefix=/usr/local/php \
+--enable-fpm \
+--with-fpm-user=nobody \
+--with-fpm-group=nobody \
+--enable-mysqlnd \
+--with-pdo-mysql=mysqlnd \
+--with-mysqli=mysqlnd \
+--with-mysql-sock=/tmp/mysql.sock \
+--with-zlib \
+--with-zlib-dir=/usr/local/zlib \
+--with-openssl \
+--with-openssl-dir=/usr/local/openssl \
+--with-system-ciphers \
+--with-curl \
+--with-libxml \
+--enable-gd \
+--with-jpeg \
+--with-webp \
+--with-xpm \
+--with-external-pcre \
+--enable-mbstring \
+--enable-opcache \
+--disable-fileinfo \
+```
 
 ## Make and Install
-
-    make
-    make test
-    sudo make install
+```
+make
+make test
+sudo make install
+```
 
 ## Add New Binary Path of cURL
-* `sudo vi /etc/profile`
+```
+sudo vi /etc/profile
+```
 
-       # Append these lines:
-       # Use New Version of php
-       export PATH=/usr/local/php/bin:/usr/local/php/sbin/:$PATH
+```
+# Append these lines:
+# Use New Version of php
+export PATH=/usr/local/php/bin:/usr/local/php/sbin/:$PATH
+```
 
-* `source /etc/profile`
+```
+source /etc/profile
+```
+
+## Check RPATH and linked libraries
+```
+readelf -d /usr/local/php/sbin/php-fpm
+ldd /usr/local/php/sbin/php-fpm
+```
 
 ## Create Directories and Set Owner if using Unix Socket(Optional)
 If Using Unix socket instead of TCP socket(by default) to communicate with Nginx, need to create dirs and config file.
@@ -153,6 +178,8 @@ If Using Unix socket instead of TCP socket(by default) to communicate with Nginx
 
   * Configure
 
+        sudo vi /usr/local/php/etc/php-fpm.d/www.conf
+
         ; Unix user/group of processes
         ; user and group should be the same as nginx's
         user = nobody
@@ -205,3 +232,4 @@ If Using Unix socket instead of TCP socket(by default) to communicate with Nginx
 
 ## References
 * [2015博客升级记(五)：CentOS 7.1编译安装PHP7](https://typecodes.com/web/centos7compilephp7.html)
+* [Other Changes](https://www.php.net/manual/en/migration74.other-changes.php)
