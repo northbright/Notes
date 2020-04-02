@@ -61,6 +61,7 @@ There're 2 configure methods to make nginx use latest or specified versions of z
     ```
     ./auto/configure \
     --prefix=/usr/local/nginx \
+    --conf-path=/usr/local/nginx/conf/nginx.conf \
     --group=nobody \
     --user=nobody \
     --with-cc-opt="-I /usr/local/pcre/include \
