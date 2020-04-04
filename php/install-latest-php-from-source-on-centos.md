@@ -163,72 +163,88 @@ If Using Unix socket instead of TCP socket(by default) to communicate with Nginx
     php-fpm will search `php-fpm.conf` in `--sysconfdir` specified in `./configure`.
     It's `PREFIX/etc` by default(e.g. `/usr/local/php/etc`).
 
-        sudo cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
+    ```
+    sudo cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
+    ```
 
 * `www.conf`
   * Copy File
 
     Goto last line of `php-fpm.conf` to check include relative path for *.conf:
 
-        ; For example in this case
-        include=/usr/local/php/etc/php-fpm.d/*.conf
+    ```
+    ; For example in this case
+    include=/usr/local/php/etc/php-fpm.d/*.conf
+    ```
 
-        ; Copy file
-        sudo cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf
+    ```
+    // Copy file
+    sudo cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf
+    ```
 
   * Configure
 
-        sudo vi /usr/local/php/etc/php-fpm.d/www.conf
+    ```
+    sudo vi /usr/local/php/etc/php-fpm.d/www.conf
+    ```
 
-        ; Unix user/group of processes
-        ; user and group should be the same as nginx's
-        user = nobody
-        group = nobody
+    ```
+    ; Unix user/group of processes
+    ; user and group should be the same as nginx's
+    user = nobody
+    group = nobody
 
-        ; Listen on unix socket or tcp socket
-        ; Option A: listen on a TCP socket(by default).
-        listen = 127.0.0.1:9000
+    ; Listen on unix socket or tcp socket
+    ; Option A: listen on a TCP socket(by default).
+    listen = 127.0.0.1:9000
 
-        ; Option B: listen on a unix socket if php-fpm and nginx are on the same server
-        ;listen = /var/run/php-fpm/php-fpm.sock
+    ; Option B: listen on a unix socket if php-fpm and nginx are on the same server
+    ;listen = /var/run/php-fpm/php-fpm.sock
 
-        ;Set permissions for unix socket...
-        ;listen.owner = nobody
-        ;listen.group = nobody
-        ;listen.mode = 0660
+    ;Set permissions for unix socket...
+    ;listen.owner = nobody
+    ;listen.group = nobody
+    ;listen.mode = 0660
+    ```  
 
 ## Configure `php-fpm` as systemd Service
 * Create systemd unit file
 
-      sudo vi /etc/systemd/system/php-fpm.service
+  ```
+  sudo vi /etc/systemd/system/php-fpm.service
 
-      [Unit]
-      Description=The PHP 7 FastCGI Process Manager
-      After=network.target
+  [Unit]
+  Description=The PHP 7 FastCGI Process Manager
+  After=network.target
 
-      [Service]
-      Type=simple
-      PIDFile=/var/run/php-fpm/php-fpm.pid
-      ExecStart=/usr/local/php/sbin/php-fpm --nodaemonize --fpm-config /usr/local/php/etc/php-fpm.conf
-      ExecReload=/bin/kill -USR2 $MAINPID
+  [Service]
+  Type=simple
+  PIDFile=/var/run/php-fpm/php-fpm.pid
+  ExecStart=/usr/local/php/sbin/php-fpm --nodaemonize --fpm-config /usr/local/php/etc/php-fpm.conf
+  ExecReload=/bin/kill -USR2 $MAINPID
 
-      [Install]
-      WantedBy=multi-user.target
+  [Install]
+  WantedBy=multi-user.target
+  ```
 
 * Enable and Start `php-fpm.service`
 
-      sudo systemctl enable php-fpm
-      sudo systemctl start php-fpm
-      sudo systemctl status php-fpm
+  ```
+  sudo systemctl enable php-fpm
+  sudo systemctl start php-fpm
+  sudo systemctl status php-fpm
+  ```
 
 * Check
 
-      ps aux | grep php-fpm
+  ```
+  ps aux | grep php-fpm
 
-      // check process and user
-      root ...... php-fpm: master process (/usr/local/php/etc/php-fpm.conf)
-      nobody ...... php-fpm: pool www
-      nobody ...... php-fpm: pool www
+  // check process and user
+  root ...... php-fpm: master process (/usr/local/php/etc/php-fpm.conf)
+  nobody ...... php-fpm: pool www
+  nobody ...... php-fpm: pool www
+  ```
 
 ## References
 * [2015博客升级记(五)：CentOS 7.1编译安装PHP7](https://typecodes.com/web/centos7compilephp7.html)
