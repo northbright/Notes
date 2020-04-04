@@ -14,17 +14,35 @@ Issue cert, copy key and cert, cmd to restart nginx all need permission, it's be
 sudo su -
 ```
 
-## Download latest [acme.sh](https://github.com/acmesh-official) from [Github](https://github.com/acmesh-official/acme.sh/releases)
+## Install [acme.sh](https://github.com/acmesh-official)
+Follow [offical guide](https://github.com/acmesh-official/acme.sh#1-how-to-install) to install acme.sh is enough
 ```
-wget https://github.com/acmesh-official/acme.sh/archive/2.8.5.tar.gz
-tar -xzvf 2.8.5.tar.gz
-cd acme.sh-2.8.5/
+curl https://get.acme.sh | sh
+```
+or
+
+```
+wget -O -  https://get.acme.sh | sh
 ```
 
-## Install [acme.sh](https://github.com/acmesh-official)
-```
-./acme.sh --install
-```
+## Install [acme.sh](https://github.com/acmesh-official) for China developers(Optional)
+Because `https://raw.githubusercontent.com` can **NOT** be accessed from China, we need to download the release.
+
+
+* Download latest [acme.sh](https://github.com/acmesh-official) from [Github](https://github.com/acmesh-official/acme.sh/releases)
+
+
+  ```
+  wget https://github.com/acmesh-official/acme.sh/archive/2.8.5.tar.gz
+  tar -xzvf 2.8.5.tar.gz
+  cd acme.sh-2.8.5/
+  ```
+
+* Install [acme.sh](https://github.com/acmesh-official)
+
+  ```
+  ./acme.sh --install
+  ```
 
 ## Issue a Cert with Webroot Mode
 ```
