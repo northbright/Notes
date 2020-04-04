@@ -6,6 +6,14 @@
 ## Configure Self-Signed SSL Cert
 * [Configure Self-Signed SSL Certificate for Nginx on CentOS](https://github.com/northbright/Notes/blob/master/nginx/configure-self-signed-ssl-certificate-for-nginx-on-centos.md) 
 
+## Switch to `root`
+Issue cert, copy key and cert, cmd to restart nginx all need permission, it's better to install and run acme.sh with root.
+
+```
+// Switch to root
+sudo su -
+```
+
 ## Download latest [acme.sh](https://github.com/acmesh-official) from [Github](https://github.com/acmesh-official/acme.sh/releases)
 ```
 wget https://github.com/acmesh-official/acme.sh/archive/2.8.5.tar.gz
@@ -14,11 +22,7 @@ cd acme.sh-2.8.5/
 ```
 
 ## Install [acme.sh](https://github.com/acmesh-official)
-Issue cert, copy key and cert, cmd to restart nginx all need permission, it's better to install and run acme.sh with root.
 ```
-// Switch to root
-sudo su -
-
 ./acme.sh --install
 ```
 
