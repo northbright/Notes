@@ -23,7 +23,7 @@
 ## Solution
 Make sure renew mode is the **SAME** as issue mode
 
-* If you want to renew the cert when nginx is running, issue the cert with nginx mode
+* If you want to renew the cert when nginx is running, issue the cert with webroot mode or nginx mode
 
 ## References
 * [通过(--standalone)方式安装证书 - 【续签】 #2449](https://github.com/acmesh-official/acme.sh/issues/2449)
