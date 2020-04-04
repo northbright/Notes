@@ -8,7 +8,7 @@ sudo mkdir -p /var/www/wordpress
 ## Set owner of web root
 
     // e.g. for wordpress
-    sudo cp -rf ~/download/WordPress-5.2.2 /var/www/wordpress
+    sudo cp -rf ~/download/WordPress-5.2.2/. /var/www/wordpress
 
     sudo chown -R nobody:nobody /var/www/wordpress
 
