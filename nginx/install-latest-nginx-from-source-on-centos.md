@@ -137,31 +137,36 @@ ldd -d /usr/local/nginx/sbin/nginx
 ## Configure Nginx as `systemd` Service
 * Create `/lib/systemd/system/nginx.service` File
 
-      sudo vi /lib/systemd/system/nginx.service
+```
+sudo vi /lib/systemd/system/nginx.service
+```
 
-      [Unit]
-      Description=The NGINX HTTP and reverse proxy server
-      After=syslog.target network.target remote-fs.target nss-lookup.target
+```
+[Unit]
+Description=The NGINX HTTP and reverse proxy server
+After=syslog.target network.target remote-fs.target nss-lookup.target
 
-      [Service]
-      Type=forking
-      PIDFile=/usr/local/nginx/logs/nginx.pid
-      ExecStartPre=/usr/local/nginx/sbin/nginx -t
-      ExecStart=/usr/local/nginx/sbin/nginx
-      ExecReload=/usr/local/nginx/sbin/nginx -s reload
-      ExecStop=/bin/kill -s QUIT $MAINPID
-      PrivateTmp=true
+[Service]
+Type=forking
+PIDFile=/usr/local/nginx/logs/nginx.pid
+ExecStartPre=/usr/local/nginx/sbin/nginx -t
+ExecStart=/usr/local/nginx/sbin/nginx
+ExecReload=/usr/local/nginx/sbin/nginx -s reload
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
 
-      [Install]
-      WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
+```
 
 * Enable and Start Nginx Service
-  
-      sudo systemctl enable nginx.service
-      sudo systemctl start nginx.service
+``` 
+sudo systemctl enable nginx.service
+sudo systemctl start nginx.service
         
-      # Check nginx service stastus
-      systemctl status nginx.service
+# Check nginx service stastus
+systemctl status nginx.service
+```
 
 * Check Users of Running Nginx Processes
 
