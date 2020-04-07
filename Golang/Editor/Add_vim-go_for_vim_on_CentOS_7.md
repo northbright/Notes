@@ -11,7 +11,7 @@
       // vi ~/.vimrc
 
       call plug#begin('~/.vim/plugged')
-      Plug 'fatih/vim-go'
+          Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
       call plug#end()
 
       // vim
