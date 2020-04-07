@@ -33,6 +33,17 @@
 * Run `vim`
   * type `:PlugInstall`
 
+## Remove Plugins
+* Remove the `Plug xx` you want to remove in `~/.vimrc`
+  ```
+  call plug#begin('~/.vim/plugged')
+  call plug#end()
+  ```
+
+* Open `Vim` and run `:PlugClean`
+  * It'll ask if delete add under folder XX
+  * Press `y` to delete all if you want
+
 ## References
 * [Automatic installation](https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation)
 * [How do I install a plugin in Vim/vi?](https://vi.stackexchange.com/questions/613/how-do-i-install-a-plugin-in-vim-vi)
