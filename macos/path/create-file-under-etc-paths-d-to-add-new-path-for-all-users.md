@@ -1,5 +1,8 @@
 # Create File under `/etc/paths.d` to Add New Path for All Users
 
+## Mac OS X Version
+* 10.15.4 Catalina
+
 ## Problem
 Want to add `/usr/local/aria2/bin/` to `$PATH` for all users
 
