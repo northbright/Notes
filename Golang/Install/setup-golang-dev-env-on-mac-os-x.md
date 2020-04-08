@@ -65,6 +65,29 @@ GOSUMDB="sum.golang.org"
 * [Add vim-go Plugin for VIM on CentOS 7](https://github.com/northbright/Notes/blob/master/Golang/Editor/Add_vim-go_for_vim_on_CentOS_7.md)
 The articles are also applied to Mac OS X. 
 
+## Install and Configure Git(Optional)
+* Install Git
+```
+xcode-select --install
+```
+
+* Configure `Git`
+
+  ```
+  git config --global user.email "xx@xx.com"
+  git config --global user.name "My Name"
+  git config --global color.ui true
+
+  // Check
+  git config --global -l
+  ```
+
+* Add New SSH Key and Add Public Key to Github Account
+  ```
+  ssh-keygen -t rsa -b 2048
+  ```
+  Copy the public key in `~/.ssh/id_rsa.pub` and go to [github SSH settings](https://github.com/settings/ssh) to add new SSH key.
+
 ## References
 * [Go 1.14 Release Notes](https://golang.google.cn/doc/go1.14)
 * [五分钟学会使用 go modules（含在家办公使用技巧）](https://gocn.vip/topics/9820)
