@@ -95,3 +95,4 @@ xcode-select --install
 * [Go Modules 终极入门](https://gocn.vip/topics/9904)
 * [谈谈gomod/goproxy/gosumdb](https://zhuanlan.zhihu.com/p/111722890)
 * <https://goproxy.io/>
+* [Set alias on Mac OS X which its Default Shell is zsh](https://github.com/northbright/Notes/blob/master/macos/shell/set-alias-on-mac-os-x-which-default-shell-is-zsh.md)
