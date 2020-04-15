@@ -1,4 +1,4 @@
-# Make Vim Remember Last Position
+# Make Vim Remember Last Position on Mac OS X
 
 ## Background
 * OS: Mac OS X 10.15.4
@@ -8,7 +8,7 @@
 * Vim can not remember last position of previous edited files
 
 ## Solution
-Modify `~/.vimrc`
+Modify `~/.vimrc`(for Mac OS X)
 
 ```
 vi ~/.vimrc
