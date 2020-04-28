@@ -9,7 +9,7 @@
 * Method B: If you have problem to access `raw.githubusercontent.com`, download release on [Github](https://github.com/junegunn/vim-plug/releases) directly
 
       // Create ~/.vim/autoload
-      mkdir ~/.vim/autoload -p
+      mkdir -p ~/.vim/autoload
 
       cd ~/download
       wget https://github.com/junegunn/vim-plug/archive/0.10.0.tar.gz
