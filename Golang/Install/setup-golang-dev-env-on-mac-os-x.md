@@ -65,6 +65,10 @@ GOSUMDB="sum.golang.org"
 * [Add vim-go Plugin for VIM on CentOS 7](https://github.com/northbright/Notes/blob/master/Golang/Editor/Add_vim-go_for_vim_on_CentOS_7.md)
 The articles are also applied to Mac OS X. 
 
+## Vim Settings
+* [Make Vim Remember Last Position on Mac OS X](https://github.com/northbright/Notes/blob/master/Linux/vim/make-vim-remember-last-position-on-mac-os-x.md)
+
+
 ## Install and Configure Git(Optional)
 * Install Git
 ```
