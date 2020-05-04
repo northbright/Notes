@@ -3,6 +3,7 @@
 ## The way goroutines yield control back to their thread:
 * `select` statement
 * Blocking calls
+  * syscalls
   * channel reads / writes
   * mutex locks
   * IO operations
