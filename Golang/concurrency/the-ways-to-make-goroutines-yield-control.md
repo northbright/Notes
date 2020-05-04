@@ -1,11 +1,5 @@
 # The Ways to Make Goroutines Yield
 
-The way goroutines yield back to their current thread is controlled by several different constructs:
-* the select statement can yield control back to the thread
-* sending on a channel can yield control back to the thread
-* doing IO operations can yield control back to the thread
-    runtime.Gosched() explicitly yields control back to the thread
-
 ## The way goroutines yield control back to their thread:
 * `select` statement
 * Blocking calls
