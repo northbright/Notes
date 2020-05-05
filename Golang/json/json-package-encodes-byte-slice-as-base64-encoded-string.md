@@ -77,6 +77,16 @@ func main() {
         json.Unmarshal(buf, &s)
         fmt.Printf("decode JSON. struct: %v\n", s)
         fmt.Printf("decoded []byte in struct: %X = %s\n", s.Data, s.Data)
+
+        // Output:
+        //original []byte: 48656C6C6F20576F726C6421 = Hello World!
+        //encode []byte to JSON: 225347567362473867563239796247516822 = "SGVsbG8gV29ybGQh"
+        //decoded JSON to []byte: 48656C6C6F20576F726C6421 = Hello World!
+        //original struct: {[72 101 108 108 111 32 71 111 108 97 110 103 33]}
+        //original []byte in struct: 48656C6C6F20476F6C616E6721 = Hello Golang!
+        //encode struct to JSON: {"data":"SGVsbG8gR29sYW5nIQ=="}
+        //decode JSON. struct: {[72 101 108 108 111 32 71 111 108 97 110 103 33]}
+        //decoded []byte in struct: 48656C6C6F20476F6C616E6721 = Hello Golang!
 }
 ```
 
