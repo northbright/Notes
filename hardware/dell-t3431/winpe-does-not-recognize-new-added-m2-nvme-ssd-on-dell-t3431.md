@@ -12,3 +12,6 @@
 ## Solution
 * Set "SATA Operation" to "AHCI"
 * Apply and reboot
+
+## References
+* [WePE Can not Recognize M.2 NVME SSD](https://github.com/northbright/Notes/blob/8b5fa3b3bb5d0f3b950a9d2061e9dcaa6506d92b/Windows/backup-and-restore/wepe-can-not-recognize-m2-nvme-ssd.md)
