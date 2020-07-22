@@ -44,6 +44,9 @@ Because `https://raw.githubusercontent.com` can **NOT** be accessed from China, 
   ./acme.sh --install
   ```
 
+## Reopen a bash(or SSH) for root
+* `acme.sh` can be run without specifying PATH
+
 ## Issue a Cert with Webroot Mode
 ```
 // -w is the web root dir
