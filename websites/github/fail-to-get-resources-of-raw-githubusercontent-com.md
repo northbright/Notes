@@ -18,9 +18,12 @@
       * `cp /etc/hosts ~/`
       * `vi ~/hosts`
 
+        ```
         # 199.232.68.133 is the IP from ipaddress.com
         # Make sure to update the IP if it's out of date.
         199.232.68.133  raw.githubusercontent.com
+        ```
+
     * Open Finder
     * Press `Command + Shift + G` and input `/etc`
     * Copy `~/hosts` to `/etc/hosts`(override)
