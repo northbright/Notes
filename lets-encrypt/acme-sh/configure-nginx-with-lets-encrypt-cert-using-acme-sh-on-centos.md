@@ -58,7 +58,7 @@ acme.sh --issue -d mysite.com -w /var/www/wordpress/ --force
 acme.sh --install-cert -d mysite.com \
 --key-file /usr/local/openssl/private/le.key \
 --fullchain-file /usr/local/openssl/certs/le.cert \
---reloadcmd "systemctl restart nginx"
+--reloadcmd "systemctl restart nginx" \
 ```
 
 ## Create a conf file(`le.conf`) for Let's Encrpyt Cert
