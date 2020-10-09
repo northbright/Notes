@@ -45,7 +45,9 @@ Use Pull Request to make a bug fix for someone else's project.
 
         // Example Commit Message
         // #305 is the issue id
-        Add missing comma in comment(#305) 
+        // Use "Fix #305" or "Fixed #305" as prefix for the first line of comment,
+        // will make Github link issue to this comment automatically.
+        Fix #305 Add missing comma in comment 
 
 8. Push commit to remote fork repo
 
