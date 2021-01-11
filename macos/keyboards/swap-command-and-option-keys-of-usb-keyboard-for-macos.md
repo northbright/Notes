@@ -2,7 +2,8 @@
 
 ## Problem
 * Connected an USB keyboard on Macbook Pro
-* `Win` key maps to the `Option` key while `Alt` key maps to the `Command` key
+* `Win` key maps to the `Command` key while `Alt` key maps to the `Option` key
+* Need `Win` -> `Option` and `Alt` -> `Command`
 
 ## Solution
 * Open `System Preferences` > `Keyboard` > `Modifier Keys`
