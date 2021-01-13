@@ -7,6 +7,8 @@
 ## Solution
 * Contact EPSON Customer Care Center
 * Replace ink pads
+  * [T04D1](https://item.jd.com/100009958978.html)
+  * [T04D1](https://item.jd.com/64675179478.html)
 
 ## References
 * [Epson Ink Pads Reset Utility](https://epson.com/Support/wa00369)
@@ -23,10 +25,9 @@
 ## 解决方法
 * 联系 EPSON 售后
 * 更换废墨收集垫（维护箱）
+  * [T04D1](https://item.jd.com/100009958978.html)
+  * [T04D1](https://item.jd.com/64675179478.html)
 
 ## 参考链接
 * [Epson Ink Pads Reset Utility](https://epson.com/Support/wa00369)
 * [电脑提示“服务请求，打印机的部件到使用期限”，应该如何解决？](https://www.epson.com.cn/apps/tech_support/faq/QA-content.aspx?ColumnId=1733&ArticleId=33220&pg=&view=&columnid2=31904)
-
-
-
