@@ -1,12 +1,11 @@
 # EPSON Printer Driver Says "A Part Inside Your Printer is at the End of Its Service Life"
 
 ## Problem
-* On PC, EPSON printer driver says "A part inside your printer is at the end of its service life"
+* On PC, EPSON printer(L6168) driver says "A part inside your printer is at the end of its service life"
 * Can not continue to print
 
 ## Solution
-* Contact EPSON Customer Care Center
-* Replace ink pads
+* Replace ink pads for EPSON L6168
   * [T04D1](https://item.jd.com/100009958978.html)
   * [T04D1](https://item.jd.com/64675179478.html)
 
@@ -19,12 +18,11 @@
 # EPSON 打印机驱动提示“服务请求，打印机的部件到使用期限”
 
 ## 问题
-* 在电脑上，打印机驱动提示“服务请求，打印机的部件到使用期限”
+* 在电脑上，EPSON L6168 打印机驱动提示“服务请求，打印机的部件到使用期限”
 * 不能继续打印
 
 ## 解决方法
-* 联系 EPSON 售后
-* 更换废墨收集垫（维护箱）
+* 更换 EPSON L6168 废墨收集垫（维护箱）
   * [T04D1](https://item.jd.com/100009958978.html)
   * [T04D1](https://item.jd.com/64675179478.html)
 
