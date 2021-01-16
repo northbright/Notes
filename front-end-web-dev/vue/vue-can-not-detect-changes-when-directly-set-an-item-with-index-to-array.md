@@ -4,7 +4,7 @@
 * Can not detect changes when set an item with index to array
   
   ```
-  arr[0] = newValue;
+  arr[index] = newValue;
 
   ```
 
@@ -15,10 +15,14 @@
     2. When you modify the length of the array, e.g. vm.items.length = newLength
 
 ## Solution
-* Use `Array.prototype.splice`
+* Use `Array.prototype.splice` which can be detected by vue
 
   ```
-  arr.splice(0, 1, newValue);
+  // 1st param is the index of value to remove
+  // 2nd param is number of value to remove
+  // 3rd param is new value to add
+  // 
+  arr.splice(index, 1, newValue);
   ```
 
 ## References
