@@ -10,6 +10,13 @@
 * One UAP can only be adopted and managed by one Unifi Controller
 * The UAP has been adopted and managed by one Unifi Controller can not be found by other Unifi Controllers
 
+## Solution
+* Turn off the old Unifi Controller
+* You can see the UAP now(gray) in new Unifi Controller on the laptop
+* Click the UAP > "+" >  "Advanced Adopt"
+* Input the user name and password of the device
+* The user name and password is set in the "Settings > Site > Device Authentication" of old Unifi Controller
+
 ## References
 * [UniFi - 如何向 UniFi 控制器中添加新设备](https://help.ui.com.cn/articles/360000227321/)
 
@@ -26,6 +33,13 @@
 ## 原因
 * 1个 UAP 只能被1个 Unifi Controller 采用和管理
 * 已经被1个 Unifi Controller 采用和管理的 UAP 不能再被其他 Unifi Controller 发现
+
+## 解决方案
+* 关闭退出原先的 Unifi Controller
+* 现在笔记本上的新版 Unifi Controller 可以发现 UAP（灰色）
+* 点击 UAP > "+" > "高级采用"
+* 输入UAP的用户名和密码
+* 用户名和密码就是原先 Unifi Controller 的"Settings > Site > Device Authentication"
 
 ## 参考资料
 * [UniFi - 如何向 UniFi 控制器中添加新设备](https://help.ui.com.cn/articles/360000227321/)
