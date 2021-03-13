@@ -23,6 +23,7 @@
 * [Windows 10 crashes when printing due to Microsoft March updates](https://www.bleepingcomputer.com/news/microsoft/windows-10-crashes-when-printing-due-to-microsoft-march-updates/)
 * [Win10系统配合M1005打印机，换了硒鼓还是无法正常显示怎么办？](https://tieba.baidu.com/p/7256965185)
 * [打印机正常，打印预览正常，打印中间有个大片空白，请问要怎么解决？](https://www.zhihu.com/question/448743998/answer/1776337075)
+* [临时解决方案：如何修复Windows 10更新导致打印蓝屏问题](https://www.cnbeta.com/articles/tech/1101069.htm)
 
 --------
 
@@ -51,3 +52,4 @@
 * [Windows 10 crashes when printing due to Microsoft March updates](https://www.bleepingcomputer.com/news/microsoft/windows-10-crashes-when-printing-due-to-microsoft-march-updates/)
 * [Win10系统配合M1005打印机，换了硒鼓还是无法正常显示怎么办？](https://tieba.baidu.com/p/7256965185
 * [打印机正常，打印预览正常，打印中间有个大片空白，请问要怎么解决？](https://www.zhihu.com/question/448743998/answer/1776337075)
+* [临时解决方案：如何修复Windows 10更新导致打印蓝屏问题](https://www.cnbeta.com/articles/tech/1101069.htm)
