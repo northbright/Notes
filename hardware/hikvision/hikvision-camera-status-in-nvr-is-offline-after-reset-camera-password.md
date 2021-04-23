@@ -14,6 +14,7 @@
 * Reset the camera's password
 * The status of the camera should be ONLINE(refresh the page)
 * You may need to reset the camera and NVR if it's still OFFLINE
+* You may need to set the record stragety(e.g. motion detection) again for all channels
 
 ---------------
 
@@ -33,5 +34,4 @@
 * 重置摄像头的密码
 * 摄像头的状态应该就变为“在线”（刷新页面）
 * 如果状态还是“不在线”，可能需要重启摄像头和 NVR
-
-
+* 可能需要重新设置所有通道的存储策略（e.g. 移动侦测）
