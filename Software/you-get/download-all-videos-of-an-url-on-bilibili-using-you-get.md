@@ -6,10 +6,14 @@
 ## Example
 ```
 // Use -i option to get extracted information of all videos
-you-get -i -l https://www.bilibili.com/video/xxxx
+you-get -i -l "https://www.bilibili.com/video/xxxx"
 
 // Download all videos
-you-get -l -o ~/videos https://www.bilibili.com/video/xxxx
+you-get -l -o ~/videos "https://www.bilibili.com/video/xxxx"
+
+// Download specified part of the videos
+// You may click part on the page and copy the URL which has suffix: `?p=xx`
+you-get -l -o ~/videos "https://www.bilibili.com/video/xxxx?p=xx"
 ```
 
 ## References
