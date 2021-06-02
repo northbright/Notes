@@ -12,6 +12,10 @@
 
     system-view
 
+## Display Current Configuration
+
+    display current-configuration
+
 ## Display Current VLANs
 
     display vlan
