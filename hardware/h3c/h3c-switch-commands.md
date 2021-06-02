@@ -119,10 +119,13 @@
     // 2. Set port link type to access
     port link-type trunk
     
-    // 3. Permite trunk VLAN 20 and 30
+    // 3. Set PVID of VLAN(e.g. vlan 20)
+    port trunk pvid vlan 20
+
+    // 4. Permite trunk VLAN 20 and 30
     port trunk permit vlan 20 30
 
-    // 4. Check VLANs
+    // 5. Check VLANs
     display vlan 20
 
     // Output:
@@ -130,7 +133,7 @@
     // Tagged ports:
     //     GigabitEthernet1/0/29
 
-    display vlan 30
+    display vlan 20
 
     // Output:
     // ...
@@ -149,6 +152,7 @@
     // e.g. Set Trunk Ports: GE1/0/1 to GE1/0/47
     interface range GE1/0/1 to GE1/0/47
     port link-type trunk
+    port trunk pvid vlan 2
     port trunk permit vlan 1 2
 
 ## Set IP Address of VLAN Interface
