@@ -120,6 +120,7 @@
     port link-type trunk
     
     // 3. Set PVID of VLAN(e.g. vlan 20)
+    // If PVID is not set, it's 1 by default.
     port trunk pvid vlan 20
 
     // 4. Permite trunk VLAN 20 and 30
