@@ -21,6 +21,12 @@
 save
 ```
 
+## Reset Configuration(Clear Saved Configuration and reboot)
+```
+reset saved-configuration
+reboot
+```
+
 ## Reset Configuration
 
 ## Display Current VLANs
