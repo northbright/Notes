@@ -132,12 +132,30 @@ reboot
     // 2. Set port link type to access
     port link-type trunk
     
-    // 3. Set PVID of VLAN(e.g. vlan 20)
-    // If PVID is not set, it's 1 by default.
-    port trunk pvid vlan 20
-
-    // 4. Permite trunk VLAN 20 and 30
+    // 3. Permite trunk VLAN 20 and 30
     port trunk permit vlan 20 30
+
+    // 4. Set PVID of VLAN(optional)
+    // If PVID is not set, it's VLAN 1 by default.
+    // Use case:
+    //   H3C switch trunk port --> UBNT UAP
+    //
+    //   VLAN 2(10.0.2.0/24) is used for UBNT UAP and 
+    //       there's a DHCP server to assign IPs for UAPs.   
+    //
+    //   VLAN 10(10.0.10.0/24) is used for guest WLAN and
+    //       there's a DHCP server to assign IPs for cliens connected to the UAP.
+    //
+    //   VLAN 20(10.0.20.0/24) is used for work WLAN and
+    //       there's a DHCP server to assign IPs for clients connected to the UAP.
+    //
+    //   UBNT UAP is configured in Unifi Controller Software:
+    //         Guest WLAN(SSID: guest) connects Network VLAN 10 Only: 10.0.10.0/24
+    //         Work WLAN(SSID: work) connects Network VLAN 20 only: 10.0.20.0/24
+    //   Trunk port settings:
+    //     Permit VLAN: vlan 1 2 10 20
+    //     PVID: vlan 2
+    port trunk pvid vlan 2
 
     // 5. Check VLANs
     display vlan 20
