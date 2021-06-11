@@ -16,6 +16,13 @@
 
     display current-configuration
 
+## Save Current Configuration
+```
+save
+```
+
+## Reset Configuration
+
 ## Display Current VLANs
 
     display vlan
