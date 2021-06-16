@@ -84,7 +84,7 @@ To make Phone Recording System can record the caller ID(number), make sure to ap
 ## VLAN Plan
 
 | VLAN ID | Netowork | Desc | Create DHCP server |
-| :--: | :--: | :--: |
+| :--: | :--: | :--: | :--: |
 | 1 | 10.0.1.0/24 | For Network device management. e.g. SSH to switches | No |
 | 2 | 10.0.2.0/24 | For UNBT UAPs | Yes |
 | 3 | 10.0.3.0/24 | For Hikvision Network Cameras(#1 - #16) and NVR(#1)  | No |
@@ -244,7 +244,7 @@ port trunk permit vlan 1 2 3 5 6 10 20 100
 * Access Ports
 
   | Port | Access VLAN | Connected Device |
-  | :--: | :--: | :-- : |
+  | :--: | :--: | :--: |
   | GE1/0/1 - GE1/0/45 | 20 | Connect to TVs, mobile phones(VLAN 20) can project to TV via Airplay |
   | GE1/0/46 | 6 | Connect to Shenou Phone Recording System |
   | GE1/0/47 | 6 | Connect to Panasonic KX-NS300 PBX |
@@ -295,7 +295,7 @@ port trunk permit vlan 1 2 3 5 6 10 20 100
 * Access Ports
 
   | Port | Access VLAN | Connected Device |
-  | :--: | :--: | :-- : |
+  | :--: | :--: | :--: |
   | GE1/0/1 - GE1/0/47 | 20 | Connect to PCs, servers, printers |
 
   ```
@@ -335,7 +335,7 @@ port trunk permit vlan 1 2 3 5 6 10 20 100
 * Access Ports
 
   | Port | Access VLAN | Connected Device |
-  | :--: | :--: | :-- : |
+  | :--: | :--: | :--: |
   | GE1/0/18 - GE1/0/27 | 2 | Connect to Laptop to run Unifi Controller. To make Unifi Controller discover UAPs, the laptop and UAPs should be in the same VLAN(2). |
 
   ```
@@ -382,7 +382,7 @@ port trunk permit vlan 1 2 3 5 6 10 20 100
 * Access Ports
 
   | Port | Access VLAN | Connected Device |
-  | :--: | :--: | :-- : |
+  | :--: | :--: | :--: |
   | GE1/0/1 - GE1/0/27 | 5 | Connect to Hikvision network cameras, NVR(ge1/0/26) |
 
   ```
@@ -422,7 +422,7 @@ port trunk permit vlan 1 2 3 5 6 10 20 100
 * Access Ports
 
   | Port | Access VLAN | Connected Device |
-  | :--: | :--: | :-- : |
+  | :--: | :--: | :--: |
   | GE1/0/1 - GE1/0/27 | 5 | Connect to Hikvision network cameras, NVR(ge1/0/26) |
 
   ```
