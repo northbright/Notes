@@ -477,3 +477,36 @@ port trunk permit vlan 1 2 3 5 6 10 20 100
   | 10.0.6.0 | 255.255.255.0 | 10.0.100.1 | VLAN 6 |
   | 10.0.10.0 | 255.255.255.0 | 10.0.100.1 | VLAN 10 |
   | 10.0.20.0 | 255.255.255.0 | 10.0.100.1 | VLAN 20 |
+
+## Panasonic KX-NS300 PBX Settings
+* Network Service > IP Address/Ports
+
+  * LAN Setting
+    * Use the following IP address
+    * IP Address: `10.0.6.3`
+    * Subnet Mask: `255.255.255.0`
+    * Default Gateway: `10.0.6.1`
+    
+## Shenou Phone Recording System Settings
+* Settings > Network
+
+  * IP Address: `10.0.6.4`
+  * Subnet Mask: `255.255.255.0`
+  * Default Gateway: `10.0.6.1`
+  * DNS: `10.0.100.2`
+
+## Hikvision NVR(#1) Setings
+* Settings > Network > Basic Settings
+
+  * IPv4 IP Address: `10.0.5.3`
+  * Subnet Mask: `255.255.255.0`
+  * Default Gateway: `10.0.5.1`
+  * DNS: `10.0.100.2`
+
+## Hikvision NVR(#2) Setings
+* Settings > Network > Basic Settings
+
+  * IPv4 IP Address: `10.0.3.3`
+  * Subnet Mask: `255.255.255.0`
+  * Default Gateway: `10.0.3.1`
+  * DNS: `10.0.100.2`
