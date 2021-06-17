@@ -226,6 +226,16 @@ port link-type trunk
 port trunk permit vlan 1 2 3 5 6 10 20 100
 ```
 
+* Static Route to H3C ER8200G2-X Router
+
+  Create a static route: all VLANs IP up-link to the router's IP of VLAN 100(10.0.100.2/24)
+  Provide Internet service
+
+  ```
+  // ip route-static IP MASK NextHOP_IP_Address 
+  ip route-static 0.0.0.0 0.0.0.0 10.0.100.2
+  ```
+
 ## H3C S5120 Access Switch(#1) Settings --> connect TVs(VLAN 20), Panasonic KX-NS300(VLAN 6), Shenou Phone Recording System(VLAN 6)
 
 * Create VLAN interfaces
