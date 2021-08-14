@@ -27,6 +27,20 @@ which go
 /usr/local/go/bin/go
 ```
 
+## Add `go get` installed binary path to `PATH`
+* If you want to run the binary installed from `go get`(e.g. [staticcheck](https://staticcheck.io/)), we need to add `$GOPATH/bin` to `$PATH` in `~/.zprofile`
+```
+vi ~/.zprofile
+
+// Append this line
+export PATH=$PATH:$GOPATH/bin
+```
+
+```
+// Reload ~/.zprofile
+source ~/.zprofile
+```
+
 ## Set `GOPROXY`
 * `go get` packages from `"https://golang.org/x/XX"` will fail in China(golang.org is blocked in China)
 * `GOPROXY` is  set to `"https://proxy.golang.org,direct"` by default
