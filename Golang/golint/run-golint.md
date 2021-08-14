@@ -1,5 +1,9 @@
 # Run golint
 
+**NOTE:** Golint is [deprecated and frozen](https://github.com/golang/go/issues/38968).
+There's no drop-in replacement for it, but tools such as [Staticcheck](https://staticcheck.io/)
+and `go vet` should be used instead.
+
 ## Install golint
 
     go get -u github.com/golang/lint/golint
