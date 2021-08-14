@@ -1,19 +1,19 @@
 # Run golint
 
-#### Install golint
+## Install golint
 
     go get -u github.com/golang/lint/golint
     cd $GOPATH/src/github.com/golang/lint/golint
     go build
 
-#### Add golint path
+## Add golint path
 
     sudo vi /etc/profile
 
     # Golint
     export PATH=$PATH:/home/xx/projects-go/src/github.com/golang/lint/golint
 
-#### Run golint
+## Run golint
 * `golint DIR`
   
         // e.g.
@@ -32,5 +32,5 @@
         golint my-project/...
         golint github.com/xx/another-project/...
 
-#### References
+## References
 * <https://github.com/golang/lint>
