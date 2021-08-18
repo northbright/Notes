@@ -28,11 +28,14 @@ which go
 ```
 
 ## Add `go get` installed binary path to `PATH`
-* If you want to run the binary installed from `go get`(e.g. [staticcheck](https://staticcheck.io/)), we need to add `$GOPATH/bin` to `$PATH` in `~/.zprofile`
+* If you want to run the binary installed from `go get`(e.g. [staticcheck](https://staticcheck.io/)), we need to set `$GOPATH` and add `$GOPATH/bin` to `$PATH` in `~/.zprofile`
 ```
 vi ~/.zprofile
 
-// Append this line
+// Append these lines
+# GOPATH is set to $HOME/go by default(if it's not set)
+# run "go help gopath" for help
+export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 ```
 
