@@ -2,10 +2,10 @@
 
 ## Logo
 
-| Logo | Size | Configure File | Param with Example | Logo File |
+| Logo | Size | Configure File | Param with Example |
 | :--: | :--: | :--: | :--: |
-| Upper-left Logo | 389 x 72 | `SITE/config/_default/params.toml` | `logo = "logos/logo.png"` | `SITE/static/logos/logo.png` |
-| Footer Logo | 180 x 180 | `SITE/config/_default/params.toml` | `footerLogo = "logos/logo-180x180.png"` | `SITE/static/logos/logo-180x180.png` |
+| Upper-left Logo | 389 x 72 | `SITE/config/_default/params.toml` | `logo = "logos/logo.png"` |
+| Footer Logo | 180 x 180 | `SITE/config/_default/params.toml` | `footerLogo = "logos/logo-180x180.png"` |
 
 ## Icons
 
