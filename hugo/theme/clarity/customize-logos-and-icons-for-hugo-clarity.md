@@ -2,10 +2,10 @@
 
 ## Logo
 
-| Logo | Size | Configure File | Param and Default Value | Logo File |
+| Logo | Size | Configure File | Param with Example | Logo File |
 | :--: | :--: | :--: | :--: |
 | Upper-left Logo | 389 x 72 | `SITE/config/_default/params.toml` | `logo = "logos/logo.png"` | `SITE/static/logos/logo.png` |
-| Footer Logo | 180 x 180 | `SITE/themes/hugo-clarity/layouts/partials/footer.html` | `{{- $defaultFooterLogo := printf "%s%s" $iconsDir "apple-touch-icon.png"}}` | `SITE/static/icons/apple-touch-icon.png` |
+| Footer Logo | 180 x 180 | `SITE/config/_default/params.toml` | `footerLogo = "logos/logo-180x180.png"` | `SITE/static/logos/logo-180x180.png` |
 
 ## Icons
 
