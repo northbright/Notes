@@ -15,7 +15,7 @@
 * Run `hostnamectl set-hostname` to change the computer name
 
   ```
-  hostnamectl set-hostname NEW_COMPUTER_NAME
+  sudo hostnamectl set-hostname NEW_COMPUTER_NAME
   ```
 
 ## References
