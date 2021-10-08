@@ -52,7 +52,7 @@ source ~/.zprofile
 
   ```
   // Mac OS X 10.15 use zsh as default shell which use ~/.zprofile
-  sudo vi ~/.zprofile
+  vi ~/.zprofile
   ```
   ```
   export GOPROXY="https://goproxy.io,direct"
