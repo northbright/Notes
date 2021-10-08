@@ -26,4 +26,10 @@ tar -xzvf go1.17.2.linux-amd64.tar.gz -C ~/
 
 * `source ~/.profile`
 
+## Check Golang Version
+
+```
+go version
+``
+
 
