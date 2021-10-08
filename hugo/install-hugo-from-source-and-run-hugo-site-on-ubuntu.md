@@ -1,4 +1,4 @@
-# Install Hugo from Source and Run Site on Ubuntu
+# Install Hugo from Source and Run Hugo Site on Ubuntu
 
 ## [Install Golang on Ubuntu](https://github.com/northbright/Notes/blob/master/Golang/Install/install-golang-on-ubuntu.md)
 
