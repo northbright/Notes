@@ -58,7 +58,7 @@ Because `https://raw.githubusercontent.com` can **NOT** be accessed from China, 
 ## Issue a Cert with Webroot Mode
 ```
 // -w is the web root dir
-acme.sh --issue -d mysite.com -w /var/www/wordpress/ --force
+acme.sh --issue -d mysite.com -w /var/www/html --force
 ```
 
 ## Install the Cert
@@ -114,7 +114,7 @@ add_header X-Content-Type-Options nosniff;
 server {
     listen       443 ssl http2;
     server_name  mysite.com;
-    root   /var/www/wordpress;
+    root   /var/www/html;
 
     # include SSL certificate settings
     #include /usr/local/nginx/conf/self-signed.conf;
