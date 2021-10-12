@@ -15,7 +15,7 @@ sudo openssl req \
 -days 365 \
 -newkey rsa:4096 \
 -keyout /usr/local/openssl/private/nginx-selfsigned.key \
--out /usr/local/openssl/certs/nginx-selfsigned.crt \
+-out /usr/local/openssl/certs/nginx-selfsigned.cer \
 ```
 | Subcommand / Option | Description |
 | :--: | :--: |
@@ -33,7 +33,7 @@ You'll be asked to fill additional information such as country, city, organizati
 ## Show the content(text) of the certificate
 ```
 openssl x509 \
--in /usr/local/openssl/certs/nginx-selfsigned.crt \
+-in /usr/local/openssl/certs/nginx-selfsigned.cer \
 -text \
 ```
 
@@ -54,7 +54,7 @@ sudo vi /usr/local/nginx/conf/self-signed.conf
 
 ```
 ## Certificate and Key
-ssl_certificate /usr/local/openssl/certs/nginx-selfsigned.crt;
+ssl_certificate /usr/local/openssl/certs/nginx-selfsigned.cer;
 ssl_certificate_key /usr/local/openssl/private/nginx-selfsigned.key;
 
 ## Protocols - TLSv1.3 requires newer OpenSSL(Feb.2018)
