@@ -47,6 +47,14 @@ Because `https://raw.githubusercontent.com` can **NOT** be accessed from China, 
 ## Reopen a bash(or SSH) for root
 * `acme.sh` can be run without specifying PATH
 
+## Set Default CA to [Let's Encrypt](https://letsencrypt.org/)
+* Starting from August-1st 2021, acme.sh uses [ZeroSSL](https://zerossl.com/) as default CA
+* Set default CA back to [Let's Encrypt](https://letsencrypt.org/)
+
+  ```
+  acme.sh --set-default-ca --server letsencrypt
+  ```
+
 ## Issue a Cert with Webroot Mode
 ```
 // -w is the web root dir

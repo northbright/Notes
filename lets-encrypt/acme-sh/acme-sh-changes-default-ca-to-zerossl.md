@@ -5,10 +5,10 @@
 * Need to change default CA back to [Let's Encrypt](https://letsencrypt.org/)
 
 ## Solution
-Use `--set-default-ca` parameter
+Use `--set-default-ca` parameter to set default CA back to [Let's Encrypt](https://letsencrypt.org/)
 
 ```
-acme.sh --set-default-ca  --server  letsencrypt
+acme.sh --set-default-ca --server letsencrypt
 ```
 
 ## References
