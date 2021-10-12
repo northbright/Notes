@@ -65,7 +65,7 @@ acme.sh --issue -d mysite.com -w /var/www/html --force
 ```
 acme.sh --install-cert -d mysite.com \
 --key-file /usr/local/openssl/private/le.key \
---fullchain-file /usr/local/openssl/certs/le.cert \
+--fullchain-file /usr/local/openssl/certs/le.cer \
 --reloadcmd "systemctl restart nginx" \
 ```
 
@@ -78,7 +78,7 @@ sudo cp /usr/local/nginx/conf/self-signed.conf /usr/local/nginx/conf/le.conf
 * Modify `ssl_certificate` and `ssl_certificate_key`
 ```
 ## Certificate and Key
-ssl_certificate /usr/local/openssl/certs/le.cert;
+ssl_certificate /usr/local/openssl/certs/le.cer;
 ssl_certificate_key /usr/local/openssl/private/le.key;
 
 ## Protocols
