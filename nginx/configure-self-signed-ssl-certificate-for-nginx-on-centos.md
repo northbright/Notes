@@ -7,6 +7,12 @@
 ## Install Nginx from Source(optional) 
 * [Install Latest Nginx from Source on CentOS](install-latest-nginx-from-source-on-centos.md)
 
+## Create Certs and keys Dir if Need
+```
+sudo mkdir -p /usr/local/openssl/certs
+sudo mkdir -p /usr/local/openssl/private
+```
+
 ## Create key and x.509 certificate
 ```
 sudo openssl req \
