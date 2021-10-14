@@ -5,10 +5,16 @@
 * The submodule folder is empty after git clone
 
 ## Solution
-Initialize and update submodules
-```
-git submodule update --init --recursive --force
-```
+* Sync URL of submodule in .gitmodules to .git/config
+  ```
+  git submodule sync --recursive
+  ```
+
+* Initialize and update submodules
+
+  ```
+  git submodule update --init --recursive --force
+  ```
 
 * Example
 
@@ -18,7 +24,8 @@ git submodule update --init --recursive --force
 
   cd PROJECT
 
-  // Init and update submodules
+  // Sync, init and update submodules
+  git submodule sync --recursive
   git submodule update --init --recursive --force
   ```
 
