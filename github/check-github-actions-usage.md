@@ -6,3 +6,6 @@
 ## Solution
 * Goto "Account Settings" > "Billing & Plans"
 * Check "Current plan" and "Usage this month"
+
+## References
+* [About billing for GitHub Actions](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
