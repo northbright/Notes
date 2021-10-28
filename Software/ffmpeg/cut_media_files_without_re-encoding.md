@@ -8,7 +8,10 @@ Use ffmpeg to cut audio / video file.
 ffmpeg -ss 00:00:30.00 -t 00:00:10 -i old.mp3 -codec copy new.mp3
 
 // Cut video file: start from 00:00:00, duration 5 minutes
- ./ffmpeg -ss 00:00:00.00 -t 00:05:00 -i 01.mp4 -c:v copy -c:a copy 01_part_1.mp4
+./ffmpeg -ss 00:00:00.00 -t 00:05:00 -i 01.mp4 -c:v copy -c:a copy 01_part_1.mp4
+
+// Cut video file start from 00:00:41 until the end
+./ffmpeg -ss 00:00:41 -i input.mp4 -c:v copy -c:a copy output.mp4
 
 ```
 
