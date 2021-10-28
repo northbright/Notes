@@ -11,7 +11,7 @@
 * Select `XHR` tag on the top right
 * Find out the `.m4s` requests
   
-  bilibili use separated video and audio FLV streams for playback.
+  bilibili use separated video and audio streams for playback.
 
   Example:
 
@@ -20,7 +20,7 @@
   | 124978976-1-30032.m4s | 556.18 KB | Video | The larger one is video file |
   | 124978976-1-30280.m4s | 194.38 KB | Audio | The smaller one is the audio file |
 
-* Get the total size for video / audio FLV files
+* Get the total size for video / audio files
   * Click the video / audio request
   * Select "HTTP Headers"
   * Find "Content-Range" in "Response Headers"
@@ -34,14 +34,14 @@
   * Find "Range" and set the range to `0` - `total size`
 
     e.g. `Range: bytes=0-416231890`
-  * Click "Send" button to re-send the HTTP request for full size video / audio FLV
+  * Click "Re-Send" > "Edit and Re-Send" button to re-send the HTTP request for full size video / audio FLV
   * You'll get the response with full video / audio FLV
   * Right click the re-sent request, select "Copy" > "Copy as cURL command"
   * Open a shell and paste the cURL command
-  * Append `> video.flv` or `> audio.flv` for the command to get audio and video FLV files
+  * Append `> video.m4s` or `> audio.m4s` for the command to get audio and video m4s files
 
-* Use ffmpeg to combine the video and audio stream to a single FLV file
-  * e.g. `ffmpeg -i "01-video.flv" -i "01-audio.flv" -c:v copy -c:a copy 01-final.flv`
+* Use ffmpeg to combine the video and audio stream to a single m4s file
+  * e.g. `ffmpeg -i "01-video.m4s" -i "01-audio.m4s" -c:v copy -c:a copy 01-final.mp4`
 
 ## References
 * [爬取B站视频 - m4s文件的相关研究](https://blog.csdn.net/Enderman_xiaohei/article/details/94718494)
