@@ -11,9 +11,13 @@
 
 ## Root Cause
 * `StrictHostKeyChecking` setting in `/etc/ssh/ssh_config` is set to `ask` by default for most distros
+  
+  When SSH to a new host, it'll ask permission to connect to the host.
+  It'll add the new public key of the new host to `~/.ssh/known_hosts` if user selects "yes".
+
 * Set it to `no` is **NOT** a good idea for security reason
   
-  With `StrictHostKeyChecking`, SSH refuses to connect to hosts whose host key has changed.
+  With `StrictHostKeyChecking`, SSH refuses to connect to hosts whose host key has changed(in `~/.ssh/known_hosts`).
   This provides maximum protection against trojan horse attacks.
 
 ## Solution
