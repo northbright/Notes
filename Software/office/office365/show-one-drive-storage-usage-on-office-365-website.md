@@ -4,7 +4,7 @@
 * Need to know One Drive Storage Usage(Office 365 Business Basic)
 
 ## Solution
-* Goto One Drive > click Settings(Gear icon) > Site Settings > Storage Metrics
+* Goto One Drive > click Settings(Gear icon) > More Settings > Storage Metrics
 
 ---------------------
 
