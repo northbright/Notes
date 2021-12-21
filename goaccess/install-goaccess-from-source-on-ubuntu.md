@@ -60,5 +60,12 @@
   PATH=$PATH:/usr/local/goaccess/bin
   ```
 
+* Check
+  
+  ```
+  goaccess --version
+  ```
+
+
 ## References
 * [Missing development files for the GeoIP library](https://github.com/allinurl/goaccess/issues/852)
