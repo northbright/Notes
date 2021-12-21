@@ -60,6 +60,11 @@
   PATH=$PATH:/usr/local/goaccess/bin
   ```
 
+  ```
+  // Refresh PATH for current shell
+  source /etc/profile
+  ```
+
 * Check
   
   ```
