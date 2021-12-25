@@ -33,7 +33,7 @@ Setup public key authentication
 * Copy the key to a remote server(e.g. `mysite.com`)
 
   ```
-  ssh-id-copy -i ~/.ssh/id_rsa.pub user@mysite.com
+  ssh-copy-id -i ~/.ssh/id_rsa.pub user@mysite.com
   ```
 
 * Open a new terminal to test passwordless login
