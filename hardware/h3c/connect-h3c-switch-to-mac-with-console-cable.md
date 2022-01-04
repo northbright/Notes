@@ -29,7 +29,7 @@
   1. Press `Ctrl` + `A`
   2. Then press `Ctrl` + `K`
 
-Warnning: If you forcely exit terminal running `screen`, you'll meet problem to run `screen` agian in a new terminal. You need to unplug and re-plug the USB-Serial adapter to Mac to fix this.
+  Warnning: If you forcely exit terminal running `screen`, you'll meet problem to run `screen` agian in a new terminal. You need to unplug and re-plug the USB-Serial adapter to Mac to fix this.
 
 ## References
 * [MAC OS X 如何使用USB串口设备](https://www.jianshu.com/p/e25009af3726)
@@ -69,7 +69,7 @@ Warnning: If you forcely exit terminal running `screen`, you'll meet problem to 
   1. 首先按下 `Ctrl` + `A`
   2. 然后按下 `Ctrl` + `K`
 
-警告：如果强制退出运行 `screen` 的 terminal，再次在新的 terminal 中运行 `screen` 会出现问题。需要移除再次插入 USB-Serial 适配器到 Mac 来解决此问题。
+  警告：如果强制退出运行 `screen` 的 terminal，再次在新的 terminal 中运行 `screen` 会出现问题。需要移除再次插入 USB-Serial 适配器到 Mac 来解决此问题。
 
 ## 参考资料
 * [MAC OS X 如何使用USB串口设备](https://www.jianshu.com/p/e25009af3726)
