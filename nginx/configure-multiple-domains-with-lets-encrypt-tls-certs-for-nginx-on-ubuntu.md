@@ -1,10 +1,11 @@
 # Configure Multiple Domains with Let's Encrypt TLS Certs for Nginx on Ubuntu
 
 ## Problem
-* Need `a.com` and `www.a.com`
-* Have a ECS(IP: xx.xx.xx.xx, OS: Ubuntu Server 20.04)
+* Own a domain: `a.com`
+* Have a ECS server(IP: xx.xx.xx.xx, OS: Ubuntu Server 20.04)
 * Run a HTTP server on the ECS(Nginx)
-* Need to configure Let's Encrypt TLS Certificates for **BOTH** domains
+* Want to visit the server via **BOTH** `a.com` and `www.a.com`
+* Need to configure Let's Encrypt TLS Certificates for **BOTH** `a.com` and `www.a.com`
 
 ## Solution
 * Create 2 DNS A records of the domains, pointed to the ECS IP
