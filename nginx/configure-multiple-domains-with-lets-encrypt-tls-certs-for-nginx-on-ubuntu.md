@@ -11,7 +11,7 @@
   * `www`(`www.a.com`) --> `xx.xx.xx.xx`
   * `@`(root of `a.com`) --> `xx.xx.xx.xx`
 * Configure `/etc/nginx/nginx.conf`
-  * Remove **DEFAULT** SSL Settings(to avoid duplicated SSL settings after add our new-added settings)
+  * Remove **DEFAULT** SSL Settings(to avoid duplicated SSL settings after add our new-added settings: [Fix Duplicated TLS Error](https://github.com/northbright/Notes/blob/master/nginx/fix-duplicated-tls-error.md))
     ```
     ##
     # SSL Settings
