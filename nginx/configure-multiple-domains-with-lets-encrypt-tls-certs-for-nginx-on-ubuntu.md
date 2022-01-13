@@ -41,6 +41,7 @@
     ```
 
 * Add per-site(domain) server config files
+
   `a.com` and `www.a.com` use **DIFFERENT** TLS certs and keys.
 
   * `/etc/nginx/conf.d/a.com.conf`
@@ -144,8 +145,9 @@
     add_header X-Frame-Options DENY;
     add_header X-Content-Type-Options nosniff;  
     ```
-* Install Let's Encrypt Cert
+* Install Let's Encrypt Certs
   * Switch to `root`
+
     Issue cert, copy key and cert, cmd to restart nginx all need permission, it's better to install and run acme.sh with root.
 
     ```
@@ -154,6 +156,7 @@
     ```
 
   * Install [acme.sh](https://github.com/acmesh-official)
+
     Follow [offical guide](https://github.com/acmesh-official/acme.sh#1-how-to-install) to install acme.sh is enough
 
     ```
@@ -166,6 +169,7 @@
     ```
 
   * Install [acme.sh](https://github.com/acmesh-official) for China developers(Optional)
+
     Because `https://raw.githubusercontent.com` can **NOT** be accessed from China, we need to download the release.
 
     * Download latest [acme.sh](https://github.com/acmesh-official) from [Github](https://github.com/acmesh-official/acme.sh/releases)
