@@ -1,8 +1,7 @@
 # Fix Duplicated TLS Error
 
 ## Problem
-* Include a SSL config file(`ssl.conf`) in `nginx.conf`
-* `ssl.conf
+* Include a SSL config file(`/etc/nginx/conf.d/ssl.conf`) in `nginx.conf`
 
 ```
 ## Protocols - TLSv1.3 requires newer OpenSSL(Feb.2018)
