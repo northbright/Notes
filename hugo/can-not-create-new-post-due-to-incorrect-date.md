@@ -11,7 +11,8 @@
 ## Root Cause
 * `Date` is incorrect
 * When replace `2021` with `2022`
-  The `Date` is set to `2022/xx/xx` which is yet to come
+
+  The `Date` is set to `2022/xx/xx` which does **NOT** come yet(in the future).
 
 ## Solution
 * Using [`hugo new`](https://gohugo.io/commands/hugo_new/) or set the `Date` correctly 
