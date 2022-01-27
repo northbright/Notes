@@ -214,8 +214,8 @@ reboot
     // 4. Add Gateway(e.g. 192.168.1.1)
     gateway-list 192.168.1.1
 
-    // 5. Add DNS(e.g. 114.114.114.114 & 8.8.8.8)
-    dns-list 114.114.114.114 8.8.8.8
+    // 5. Add DNS(e.g. aliyun public DNS: 223.5.5.5 and 223.6.6.6)
+    dns-list 223.5.5.5 223.6.6.6
 
     // 6. Add an forbidden IP(optional)
     // Warning: this command will add single IP but NOT IP range,
