@@ -75,7 +75,7 @@ cobra add create
 ```
 
 Go to `cmd/create.go` to customize `createCmd`
-* `Run` func: Write `Hello World!` to the created file
+* `Run` func: create a text file which contains "Hello, NAME"
 * `Args`: accept only 1 argument for the name of file to create
 * Local Flag: `--name` / `-n`: output name in the created file
   * If no name is specified, it'll read name in config file(default: $HOME/.demo.yaml) via Viper
@@ -112,6 +112,7 @@ if no name specified, it'll try to read the name in '$HOME/.demo.yml'`,
                 }
                 if len(name) == 0 {
                         // No name flag specified, try to read name from config file($HOME/.demo.yaml)
+                        // Use viper to read configuration.
                         name = viper.GetString("name")
                         fmt.Printf("viper: read name in config file: %v\n", name)
                         // No name found in the config file, use everyone as name.
@@ -151,6 +152,13 @@ go run main.go create example.txt
 // Output:
 Hello, Luke
 ```
+
+## Configuration
+
+It generates code of initializing config via [Viper](https://github.com/spf13/viper) automatically when run `cobra init` with `--viper` option.
+
+  * Use `$HOME/.demo.yaml" as default config file
+You may customize configuration in `init()` and `initConfig()` in `cmd/root.go`.
 
 ## References
 * [Golang | 使用 Cobra 构建命令行工具](https://www.jianshu.com/p/63dd2075eb22)
