@@ -1,4 +1,4 @@
-# Use Cobra to Create CLI Interfaces for Golang App
+# Use Cobra and Viper to Create CLI Interfaces for Golang App
 
 ## Install Cobra
 * Install Latest [Golang](https://golang.org)
