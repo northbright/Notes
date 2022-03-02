@@ -174,7 +174,7 @@ var hiCmd = &cobra.Command{
         Run: func(cmd *cobra.Command, args []string) {
                 name := args[0]
                 // Emoji flag is not set(--emoji), read emoji from config file.
-                // default config file: $HOME/.demo.yaml
+                // default config file: $HOME/.demo.yaml(set in initConfig() in cmd/root.go)
                 if len(emoji) == 0 {
                         emoji = viper.GetString("emoji")
                 }
