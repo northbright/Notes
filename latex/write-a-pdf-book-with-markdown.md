@@ -94,7 +94,7 @@ Use [Pandoc](https://pandoc.org/) with `xelatex` as PDF engine(`--pdf-engine=xel
 
     * Firstly, find out the **font name**
 
-      e.g. * [mac怎么查看系统已安装的字体名录？](https://www.zhihu.com/question/21686333/answer/618481248)
+      e.g. [mac怎么查看系统已安装的字体名录？](https://www.zhihu.com/question/21686333/answer/618481248)
 
     * Add `CJKmainfont` flag
 
