@@ -142,6 +142,56 @@ Use [Pandoc](https://pandoc.org/) with `xelatex` as PDF engine(`--pdf-engine=xel
 
   Check `build/output.pdf`
 
+* Complete Source Code
+
+  * `compile_pdf.sh`
+
+    ```
+    mkdir -p build
+
+    # pandoc version 2.7.3
+    pandoc \
+        --pdf-engine=xelatex \
+        --template=./templates/eisvogel.tex \
+        --highlight-style tango \
+        --toc -N \
+        -o build/output.pdf \
+        -V CJKmainfont="PingFangSC-Regular" \
+        --listings \
+        src/title.txt src/*.md
+        # --template=./templates/eisvogel.latex \
+        # --top-level-division=chapter \
+        # --filter pandoc-crossref \
+        # -V book \
+    ```
+
+  * `src/title.txt`
+
+    ```
+    ---
+    title: Some Markdown Book
+    subtitle: Everything is awesome
+    author: Ryan Frazier
+    subject: "markdown"
+    keywords: [books,programming]
+    language: en-US
+    cover-image: img/example-book-cover.png
+    lof: true
+    lof-own-page: true
+    toc-own-page: true
+    titlepage: true
+    titlepage-background: backgrounds/background10.pdf
+    titlepage-text-color: "333333"
+    titlepage-rule-color: "00737C"
+    papersize: letter
+    prepend-titlepage: img/example-book-cover.pdf
+    colorlinks: true
+    code-block-font-size: \scriptsize
+    ---
+    ```
+
+You may get the modified source code from [Pandoc Markdown Book](https://github.com/northbright/pandoc-markdown-book).
+
 ## References
 * [Write a Book with Markdown](https://pianomanfrazier.com/post/write-a-book-with-markdown/) with [Example: pandoc markdown book](https://gitlab.com/pianomanfrazier/pandoc-markdown-book)
 * [mac怎么查看系统已安装的字体名录？](https://www.zhihu.com/question/21686333/answer/618481248)
