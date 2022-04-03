@@ -27,43 +27,31 @@ which go
 /usr/local/go/bin/go
 ```
 
-## Add `go get` installed binary path to `PATH`
-* If you want to run the binary installed from `go get`(e.g. [staticcheck](https://staticcheck.io/)), we need to set `$GOPATH` and add `$GOPATH/bin` to `$PATH` in `~/.zprofile`
-```
-vi ~/.zprofile
+## Set Go Environment Variables
+* `GOPROXY`
+  * `go get` packages from `"https://golang.org/x/XX"` will fail in China(golang.org is blocked in China)
+  * `GOPROXY` is  set to `"https://proxy.golang.org,direct"` by default
+  * `"https://proxy.golang.org"` is blocked in China
+  * Set `GOPROXY` to `"https://goproxy.io"` for gophers in China
+* `GOSUMDB`
+  * Set `GOSUMDB` to `"sum.golang.google.cn"` for gophers in China
+* `GOPATH`
+  * If you want to run the binary installed from `go get`(e.g. [staticcheck](https://staticcheck.io/)), we need to set `$GOPATH` and add `$GOPATH/bin` to `$PATH` in `~/.zprofile`
 
-// Append these lines
-# GOPATH is set to $HOME/go by default(if it's not set)
-# run "go help gopath" for help
+```
+// Mac OS X 10.15 use zsh as default shell which use ~/.zprofile
+vi ~/.zprofile
+```
+```
+export GOPROXY="https://goproxy.io,direct"
+export GOSUMDB="sum.golang.google.cn"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 ```
-
 ```
-// Reload ~/.zprofile
+// Reload `~/.zprofile` in current terminal
 source ~/.zprofile
 ```
-
-## Set `GOPROXY`
-* `go get` packages from `"https://golang.org/x/XX"` will fail in China(golang.org is blocked in China)
-* `GOPROXY` is  set to `"https://proxy.golang.org,direct"` by default
-* `"https://proxy.golang.org"` is blocked in China
-* Use `"https://goproxy.io"` instead
-
-  ```
-  // Mac OS X 10.15 use zsh as default shell which use ~/.zprofile
-  vi ~/.zprofile
-  ```
-  ```
-  export GOPROXY="https://goproxy.io,direct"
-  ```
-  ```
-  source ~/.zprofile
-  ```
-
-## About `GOSUMDB`
-* No need to set `GOSUMDB` to "sum.golang.google.cn"
-* After `GOPROXY` is set to `"https://goproxy.io,direct"`, it connects the sum database via proxy
 
 ## Check Golang Environment Variables
 ```
@@ -73,7 +61,7 @@ go env
 ...
 GOPROXY="https://proxy.golang.org,direct"
 GOROOT="/usr/local/go"
-GOSUMDB="sum.golang.org"
+GOSUMDB="sum.golang.google.cn"
 ...
 ```
 
