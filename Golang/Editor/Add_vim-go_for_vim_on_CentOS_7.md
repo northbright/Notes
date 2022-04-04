@@ -18,6 +18,9 @@
       :PlugStatus
       :PlugInstall
 
+      // To update vim-go
+      :PlugUpdate
+
 * Method B: Copy file directly
 
       git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
