@@ -8,7 +8,7 @@
 ./ffmpeg -i ~/videos/01.mov -c:v h264 -b:v 800k -c:a aac -b:a 64k ~/videos/01.mp4
 
 // Need to upscale or downscale
-./ffmpeg -i ~/videos/01.mov -vf scale=640x480:flags=lanczos -c:v h264 -b:v 800k -c:a aac -b:a 64k ~/videos/01_480p.mp4
+./ffmpeg -i ~/videos/01.mov -vf scale=854x480:flags=lanczos -c:v h264 -b:v 800k -c:a aac -b:a 64k ~/videos/01_480p.mp4
 ```
 
 ## References
