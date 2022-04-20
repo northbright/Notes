@@ -21,6 +21,14 @@
       // To update vim-go
       :PlugUpdate
 
+      // Update binaries used by vim-go
+      // If you get the generic syntax Go 1.18,
+      // run this command in vim to update binaries manually.
+      :GoUpdateBinaries
+
 * Method B: Copy file directly
 
       git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
+
+## References
+* ["text motion objects" - "[[" AND "]]" not working with go1.18 generic syntax](https://github.com/fatih/vim-go/issues/3383)
