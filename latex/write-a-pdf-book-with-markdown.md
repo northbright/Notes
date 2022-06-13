@@ -73,6 +73,18 @@ Use [Pandoc](https://pandoc.org/) with `xelatex` as PDF engine(`--pdf-engine=xel
   cp ~/pandoc-latex-template/eisvogel.tex ~/pandoc-markdown-book/templates/
   ```
 
+* Copy source files(Markdown) to `~/pandoc-markdown-book/src`
+
+* Rename the markdown files to make sure the files are sorted by chapter when build them to a PDF
+
+  The file name can be consist of chapter No and title.
+  e.g.
+  ```
+  01-intro.md
+  02-setup.md
+  ......
+  ```
+
 * Modify `compile_pdf.sh`
 
   * Backup `compile_pdf.sh`
