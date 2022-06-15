@@ -17,7 +17,7 @@
 
 #### Example
 
-    find -name "*.md" -type f -print0 | xargs -0 grep -i "git config" -rn --color
+    find . -name "*.md" -type f -print0 | xargs -0 grep -i "git config" -rn --color
 
 #### References
 * [What does “xargs grep” do?](https://askubuntu.com/questions/833128/what-does-xargs-grep-do)
