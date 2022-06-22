@@ -177,8 +177,8 @@ Use [Pandoc](https://pandoc.org/) with `xelatex` as PDF engine(`--pdf-engine=xel
         --toc -N \
         -o build/output.pdf \
         -V CJKmainfont="PingFangSC-Regular" \
-        -f markdown-implicit_figures \
         --listings \
+        -f markdown-implicit_figures \
         src/title.txt src/*.md
         # --template=./templates/eisvogel.latex \
         # --top-level-division=chapter \
