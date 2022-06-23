@@ -1,6 +1,6 @@
 # Get Current Executable Directory in golang
 
-#### os.Getwd() will NOT return current executable dir.
+## os.Getwd() will NOT return current executable dir.
 * Getwd returns a rooted path name corresponding to the current directory(See <https://godoc.org/os#Getwd>).
 * It's similar to `pwd` command.
 * Example Code
@@ -29,7 +29,7 @@
         * `./projects-go/src/github.com/northbright/getwd-test/getwd-test`
         * the result is: `os.Getwd(): /home/xx`
 
-#### Solution
+## Solution
 
     import (
         "fmt"
@@ -56,5 +56,5 @@
         return dir, nil
     }
 
-#### References
+## References
 * [pathhelper](https://github.com/northbright/pathhelper)
