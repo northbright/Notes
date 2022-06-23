@@ -1,5 +1,22 @@
 # Get Current Executable Directory in golang
 
+## Update
+* After Go 1.18, use [os.Executable](https://pkg.go.dev/os#Executable) to get the absolute path of current executable and use [filepath.Dir](https://pkg.go.dev/path/filepath#Dir) to get the dir
+
+  ```
+  // ExecDir returns the absolute path of given relative path to the current executable dir.
+  // If relPath is "", it just returns the absolute path of current executable dir.
+  func ExecDir(relPath string) (string, error) {
+          // os.Executable requires Go 1.18+
+          ex, err := os.Executable()
+          if err != nil {
+                  return "", err
+          }
+
+          return filepath.Join(filepath.Dir(ex), relPath), nil
+  }
+  ```
+
 ## os.Getwd() will NOT return current executable dir.
 * Getwd returns a rooted path name corresponding to the current directory(See <https://godoc.org/os#Getwd>).
 * It's similar to `pwd` command.
@@ -57,4 +74,6 @@
     }
 
 ## References
+* [How to get the directory of the currently running file?](https://dev.to/natamacm/how-to-get-the-directory-of-the-currently-running-file-47mg)
 * [pathhelper](https://github.com/northbright/pathhelper)
+* [pathelper](https://github.com/northbright/pathelper)
