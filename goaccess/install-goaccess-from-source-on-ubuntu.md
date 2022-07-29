@@ -71,6 +71,9 @@
   goaccess --version
   ```
 
+## Analyze Nginx Log
+* [Use GoAccess to Analyze Nginx Log in Real-Time](https://github.com/northbright/Notes/blob/master/goaccess/use-goaccess-to-analyze-nginx-log.md)
+
 
 ## References
 * [Missing development files for the GeoIP library](https://github.com/allinurl/goaccess/issues/852)
