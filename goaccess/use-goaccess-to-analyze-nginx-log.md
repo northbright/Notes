@@ -14,3 +14,6 @@
   ```
 
 * Press "space" to select `NCSA Combined Log Format` for Nginx log
+
+## References
+* [Get Started](https://goaccess.io/get-started)
