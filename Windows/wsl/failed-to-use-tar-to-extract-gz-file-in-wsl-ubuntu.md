@@ -25,6 +25,8 @@ Set default WSL version and distro(Ubuntu 22.04) WSL version to 2
 
   // Set distro WSL version to 2
   // wsl --set-version <Distro Name> <version>
+  // If it still shows version 1 after run this command,
+  // you may need to run Powershell as administrator
   wsl --set-version Ubuntu-22.04 2
   ```
 
