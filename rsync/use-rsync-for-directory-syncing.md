@@ -1,10 +1,14 @@
 # Use `rsync` for Directory Syncing
 
 ## Solution
-* Use `-r` or `-a` option for directory syncing
+* Use `-r` or `-a` option for directory syncing, `-z` for compressing
 
   ```
-  rsync -av SRC_DIR/ USER@HOST:DEST_DIR
+  rsync -avz SRC_DIR/ USER@HOST:DEST_DIR/
+
+  // example
+  // rsync over ssh
+  rsync -avz ./public/ xx@xx.com:~/public/
   ```
 
 * Do NOT forget to add '/' after `SRC_DIR`
