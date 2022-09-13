@@ -1,7 +1,7 @@
 # Set alias on Mac OS X which its Default Shell is zsh
 
 ## Problem
-* Set alias for `ls` to `ls -G` in `~/.profile` does NOT work on Mac OS X 10.15.4(Catalina)
+* Set alias for `ls` to `ls -Glh` in `~/.profile` does NOT work on Mac OS X 10.15.4(Catalina)
 
 ## Root Cause
 * Apple change default shell to zsh in Mac OS X 10.15
