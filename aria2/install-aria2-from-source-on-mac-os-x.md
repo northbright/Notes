@@ -1,4 +1,4 @@
-# Install aria2 from Source on Mac OS X
+# Install [aria2](https://github.com/aria2/aria2/) from Source on Mac OS X
 
 ## Install Developer Tools
 * To install developer tools include gcc, we need to install Command Line Tools
