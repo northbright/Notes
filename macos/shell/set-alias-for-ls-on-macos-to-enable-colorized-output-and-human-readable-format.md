@@ -21,3 +21,6 @@ alias ls="ls -Glh"
 ```
 
 * `source ~/.zshrc`
+
+## References
+* [See Sizes in Human Readable Format from the Command Line](https://osxdaily.com/2012/01/25/see-sizes-in-human-readable-format-from-the-command-line/)
