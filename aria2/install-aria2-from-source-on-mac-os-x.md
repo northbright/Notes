@@ -39,6 +39,8 @@ Copy these lines
 ```
 
 ## Check
+Open a new Terminal Window and run:
+
 ```
 aria2c --version
 ```
