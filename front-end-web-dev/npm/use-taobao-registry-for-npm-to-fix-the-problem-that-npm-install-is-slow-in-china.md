@@ -23,9 +23,12 @@ Use taobao registry
 - Set registry in global config
 
   To install global command, we need use `sudo npm install -g X`.
-  This will make npm use `/root/.npmrc` instead of `~/.npmrc`.
   We need to set a global npm config.
 
+  * Get Global Config File of npm
+    * [Get Global Config File of npm](https://github.com/northbright/Notes/blob/master/front-end-web-dev/npm/get-global-config-file-of-npm.md)
+
+  * Set Registry in Global Config
       // Global npm config file is $PREFIX/etc/npmrc
       // e.g. $PREFIX=/usr/local/node
       // global config file is /usr/local/node/etc/npmrc
@@ -39,12 +42,14 @@ Use taobao registry
 
 - check
 
-      // Check for current user
-      npm config get registry
-
-      // Check for sudo user
-      sudo npm config get registry
-
+  ```
+  npm config ls -l | grep registry
+  // Output:
+  // Overridden by Global
+  registry = "https://registry.npmjs.org/" ; overridden by global
+  // or Overridden by User
+  registry = "https://registry.npmjs.org/" ; overridden by user
+  ```
 
 ## References
 
