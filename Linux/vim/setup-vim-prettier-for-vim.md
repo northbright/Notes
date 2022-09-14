@@ -21,5 +21,15 @@
   call plug#end()
   ```
 
+* Open Vim and Run `:PlugInstall` to Install [vim-prettier](https://github.com/prettier/vim-prettier)
+
+  ```
+  vim
+  ```
+
+  ```
+  :PlugInstall
+  ```
+
 ## Usage
 * Run `:Prettier` to format `.js, .vue, .html, .css...` files 
