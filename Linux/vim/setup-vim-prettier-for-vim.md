@@ -6,8 +6,11 @@
 * macOS
   * [Install Node.js and npm on macOS](https://github.com/northbright/Notes/blob/master/front-end-web-dev/nodejs/install-nodejs-and-npm-on-macos.md)
 
-## Install [vim-plug]([vim-plug](https://github.com/junegunn/vim-plug) )
-*  [ Use vim-plug to Install Vim Plugins on CentOS 7](https://github.com/northbright/Notes/blob/master/Linux/vim/use-vim-plug-to-install-vim-plugins.md)
+## Install [vim-plug](https://github.com/junegunn/vim-plug)
+* CentOS
+  * [Install vim-plug on CentOS](https://github.com/northbright/Notes/blob/master/Linux/vim/install-vim-plug-on-centos.md)
+* macOS
+  * [Install vim-plug on macOS](https://github.com/northbright/Notes/blob/master/Linux/vim/install-vim-plug-on-macos.md)
 
 ## Install [vim-prettier](https://github.com/prettier/vim-prettier)
 * Open `~/.vimrc`, find `call plug#begin` ... `call plug#end()`, insert `Plug 'prettier/vim-prettier'`
@@ -36,3 +39,6 @@
 
 ## Usage
 * Run `:Prettier` to format `.js, .vue, .html, .css...` files 
+
+## References
+* [Use vim-plug to Install Vim Plugins](https://github.com/northbright/Notes/blob/master/Linux/vim/use-vim-plug-to-install-vim-plugins.md)
