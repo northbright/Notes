@@ -1,7 +1,10 @@
 # Setup [vim-prettier](https://github.com/prettier/vim-prettier) for Vim
 
 ## Install [Node.js](https://nodejs.org)
-* [Install Node.js from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/front-end-web-dev/nodejs/install-nodejs-from-source-on-centos-7.md)
+* CentOS
+  * [Install Node.js from Source on CentOS 7](https://github.com/northbright/Notes/blob/master/front-end-web-dev/nodejs/install-nodejs-from-source-on-centos-7.md)
+* macOS
+  * [Install Node.js and npm on macOS](https://github.com/northbright/Notes/blob/master/front-end-web-dev/nodejs/install-nodejs-and-npm-on-macos.md)
 
 ## Install [vim-plug]([vim-plug](https://github.com/junegunn/vim-plug) )
 *  [ Use vim-plug to Install Vim Plugins on CentOS 7](https://github.com/northbright/Notes/blob/master/Linux/vim/use-vim-plug-to-install-vim-plugins.md)
