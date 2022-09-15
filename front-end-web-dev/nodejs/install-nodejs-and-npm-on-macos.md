@@ -1,4 +1,4 @@
-# Install [Node.js](https://nodejs.org/en/) on macOS
+# Install [Node.js](https://nodejs.org/en/) and `npm` on macOS
 
 ## Steps
 * Visit [Node.js](https://nodejs.org/en/) 
