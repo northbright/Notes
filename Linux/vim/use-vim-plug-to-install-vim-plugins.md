@@ -1,22 +1,10 @@
-# Use [vim-plug](https://github.com/junegunn/vim-plug) to Install Vim Plugins on CentOS 7
+# Use [vim-plug](https://github.com/junegunn/vim-plug) to Install Vim Plugins
 
 ## Installation
-* Method A: Download [plug.vim](https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim) to `~/.vim/autoload`
-
-      curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-* Method B: If you have problem to access `raw.githubusercontent.com`, download release on [Github](https://github.com/junegunn/vim-plug/releases) directly
-
-      // Create ~/.vim/autoload
-      mkdir -p ~/.vim/autoload
-
-      cd ~/download
-      wget https://github.com/junegunn/vim-plug/archive/0.10.0.tar.gz
-      tar -xzvf 0.10.0.tar.gz
-      cp vim-plug-0.10.0/plug.vim ~/.vim/autoload/
-
-* Run `vim`
+* CentOS
+  * [Install vim-plug on CentOS](https://github.com/northbright/Notes/blob/master/Linux/vim/install-vim-plug-on-centos.md)
+* macOS
+  * [Install vim-plug on macOS](https://github.com/northbright/Notes/blob/master/Linux/vim/install-vim-plug-on-macos.md)
 
 ## Install Plugins
 * Open `~/.vimrc` and put plugins in `call plug#begin('~/.vim/plugged')` and `call plug#end()`
