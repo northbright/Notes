@@ -23,7 +23,6 @@
   vim
   ```
   ```
+  // :PlugInstall, :PlugStatus should be available
   :PlugStatus
-  // Output:
-  - vim-prettier: OK
   ```
