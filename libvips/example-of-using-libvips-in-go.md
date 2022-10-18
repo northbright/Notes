@@ -15,3 +15,5 @@
 
 * See `resizeImage()`, `grayScale()`, `blur()`, `setUserComment()`, `saveToJpegBuffer()` and `saveToWebPBuffer()` in [internal/image/vips/image.go](https://github.com/DMarby/picsum-photos/blob/main/internal/image/vips/image.go)
 
+* `New()`, `ProcessImage()`, `taskProcessor()` and `Shutdown()` in [image/vips/vips.go](https://github.com/DMarby/picsum-photos/blob/main/internal/image/vips/vips.go) show how the process to initialize and process image via libvips in Golang
+
