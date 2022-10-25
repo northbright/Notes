@@ -8,3 +8,4 @@
 ## References
 * [How to Combine Multiple JPEGs Into One PDF](https://www.lifewire.com/combine-multiple-jpegs-into-one-pdf-5204627)
 * [11 Best Free PDF Creators](https://www.lifewire.com/free-tools-to-create-pdf-files-1356335)
+* [The 9 Best Free PDF Editors (October 2022)](https://www.lifewire.com/best-free-pdf-editors-4147622)
