@@ -1,4 +1,4 @@
-# Flusb DNS Cache on Mac OS
+# Flush DNS Cache on Mac OS
 
 ## Solution
 ```
