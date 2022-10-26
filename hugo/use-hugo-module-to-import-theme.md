@@ -31,7 +31,7 @@
   * Make sure the theme to import is a Hugo Module
 
     * If the theme is a Hugo Module, `go.mod` should be in the repo root.
-    * e.g. <gitlab.com/kaushalmodi/hugo-mwe-theme>
+    * e.g. <https://gitlab.com/kaushalmodi/hugo-mwe-theme>
 
   * Create `config.yml` and add the `module` section
 
