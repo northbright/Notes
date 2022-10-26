@@ -11,7 +11,7 @@ Resolve [cnBeta](https://www.cnbeta.com) to the IP provided by Cloudflare.
 * Input `www.cnbeta.com` and click "Ping Test"
 * Find it failed to ping `www.cnbeta.com` from the test sites in China
 * It succeeded to ping `www.cnbeta.com` from the test sites out of China(Hongkong, Japan, US...) because of resolving `www.cnbeta.com` to Cloudflare's IP
-* Record the IP(e.g. `104.26.7.xx`
+* Record the IP(e.g. `104.26.7.xx`)
 
 #### Update `/etc/hosts`
 * `sudo vi /etc/hosts`
