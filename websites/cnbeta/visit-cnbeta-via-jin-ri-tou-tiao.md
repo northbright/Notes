@@ -14,3 +14,4 @@ Use [Jinritoutiao](https://www.toutiao.com/) to visit cnBeta
 ## References
 * [cnBeta打开方法2022.11.01更新](https://zhuanlan.zhihu.com/p/578484638)
 * [cnBeta，一路走好](https://mp.weixin.qq.com/s/rpolcBnmgLehQRSpO2AzHw)
+* [cnBeta，好像还没死透](https://mp.weixin.qq.com/s/LI3kWfTB0jjvw4jssMr3FQ)
