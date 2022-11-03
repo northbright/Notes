@@ -1,7 +1,7 @@
 # Visit cnBeta via Jinritoutiao
 
 ## Problem
-* [cnBeta.com] was blocked on 2022/10
+* [cnBeta.com](https://www.cnbeta.com) was blocked on 2022/10
 * Updated [`/etc/hosts`](https://github.com/northbright/Notes/blob/master/macos/network/update-etc-hosts-on-mac-os.md) and it just worked for a few days
 * Need a easy way to access cnBeta
 
