@@ -10,3 +10,6 @@ Use [Jinritoutiao](https://www.toutiao.com/) to visit cnBeta
 
 * Go to [Jinritoutiao](https://www.toutiao.com/) and search "cnBeta"
 * or visit the [cnBeta channel](https://www.toutiao.com/c/user/token/MS4wLjABAAAA_Q07NxeCa4hDPFoRcdphaZOk2X6C8BApfpTPTMLJswI/) directly
+
+## References
+* [cnBeta打开方法2022.11.01更新](https://zhuanlan.zhihu.com/p/578484638)
