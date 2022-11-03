@@ -38,5 +38,8 @@ Resolve [cnBeta](https://www.cnbeta.com) to the IP provided by Cloudflare.
   ping www.cnbeta.com
   ```
 
+## Workaround
+* [Visit cnBeta via Jinritoutiao](https://github.com/northbright/Notes/blob/master/websites/cnbeta/visit-cnbeta-via-jin-ri-tou-tiao.md)
+
 ## References
 * [Flush DNS Cache on Mac OS](https://github.com/northbright/Notes/blob/master/macos/network/flush-dns-cache-on-mac-os.md)
