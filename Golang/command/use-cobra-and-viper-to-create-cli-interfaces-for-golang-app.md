@@ -1,25 +1,28 @@
 # Use Cobra and Viper to Create CLI Interfaces for Golang App
 
-## Install Cobra
+## Install Cobra CLI
 * Install Latest [Golang](https://golang.org)
   * [Set Golang Development Environment on Mac OS X in China](https://github.com/northbright/Notes/blob/master/Golang/Install/setup-golang-dev-env-on-mac-os-x.md)
 
-* Get [Cobra](https://github.com/spf13/cobra) Package
+* Get [cobra-cli](https://github.com/spf13/cobra-cli) command
 
   ```
-  go get -u github.com/spf13/cobra
+  go install github.com/spf13/cobra-cli@latest.
   ```
+
+  Go will automatically install it in your `$GOPATH/bin` directory which should be in your `$PATH`.
 
 * Check
   
   ```
-  which cobra
+  which cobra-cli
+
   // Output:
-  /Users/XX/go/bin/cobra
+  /Users/XX/go/bin/cobra-cli
   ```
 
   ```
-  cobra
+  cobra-cli
   // Output:
   // Cobra is a CLI library for Go that empowers applications.
   // This application is a tool to generate the needed files
@@ -40,7 +43,7 @@ Use `cobra init` command to initialize a go module, run `cobra init -h` for more
 ```
 cd ~/demo
 // Create a new app and use viper for configuration
-cobra init --viper
+cobra-cli init --viper
 ```
 
 It'll create `main.go` and `cmd/root.go`
@@ -69,7 +72,7 @@ go run main.go
 ## Create a sub command: `demo goodbye [Name]`
 
 ```
-cobra add goodbye
+cobra-cli add goodbye
 ```
 
 Goto `cmd/goodbye.go` to implement `goodbyeCmd`
@@ -99,7 +102,7 @@ Goodbye, Frank
 ## Create another Sub Command with Flags: `demo goodnight [Name] --moon --sleepingface`
 
 ```
-cobra add goodnight
+cobra-cli add goodnight
 ```
 
 Goto `cmd/goodnight.go` to implement `goodnightCmd`
@@ -148,7 +151,7 @@ goodnight, Frank🌙😴
 ## Create another Sub Command with Flag which Can Be Read From Config File Using Viper: `demo hi [Name] --emoji [emoji]`
 
 ```
-cobra add hi
+cobra-cli add hi
 ```
 
 Goto `cmd/hi.go` to implement `hiCmd`
@@ -220,3 +223,4 @@ Hi, Frank🐱
 ## References
 * [Golang | 使用 Cobra 构建命令行工具](https://www.jianshu.com/p/63dd2075eb22)
 * [Using the Cobra Library](https://github.com/spf13/cobra/blob/master/user_guide.md#using-the-cobra-library)
+* [Cobra Generator](https://github.com/spf13/cobra-cli)
