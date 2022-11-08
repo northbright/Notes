@@ -7,7 +7,7 @@
 * Get [cobra-cli](https://github.com/spf13/cobra-cli) command
 
   ```
-  go install github.com/spf13/cobra-cli@latest.
+  go install github.com/spf13/cobra-cli@latest
   ```
 
   Go will automatically install it in your `$GOPATH/bin` directory which should be in your `$PATH`.
