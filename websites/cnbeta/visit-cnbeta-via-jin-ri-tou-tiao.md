@@ -6,10 +6,18 @@
 * Need a easy way to access cnBeta
 
 ## Solution
-Use [Jinritoutiao](https://www.toutiao.com/) to visit cnBeta
+* Method A(recommended)
 
-* Go to [Jinritoutiao](https://www.toutiao.com/) and search "cnBeta"
-* or visit the [cnBeta channel](https://www.toutiao.com/c/user/token/MS4wLjABAAAA_Q07NxeCa4hDPFoRcdphaZOk2X6C8BApfpTPTMLJswI/) directly
+  Visit [cnbeta.com.tw](http://cnbeta.com.tw/)
+
+  It'll redirect to [cnBeta channel](https://www.toutiao.com/c/user/token/MS4wLjABAAAA_Q07NxeCa4hDPFoRcdphaZOk2X6C8BApfpTPTMLJswI/)
+
+* Method B
+
+  Use [Jinritoutiao](https://www.toutiao.com/) to visit cnBeta
+
+  * Go to [Jinritoutiao](https://www.toutiao.com/) and search "cnBeta"
+  * or visit the [cnBeta channel](https://www.toutiao.com/c/user/token/MS4wLjABAAAA_Q07NxeCa4hDPFoRcdphaZOk2X6C8BApfpTPTMLJswI/) directly
 
 ## References
 * [cnBeta打开方法2022.11.01更新](https://zhuanlan.zhihu.com/p/578484638)
