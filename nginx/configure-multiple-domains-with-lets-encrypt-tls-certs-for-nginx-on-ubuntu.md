@@ -98,55 +98,8 @@
       ```
     
 * Global(common) TLS configuration
+  * [Global TLS Config for Nginx](https://github.com/northbright/Notes/blob/master/nginx/global-tls-config-for-nginx.md)
 
-  Different servers(domains) use **DIFFERENT** TLS certificates / keys,
-  but share the **SAME** common TLS configuration
-
-  * Create Diffie-Hellman Group
-
-    Diffie-Hellman Group is used in negotiating [Perfect Forward Secrecy](https://en.wikipedia.org/wiki/Forward_secrecy) with clients.
-
-    ```
-    sudo openssl dhparam \
-    -out /usr/local/openssl/certs/dhparam.pem 2048
-    ```
-
-    Please note, it'll take a long time(a few minutes) if key size >= 4096(but recommended).
-
-  * Add global TLS config file
-
-    ```
-    sudo vi /etc/nginx/conf.d/ssl.conf
-    ```
-
-    ```
-    ## Protocols - TLSv1.3 requires newer OpenSSL(Feb.2018)
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
-
-    ## Key Exchange
-    ssl_dhparam /usr/local/openssl/certs/dhparam.pem;
-    ssl_ecdh_curve secp384r1;
-
-    ## Cipher Strength
-    ssl_ciphers AES256+EECDH:AES256+EDH:!aNULL;
-
-    ## Enable HSTS on all subdomains
-    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
-
-    ## Other typical SSL settings
-    ssl_session_cache shared:SSL:10m;
-    ssl_session_timeout 10m;
-    ssl_prefer_server_ciphers on;
-
-    ssl_stapling on;
-    ssl_stapling_verify on;
-
-    resolver 8.8.8.8 8.8.4.4 valid=300s;
-    resolver_timeout 10s;
-
-    add_header X-Frame-Options DENY;
-    add_header X-Content-Type-Options nosniff;  
-    ```
 * Install Let's Encrypt Certs
   * Switch to `root`
 
