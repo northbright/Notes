@@ -64,3 +64,6 @@
 
 * Configure SELinux
   * See [Fix 403 Forbidden Error of Nginx on CentOS 7](https://github.com/northbright/Notes/blob/master/nginx/configure-selinux-to-fix-403-forbidden-error-of-nginx-on-centos.md)
+
+## References
+* [Nginx doesn't have permission to access files with the same ownership](https://serverfault.com/questions/748561/nginx-doesnt-have-permission-to-access-files-with-the-same-ownership)
