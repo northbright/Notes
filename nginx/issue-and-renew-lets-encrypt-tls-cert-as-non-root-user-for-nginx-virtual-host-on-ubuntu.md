@@ -104,3 +104,6 @@ server {
   // for a.com
   acme.sh --issue --log -d a.com -w ~/webroot --force
 
+
+## References
+* [Certificate from Let's Encrypt with Nginx and a non-root user](https://jereze.com/code/letsencrypt-acme-no-root/)
