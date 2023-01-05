@@ -10,11 +10,20 @@
   sudo adduser letsencrypt
   ```
 
+* Make web root of letsencrypt user for [acme.sh](https://github.com/acmesh-official/acme.sh) challenge
+
   ```
-  // Make web root
   su - letsencrypt
   mkdir ~/webroot
   exit
+  ```
+
+* Add `rx` permissions for `/home/letsencrypt` dir(home of letsencrypt user)
+
+  Nginx worker processes run as `www-data` and need `rx` permissions to read / write [acme.sh](https://github.com/acmesh-official/acme.sh) challenge
+
+  ```
+  sudo chmod o+rx -R /home/letsencrypt
   ```
 
 * Modify `/etc/sudoers` to make `letsencrypt` user no password required when reload nginx
@@ -25,14 +34,6 @@
 
   ```
   letsencrypt ALL= NOPASSWD: /bin/systemctl reload nginx.service
-  ```
-
-* Add `rx` permissions for `/home/letsencrypt` dir(home of letsencrypt user)
-
-  Nginx worker processes run as `www-data` and need `rx` permissions to read / write acme.sh challenge
-
-  ```
-  sudo chmod o+rx -R /home/letsencrypt
   ```
 
 ## Modify Nginx config(e.g. `/etc/nginx/conf.d/a.com.conf` to add [acme.sh](https://github.com/acmesh-official/acme.sh) challenge config
