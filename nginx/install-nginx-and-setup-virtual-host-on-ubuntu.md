@@ -90,3 +90,4 @@ curl a.com
 
 ## References
 * [Difference in sites-available vs sites-enabled vs conf.d directories (Nginx)?](https://serverfault.com/questions/527630/difference-in-sites-available-vs-sites-enabled-vs-conf-d-directories-nginx)
+* [Nginx doesn't have permission to access files with the same ownership](https://serverfault.com/questions/748561/nginx-doesnt-have-permission-to-access-files-with-the-same-ownership)
