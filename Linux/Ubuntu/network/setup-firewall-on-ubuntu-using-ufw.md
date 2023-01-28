@@ -13,13 +13,20 @@
    ......
    ```
 
+   * If `ufw` is not installed, run `sudo apt install ufw` to install it
+   * If it's inactive, start ufw service and make the service enabled to start automatically with system boot:
+
+     ```
+     sudo systemctl enable --now ufw
+     ```
+
 2. Check `ufw` firewall status
 
    ```
-   ufw status verbose
+   sudo ufw status verbose
    
    // Output:
-   // Status: inactive
+   // Status: inactive / active
    ```
 
 3. Setup Firewall Policies
@@ -48,6 +55,12 @@
      // or you may specify the HTTP / HTTPS port
      sudo ufw allow 80
      sudo ufw allow 443 
+     ```
+
+   * Allow Samba(optional)
+
+     ```
+     sudo ufw allow samba
      ```
 
 4. Enable `ufw` if firewall is disabled(`inactive`)
