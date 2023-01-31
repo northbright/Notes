@@ -42,7 +42,8 @@ sudo mkdir /data
 
   * Add `server min protocol = NT1` under `[global]` section(optional)
 
-    Xiaomi TV supports SMB v1 only, need to add this line for Xiaomi TV
+    Xiaomi TV supports SMB v1 only, need to add this line for Xiaomi TV,
+    see [小米电视无法访问samba共享文件](https://zhuanlan.zhihu.com/p/590959284)
 
   * Put the code to the end of the file
 
@@ -63,3 +64,4 @@ sudo systemctl restart smbd
 * [How to install SAMBA on Ubuntu 22.04 LTS Jammy Linux](https://www.how2shout.com/linux/how-to-install-samba-on-ubuntu-22-04-lts-jammy-linux/)
 * [A big change for Samba in Ubuntu 22.04 and how to get around it](https://www.techrepublic.com/article/big-change-samba-ubuntu/)
 * [Setup Firewall on Ubuntu Using ufw](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/network/setup-firewall-on-ubuntu-using-ufw.md)
+* [小米电视无法访问samba共享文件](https://zhuanlan.zhihu.com/p/590959284)
