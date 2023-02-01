@@ -10,13 +10,15 @@ sudo apt update
 sudo apt install samba
 ```
 
-It will install BOTH Samba server and Samba NetBIOS server.
-For security reason, it's better to stop and disable Samba NetBIOS server:
+* Disable Samba NetBIOS Server(optional)
 
-```
-sudo systemctl stop nmbd.service
-sudo systemctl disable nmbd.service
-```
+  It will install BOTH Samba server and Samba NetBIOS server.
+  For security reason, it's better to stop and disable Samba NetBIOS server:
+
+  ```
+  sudo systemctl stop nmbd.service
+  sudo systemctl disable nmbd.service
+  ```
 
 * Disable Samba NetBIOS Server(optional)
 
