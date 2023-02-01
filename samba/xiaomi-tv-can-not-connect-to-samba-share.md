@@ -1,8 +1,8 @@
-# Xiaomi TV Can NOT Connect to SMB Share
+# Xiaomi TV Can NOT Connect to Samba Share
 
 ## Problem
-* Setup SMB share on Ubuntu
-* PC clients can connect the SMB share
+* Setup Samba share on Ubuntu
+* PC clients can connect the Samba share
 * Xiaomi TV can NOT connect
 
 ## Root Cause
@@ -10,7 +10,7 @@
 
 ## Solution
 
-Add SMB v1 protocol support for SMB service
+Add SMB v1 protocol support for Samba service
 
 * Edit `/etc/samba/smb.conf`
 * Add `server min protocol = NT1` under `[global]` section(optional)
