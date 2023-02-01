@@ -51,7 +51,7 @@ sudo mkdir /data
     [data]
        path = /data
        guest only = yes
-       browsable = yes
+       browseable = yes
        writable = no
     ```
 
