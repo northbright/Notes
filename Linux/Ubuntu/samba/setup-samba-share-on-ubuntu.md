@@ -11,14 +11,20 @@ sudo apt install samba
 ```
 
 * Disable Samba NetBIOS Server(optional)
+  * It will install BOTH Samba server(`smbd`) and Samba NetBIOS server(`nmbd`).
+  * It brings network and printer browsing capabilities.
+  * It also cause noisy network broadcasts
 
-  It will install BOTH Samba server(`smbd`) and Samba NetBIOS server(`nmbd`).
-  For security reason, it's better to stop and disable Samba NetBIOS server:
+    > Any NetBIOS capable machine will broadcast their NetBIOS computer name every 60 seconds
 
-  ```
-  sudo systemctl stop nmbd.service
-  sudo systemctl disable nmbd.service
-  ```
+    See [Do I need NetBIOS?](https://blogs.msmvps.com/acefekay/2013/03/02/do-i-need-netbios/)
+
+  * For security / performance reason, it's better to stop and disable Samba NetBIOS server
+
+    ```
+    sudo systemctl stop nmbd.service
+    sudo systemctl disable nmbd.service
+    ```
 
 * Disable Samba NetBIOS Server(optional)
 
@@ -207,3 +213,4 @@ sudo systemctl enable smbd.service
 
 ## References
 * [How To Set Up a Samba Share For A Small Organization on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-samba-share-for-a-small-organization-on-ubuntu-16-04)
+* [Do I need NetBIOS?](https://blogs.msmvps.com/acefekay/2013/03/02/do-i-need-netbios/)
