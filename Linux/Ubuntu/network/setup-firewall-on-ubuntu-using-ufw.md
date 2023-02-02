@@ -78,7 +78,7 @@
 5. Check `ufw` status
 
    ```
-   ufw status
+   sudo ufw status
 
    // Output:
    To                         Action      From
