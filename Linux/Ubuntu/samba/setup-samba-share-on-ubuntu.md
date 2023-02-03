@@ -31,6 +31,27 @@ sudo apt install samba
 ## Install and Configure Firewall(`ufw`)
 * [Setup Firewall on Ubuntu Using ufw](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/network/setup-firewall-on-ubuntu-using-ufw.md)
 
+* Run `sudo ufw status verbose` to check
+
+  ```
+  sudo ufw status verbose
+  Status: active
+  Logging: on (low)
+  Default: deny (incoming), allow (outgoing), disabled (routed)
+  New profiles: skip
+
+  To                         Action      From
+  --                         ------      ----
+  22/tcp                     ALLOW IN    Anywhere                  
+  137,138/udp (Samba)        ALLOW IN    Anywhere                  
+  139,445/tcp (Samba)        ALLOW IN    Anywhere                  
+  22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+  137,138/udp (Samba (v6))   ALLOW IN    Anywhere (v6)             
+  139,445/tcp (Samba (v6))   ALLOW IN    Anywhere (v6)  
+  ```
+
+  If NetBIOS is enabled, port 137, 138 and 139 are open.
+
 ## Samba's Global Settings
 * Backup the Samba Config File
 
@@ -214,3 +235,4 @@ sudo systemctl enable smbd.service
 ## References
 * [How To Set Up a Samba Share For A Small Organization on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-samba-share-for-a-small-organization-on-ubuntu-16-04)
 * [Do I need NetBIOS?](https://blogs.msmvps.com/acefekay/2013/03/02/do-i-need-netbios/)
+* [Samba 4, shares, wsdd and Windows 10 – how to list Linux Samba servers in the Win 10 Explorer](https://linux-blog.anracom.com/2020/05/24/samba-4-shares-wsdd-and-windows-10-how-to-list-linux-samba-servers-in-the-win-10-explorer/)
