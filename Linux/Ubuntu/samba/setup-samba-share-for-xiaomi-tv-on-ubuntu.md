@@ -33,6 +33,7 @@
   You may just press "OK" on the remote to visit Samba share instead of inputting the IP address to create a new network share on the TV.
 
   `nmbd.service` is enabled by default after Samba is installed(`sudo apt install samba`)
+
   If it's disabled, you may re-enable it.
 
   ```
@@ -47,7 +48,7 @@
 
 ## Access Samba Share from Xiaomi TV
 
-* Press "OK" and run "File Manager", it will take Xiaomi TV 15 - 60 seconds to Find Share
+* Press "OK" and run "File Manager", it will take Xiaomi TV 15 - 60 seconds to Find Samba share
 * Once the Samba Share name appears, press "OK" and input user name and password(optional)
 * Xiaomi TV will save the user name and password of the Samba Share
 * It'll re-scan the network to discover Samba share when run "File Manager" after each reboot
