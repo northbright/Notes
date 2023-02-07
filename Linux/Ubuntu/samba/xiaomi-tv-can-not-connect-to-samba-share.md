@@ -3,7 +3,10 @@
 ## Problem
 * Setup Samba share on Ubuntu
 * PC clients can connect the Samba share
-* Xiaomi TV can NOT connect
+* Xiaomi TV can NOT connect the Samba share
+  * Click "Add New Network Share"
+  * Input IP of Samba Server
+  * Got error
 
 ## Root Cause
 * Xiaomi TV only support SMB v1
