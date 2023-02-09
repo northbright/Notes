@@ -84,6 +84,16 @@ sudo systemctl restart nginx
   git clone https://github.com/acmesh-official/acme.sh.git
   ```
 
+* Create `/home/letsencrypt/.acme.sh`
+
+  If `/home/letsencrypt/.acme.sh` is NOT created you will get error when run `acme.sh --set-default-ca --server letsencrypt`:
+
+  > touch: cannot touch '/home/letsencrypt/.acme.sh/account.conf': No such file or directory
+
+  ```
+  mkdir /home/letsencrypt/.acme.sh
+  ```
+
 * Add Path of `acme.sh` Binary
 
   ```
