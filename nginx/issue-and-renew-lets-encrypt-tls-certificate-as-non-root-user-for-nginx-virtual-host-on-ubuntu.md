@@ -141,6 +141,11 @@ sudo systemctl restart nginx
 
 ## Update Nginx Virtual Host Config
 
+Switch user
+```
+exit
+```
+
 ```
 sudo vi /etc/nginx/conf.d/a.com.conf
 ```
@@ -194,6 +199,10 @@ sudo service nginx force-reload
 
 cronjob to renew certificates should be installed automatically when install a
  certificate.
+
+```
+su - letsencrypt
+```
 
 ```
 crontab -l
