@@ -65,6 +65,11 @@ server {
 ## Global TLS Config for Nginx
 * [Global TLS Config for Nginx](https://github.com/northbright/Notes/blob/master/nginx/global-tls-config-for-nginx.md)
 
+## Restart Nginx
+```
+sudo systemctl restart nginx
+```
+
 ## Install [acme.sh](https://github.com/acmesh-official/acme.sh) as `letsencrypt` user
 
 * Switch User
