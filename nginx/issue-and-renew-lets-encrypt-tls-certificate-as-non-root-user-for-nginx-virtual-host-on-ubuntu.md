@@ -176,6 +176,10 @@ server {
             # Put public content to /var/www/html.
             root   /var/www/html;
             index  index.html index.htm;
+
+            # To redirect to other app(e.g. Golang app),
+            # comment above root / index settings and uncomment below line.
+            # proxy_pass http://localhost:8080;
         }
 
         # acme.sh challenge(HTTP-01 challenge)
