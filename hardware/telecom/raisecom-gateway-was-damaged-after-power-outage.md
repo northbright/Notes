@@ -9,3 +9,6 @@
 
 ## Solution
 * Call 10000 to replace the damaged device
+
+## Suggestion
+* Poweroff the gateway **BEFORE** expected power loss
