@@ -26,8 +26,6 @@ sudo apt install samba
     sudo systemctl disable nmbd.service
     ```
 
-* Disable Samba NetBIOS Server(optional)
-
 ## Install and Configure Firewall(`ufw`)
 * [Setup Firewall on Ubuntu Using ufw](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/network/setup-firewall-on-ubuntu-using-ufw.md)
 
