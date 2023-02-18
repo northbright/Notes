@@ -10,6 +10,9 @@
        // Example
        CMDKEY add:\\server /user:admin /pass:123456
 
+       // List all added crendentials
+       CMDKEY /list
+
        // List added credential by server name
        CMDKEY list:server
        
