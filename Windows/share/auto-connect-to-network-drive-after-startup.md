@@ -3,27 +3,33 @@
 ## Steps
 1. Open a new `CMD` window
 2. Use `CMDKEY` command to add server credential to `Credential Manager`
-
-       // Add credential
-       CMDKEY add:%SERVER% /user:%USERNAME /pass:%PASSWORD%
+   * Add credential
        
-       // Example
-       CMDKEY add:\\server /user:admin /pass:123456
+     `CMDKEY add:{SERVER} /user:{USERNAME} /pass:{PASSWORD}`
+       
+     e.g. `CMDKEY add:\\server /user:admin /pass:123456`
 
-       // List all added crendentials
-       CMDKEY /list
+   * List all added crendentials
+       
+     `CMDKEY /list`
 
-       // List added credential by server name
-       CMDKEY /list:%SERVER%
+   * List added credential by server name
+       
+     `CMDKEY /list:{SERVER}`
 
-       CMDKEY /list:server
-       CMDKEY /list:10.0.10.3
+      e.g.
+        
+      `CMDKEY /list:server`
+      `CMDKEY /list:10.0.10.3`
 
-       // Delete credential
-       CMDKEY /delete:%SERVER%
+   * Delete credential(optional)
 
-       CMDKEY /delete:server
-       CMDKEY /delete:10.0.10.3
+     `CMDKEY /delete:{SERVER}`
+
+     e.g.
+
+     `CMDKEY /delete:server`
+     `CMDKEY /delete:10.0.10.3`
        
 3. Use `NET` command to connect network drive
 
