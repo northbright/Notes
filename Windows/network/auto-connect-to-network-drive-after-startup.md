@@ -14,7 +14,10 @@
        CMDKEY /list
 
        // List added credential by server name
-       CMDKEY list:server
+       CMDKEY /list:%SERVER%
+
+       CMDKEY /list:server
+       CMDKEY /list:10.0.10.3
        
 3. Use `NET` command to connect network drive
 
