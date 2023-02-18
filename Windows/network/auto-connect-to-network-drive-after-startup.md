@@ -18,6 +18,12 @@
 
        CMDKEY /list:server
        CMDKEY /list:10.0.10.3
+
+       // Delete credential
+       CMDKEY /delete:%SERVER%
+
+       CMDKEY /delete:server
+       CMDKEY /delete:10.0.10.3
        
 3. Use `NET` command to connect network drive
 
