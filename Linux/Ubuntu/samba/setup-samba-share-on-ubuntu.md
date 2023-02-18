@@ -144,7 +144,7 @@ The samba / system users will be created: `frank`, `sonny`, `admin`.
   sudo chmod 2770 /samba/frank
   ```
 
-  `2770` means that new files or directories created under `/samba/frank/` will inherit the group ownership of the parent directory rather than the primary group of the user that created the file or directory.
+  The first digit: `2` of `2770` means that new files or directories created under `/samba/frank/` will inherit the group ownership of the parent directory rather than the **PRIMARY** group of the user that created the file or directory.
 
   This means, for example, that if the admin user were to create a new directory in `frank`’s share, `frank` would be able to read and write to it.
 
