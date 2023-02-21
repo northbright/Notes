@@ -95,6 +95,7 @@ sudo apt install samba
 
       # Xiaomi TV supports SMB1 only.
       # Add SMB1 protocol(optional).
+      client min protocol = NT1
       server min protocol = NT1
   ```
 
