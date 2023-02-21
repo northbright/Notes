@@ -53,6 +53,7 @@
 * Once the Samba Share name appears, press "OK" and input user name and password(optional)
 * Xiaomi TV will save the user name and password of the Samba Share
 * It'll re-scan the network to discover Samba share when run "File Manager" after each reboot
+* [Unplug Power Cable Will Make Mi TV Lose Samba Authentication](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/samba/unplug-power-cable-will-make-mi-tv-lose-samba-authentication.md)
 
 ## DEBUG
 If Xiaomi TV can not discover the Samba share, try these:
@@ -68,3 +69,4 @@ If Xiaomi TV can not discover the Samba share, try these:
 * [samba 4.11 or newer version enable SMB1](https://www.cnblogs.com/mrcoolfuyu/p/12321159.html)
 * [关于小米电视无法访问电脑创建共享文件夹问题](https://zhuanlan.zhihu.com/p/340762417)
 * [SMB1 is disabled by default](https://wiki.samba.org/index.php/Samba_4.11_Features_added/changed#SMB1_is_disabled_by_default)
+* [Unplug Power Cable Will Make Mi TV Lose Samba Authentication](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/samba/unplug-power-cable-will-make-mi-tv-lose-samba-authentication.md)
