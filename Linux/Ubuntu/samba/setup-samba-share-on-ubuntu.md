@@ -93,8 +93,8 @@ sudo apt install samba
       max log size = 1000
       log level = 3 passdb:5 auth:5
 
-      # Xiaomi TV supports SMBv1 only.
-      # Add SMBv1 protocol(optional).
+      # Xiaomi TV supports SMB1 only.
+      # Add SMB1 protocol(optional).
       server min protocol = NT1
   ```
 
