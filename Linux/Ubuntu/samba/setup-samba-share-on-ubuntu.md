@@ -234,3 +234,4 @@ sudo systemctl enable smbd.service
 * [How To Set Up a Samba Share For A Small Organization on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-samba-share-for-a-small-organization-on-ubuntu-16-04)
 * [Do I need NetBIOS?](https://blogs.msmvps.com/acefekay/2013/03/02/do-i-need-netbios/)
 * [Samba 4, shares, wsdd and Windows 10 – how to list Linux Samba servers in the Win 10 Explorer](https://linux-blog.anracom.com/2020/05/24/samba-4-shares-wsdd-and-windows-10-how-to-list-linux-samba-servers-in-the-win-10-explorer/)
+* [samba 4.11 or newer version enable SMB1](https://www.cnblogs.com/mrcoolfuyu/p/12321159.html)
