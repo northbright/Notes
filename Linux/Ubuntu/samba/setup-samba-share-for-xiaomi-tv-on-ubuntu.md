@@ -15,6 +15,7 @@
   ```
   [global]
     ......
+    client min protocol = NT1
     server min protocol = NT1
     ......
   ``` 
