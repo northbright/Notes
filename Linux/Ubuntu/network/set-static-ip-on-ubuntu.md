@@ -18,16 +18,16 @@ ip a
 In this case, `enp0s31f6` is the ethernet interface.
 
 ## Replace `dhcp4` with Static IP Settings
-* Backup Config File(`/etc/00-installer-config.yaml`)
+* Backup Config File(`/etc/netplan/00-installer-config.yaml`)
 
   ```
-  sudo cp /etc/00-installer-config.yaml /etc/00-installer-config.yaml.bk
+  sudo cp /etc/netplan/00-installer-config.yaml /etc/netplan/00-installer-config.yaml.bk
   ```
 
 * Disable DHCP and Set Static IP
 
   ```
-  sudo vi /etc/00-installer-config.yaml
+  sudo vi /etc/netplan/00-installer-config.yaml
   ```
 
   ```
