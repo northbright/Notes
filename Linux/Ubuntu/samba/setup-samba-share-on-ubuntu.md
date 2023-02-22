@@ -231,6 +231,12 @@ sudo systemctl start smbd.service
 sudo systemctl enable smbd.service
 ```
 
+## Restart Samba Service(optional)
+
+```
+sudo systemctl restart smbd.service
+```
+
 ## References
 * [How To Set Up a Samba Share For A Small Organization on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-samba-share-for-a-small-organization-on-ubuntu-16-04)
 * [Do I need NetBIOS?](https://blogs.msmvps.com/acefekay/2013/03/02/do-i-need-netbios/)
