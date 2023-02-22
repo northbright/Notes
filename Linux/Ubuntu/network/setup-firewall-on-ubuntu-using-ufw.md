@@ -77,6 +77,8 @@
 
 5. Check `ufw` status
 
+   Use `ufw status` or `ufw status verbose` to show firewall status.
+
    ```
    sudo ufw status
 
@@ -87,6 +89,19 @@
    22/tcp                     ALLOW       Anywhere                  
    80/tcp                     ALLOW       Anywhere                  
    443/tcp                    ALLOW       Anywhere                  
+   ```
+
+   ```
+   sudo ufw status verbose
+
+   To                         Action      From
+   --                         ------      ----
+   22/tcp                     ALLOW IN    Anywhere                  
+   137,138/udp (Samba)        ALLOW IN    Anywhere                  
+   139,445/tcp (Samba)        ALLOW IN    Anywhere                  
+   22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+   137,138/udp (Samba (v6))   ALLOW IN    Anywhere (v6)             
+   139,445/tcp (Samba (v6))   ALLOW IN    Anywhere (v6)     
    ```
 
 ## References
