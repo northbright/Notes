@@ -1,4 +1,4 @@
-# There is No Text Editor Installed on Ubuntu Server Minimal Installation
+# There is No Text Editor Installed on Ubuntu Server 22.04 Minimal Installation
 
 ## Problem
 * Install Ubuntu Server 22.04 with Minimal Installation
