@@ -45,7 +45,7 @@ In this case, `enp0s31f6` is the ethernet interface.
         nameservers:
           addresses:
             - 223.5.5.5
-            - 119.29.29.29
+            - 223.6.6.6
     version: 2
   ```
 
