@@ -33,9 +33,8 @@ network:
           via: 10.0.10.1
       nameservers:
         addresses:
-          - 8.8.8.8
           - 223.5.5.5
-          - 223.6.6.6
+          - 119.29.29.29
   version: 2
 ```
 
