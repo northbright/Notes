@@ -55,7 +55,6 @@
 
   ![](img/01.png)
 
-  * If your account is administrator, you may check "Grant Admin Consent" option to make other tenants skip this step
   * 如果当前账户是管理员，你可以勾选“代表组织同意”。这样后续其他成员可以跳过这一步
   * 如果忘记勾选，可以在 Office 365 的管理页面来代理授权
     * Azure Active Directory admin center > 企业应用程序 > 所有应用程序 > Apple Internet Accounts
