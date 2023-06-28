@@ -8,7 +8,10 @@
   * Create a MSR Partition(size=128M)
   * Create a Primary Partition(all left size)
 * Use Dism++ to Restore Previous Windows 10 Image
-* Got "Code 31" Error
+* Got "Failed to Repair Bootmgr" Error(Code: 31)
+* Try to Repair Bootmgr
+  * Go to "Recovery" > "Bootmgr Repair"
+  * Got the Same Error
 
 ## Root Cause
 The EFI Partition is RAW FS.
@@ -36,7 +39,10 @@ Format the EFI partition to FAT32
   * 创建 1 个 EFI 分区（大小 = 360M）
   * 创建 1 个 MSR 分区（大小 = 128M）
   * 创建 1 个 Primary 分区（所有剩下的空间）
-* 使用 Dism++ 来恢复 Windows 镜像时，出现错误 31
+* 使用 Dism++ 来恢复 Windows 镜像时，出现“引导修复失败“的错误（错误代码： 31）
+* 尝试单独修复 Windows 的引导
+  * 恢复功能 > 引导修复
+  * 出现相同的错误
 
 ## 原因
 EFI 分区的文件系统为 RAW FS。
