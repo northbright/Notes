@@ -16,9 +16,15 @@
   * Open Terminal
   * Run `sudo cupsctl WebInterface=no`
 
+## 2-Side Printing Setting in Microsoft Word
+* Press `Command + P` to Print Current Document
+* Drop Down "Copies & Pages" Menu > Select "Layout"
+* Set "2-Sided Printing" to "Disabled"
+
 ## References
 * [How to STOP default two sided printing](https://discussions.apple.com/thread/5244577)
 * [How to Stop Two-Side Printing From Being the Default in macOS](https://www.howtogeek.com/309677/how-to-stop-two-side-printing-from-being-the-default-in-macos/)
+* [Two-sided printing in Word for Mac](https://answers.microsoft.com/en-us/msoffice/forum/all/two-sided-printing-in-word-for-mac/241d9f84-da19-4228-be25-3ce8cde87533)
 
 ----------------
 
@@ -39,3 +45,13 @@
 * 关闭 "[CUPS](https://www.cups.org/) WebInterface"
   * 打开终端
   * 运行 `sudo cupsctl WebInterface=no`
+
+## Microsoft Word 的双面打印设置
+* 按下 `Command + P` 来进入打印页面 
+* 下拉 "份数与页数" 菜单项 > 选择 "布局"
+* 将"双面打印"设置为关闭
+
+## 参考资料
+* [How to STOP default two sided printing](https://discussions.apple.com/thread/5244577)
+* [How to Stop Two-Side Printing From Being the Default in macOS](https://www.howtogeek.com/309677/how-to-stop-two-side-printing-from-being-the-default-in-macos/)
+* [Two-sided printing in Word for Mac](https://answers.microsoft.com/en-us/msoffice/forum/all/two-sided-printing-in-word-for-mac/241d9f84-da19-4228-be25-3ce8cde87533)
