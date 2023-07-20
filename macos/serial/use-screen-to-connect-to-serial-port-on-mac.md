@@ -31,8 +31,36 @@ Use `screen` to Connect to Serial Port
   ```
 
 * Quit
+  * Kill Current Screen Window(Session)
 
-  * Press `CTRL+A` then Press `\`
+    * Press `CTRL+A` then Press `k`
+
+      It'll ask:
+
+      > Really kill this window [y/n]
+
+      Press `y`
+
+  * Kill All Screen Windows(Sessions)
+  
+    * Press `CTRL+A` then Press `CTRL+\`
+
+      It'll ask:
+
+      > Really quit and kill all your windows [y/n]
+
+      Press `y`
+
+* Check if There's No Screen Session
+
+  ```
+  screen -list
+  ```
+
+  Output:
+  ```
+  No Sockets found in /var/......
+  ```
 
 ## References
 * [Is there an OS X terminal program that can access serial ports?](https://apple.stackexchange.com/questions/32834/is-there-an-os-x-terminal-program-that-can-access-serial-ports)
