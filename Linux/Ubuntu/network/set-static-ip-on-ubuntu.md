@@ -46,6 +46,9 @@ In this case, `enp0s31f6` is the ethernet interface.
           addresses:
             - 223.5.5.5
             - 223.6.6.6
+        # Add optional: true
+        # to avoid waiting a long time on boot if the device is down
+        optional: true
     version: 2
   ```
 
@@ -59,3 +62,4 @@ In this case, `enp0s31f6` is the ethernet interface.
 * [How to Configure Static IP Address on Ubuntu 20.04](https://www.rosehosting.com/blog/how-to-configure-static-ip-address-on-ubuntu-20-04/)
 * [netplan generate: `gateway4` has been deprecated, use default routes instead](https://unix.stackexchange.com/questions/681220/netplan-generate-gateway4-has-been-deprecated-use-default-routes-instead)
 * [Ubuntu netplan gateway4 has been deprecated](https://tizutech.com/ubuntu-netplan-gateway4-has-been-deprecated/)
+* [A start job is running for wait for network to be configured. Ubuntu server 17.10](https://askubuntu.com/questions/972215/a-start-job-is-running-for-wait-for-network-to-be-configured-ubuntu-server-17-1)
