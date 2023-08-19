@@ -37,9 +37,15 @@
 
    * Allow Samba(optional)
 
+     WARNING: you need to install `samba` before add this profile.
+
      ```
      sudo ufw allow samba
      ```
+
+     If you got "ERROR: Could not find a profile matching 'samba'",
+     That means the 'samba' application is NOT installed on the server yet.
+     Run `sudo apt install samba` to install it.
 
 3. Enable `ufw` if firewall is disabled(`inactive`)
 
