@@ -82,6 +82,7 @@ sudo apt install samba
 
   ```
   [global]
+      workgroup = WORKGROUP
       server string = YOUR_SERVER
       server role = standalone server
 
