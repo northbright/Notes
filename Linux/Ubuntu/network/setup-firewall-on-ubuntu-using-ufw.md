@@ -1,35 +1,12 @@
 # Setup Firewall on Ubuntu Using `ufw`
 
 ## Steps
-1. Check `ufw` service status
+1. Install `ufw`
 
    ```
-   systemctl status ufw
-
-   // Output:
-   // ● ufw.service - Uncomplicated firewall
-   //     Loaded: loaded (/lib/systemd/system/ufw.service; enabled; vendor preset: enabled)
-   //     Active: active (exited)    
-   ......
+   sudo apt install ufw
    ```
-
-   * If `ufw` is not installed, run `sudo apt install ufw` to install it
-   * If it's inactive, start ufw service and make the service enabled to start automatically with system boot:
-
-     ```
-     sudo systemctl enable --now ufw
-     ```
-
-2. Check `ufw` firewall status
-
-   ```
-   sudo ufw status verbose
-   
-   // Output:
-   // Status: inactive / active
-   ```
-
-3. Setup Firewall Policies
+2. Setup Firewall Policies
 
    * Setting Up Default Policies
 
@@ -37,6 +14,7 @@
      sudo ufw default deny incoming
      sudo ufw default allow outgoing
      ```
+
    * Allow SSH
 
      ```
@@ -63,7 +41,7 @@
      sudo ufw allow samba
      ```
 
-4. Enable `ufw` if firewall is disabled(`inactive`)
+3. Enable `ufw` if firewall is disabled(`inactive`)
 
    ```
    sudo ufw enable
@@ -75,7 +53,7 @@
 
      You should enable ufw **AFTER** setting up the firewall policies including allow SSH
 
-5. Check `ufw` status
+4. Check `ufw` status
 
    Use `ufw status` or `ufw status verbose` to show firewall status.
 
