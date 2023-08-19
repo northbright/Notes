@@ -112,13 +112,13 @@ sudo apt install samba
 ## Create Users
 The samba / system users will be created: `frank`, `sonny`, `admin`.
 
-* Create a Directory to Store Data(`/samba/`) and Set the Group Ownership to `sambashare`
+* Create a Directory to Store Data(`/data/samba/`) and Set the Group Ownership to `sambashare`
 
   The user group `sambashare` will be created after `samba` is installed.
 
   ```
-  sudo mkdir /samba/
-  sudo chown :sambashare /samba/
+  sudo mkdir /data/samba/
+  sudo chown :sambashare /data/samba/
   ```
 
 * Create User(e.g. `frank`)
@@ -126,23 +126,25 @@ The samba / system users will be created: `frank`, `sonny`, `admin`.
   * Create home directory for `frank`
 
     ```
-    sudo mkdir /samba/frank
+    sudo mkdir /data/samba/frank
     ```
 
   * Create system user: `frank`
 
     ```
-    sudo adduser --home /samba/frank \
+    sudo adduser --home /data/samba/frank \
     --no-create-home \
     --shell /usr/sbin/nologin \
     --ingroup sambashare frank
     ```
 
+    Input password and press `y` to create the user.
+
 * Set Ownership and Permissions of `frank`'s Home
 
   ```
-  sudo chown frank:sambashare /samba/frank
-  sudo chmod 2770 /samba/frank
+  sudo chown frank:sambashare /data/samba/frank
+  sudo chmod 2770 /data/samba/frank
   ```
 
   The first digit: `2` of `2770` means that new files or directories created under `/samba/frank/` will inherit the group ownership of the parent directory rather than the **PRIMARY** group of the user that created the file or directory.
@@ -165,21 +167,21 @@ The samba / system users will be created: `frank`, `sonny`, `admin`.
 * Create Home Directory of `admin`
 
   ```
-  sudo mkdir /samba/everyone
+  sudo mkdir /data/samba/everyone
   ```
 
 * Create Samba and System User for `admin`
 
   ```
-  sudo adduser --home /samba/everyone \
+  sudo adduser --home /data/samba/everyone \
   --no-create-home \
   --shell /usr/sbin/nologin \
   --ingroup sambashare admin
   ```
 
   ```
-  sudo chown admin:sambashare /samba/everyone/
-  sudo chmod 2770 /samba/everyone/
+  sudo chown admin:sambashare /data/samba/everyone/
+  sudo chmod 2770 /data/samba/everyone/
   ```
 
   ```
@@ -202,7 +204,7 @@ sudo vi /etc/samba/smb.conf
 
 ```
 [frank]
-    path = /samba/frank
+    path = /data/samba/frank
     browseable = yes
     read only = no
     force create mode = 0660
@@ -210,7 +212,7 @@ sudo vi /etc/samba/smb.conf
     valid users = frank @admins
 
 [everyone]
-    path = /samba/everyone
+    path = /data/samba/everyone
     browseable = yes
     read only = no
     force create mode = 0660
