@@ -13,7 +13,7 @@ sudo apt install samba
 * Disable Samba NetBIOS Server(optional)
 
   NetBIOS(nmbd.service) is enabled by default after Samba is installed.
-  It makes other PCs in the same subnets see the Ubuntu Server(`server string` in `/etc/samba/smb.conf`).
+  It makes other PCs in the same subnets see the name of Ubuntu Server(hostname).
   
   * It will install BOTH Samba server(`smbd`) and Samba NetBIOS server(`nmbd`).
   * It brings network and printer browsing capabilities.
