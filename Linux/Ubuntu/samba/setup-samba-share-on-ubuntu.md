@@ -25,10 +25,14 @@ sudo apt install samba
 
   * For security / performance reason, it's better to stop and disable Samba NetBIOS server
 
+    1. Disable `nmbd` Serivce
+
     ```
     sudo systemctl stop nmbd.service
     sudo systemctl disable nmbd.service
     ```
+
+    2. Add `disable netbios = yes` in `[global]` Section of `/etc/samba/smb.conf`
 
 ## Install and Configure Firewall(`ufw`)
 * [Setup Firewall on Ubuntu Using ufw](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/network/setup-firewall-on-ubuntu-using-ufw.md)
@@ -252,3 +256,4 @@ sudo systemctl restart smbd.service
 * [关于小米电视无法访问电脑创建共享文件夹问题](https://zhuanlan.zhihu.com/p/340762417)
 * [SMB1 is disabled by default](https://wiki.samba.org/index.php/Samba_4.11_Features_added/changed#SMB1_is_disabled_by_default)
 * [UBUNTU20 samba4 部分samba版本无法连接问题](https://zhuanlan.zhihu.com/p/322461735)
+* [Samba: How to Disable LAN Samba Server Discovery](https://raspberrypi.stackexchange.com/questions/84565/samba-how-to-disable-lan-samba-server-discovery)
