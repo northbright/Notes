@@ -12,6 +12,8 @@
 * Find out the `.m4s` requests
   
   bilibili use separated video and audio streams for playback.
+  * The larger one is the video stream
+  * The smaller one is audio stream
 
   Example:
 
@@ -20,25 +22,11 @@
   | 124978976-1-30032.m4s | 556.18 KB | Video | The larger one is video file |
   | 124978976-1-30280.m4s | 194.38 KB | Audio | The smaller one is the audio file |
 
-* Get the total size for video / audio files
-  * Click the video / audio request
-  * Select "HTTP Headers"
-  * Find "Content-Range" in "Response Headers"
-    * The last number behind `/` is the total size
-    * e.g. `bytes 887133-1456659/41623189` -> Total size is 41623189
-  * Record the total size
-
-* Edit and re-send the request of both video and audio FLV files
-  * Right click the video / audio request
-  * Select "HTTP Headers" > "HTTP Request Headers"
-  * Find "Range" and set the range to `0` - `total size`
-
-    e.g. `Range: bytes=0-416231890`
-  * Click "Re-Send" > "Edit and Re-Send" button to re-send the HTTP request for full size video / audio FLV
-  * You'll get the response with full video / audio FLV
-  * Right click the re-sent request, select "Copy" > "Copy as cURL command"
+* Use cURL to Download the Video and Audio File
+  * Right click the video and audio request, select "Copy" > "Copy as cURL command"
   * Open a shell and paste the cURL command
-  * Append `> video.m4s` or `> audio.m4s` for the command to get audio and video m4s files
+  * Find `range` int the command and set it to `'range: bytes=0-'`
+  * Append `> video.m4s` or `> audio.m4s` the the end of the command to download the files
 
 * Use ffmpeg to combine the video and audio stream to a single m4s file
   * e.g. `ffmpeg -i "01-video.m4s" -i "01-audio.m4s" -c:v copy -c:a copy 01-final.mp4`
