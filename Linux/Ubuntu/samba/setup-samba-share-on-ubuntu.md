@@ -23,7 +23,7 @@ sudo apt install samba
 
     See [Do I need NetBIOS?](https://blogs.msmvps.com/acefekay/2013/03/02/do-i-need-netbios/)
 
-  * For security / performance reason, it's better to stop and disable Samba NetBIOS server
+  * Disable Samba NetBIOS server
 
     1. Disable `nmbd` Serivce
 
@@ -33,6 +33,22 @@ sudo apt install samba
     ```
 
     2. Add `disable netbios = yes` in `[global]` Section of `/etc/samba/smb.conf`
+
+  * Re-Enable NetBIOS
+
+    1. Remove `disable netbios = yes` in `[global]` Section of `/etc/samba/smb.conf`
+    2. Enable `nmbd` Service
+
+       ```
+       sudo systemctl enable nmbd.service
+       sudo systemctl start nmbd.service
+       ```
+
+       Unmask `nmbd` service if it failed to enable the service with error: `Unit nmbd.service is masked.`
+
+       ```
+       sudo unmask nmbd.service
+       ```
 
 ## Install and Configure Firewall(`ufw`)
 * [Setup Firewall on Ubuntu Using ufw](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/network/setup-firewall-on-ubuntu-using-ufw.md)
