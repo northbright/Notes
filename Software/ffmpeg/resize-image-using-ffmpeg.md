@@ -9,7 +9,7 @@ Use FFmpeg to scale the image.
 * Specify both width and height
 
 ```
-ffmpeg -i input.jpg -vf scale=320:240 output.jpg
+ffmpeg -i input.jpg -vf scale=3840:2160 output.jpg
 ```
 
 * Specify only width or height and set another to `-1`, let ffmpeg calculate the dimension automatically
