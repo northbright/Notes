@@ -35,11 +35,12 @@ ffmpeg -i input.jpg -vf scale=iw/2:ih/2 output.jpg
   ```
   #!/bin/sh
 
-  for f in *.jpg;
-      do
-          filename="${f%.*}"
-          ffmpeg -i "$f" -vf scale=3840:2160 "$filename"_4k.jpg;
-      done
+  find . -type f -name "*.jpg" -exec sh -c '
+      name="${1%.*}"
+      echo "$name"
+      ffmpeg -i "$1" -vf scale=3840:2160 "$name"_4k.jpg
+      rm -f $1
+  ' find-sh {} \;
   ```
 
 * Add Execution Permission
@@ -52,3 +53,4 @@ ffmpeg -i input.jpg -vf scale=iw/2:ih/2 output.jpg
 * [Use ffmpeg to resize image](https://newbedev.com/use-ffmpeg-to-resize-image)
 * [Image Scaling - 2020](https://www.bogotobogo.com/FFMpeg/ffmpeg_image_scaling_jpeg.php)
 * [ffmpeg batch command to reduce file quality](https://unix.stackexchange.com/questions/609734/ffmpeg-batch-command-to-reduce-file-quality)
+* [use find command for recursive conversion using ffmpeg](https://superuser.com/questions/1532996/use-find-command-for-recursive-conversion-using-ffmpeg)
