@@ -7,9 +7,13 @@
 * It takes much time when there're a lot of cameras to share
 
 ## Solution
-* Firstly, select the first camera you want to share
-* Set its permission(e.g. playback)
-* When you select the next camera(s) or select all cameras(double click the NVR name), you can find all permissions are copied
+* Method A(recommended)
+  * [Use "Share Family" Instead of "Share Devices" to Friend Make it Simple and Fast to Share Multiple Devices in Yingshiyun](https://github.com/northbright/Notes/blob/master/hardware/hikvision/yingshiyun/use-share-family-instead-of-share-devices-to-friend-make-it-simple-and-fast-to-share-multiple-devices-in-yingshiyun.md)
+
+* Method B
+  * Firstly, select the first camera you want to share
+  * Set its permission(e.g. playback)
+  * When you select the next camera(s) or select all cameras(double click the NVR name), you can find all permissions are copied
 
 --------------------
 # 在萤石云视频 App 中分享多个摄像头，只需设置 1 次权限的技巧
@@ -21,6 +25,10 @@
 * 当有很多摄像头时，费时很久
 
 ## 解决方法
-* 首先选择第 1 个摄像头
-* 先设置好这个摄像头的权限（e.g. 回放）
-* 当选择后续的摄像头或者全选摄像头（双击 NVR 的名字）时，你会发现这些摄像头的权限已经被设置好了（复制第 1 个摄像头的权限）
+* 方法 A（推荐）
+  * [Use "Share Family" Instead of "Share Devices" to Friend Make it Simple and Fast to Share Multiple Devices in Yingshiyun](https://github.com/northbright/Notes/blob/master/hardware/hikvision/yingshiyun/use-share-family-instead-of-share-devices-to-friend-make-it-simple-and-fast-to-share-multiple-devices-in-yingshiyun.md)
+
+* 方法 B
+  * 首先选择第 1 个摄像头
+  * 先设置好这个摄像头的权限（e.g. 回放）
+  * 当选择后续的摄像头或者全选摄像头（双击 NVR 的名字）时，你会发现这些摄像头的权限已经被设置好了（复制第 1 个摄像头的权限）
