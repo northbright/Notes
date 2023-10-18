@@ -85,7 +85,7 @@ Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
     * It'll Show a New Volume(`Untitled`) on the Desktop
   * Click "Create macOS Installer" Button Again
   * Click "Download macOS Installer" Button
-  * Select the macOS(e.g. macOS 12 Monterey)
+  * Select the macOS(e.g. macOS 12.7 Monterey)
   * It'll Download the macOS Installer to `/Applications`
   * It Requires to Input User Password to Extract the Installer and  Download is Done
   * **IMPORTANT**: Click **"NO"** When It Ask "Create macOS Installer?"
