@@ -6,16 +6,25 @@
   xcode-select --install
   ```
 
-## Get Source from [Github](https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.gz)
-* You may use browser(Firefox, Safari...) to download the source code
-* You may also use cURL to download
+## Download [aria2 Source Code](https://github.com/aria2/aria2/releases)
+There're many ways to get the source code of aria2:
+1. Download the "aria2-X.Y.Z.tar.bz2(.gz | .xz)" in "Assets"(Recommended).
+2. Download the "Source Code(zip) | (tar.gz)" in "Assets".
+3. Run `git clone https://github.com/aria2/aria2.git`.
 
-  ```
-  cURL -L -O https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.gz
-  ```
+We need to run `./configure` before run `make` in the source dir.
+Only "aria2-X.Y.Z.tar.bz2(.gz | .xz)" contains the `configure` file.
+"Source Code(zip) | (tar.gz)" and the git repo does NOT contains it and need extra steps to build the source code.
+
+To make it easy, we just download "aria2-X.Y.Z.tar.bz2(.gz | .xz)".
+
 ```
-tar -xzvf aria2-1.35.0.tar.gz
-cd aria2-1.35.0
+cURL -L -O https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.gz
+```
+
+```
+tar -xzvf aria2-1.36.0.tar.gz
+cd aria2-1.36.0
 ```
 
 ## Configure
