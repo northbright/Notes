@@ -7,8 +7,8 @@ Open Terminal > Perferences > Profiles Tab > Select a profile(e.g. "Basic")
 * Set font to "Menlo Regular" 18 - 20 point
   * If you can not find the value you want, check [Set Terminal Font Size which is Not in the Droplist on macOS Sonoma](https://github.com/northbright/Notes/blob/master/macos/terminal/set-terminal-font-size-which-is-not-in-the-droplist-on-macos-sonoma.md)
 
-* Set background color to Black
-* Set foreground color to white
+* Set Background Color: Black
+* Set Text and Bold Text: White
 
 ## Window Size
 * Select Window Tab
