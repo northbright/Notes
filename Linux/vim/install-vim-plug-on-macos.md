@@ -13,7 +13,7 @@
 * Copy `plug.vim` to `~/.vim/autoload`
 
   ```
-  mkir -p ~/.vim/autoload
+  mkdir -p ~/.vim/autoload
   cp ~/download/vim-plug-0.11.0/plug.vim ~/.vim/autoload
   ```
 
