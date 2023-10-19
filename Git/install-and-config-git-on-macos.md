@@ -1,7 +1,7 @@
 # Install and Configure Git on macOS
 
 ## Install Git
-* Install "Command Line Tools" which Contains Git
+* Install "Command Line Tools" which Contains [Git](https://git-scm.com/download/mac)
 
   ```
   xcode-select --install
