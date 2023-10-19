@@ -16,6 +16,15 @@
       tar -xzvf 0.10.0.tar.gz
       cp vim-plug-0.10.0/plug.vim ~/.vim/autoload/
 
+* Add a vim-plug Section to `~/.vimrc`
+  Example:
+
+  ```
+  call plug#begin('~/.vim/plugged')
+     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  call plug#end()
+  ```
+
 * Run `vim` and `:PlugStatus`
 
   ```
