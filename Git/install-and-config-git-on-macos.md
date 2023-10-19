@@ -25,3 +25,6 @@ To clone / pull / push repos on [Github](https://github.com/) via `SSH` protocol
   ```
 
   Copy the public key in `~/.ssh/id_rsa.pub` and go to github SSH settings to add new SSH key.
+
+## References
+* [First Run Git Will Pop up to Ask Install Command Line Tools](https://github.com/northbright/Notes/blob/master/macos/command-line-tools/first-run-git-will-pop-up-to-ask-to-install-command-line-tools.md)
