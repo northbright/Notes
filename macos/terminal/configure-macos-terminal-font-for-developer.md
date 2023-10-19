@@ -13,3 +13,4 @@ Open Terminal > Perferences > Profiles Tab > Select a profile(e.g. "Basic")
 ## Window Size
 * Select Window Tab
 * Set colums / rows to the values you want
+  e.g. 96 colums x 46 rows
