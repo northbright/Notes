@@ -1,11 +1,11 @@
-# Install Latest macOS on Unsupported Mac for China Users
+# Install macOS Sonoma on Unsupported Mac for China Users
 
 ## Problem
 * iMac 27" 2017(iMac18,3) and It's NOT in the Supported Models for macOS Sonoma
 * Need to Install Xcode 15 But It Requires macOS Sonoma
 
 ## Solution
-Use [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) to install latest macOS(e.g. Sonoma) on unsupported Macs.
+Use [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) to install macos Sonoma on unsupported Macs.
 
 For non-China Users, you may just follow the video tutorial:
 * [Install macOS Sonoma on Unsupported Macs [2008-2017] with OCLP!](https://www.bilibili.com/video/BV1vh4y167DA)
@@ -66,11 +66,11 @@ Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
 3. Create macOS Installer on the USB Disk
   * Click "Create macOS Installer" Button
   * Click "Download macOS Installer" Button
-  * Select the macOS(e.g. macOS 14.0 Sonoma)
+  * Select the macOS 14.0 Sonoma
   * It'll Download the macOS Installer to `/Applications`
   * It Requires to Input User Password to Extract the Installer and  Download is Done
   * Click "Yes" When It Ask "Create macOS Installer?"
-  * Select Local macOS Installer(e.g. macOS 14.0 Sonoma)
+  * Select Local macOS Installer: macOS 14.0 Sonoma
   * Select Local Disk: the USB Disk
   * After "Successfully Create the macOS Installer", It'll Ask "Would you like to continue to intall OpenCore to this disk?"
   * Click "Yes" > It'll Build a OpenCore for Your Model of Mac
@@ -94,7 +94,7 @@ Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
   * It'll Download the macOS Installer to `/Applications`
   * It Requires to Input User Password to Extract the Installer and  Download is Done
   * Click "NO" When It Ask "Create macOS Installer?"
-    * If we click "Yes" and it will erase the partition / macOS installer for latest macOS(e.g. macOS Sonoma). We just use "Create macOS Installer" to download the installer to `/Applications`.
+    * If we click "Yes" and it will erase the partition / macOS installer for macOS Sonoma. We just use "Create macOS Installer" to download the installer to `/Applications`.
   * Open a Terminal and Type `sudo` and a space(` `)
   * Open a Finder and Go to `Applications` > Right Click the Latest macOS Installer Your Model Supported(e.g. install macOS Monterey) > Click "Show Package Contents"
   * Go to "Contents" > "Resources"
@@ -111,8 +111,9 @@ Exception: [AbstractCommand.cc:340] errorCode=2 Timeout.
 5. Backup All Data
    * Your Data in `/home/XX`
    * Downloads, Photos, Videos, Documents
-   * RSA private / public keys in `~/.ssh`
-   * VIM configure file in `~/.vimrc`
+   * Configure Files for Developers
+     * RSA private / public keys in `~/.ssh`
+     * VIM configure file in `~/.vimrc`
 
 6. Reboot to Install macOS Sonoma from USB Drive
   * Press "Option" Key or "Alt" Key for Windows Keyboard
