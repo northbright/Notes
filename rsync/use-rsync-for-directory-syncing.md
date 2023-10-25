@@ -29,3 +29,4 @@
 
 ## References
 * [How To Use Rsync to Sync Local and Remote Directories](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories)
+* [How to speed up rsync between two local disks?](https://superuser.com/questions/109780/how-to-speed-up-rsync-between-two-local-disks)
