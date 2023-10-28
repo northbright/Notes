@@ -24,13 +24,32 @@
 
 * Add Binary Path of FFmpeg
 
-  ```
-  sudo vi /etc/paths.d/ffmpeg
-  ```
-  Copy these lines
-  ```
-  /usr/local/ffmpeg/bin
-  ```
+  * Method A
+  
+    ```
+    sudo vi /etc/paths.d/ffmpeg
+    ```
+    Copy these lines:
+    ```
+    /usr/local/ffmpeg/bin
+    ```
+
+  * Method B
+    
+    ```
+    sudo vi ~/.zprofile
+    ```
+
+    Copy these lines:
+    ```
+    # FFmpeg
+    /usr/local/ffmpeg/bin
+    ```
+
+    Run `source` command in the terminal.
+    ```
+    source ~/.zprofile
+    ```
 
 * Reopen a Terminal and Check
 
