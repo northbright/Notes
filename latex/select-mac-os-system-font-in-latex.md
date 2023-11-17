@@ -15,7 +15,7 @@ To select macOS system font in LaTex, we need to use the **"Font Name"**.
 * Select One Font and Click "i" Icon to Show Details of the Font
 * The 1st Line is the Font Name（e.g. `苹方-简`)
 * Copy the Font Name and Paste it to TexShop
-  * Use `ctex` Package
+  * Method A: Use `ctex` Package(new method, recommended)
 
     ```LaTex
     \documentclass[UTF8]{ctexart}
@@ -25,7 +25,7 @@ To select macOS system font in LaTex, we need to use the **"Font Name"**.
     \end{document}
     ```
 
-  * Use `xeCJK` Package
+  * Method B: Use `xeCJK` Package(old method)
 
     ```LaTex
     \documentclass{article}
