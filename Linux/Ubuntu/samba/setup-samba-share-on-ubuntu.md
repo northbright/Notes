@@ -45,6 +45,7 @@ sudo apt install samba
        ```
 
        Unmask `nmbd` service if it failed to enable the service with error: `Unit nmbd.service is masked.`
+       See [Failed to Enable a Service due to It is Masked](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/service/failed-to-enable-a-service-due-to-it-is-masked.md) for more information.
 
        ```
        sudo systemctl nmask nmbd.service
@@ -276,3 +277,4 @@ sudo systemctl restart smbd.service
 * [SMB1 is disabled by default](https://wiki.samba.org/index.php/Samba_4.11_Features_added/changed#SMB1_is_disabled_by_default)
 * [UBUNTU20 samba4 部分samba版本无法连接问题](https://zhuanlan.zhihu.com/p/322461735)
 * [Samba: How to Disable LAN Samba Server Discovery](https://raspberrypi.stackexchange.com/questions/84565/samba-how-to-disable-lan-samba-server-discovery)
+* [Failed to Enable a Service due to It is Masked](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/service/failed-to-enable-a-service-due-to-it-is-masked.md)
