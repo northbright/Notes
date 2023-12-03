@@ -47,7 +47,7 @@ sudo apt install samba
        Unmask `nmbd` service if it failed to enable the service with error: `Unit nmbd.service is masked.`
 
        ```
-       sudo unmask nmbd.service
+       sudo systemctl nmask nmbd.service
        ```
 
 ## Install and Configure Firewall(`ufw`)
