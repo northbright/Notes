@@ -56,7 +56,7 @@ DHCP IP Pool exhausted.
 * Check
 
   ```
-  display dhcp server pool vlan 30
+  display dhcp server pool vlan30
   
   // Output:
   Pool name: vlan30
