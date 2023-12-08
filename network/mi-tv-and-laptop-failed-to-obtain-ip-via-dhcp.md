@@ -38,7 +38,7 @@ DHCP IP Pool exhausted.
   ```
 
 * Use Static IP for Mi TVs
-* Rest the IP in Use of DHCP IP Pool
+* Reset the IP in Use of DHCP IP Pool
   ```
   reset dhcp server ip-in-use
   ```
