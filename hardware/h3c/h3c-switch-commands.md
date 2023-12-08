@@ -264,6 +264,43 @@ reboot
    expired day 0 hour 12
    ```
 
+9. Check DHCP Free IPs
+
+   ```
+   display dhcp server free-ip
+   ```
+
+10. Check DHCP IP in Use
+
+   ```
+   display dhcp server ip-in-use
+   ```
+
+11. Reset(Clean) DHCP IP in Use
+
+   ```
+   reset dhcp server ip-in-use
+   ```
+
+12. Get DHCP Pool Settings
+
+  * Get All DHCP Pool Settings
+
+    ```
+    display dhcp server pool
+    ```
+
+  * Get Specified DHCP Pool Settings by VLAN Name
+
+    ```
+    display dhcp server pool vlan30
+    // Output:
+    Pool name: vlan30
+    Network: 192.168.30.0 mask 255.255.255.0
+    dns-list 192.168.100.2
+    expired 0 12 0 0
+    gateway-list 192.168.30.1
+    ```
 ## Add Static Route
 
     // under system-view
@@ -280,3 +317,6 @@ reboot
 
     // Output
     // 00:a1:b2:c3:d4:f5 xx LEARNED GigabitEthernet1/0/1
+
+## References
+* [04-三层技术-IP业务命令参考](https://www.h3c.com/cn/d_201901/1150027_30005_0.htm)
