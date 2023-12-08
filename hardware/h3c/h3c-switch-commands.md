@@ -201,34 +201,68 @@ reboot
 
 ## Create DHCP IP Pool
 
-    // 1. Enable DHCP server
-    dhcp enable
+1. Enable DHCP server
 
-    // 2. Create DHCP IP pool with given pool name
-    // e.g. create a IP pool for VLAN 1. "vlan1" here is the pool name(string).
-    dhcp server ip-pool vlan1
+   ```
+   dhcp enable
+   ```
 
-    // 3. Set DCHP network and mask(e.g. 192.168.1.0)
-    network 192.168.1.0 mask 255.255.255.0
+2. Create DHCP IP pool with given pool name
+   
+   e.g. create a IP pool for VLAN 1. "vlan1" here is the pool name(string).
+    
+   ```
+   dhcp server ip-pool vlan1
+   ```
 
-    // 4. Add Gateway(e.g. 192.168.1.1)
-    gateway-list 192.168.1.1
+3. Set DCHP network and mask(e.g. 192.168.1.0)
 
-    // 5. Add DNS(e.g. aliyun public DNS: 223.5.5.5 and 223.6.6.6)
-    dns-list 223.5.5.5 223.6.6.6
+   ```
+   network 192.168.1.0 mask 255.255.255.0
+   ```
 
-    // 6. Add an forbidden IP(optional)
-    // Warning: this command will add single IP but NOT IP range,
-    // to add forbidden IP range, quit to system-view
-    // and use "dhcp server forbidden-ip LOW-IP HIGH-IP")
-    forbidden-ip 192.168.1.4 192.168.1.5
+4. Add Gateway(e.g. 192.168.1.1)
 
-    // 7. Add forbidden IP range(optional)
-    // quit to system-view first
-    quit
+   ```
+   gateway-list 192.168.1.1
+   ```
 
-    // Use "dhcp server forbidden-ip LOW-IP HIGH-IP"(e.g. 192.168.1.2 - 192.168.1.20)````
-    dhcp server forbidden-ip 192.168.1.2 192.168.1.20
+5. Add DNS(e.g. aliyun public DNS: 223.5.5.5 and 223.6.6.6)
+
+   ```
+   dns-list 223.5.5.5 223.6.6.6
+   ```
+
+6. Add an forbidden IP(optional)
+   * Warning: this command will add single IP but NOT IP range
+   * To add forbidden IP range, quit to system-view
+   * Use `dhcp server forbidden-ip LOW-IP HIGH-IP`
+
+   ```
+   forbidden-ip 192.168.1.4 192.168.1.5
+   ```
+
+7. Add forbidden IP range(optional)
+   * quit to system-view first
+
+     ```
+     quit
+     ```
+
+   * Use "dhcp server forbidden-ip LOW-IP HIGH-IP"(e.g. 192.168.1.2 - 192.168.1.20)
+    
+     ```
+     dhcp server forbidden-ip 192.168.1.2 192.168.1.50
+     ```
+
+8. Set the DHCP Expiration Time(Lease Time)
+
+   * The DHCP Expiration Time is Set to 1 Day by Default
+   * e.g. Change it to 12 Hour
+   
+   ```
+   expired day 0 hour 12
+   ```
 
 ## Add Static Route
 
