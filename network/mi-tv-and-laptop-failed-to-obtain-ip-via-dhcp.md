@@ -40,6 +40,7 @@ DHCP IP Pool exhausted.
 * Use Static IP for Mi TVs
 * Reset the IP in Use of DHCP IP Pool
   ```
+  // in User View(quit System-View)
   reset dhcp server ip-in-use
   ```
 * Use Shorter DHCP Expiration Time(Lease Time)
