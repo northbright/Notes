@@ -22,7 +22,7 @@
     # ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE
     # ssl_prefer_server_ciphers on;
     ```
-  * Include config files under `/etc/nginx/conf.d`
+  * Include config files under `/etc/nginx/conf.d` and disable including config files under `/etc/nginx/sites-enabled`
     
     | File | Desc |
     | :--: | :--: |
@@ -38,13 +38,244 @@
     ##
 
     include /etc/nginx/conf.d/*.conf;
-    ......
+
+    # Disable sites-enabled
+    #include /etc/nginx/sites-enabled/*;
     ```
 
-## Config Nginx Virtual Host and Issue Let's Encrypt Certificate for `a.com` and `www.a.com`
-* [Issue and Renew Let's Encrypt TLS Certificate as Non-Root User for Nginx Virtual Host on Ubuntu](https://github.com/northbright/Notes/blob/master/nginx/issue-and-renew-lets-encrypt-tls-certificate-as-non-root-user-for-nginx-virtual-host-on-ubuntu.md)
+* Add per-site(domain) server config files
+
+  `a.com` and `www.a.com` use **DIFFERENT** TLS certs and keys.
+
+  * `/etc/nginx/conf.d/a.com.conf`
+
+    ```
+    server {
+            listen       80;
+            server_name  a.com;
+
+            # Process acme challenge over HTTP
+            location ^~ /.well-known/acme-challenge/ {
+                 alias /home/letsencrypt/webroot/.well-known/acme-challenge/;
+            }
+
+            # Redirect HTTP to HTTPS
+            return 302 https://$server_name$request_uri;
+    }
+
+    server {
+            listen       443 ssl http2;
+            server_name  a.com;
+
+            ## Certificate and Key
+            ssl_certificate /home/letsencrypt/certs/a.com/fullchain;
+            ssl_certificate_key /home/letsencrypt/certs/a.com/key;
+
+            location / {
+                root   /var/www/html;
+                index  index.html index.htm;
+            }
+    }
+    ```
+
+  * `/etc/nginx/conf.d/www.a.com.conf`
+
+    ```
+    server {
+            listen       80;
+            server_name  www.a.com;
+
+            # Process acme challenge over HTTP
+            location ^~ /.well-known/acme-challenge/ {
+                 alias /home/letsencrypt/webroot/.well-known/acme-challenge/;
+            }
+    
+            # Redirect HTTP to HTTPS
+            return 302 https://$server_name$request_uri;
+    }
+
+    server {
+            listen       443 ssl http2;
+            server_name  www.a.com;
+
+            ## Certificate and Key
+            ssl_certificate /home/letsencrypt/certs/www.a.com/fullchain;
+            ssl_certificate_key /home/letsencrypt/certs/www.a.com/key;
+
+            location / {
+                root   /var/www/html;
+                index  index.html index.htm;
+            }
+    }
+    ```
+    
+* Global(common) TLS configuration
+
+  Different servers(domains) use **DIFFERENT** TLS certificates / keys,
+  but share the **SAME** common TLS configuration
+
+  * Create Diffie-Hellman Group
+
+    Diffie-Hellman Group is used in negotiating [Perfect Forward Secrecy](https://en.wikipedia.org/wiki/Forward_secrecy) with clients.
+
+    ```
+    sudo openssl dhparam \
+    -out /usr/local/openssl/certs/dhparam.pem 2048
+    ```
+
+    Please note, it'll take a long time(a few minutes) if key size >= 4096(but recommended).
+
+  * Add global TLS config file
+
+    ```
+    sudo vi /etc/nginx/conf.d/ssl.conf
+    ```
+
+    ```
+    ## Protocols - TLSv1.3 requires newer OpenSSL(Feb.2018)
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+
+    ## Key Exchange
+    ssl_dhparam /usr/local/openssl/certs/dhparam.pem;
+    ssl_ecdh_curve secp384r1;
+
+    ## Cipher Strength
+    ssl_ciphers AES256+EECDH:AES256+EDH:!aNULL;
+
+    ## Enable HSTS on all subdomains
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+
+    ## Other typical SSL settings
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_timeout 10m;
+    ssl_prefer_server_ciphers on;
+
+    ssl_stapling on;
+    ssl_stapling_verify on;
+
+    resolver 8.8.8.8 8.8.4.4 valid=300s;
+    resolver_timeout 10s;
+
+    add_header X-Frame-Options DENY;
+    add_header X-Content-Type-Options nosniff;  
+    ```
+* Install and Renew Let's Encrypt Certs as Non-Root User
+
+  * Create a `letsencrypt` user
+
+    ```
+    sudo adduser letsencrypt
+    ```
+
+  * Use `visudo` to modify `/etc/sudoers`
+
+    ```
+    // No password will be required
+    // When run `sudo systemctl restart nginx`
+
+    letsencrypt   ALL=(ALL:ALL) NOPASSWD:/usr/bin/systemctl restart nginx
+    ```
+
+  * Switch to `letsencrypt` user
+
+    ```
+    sudo su - letsencrypt
+    ```
+
+  * Make Web Root
+
+    ```
+    cd ~/
+    mkdir ~/webroot
+    ```
+
+  * Install [acme.sh](https://github.com/acmesh-official)
+
+    Follow [offical guide](https://github.com/acmesh-official/acme.sh#1-how-to-install) to install acme.sh is enough
+
+    ```
+    curl https://get.acme.sh | sh
+    ```
+    or
+
+    ```
+    wget -O -  https://get.acme.sh | sh
+    ```
+
+  * Install [acme.sh](https://github.com/acmesh-official) for China developers(Optional)
+
+    Because `https://raw.githubusercontent.com` can **NOT** be accessed from China, we need to download the release.
+
+    * Download latest [acme.sh](https://github.com/acmesh-official) from [Github](https://github.com/acmesh-official/acme.sh/releases)
+
+
+      ```
+      wget https://github.com/acmesh-official/acme.sh/archive/2.8.5.tar.gz
+      tar -xzvf 2.8.5.tar.gz
+      cd acme.sh-2.8.5/
+      ```
+
+    * Install [acme.sh](https://github.com/acmesh-official)
+
+      ```
+      ./acme.sh --install
+      ```
+
+* Reopen a bash(or SSH) for root
+  * `acme.sh` can be run without specifying PATH
+
+* Set Default CA to [Let's Encrypt](https://letsencrypt.org/)
+  * Starting from August-1st 2021, acme.sh uses [ZeroSSL](https://zerossl.com/) as default CA
+  * Set default CA back to [Let's Encrypt](https://letsencrypt.org/)
+
+    ```
+    acme.sh --set-default-ca --server letsencrypt
+    ```
+
+* Issue Certs with Webroot Mode
+  ```
+  // for a.com
+  acme.sh --issue -d a.com -w ~/webroot --force
+
+  // for www.a.com
+  acme.sh --issue -d www.a.com -w ~/webroot --force
+  ```
+
+* Install the Certs
+  ```
+  // for a.com
+  acme.sh --install-cert -d a.com \
+  --key-file /home/letsencrypt/certs/a.com/key \
+  --fullchain-file /home/letsencrypt/certs/a.com/fullchain \
+  --reloadcmd "sudo systemctl restart nginx" \
+
+  // for www.a.com
+  acme.sh --install-cert -d www.a.com \
+  --key-file /home/letsencrypt/certs/www.a.com/key \
+  --fullchain-file /home/letsencrypt/certs/www.a.com/fullchain \
+  --reloadcmd "sudo systemctl restart nginx" \
+
+* Restart Nginx to Test Cert
+  ```
+  sudo systemctl restart nginx
+  ```
+
+  * Goto [SSL Labs](https://www.ssllabs.com/ssltest/) to test the cert
+  * Use Chrome, Firefox to view the cert
+
+* Test Renew Script in `crontab`
+  ```
+  // Find the renew script in crontab
+  crontab -l
+  ```
+
+  ```
+  // Test the renew script with --force option
+  "/home/letsencrypt/.acme.sh"/acme.sh --cron --home "/home/letsencrypt/.acme.sh" --force
+  ```
 
 ## References
+* [Certificate from Let's Encrypt with Nginx and a non-root user](https://jereze.com/code/letsencrypt-acme-no-root/)
 * [How to issue a cert](https://github.com/acmesh-official/acme.sh/wiki/How-to-issue-a-cert)
 * [Privilege separation #2440](https://github.com/acmesh-official/acme.sh/issues/2440#issuecomment-536139894)
 * [不能自动续期，请教该如何处理 #2062](https://github.com/acmesh-official/acme.sh/issues/2062#issuecomment-457890843)
