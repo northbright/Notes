@@ -22,12 +22,12 @@
 
   * First use -n option to dry run
     ```Shell
-    rsync -anv ~/Volumes/WD-SSD/my-backup/ ~/my-backup/
+    rsync -anv /Volumes/WD-SSD/my-backup/ ~/my-backup/
     ```
 
   * Do the real sync if there's no problem
     ```Shell
-    rsync -av ~/Volumes/WD-SSD/my-backup/ ~/my-backup/
+    rsync -av /Volumes/WD-SSD/my-backup/ ~/my-backup/
     ```
 
 ## References
