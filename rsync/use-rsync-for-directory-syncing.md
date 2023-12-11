@@ -7,11 +7,12 @@
 ## Remote Directory Syncing
 * Use `-r` or `-a` option for directory syncing, `-z` for compressing
 
-  ```
+  ```Shell
   rsync -avz SRC_DIR/ USER@HOST:DEST_DIR/
+  ```
 
-  // example
-  // rsync over ssh
+  e.g. rsync over ssh
+  ```Shell
   rsync -avz ./public/ xx@xx.com:~/public/
   ```
 
@@ -19,13 +20,15 @@
 * Use `cp` Command or Finder App to Copy the Dir for the FIRST time(Rsync Will Be Very Slow)
 * Then Use `Rsync` to Sync Directory
 
-  // example
-  // First use -n option to dry run
-  rsync -anv ~/Volumes/WD-SSD/my-backup/ ~/my-backup/
+  * First use -n option to dry run
+    ```Shell
+    rsync -anv ~/Volumes/WD-SSD/my-backup/ ~/my-backup/
+    ```
 
-  // Do the real sync if there's no problem
-  rsync -av ~/Volumes/WD-SSD/my-backup/ ~/my-backup/
-
+  * Do the real sync if there's no problem
+    ```Shell
+    rsync -av ~/Volumes/WD-SSD/my-backup/ ~/my-backup/
+    ```
 
 ## References
 * [How To Use Rsync to Sync Local and Remote Directories](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories)
