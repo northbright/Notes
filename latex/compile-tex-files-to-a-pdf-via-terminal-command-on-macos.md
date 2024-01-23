@@ -7,7 +7,7 @@
 ## Solution
 Run `xelatex` **2** times to compile the Tex File.
 
-* Set Working Dir(contains xx.tex file) to Make `xelatex` Find All `.tex` Files when Using `\include{}` Commands in Any `.tex` File
+* Change Working Dir to the Dir Contains `xx.tex` to Make `xelatex` Find All `.tex` Files when Using `\include{}` Commands in Any `.tex` File
 
   ```
   cd ~/my_book
@@ -28,3 +28,4 @@ Run `xelatex` **2** times to compile the Tex File.
 ## References
 * [How can I compile my .tex file into a .pdf in terminal?](https://tex.stackexchange.com/questions/312812/how-can-i-compile-my-tex-file-into-a-pdf-in-terminal)
 * [Prevent pdflatex from writing a bunch of files](https://tex.stackexchange.com/questions/11123/prevent-pdflatex-from-writing-a-bunch-of-files)
+* [Definition of the TEXINPUTS variable](https://tex.stackexchange.com/questions/93712/definition-of-the-texinputs-variable)
