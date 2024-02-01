@@ -4,14 +4,14 @@
 * Need to Run `xelatex` Command in Github Actions Runner
 
 ## Solution
-Use [setup-texlive-action](https://github.com/teatimeguest/setup-texlive-action) with `scheme-full`
+Use [setup-texlive-action](https://github.com/teatimeguest/setup-texlive-action) with `scheme-small` or other schemes contain more packages than `scheme-small`(e.g. `scheme-medium`, `scheme-full`).
 
 ```
     - name: Setup Texlive
       uses: teatimeguest/setup-texlive-action@v3
       with:
         packages: >-
-          scheme-full
+          scheme-small
 
     - name: Check XeLaTex Version
       run: xelatex --version
