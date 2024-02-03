@@ -11,7 +11,7 @@ Run `xelatex` **2** times to compile the Tex File.
 To make `xelatex` can find All `.tex` files when using `\include{}` commands in any `.tex`,
 there're 2 methods.
 
-* Method A
+* Method A(recommended)
   
   Change working dir to the dir contains `xx.tex`(e.g. `~/my_book/xx.tex`).
 
@@ -20,6 +20,9 @@ there're 2 methods.
   ```
 
 * Method B
+
+  **UPDATE**: Method B can **NOT** work if using `minted` package for code highlighting.
+  See: [Got "Package minted Error: Missing Pygments output" Error when Run Xelatex to Compile Tex Using minted for Code Highlighting](https://github.com/northbright/Notes/blob/master/latex/got-package-minted-error-missing-pygments-output-when-run-xelatex-to-compile-tex-using-minted-for-code-highlighting.md)
   
   Add local Tex path into `TEXINPUTS` variable.
 
