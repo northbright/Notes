@@ -33,6 +33,7 @@ See docs of [func (*Template) ParseFiles](https://pkg.go.dev/text/template#Templ
 
 ```go
 func ExecuteTemplate(templFile, outputFile string) error {
+    // The returned template's name will have the base name and parsed contents of the first file(only one file in this case).
     t, err := template.ParseFiles(tmplFile)
     if err != nil {
         return err
@@ -54,7 +55,9 @@ func ExecuteTemplate(templFile, outputFile string) error {
         return err
     }
     ......
-    if err := t.ExecuteTemplate(w, templFile, data); err != nil {
+    // Use base name which is the same as template's name.
+    name := filepath.Base(templFile)
+    if err := t.ExecuteTemplate(w, name, data); err != nil {
         return err
     }
     ......
