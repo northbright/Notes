@@ -22,8 +22,6 @@
 Template created by [func New](https://pkg.go.dev/text/template#New) without calling [func (*Template) Parse](https://pkg.go.dev/text/template#Template.Parse) will have en empty template body.
 Calling [func (*Template) ParseFiles](https://pkg.go.dev/text/template#Template.ParseFiles) just associates new parsed templates to t(append to it) but t's template is still empty.
 
-You may call `t.Templates()` to show t(first) and its associated templates.
-
 Call [func (*Template) Execute](https://pkg.go.dev/text/template#Template.Execute) on t with empty template will fail. 
 
 See docs of [func (*Template) ParseFiles](https://pkg.go.dev/text/template#Template.ParseFiles):
