@@ -3,7 +3,7 @@
 ## Problem
 * Got "incomplete or empty template" when Run Below Code:
 
-  ```
+  ```go
   func ExecuteTemplate(templFile, outputFile string) error {
       t, err := template.New(tmplFile).ParseFiles(tmplFile)
       if err != nil {
