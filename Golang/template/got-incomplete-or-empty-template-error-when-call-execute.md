@@ -63,3 +63,4 @@ func ExecuteTemplate(templFile, outputFile string) error {
 
 ## References
 * [error: template: "..." is an incomplete or empty template](https://stackoverflow.com/questions/49043292/error-template-is-an-incomplete-or-empty-template)
+* [text/template func (*template).Templates Returns NOT Only Associated Templates BUT ALSO Itself](https://github.com/northbright/Notes/blob/master/Golang/template/html-template-templates-returns-not-only-associated-templates-but-also-itself.md)
