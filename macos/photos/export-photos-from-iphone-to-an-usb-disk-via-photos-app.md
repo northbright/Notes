@@ -1,15 +1,21 @@
-# Export Photos from iPhone to External Storage via Photos App
+# Export Photos from iPhone to an USB Disk via Photos App
 
 ## Problem
-* Need to Export Photos from iPhone to External Storage(e.g. USB Disk)
+* Need to Export Photos from iPhone to an USB Disk
 
 ## Solution
 Using Photos app.
 
-#### Create a New Photo Library on External Storage
+#### Format the USB Disk
+* Supported Formats
+  * ExFat
+  * APFS
+  * Mac OS Extended(Journaled)
+
+#### Create a New Photo Library on the USB Disk
 * Quit Photos App
 * Press and Hold the Option Key while You Open Photos
-* Click "Create New" to Create a Photo Library on the External Device
+* Click "Create New" to Create a Photo Library on the USB Disk
 * Select the New Photo Library and Click "Choose Library" to Open It
 
 #### Import Photos
@@ -17,15 +23,15 @@ Using Photos app.
 * Select "xx's iPhone" on the Side Bar
 * Select the Photos to Import and Click "Import"
 
-#### Designate the Photo Library on the External Device(Optional)
+#### Designate the Photo Library on the USB Disk(Optional)
 iCloud features for Photos are only available in the System Photo Library.
 
 * Quit Photos App
 * Press and Hold the Option Key while You Open Photos
-* Select the Photo Libray on the External Device and Click "Choose Library" to Open It
+* Select the Photo Libray on the USB Disk and Click "Choose Library" to Open It
 * Go to Menu > Photos > Preferences > General
 * Click "Use as System Photo Library"
-* Make Sure Connect the External Device while Using Photos, iCloud or Other Apps Using System Photo Library 
+* Make Sure Connect the USB Disk while Using Photos, iCloud or Other Apps Using System Photo Library 
 
 ## References
 * [Move your Photos library to save space on your Mac](https://support.apple.com/en-us/108345)
