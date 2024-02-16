@@ -215,7 +215,7 @@ su - letsencrypt
 crontab -l
 
 // Output:
-// 6 0 * * * "/home/letsencrypt/.acme.sh"/acme.sh --cron --home "/home/letsencrypt/.acme.sh" > /dev/null
+47 23 * * * /home/letsencrypt/acme.sh/acme.sh --cron --home "/home/letsencrypt/.acme.sh" > /dev/null
 ```
 
 If the output is: `no crontab for letsencrypt`, install cronjob manually:
@@ -232,13 +232,13 @@ Get the command in crontab:
 crontab -l
 
 // Output:
-6 0 * * * "/home/letsencrypt/.acme.sh"/acme.sh --cron --home "/home/letsencrypt/.acme.sh" > /dev/null
+47 23 * * * /home/letsencrypt/acme.sh/acme.sh --cron --home "/home/letsencrypt/.acme.sh" > /dev/null
 ```
 
 Run the command with `--force` option to force `acme.sh` to renew certificate:
 
 ```
-/home/letsencrypt/.acme.sh/acme.sh --cron --home /home/letsencrypt/.acme.sh --force 
+/home/letsencrypt/acme.sh/acme.sh --cron --home "/home/letsencrypt/.acme.sh" --force
 ```
 
 ## Check Installed / Renewed Certificates
