@@ -1,5 +1,8 @@
 # Issue and Renew Let's Encrypt TLS Certificate as Non-Root User for Nginx Virtual Host on Ubuntu
 
+## Make Sure HTTP and HTTPS Rules are Added in `ufw` Firewall
+* [Setup Firewall on Ubuntu Using ufw](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/network/setup-firewall-on-ubuntu-using-ufw.md)
+
 ## Make Sure Nginx is Installed and Setup Properly
   * [Install Nginx and Setup Virtual Host on Ubuntu](https://github.com/northbright/Notes/blob/master/nginx/install-nginx-and-setup-virtual-host-on-ubuntu.md) 
 
