@@ -12,7 +12,7 @@ Turn off "Screen Time" on parent device
 
 #### Turn Off Screen Time on Parent's iPhone
 * Go to Settings > Family > Child's Name > Screen Time > Turn Off Screen Time
-* Reboot Child's iPhone
+* Wait 30 Seconds or Reboot Child's iPhone
 * Settings > Apple ID > Sign Out 
 
 #### Remove Screen Time Passcode on Parent's Mac
@@ -20,8 +20,8 @@ Turn off "Screen Time" on parent device
 * Go to Settings > Screen Time > Choose Child's Name on Right-Top > Turn Off "Lock Screen Time Settings"
 * Input Mac Login Password
 * Input Screen Time Passcode
-* Reboot Child's iPhone
-* Settings > Apple ID > Sign Out
+* Wait 30 Seconds or Reboot Child's iPhone
+* Go to Settings > Apple ID > Sign Out
 
 ## References
 * [Sign out is not available due to restrictions](https://discussions.apple.com/thread/250270641?sortBy=best)
