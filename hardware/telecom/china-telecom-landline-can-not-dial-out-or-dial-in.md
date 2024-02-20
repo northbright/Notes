@@ -12,3 +12,5 @@ Reboot the Raisecom gateway device one or more times.
 * Wait About 3 Minutes for Each Reboot
 * Check WAN and Line Indicators are GREEN
 
+## References
+* [Power Off and On Raisecom Gateway May Damage It](https://github.com/northbright/Notes/blob/master/hardware/telecom/power-off-and-on-raisecom-gateway-may-damage-it.md)
