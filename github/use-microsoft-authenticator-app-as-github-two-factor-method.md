@@ -10,6 +10,10 @@
   Note: if you've configured Authenticator app before and you need to login [Microsoft Authenticator](https://apps.apple.com/us/app/microsoft-authenticator/id983156458) on anothor phone(e.g. your phone was lost), click "Edit" > "Having problems?" > use password instead of authentication code to go into the "Authentication app" settings
 
 * Run [Microsoft Authenticator](https://apps.apple.com/us/app/microsoft-authenticator/id983156458) > Authenticated ID > Scan the QR Code
+* Verify the code from the the Microsoft Authenticator
+  * Go to Github Account Page > Authenticator app > Verify the code from the app
+  * Input the Code on the Microsoft Authenticator
+  * Click "Save"
 
 ## Backup Credentials in [Microsoft Authenticator](https://apps.apple.com/us/app/microsoft-authenticator/id983156458)
 * Login Microsoft Account in [Microsoft Authenticator](https://apps.apple.com/us/app/microsoft-authenticator/id983156458)
