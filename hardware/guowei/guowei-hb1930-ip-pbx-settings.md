@@ -180,6 +180,18 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
 * 市话呼出：先拨0，加号码
 * 国内呼出：先拨00，加号码
 
+## 挂载硬盘
+* 系统 > 存储 > 存储设备
+* 格式化硬盘(FAT)
+* 挂载硬盘
+
+## 录音
+选择需要录音的fxo中继和分机
+
+* 录音 > 录音设置
+* 要录音的中继 > 选择中继(e.g. fxo)
+* 要录音的分机 > 选择分机
+
 ## 手册
 * [国威官网文档下载](https://www.gwtx.com.cn/download.html)
 * [国威HB100/HB1910/HB1930/HB1960配置文档下载](https://cdn055.yun-img.com/static/upload/guoweidz/download/20230520165902_66819.pdf)
