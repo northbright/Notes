@@ -1,43 +1,43 @@
 # A Module Can Contain Multiple Packages
 
-A module can consist of multiple importable packages; each package has its own directory, and can be structured hierarchically. Here’s a sample project structure:
+A module can contain multiple importable packages.
+Each package has its own directory, and can be structued hierachically.
+
+## Example Project
+
+####  Module `task` contains 3 packages:
+
+  * package `task` for generic task, contains the `Task` interface
+  * package `copyfile` for copy file task(implements `task.Task` interface)
+  * package `download` for download task(implements `task.Task` interface)
+
+#### Structure
 
 ```bash
-project-root-directory/
+projects-go/task/
   go.mod
-  modname.go
-  modname_test.go
-  auth/
-    auth.go
-    auth_test.go
-    token/
-      token.go
-      token_test.go
-  hash/
-    hash.go
-  internal/
-    trace/
-      trace.go
+  task.go
+  task_test.go
+  copyfile/
+    copyfile.go
+    copyfile_test.go
+  download/
+    download.go
+    download_test.go
 ```
 
-As a reminder, we assume that the module line in `go.mod` says:
+#### `go.mod` in the Module Root Dir
 
 ```go
-module github.com/someuser/modname
+module github.com/xx/task
 ```
 
-The modname package resides in the root directory, declares package modname and can be imported by users with:
+#### Packages Can be Imported as Follows:
 
 ```go
-import "github.com/someuser/modname"
-```
-
-Sub-packages can be imported by users as follows:
-
-```go
-import "github.com/someuser/modname/auth"
-import "github.com/someuser/modname/auth/token"
-import "github.com/someuser/modname/hash"
+import "github.com/xx/task"
+import "github.com/xx/task/copyfile"
+import "github.com/xx/task/download"
 ```
 
 ## References
