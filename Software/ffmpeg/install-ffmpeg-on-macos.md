@@ -12,7 +12,7 @@
 sudo mkdir -p /usr/local/ffmpeg/bin
 ```
 
-* Unzip and Move `ffmpeg`, `ffprobe` to `/usr/local/ffmpeg/bin`
+## Unzip and Move `ffmpeg`, `ffprobe` to `/usr/local/ffmpeg/bin`
 ```bash
 cd /Users/xx/Downloads
 unzip ffmpeg-6.1.1.zip
