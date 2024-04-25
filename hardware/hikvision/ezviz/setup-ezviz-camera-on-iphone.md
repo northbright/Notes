@@ -54,3 +54,4 @@ Click the "Camera" and click right-top "Gear" icon to enter settings.
 
 ## References
 * [Manual of Ezviz C6C](https://mfs.ezvizlife.com/C6_User%20Manual_EN(V1.0.0).pdf?ver=87945)
+* [萤石摄像头特写追踪是什么意思？](https://www.douyin.com/video/7245476850321968443)
