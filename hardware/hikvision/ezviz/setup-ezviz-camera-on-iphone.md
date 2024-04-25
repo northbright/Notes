@@ -31,8 +31,8 @@
 #### Configure Camera
 Click the "Camera" and click right-top "Gear" icon to enter settings.
 
-* Storage Settings
-  * Storage > Format Storage Media
+* Device Recording Settings
+  * Device Recording Settings > Format Storage Media
   * Select Storage Plan
     1. Continuous(full-time) Recording
     2. Event/Motion Detection Recording
