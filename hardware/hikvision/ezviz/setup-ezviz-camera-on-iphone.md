@@ -1,7 +1,7 @@
 # Setup Ezviz Camera on iPhone
 
 ## Problem
-* Purchased an Ezviz Camera([C6c 4K星光增强版](https://item.jd.com/100072112653.html)
+* Purchased an Ezviz Camera([C6c 4K星光增强版](https://item.jd.com/100072112653.html))
 * Need to Setup the Camera on iPhone
 
 ## Steps
