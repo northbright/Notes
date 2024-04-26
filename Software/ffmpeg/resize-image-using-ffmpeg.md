@@ -54,3 +54,4 @@ ffmpeg -i input.jpg -vf scale=iw/2:ih/2 output.jpg
 * [Image Scaling - 2020](https://www.bogotobogo.com/FFMpeg/ffmpeg_image_scaling_jpeg.php)
 * [ffmpeg batch command to reduce file quality](https://unix.stackexchange.com/questions/609734/ffmpeg-batch-command-to-reduce-file-quality)
 * [use find command for recursive conversion using ffmpeg](https://superuser.com/questions/1532996/use-find-command-for-recursive-conversion-using-ffmpeg)
+* [Scaling](https://trac.ffmpeg.org/wiki/Scaling)
