@@ -40,6 +40,7 @@ subtitles=opening.srt:force_style='Fontsize=18'", \
 ```
 
 * `-framerate`
+
   The duration of one image, in this case it’s 3 seconds.
 
 * `-fliter_complex`
@@ -55,9 +56,11 @@ subtitles=opening.srt:force_style='Fontsize=18'", \
   * Embed the Subtitle File(`opening.srt`) and Set the Font Size to 30
 
 * `-pix_fmt yuv 420p`
+
   The pixel format. `yuv 420p` is recommended because it increases the compatibility with most of the video players.
 
 * `-r 30`
+
   The frame rate of the output video. Default is 25.
 
 #### Add Fade Out Effect
@@ -66,6 +69,7 @@ ffmpeg -i opening.mp4 -vf "fade=t=out:st=2:d=1" opening-fade-out.mp4
 ```
 
 * `"fade=t=out:st=2:d=1"`
+
   The vides starts to fade out at the beginning of 3rd second(index=2) and the duration is 1 second.
 
 ## Make the Ending Video from a Photo
@@ -188,6 +192,8 @@ Tomas(Team B)
 
 ## Add BGM
 
+#### Add Audio Track
+
 ```bash
 ffmpeg -i output.mp4 -i bgm.m4a -shortest -c:v copy -map 0:v:0 -map 1:a:0 output-with-bgm.mp4
 ```
@@ -196,7 +202,8 @@ ffmpeg -i output.mp4 -i bgm.m4a -shortest -c:v copy -map 0:v:0 -map 1:a:0 output
 * The `-map 0:v:0` option: map the video stream of output.mp4(which index is 0) to the output video stream
 * The `-map 1:a:0` option: map the audio stream of bgm.m4a(which index is 1) to the output audio stream
 
-* Fade Out the Audio
+#### Fade Out the Audio
+
 ```bash
 ffmpeg -i output-with-bgm.mp4 -c:v copy -af "afade=t=out:st=86:d=5" output-with-bgm-fade-out.mp4
 ```
