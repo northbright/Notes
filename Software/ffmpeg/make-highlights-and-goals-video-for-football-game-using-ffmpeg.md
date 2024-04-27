@@ -97,61 +97,48 @@ subtitles=ending.srt:force_style='Fontsize=18'" \
 ffmpeg -i ending.mp4 -vf "fade=t=in:st=0:d=1,fade=t=out:st=3:d=2" ending-fade-out.mp4
 ```
 
-## Concat Multiple Goals Videos into One Video File
+## Concat All Videos into One Video File
 To avoid "Non-monotonous DTS in output stream" errors, we need to convert all videos to `.mts`.
 
-* Convert All Videos to `.mts`
-
-  ```bash
-  ffmpeg -i 01.mp4 -q 0 01.mts
-  ```
-
-  * The `-q 0` specifies the output file's quality. 0 is the hightest quality.
-
-* Create a List File
-
-  ```bash
-  vi list.txt
-  ```
-
-  ```bash
-  file 'opening-fade-out.mts'
-  file '01.mts'
-  file '02.mts'
-  file '03.mts'
-  file 'ending-fade-out.mts'
-  ```
-
-* Concat All `.mts` in the List and Output to a `.mp4`
-
-  ```bash
-  ffmpeg -f concat -safe 0 -i list.txt -c:v libx264 -c:a aac -b 128k -preset slow -crf 18 output.mp4
-  ```
-
-  * The `-preset slow` option specifies the encoding speed(a lower speed is a higher quality).
-  * The `-crf 18` option specifies the quality. See [What is -crf used for in FFmpeg?](https://superuser.com/questions/677576/what-is-crf-used-for-in-ffmpeg).
-
-## Add BGM
+#### Convert All Videos to `.mts`
 
 ```bash
-ffmpeg -i output.mp4 -i bgm.m4a -shortest -c:v copy -map 0:v:0 -map 1:a:0 output-with-bgm.mp4
+ffmpeg -i 01.mp4 -q 0 01.mts
 ```
 
-* The `-shortest` option: cut the audio if it's longer than the video.
-* The `-map 0:v:0` option: map the video stream of output.mp4(which index is 0) to the output video stream
-* The `-map 1:a:0` option: map the audio stream of bgm.m4a(which index is 1) to the output audio stream
+* The `-q 0` specifies the output file's quality. 0 is the hightest quality.
 
-* Fade Out Audio
+#### Create a List File
+
 ```bash
-ffmpeg -i output-with-bgm.mp4 -c:v copy -af "afade=t=out:st=86:d=5" output-with-bgm-fade-out.mp4
+vi list.txt
 ```
 
-* `-af "afade=t=out:st=86:d=5"`
-  The audio starts to fade out at 86th seconds and the duration is 5 seconds.
+```bash
+file 'opening-fade-out.mts'
+file '01.mts'
+file '02.mts'
+file '03.mts'
+file 'ending-fade-out.mts'
+```
+
+#### Concat All `.mts` in the List and Output to a `.mp4`
+
+```bash
+ffmpeg -f concat -safe 0 -i list.txt \
+-c:v libx264 -c:a aac -b 128k -preset slow -crf 18 \
+output.mp4
+```
+
+* The `-preset slow` option specifies the encoding speed(a lower speed is a higher quality).
+* The `-crf 18` option specifies the quality. See [What is -crf used for in FFmpeg?](https://superuser.com/questions/677576/what-is-crf-used-for-in-ffmpeg).
+
+We get the complete video which consists of the openging, all the highlights, goals and the ending.
 
 ## Add Subtitles
+After we get the complete video, we know the start / end time of each highlight and goal to create the subtitles.
 
-#### Create a Subtitle File for the Goals(`sub.srt`)
+#### Create a Subtitle File for the Highlights and Goals(`sub.srt`)
 
 ```bash
 vi sub.srt
@@ -174,13 +161,48 @@ No.1
 Tomas(Team B)
 ```
 
-#### Add the Subtitle File
+#### Add Subtitles to the Video
+
+* Method A(NOT Recommeded)
+
+  ```bash
+  ffmpeg -i output.mp4 \
+  -filter_complex \
+  "subtitles=sub.srt:force_style='Fontsize=18'" \
+  output-subtitled.mp4
+  ```
+
+  Please note it'll re-encoding video.
+
+* Method B: Re-Concat All Videos into One Video File with Subtitle File(Recommended)
+
+  ```bash
+  ffmpeg -f concat -safe 0 -i list.txt \
+  -c:v libx264 -c:a aac -b 128k -preset slow -crf 18 \
+  -filter_complex \
+  "subtitles=sub.srt:force_style='Fontsize=18'" \
+  output.mp4
+  ```
+
+  It encodes the video only once to concat all videos and rending subtitles for the output video.
+
+## Add BGM
+
 ```bash
-ffmpeg -i output-with-bgm-fade-out.mp4 \
--filter_complex \
-"subtitles=sub.srt:force_style='Fontsize=18'" \
-output-final.mp4
+ffmpeg -i output.mp4 -i bgm.m4a -shortest -c:v copy -map 0:v:0 -map 1:a:0 output-with-bgm.mp4
 ```
+
+* The `-shortest` option: cut the audio if it's longer than the video.
+* The `-map 0:v:0` option: map the video stream of output.mp4(which index is 0) to the output video stream
+* The `-map 1:a:0` option: map the audio stream of bgm.m4a(which index is 1) to the output audio stream
+
+* Fade Out the Audio
+```bash
+ffmpeg -i output-with-bgm.mp4 -c:v copy -af "afade=t=out:st=86:d=5" output-with-bgm-fade-out.mp4
+```
+
+* `-af "afade=t=out:st=86:d=5"`
+  The audio starts to fade out at 86th seconds and the duration is 5 seconds.
 
 ## References
 * [ffmpeg 给视频添加字幕，在视频的某个时间段加入声音特效和动画](https://blog.csdn.net/qq_39962403/article/details/114897352)
