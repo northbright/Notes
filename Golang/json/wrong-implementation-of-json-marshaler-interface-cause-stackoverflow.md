@@ -14,9 +14,16 @@
       // Just call json.Marshal() on t
       return json.Marshal(t)
   }
+
+  func (t *Task) UnmarshalJSON(data []byte) error {
+      // Just call json.Unmarshal() on t
+      json.Unmarshal(data, t)
+      // Do some customization.
+      ......
+  }
   ```
 
-* The Program Encounters a Fatal Error: Stackoverflow at `task.MarshalJSON()`
+* The Program Encounters a Fatal Error: Stackoverflow at `task.MarshalJSON()` or `task.UnmarshalJSON()`
 
 ## Root Cause
 [`json.Marshal`](https://pkg.go.dev/encoding/json#Marshal) doc says:
@@ -24,8 +31,9 @@
 
 Use `json.Marshal() on a value to implement `json.Marshaler` interface for value's type will cause an infinite loop.
 
+The same as `json.Unmarshal`.
+
 ## Solution
-#### Method A
 Using a local type(alias) for the type.
 
 ```go
@@ -37,14 +45,17 @@ N().
         a := (*localTask)(t)
         return json.Marshal(a)
 }
-```
 
-#### Method B
-Use [`encoding.BinaryMarshaler`](https://pkg.go.dev/encoding#BinaryMarshaler) instead if it's possible.
+func (t *Task) UnmarshalJSON(data []byte) error) {
+        // Use a local type(alias) to avoid infinite loop when call json.Marshal() in MarshalJSO
+N().
+        type localTask Task
 
-```go
-func (t *Task) MarshalBinary() ([]byte, error) {
-    return json.Marshal(t)
+        a := (*localTask)(t)
+
+        json.Unmarshal(data, lt)
+        // Do some customization.
+        ......
 }
 ```
 
