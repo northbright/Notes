@@ -217,6 +217,15 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
 * 要录音的中继 > 选择中继(e.g. fxo)
 * 要录音的分机 > 选择分机
 
+## 通话中转移
+用户呼入，分机 A(`6001`) 接听，需要在通话中转移给分机 B（`6003`）。
+
+* 分机 A 接听来电后，按`*2`
+* 听到提示音后，迅速按分机号码（e.g. `6003`）
+* 分机 B 接听后，分机 A 听到分机 B 接通后，挂断分机 A
+* 用户可以与分机 B 进行通话
+
 ## 手册
 * [国威官网文档下载](https://www.gwtx.com.cn/download.html)
 * [国威HB100/HB1910/HB1930/HB1960配置文档下载](https://cdn055.yun-img.com/static/upload/guoweidz/download/20230520165902_66819.pdf)
+* [国威HB1930-HB1960-查询分机号-转接-呼叫转移等-代码大全](http://gwtx.com.cn/newsdetail_3114109.html)
