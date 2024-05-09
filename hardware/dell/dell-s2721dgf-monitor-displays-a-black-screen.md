@@ -1,7 +1,7 @@
 # Dell S2721DGF Monitor Displays a Black Screen
 
 ## Problem
-* Dell S2721DGF Monitor Displays a Black Screen when Power on the PC(Dell Precision T3460)
+* Dell S2721DGF Monitor Displays a Black Screen when Power on the PC(Dell Precision T3460 with Windows 11 Home)
 * PC Started Successfully(HDD LED is Blinking and Keyboard LEDs Work when Pressing NumLock, CapsLock)
 
 ## Solution
