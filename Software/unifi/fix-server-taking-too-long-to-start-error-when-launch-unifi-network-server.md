@@ -9,10 +9,13 @@
   * Unzip the File and Open "server.log" with Notpad
   * Found Messages:
 
-    > <launcher> INFO - Starting database process...
-    > <mongod-tail> WARN mongo - Mongo log not found during startup
-    > <mongo-db> WARN mongo - Stop listening to Mongo logs after process has exited
-    > <mongo-db> INFO mongo - Database process stopped, code=-1073741515
+    ```
+    <launcher> INFO - Starting database process...
+    <mongod-tail> WARN mongo - Mongo log not found during startup
+    <mongo-db> WARN mongo - Stop listening to Mongo logs after process has exited
+    <mongo-db> INFO mongo - Database process stopped, code=-1073741515
+    ```
+
   * The Launcher Failed to Start Mongo DB Process
   * Open File Explorer and Go to "C:\Users\XX\Ubiquiti UniFi\bin"
   * Run "mongod.exe" and Got "VCRUNTIME140.dll not found" and "MSVCP140.dll not found" Errors
@@ -28,7 +31,7 @@
 
 -------------------
 
-# 修复启动Unifi Network Server 时遇到的 "Server taking too long to start" 错误
+# 修复启动 Unifi Network Server 时遇到的 "Server taking too long to start" 错误
 
 ## 问题
 * 已安装 [Unifi Network Server v8.1.127](https://dl.ui.com/unifi/8.1.127/UniFi-installer.exe)
@@ -39,10 +42,13 @@
   * 解压该 zip 文件然后使用记事本打开 "server.log"
   * 找到一些信息：
 
-    > <launcher> INFO - Starting database process...
-    > <mongod-tail> WARN mongo - Mongo log not found during startup
-    > <mongo-db> WARN mongo - Stop listening to Mongo logs after process has exited
-    > <mongo-db> INFO mongo - Database process stopped, code=-1073741515
+    ```
+    <launcher> INFO - Starting database process...
+    <mongod-tail> WARN mongo - Mongo log not found during startup
+    <mongo-db> WARN mongo - Stop listening to Mongo logs after process has exited
+    <mongo-db> INFO mongo - Database process stopped, code=-1073741515
+    ```
+
   * 启动器因为不能启动 MongoDB 的进程而失败
   * 打开文件管理器然后访问 "C:\Users\XX\Ubiquiti UniFi\bin"
   * 运行 "mongod.exe" 然后提示 "VCRUNTIME140.dll 无法找到" 和 "MSVCP140.dll 无法找到"的错误
