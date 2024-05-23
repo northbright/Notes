@@ -22,6 +22,8 @@
 
 ## Solution
 * Install [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-gb/download/details.aspx?id=48145)
+* Exit the "Unifi Network Server" and Reboot
+  * You'll Meet "Port 8080 is used by other programs" if Run Unifi Network Server Again without Reboot(the Other Program is Last Process of Unifi Network Server Itself)
 * Launch Unifi Network Server and It Works
 
 -------------------
@@ -50,4 +52,6 @@
 
 ## 解决方法
 * 安装 [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-gb/download/details.aspx?id=48145)
+* 退出 Unifi Network Server 然后重启电脑
+  * 如果不重启直接再次运行 Unifi Network Server，会遇到 "Port 8080 is used by other programs" 的错误（另一个使用 8080 端口的程序就是上一个 Unifi Network Server 自身的进程）
 * 启动 Unifi Network Server，运行正常
