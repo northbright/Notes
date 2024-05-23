@@ -23,3 +23,6 @@
 
 * Open a New Browser Tab and Visit "http://127.0.0.1:8080"
 * Input Username and Password of the User in the Backup
+
+## References
+* [Fix "Server taking too long to start" Error When Launch Unifi Network Server](https://github.com/northbright/Notes/blob/master/Software/unifi/fix-server-taking-too-long-to-start-error-when-launch-unifi-network-server.md)
