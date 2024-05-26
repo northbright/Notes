@@ -85,29 +85,36 @@
 
 Network Topology
 
-+---------------------------------------------------------------------+
-|                                                                     |
-|         +------------+                                              |
-|         |  Gateway   |                                              |
-|         +-----+------+                                              |
-|               |                                                     |
-|         +-----+-----+ VLAN 2: AC,AP Management VLAN.                |
-|         |Core Switch| VLANIF: 10.0.2.1/24, DHCP server is enabled.  |
-|         +-----+-----+                                               |
-|               |       VLAN 20: WLAN Service VLAN                    |
-|               |       VLANIF: 10.0.20.1/24, DHCP server is enabled. |
-|               |                                                     |
-|               |VLAN 2,20                                            |
-|               |                                                     |
-|          +----+-----+  VLAN 2  +----+                               |
-|          |POE Switch+----------+ AC | VLANIF: 10.0.2.3/24           |
-|          ++------+--+          +----+                               |
-|  VLAN 2,20|      |VLAN 2,20                                         |
-|        +--+-+  +-+--+                                               |
-|        |AP-1|  |AP-2|                                               |
-|        +----+  +----+                                               |
-|                                                                     |
-+---------------------------------------------------------------------+
++------------------------------------------------------------------------+
+|                                                                        |
+|            +------------+                                              |
+|            |  Gateway   |                                              |
+|            +-----+------+                                              |
+|                  |                                                     |
+|                  |       VLAN 2: AC,AP Management                      |
+|                  |       VLANIF: 10.0.2.1/24, DHCP server is enabled.  |
+|            +-----+-----+                                               |
+|            |Core Switch| VLAN 10: WLAN Service for laptop.             |
+|            +-----+-----+ VLANIF: 10.0.10.1/24, DHCP server is enabled. |
+|                  |                                                     |
+|                  |       VLAN 20: WLAN Service for mobile device.      |
+|                  |       VLANIF: 10.0.20.1/24, DHCP server is enabled. |
+|                  |                                                     |
+|                  |VLAN 2,10,20                                         |
+|                  |                                                     |
+|             +----+-----+  VLAN 2  +----+                               |
+|             |POE Switch+----------+ AC | VLANIF: 10.0.2.3/24           |
+|             +----+-----+          +----+                               |
+|     VLAN 2,10,20 |                                                     |
+|                +-+--+                                                  |
+|      +---------+ AP +--------------+                                   |
+|      |         +----+              |                                   |
+|      |                             |                                   |
+|   +--v---+                      +--v--+                                |
+|   |Laptop|IP:10.0.10.60/24      |Phone| IP:10.0.20.60/24               |
+|   +------+                      +-----+                                |
+|                                                                        |
++------------------------------------------------------------------------+
 
 #### Create Mangement VLAN and VLANIF
 * Go to Configuration > AC Config > VLAN > Create(e.g. `VLAN 2`)
@@ -165,9 +172,9 @@ Go to Config Wizard > AP Going Online.
 Create a new SSID
 
 1. Basic Information
-  * SSID Name: e.g. `Huawei`
+  * SSID Name: e.g. `huawei`(VLAN 20) or `huawei-pc`(VLAN 10)
   * Service VLAN: Single VLAN
-  * Service VLAN ID: e.g. `20`
+  * Service VLAN ID: e.g. `20` or `10`
   * Forwarding Mode: Direct
   * Next
 
@@ -183,5 +190,10 @@ Create a new SSID
 
 3. Access Control
   * Binding the AP Group: Select `default` Group
-  * Valid Radio: All, 0, 1, 2
+  * Valid Radio: Specify Which Radio Profile to Use(Default is `All`: `0`, `1`, `2`)
+    * `0`: Radio Profile 0: 2.4G
+    * `1`: Radio Profile 1: 5G / 6G
+    * `2`: Radio Profile 2: 5G / 6G
+
+    You may check / configure the Radio Profiles of the AP Group under AP Config > AP Group > Radio Managemnt.
   * Finish
