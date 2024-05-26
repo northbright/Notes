@@ -151,6 +151,30 @@ Network Topology
 ## Configure AP
 Use Config Wizard for AP.
 
+#### Create AP Group
+We can use `default` AP Group for APs.
+But if we need to do some customization(e.g. 5 GHz DCA Channel Set), create a new AP group is recommended.
+
+* Go to AP Config > AP Group > Create
+* AP Group Name: XX(e.g. `group1`)
+* Copy parameters from other groups: `default`
+
+#### Create Regulatory Domain Profile for Radio Management
+Default frequency bandwidth of 5G DCA Channel Set is 20 MHz,
+We can set it to 80 MHz to increase the connection speed.
+To do this, create a Regulatory Domain Profile and apply it to `group1`.
+
+* Go to AP Config > AP Group > Click the group(e.g. `group1`)
+* Click Radio Managment > Regulatory Domain Profile
+* Regulatory Domain Profile > Click "Create" Button
+* Profile Name: e.g. `radio1`
+* Copy parameters from other profiles: e.g. `default`
+* Click OK and `group1` Use `radio1` as Regulatory Domain Profile
+* Go to "5 GHz DCA Channel Set"
+  * Frequency bandwidth > Select 80 MHz
+  * Channel Set: Check All Channels
+* Apply
+
 #### AP Going Online
 Go to Config Wizard > AP Going Online.
 
@@ -161,8 +185,8 @@ Go to Config Wizard > AP Going Online.
   * Click Next
 
 2. Group APs
-  * Use `default` Group
-  * Check the APs in `default` Group
+  * Use `group1` Group
+  * Check the APs in `group1` Group
   * Click Next
 
 3. Confirm Configurations
@@ -189,11 +213,12 @@ Create a new SSID
   * Click Next
 
 3. Access Control
-  * Binding the AP Group: Select `default` Group
+  * Binding the AP Group: Select `group1` Group
   * Valid Radio: Specify Which Radio Profile to Use(Default is `All`: `0`, `1`, `2`)
     * `0`: Radio Profile 0: 2.4G
     * `1`: Radio Profile 1: 5G / 6G
     * `2`: Radio Profile 2: 5G / 6G
 
-    You may check / configure the Radio Profiles of the AP Group under AP Config > AP Group > Radio Managemnt.
+    Using 2 Different SSIDs for 2.4G and 5G is recommended(e.g. `XX-2.4G`, `XX-5G`).
+
   * Finish
