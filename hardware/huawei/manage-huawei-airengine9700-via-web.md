@@ -222,3 +222,7 @@ Create a new SSID
     Using 2 Different SSIDs for 2.4G and 5G is recommended(e.g. `XX-2.4G`, `XX-5G`).
 
   * Finish
+
+## References
+* [Web示例(V2R19C00版本)：旁挂二层组网直接转发【AP+L3+旁挂AC+出口网关】](https://forum.huawei.com/enterprise/zh/thread/580934502589546496)
+* [AirEngine 9700-射频资源管理（SmartRadio）](https://support.huawei.com/enterprise/zh/doc/EDOC1100278107/c349ef2)
