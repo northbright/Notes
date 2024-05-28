@@ -223,6 +223,12 @@ Create a new SSID
 
   * Finish
 
+#### Radio Planning / Calibration(Optional)
+* Go to AP Config > AP Group > Click the group(e.g. `group1`)
+* Expand "Radio Management" by Click "+"
+* Select Radio Name(e.g. "Radio 0" for 2.4G, "Radio 1" and "Radio 2" for 5G)
+* Modify Radio Settings and Apply
+
 ## References
 * [Web示例(V2R19C00版本)：旁挂二层组网直接转发【AP+L3+旁挂AC+出口网关】](https://forum.huawei.com/enterprise/zh/thread/580934502589546496)
 * [AirEngine 9700-射频资源管理（SmartRadio）](https://support.huawei.com/enterprise/zh/doc/EDOC1100278107/c349ef2)
