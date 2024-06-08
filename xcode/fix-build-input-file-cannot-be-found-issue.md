@@ -15,4 +15,5 @@ An entitlements file is one of a small group of project files that are not ident
 * Enter a Correct Path of .entitlements for Debug and Release or Remove It
 * Build Again
 
-
+## References
+* [Build input file cannot be found: Did you forget to declare this file as an output of a script phase or custom build rule which produces it?](https://forums.developer.apple.com/forums/thread/728087)
