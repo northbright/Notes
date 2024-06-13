@@ -29,7 +29,7 @@
     * Create
     * It'll a "vg-hdd" Device under Available Devices
 * Create Logical Volume
-  * Goto "Available Devices" > "vg-hdd" > Create Logical Volume
+  * Goto "Available Devices" > "vg-hdd" > free space > Create Logical Volume
   * Name: "lv-seagate"
   * Size: Leave Empty to Use All Free Space
   * Format: `ext4`
