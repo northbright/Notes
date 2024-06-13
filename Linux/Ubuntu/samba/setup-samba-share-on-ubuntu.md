@@ -271,6 +271,26 @@ sudo systemctl enable smbd.service
 sudo systemctl restart smbd.service
 ```
 
+## Change Samba User Password(optional)
+Use `sudo sambapasswd -U USER_NAME` command to reset password for user.
+
+```
+// e.g. Reset password for frank.
+sudo sambapasswd -U frank
+```
+
+## Delete / Disable Samba User(optional)
+
+```
+// Disable user frank.
+sudo sambapasswd -d frank
+```
+
+```
+// Delete user frank.
+sudo sambapasswd -x frank
+```
+
 ## References
 * [How To Set Up a Samba Share For A Small Organization on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-samba-share-for-a-small-organization-on-ubuntu-16-04)
 * [Do I need NetBIOS?](https://blogs.msmvps.com/acefekay/2013/03/02/do-i-need-netbios/)
