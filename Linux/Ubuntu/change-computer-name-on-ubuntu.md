@@ -18,5 +18,13 @@
   sudo hostnamectl set-hostname NEW_COMPUTER_NAME
   ```
 
+* Reboot
+
+  To make other PCs can access the pc with the new name(e.g. `ping XX` or visit samba share: `\\XX`), reboot the pc.
+
+  ```
+  sudo reboot
+  ```
+
 ## References
 * [How do I change the computer name?](https://askubuntu.com/questions/9540/how-do-i-change-the-computer-name)
