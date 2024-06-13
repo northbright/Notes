@@ -14,9 +14,15 @@
 * System Waits Other 2 Ethernet Devices to Be Configured
 
 ## Solution
-Add `optional: true` to any devices that may not always be available in netplan config file(e.g. `/etc/netplan/00-installer-config.yaml`)
+Add `optional: true` to any devices that may not always be available in netplan config file(e.g. `/etc/netplan/00-installer-config.yaml` or `/etc/netplan/50-cloud-init.yaml`)
 
-* Edit `/etc/netplan/00-installer-config.yaml`
+* Backup netplan Config File(e.g. `/etc/netplan/50-cloud-init.yaml`)
+
+  ```
+  sudo cp /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bk
+  ```
+
+* Edit `/etc/netplan/xx.yaml`
 
   ```
   # This is the network config written by 'subiquity'
