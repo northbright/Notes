@@ -89,11 +89,13 @@ sudo apt install samba
 
   // Output:
   1: lo: <LOOPBACK,UP,LOWER_UP> ......
-  2: enp0s31f6: <BROADCAST,MULTICAST,UP,LOWER_UP> ......
-  3: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> ......
+  2: eno1: <BROADCAST,MULTICAST,UP,LOWER_UP> ......
+  3: enp1s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> ......
+  4: enp1s0f1: <BROADCAST,MULTICAST,UP,LOWER_UP> ......
+  5: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> ......
   ```
 
-  Record the interface(e.g. `enp0s31f6`) and it'll be used to bind to Samba server(`YOUR_NETWORK_INTERFACE)`.
+  Record the interfaces(e.g. `enp1s0f0` and `enp1s0f1`) and they'll be used to bind to Samba server(`YOUR_NETWORK_INTERFACE)`.
 
 * Create `[global]` Section
 
@@ -108,11 +110,12 @@ sudo apt install samba
       server role = standalone server
 
       # Bind ethernet interface
+      # e.g. interfaces = lo enp1s0f0 enp1s0f1
       interfaces = lo YOUR_NETWORK_INTERFACE
       bind interfaces only = yes
 
-      # Disable NetBIOS server
-      disable netbios = yes
+      # Disable NetBIOS server(optional)
+      disable netbios = no
 
       smb ports = 445
       log file = /var/log/samba/smb.log
