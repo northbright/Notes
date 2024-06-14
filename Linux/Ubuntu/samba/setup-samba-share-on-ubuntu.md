@@ -1,12 +1,13 @@
 # Setup Samba Share on Ubuntu
 
-## Update
-```
-sudo apt update
-```
+## Configure Network(Optional)
+If the samba server has 2 or more network interfaces and need to be accessed from different subnets, we need to configure the network interfaces.
+
+* [Use netplan to Configure 2 Interfaces](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/network/use-netplan-to-configure-2-interfaces.md)
 
 ## Install Samba
 ```
+sudo apt update
 sudo apt install samba
 ```
 
