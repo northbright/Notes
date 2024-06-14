@@ -14,7 +14,7 @@
 
 * Allow Added User to Run Any Commands Anywhere
 
-  ```
+  ```bash
   sudo visudo
   ```
 
