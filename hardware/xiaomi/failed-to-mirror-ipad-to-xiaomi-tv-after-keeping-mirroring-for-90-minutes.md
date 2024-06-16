@@ -1,4 +1,4 @@
-Failed to Mirror iPad to Xiaomi TV after Keeping Mirroring for 90 Minutes
+# Failed to Mirror iPad to Xiaomi TV after Keeping Mirroring for 90 Minutes
 
 ## Problem
 * Keep Mirroring iPad Screen to Xiaomi TV for 90 Minutes
