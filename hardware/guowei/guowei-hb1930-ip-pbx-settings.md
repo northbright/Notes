@@ -92,7 +92,8 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
 
 * 设置时间
   * 系统 > 日期时间 > 与 NTP 服务器同步
-  * `npt.aliyun.com`
+  * `ntp.aliyun.com`
+  * `ntp1.aliyun.com`
 
 ## 注意⚠️ : 菜单 > PBX 下的设置修改后点击”保存“是不会生效的，需要点击右上方的“应用”才能生效
 * 菜单 > PBX 下的设置项只点击“保存”是不会生效的
