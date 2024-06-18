@@ -78,6 +78,7 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
 * WAN 口连接 H3C S5120 POE 交换机 #6 GE1/0/25 
 
 ## 网络设置
+* 初始管理 IP: `192.168.100.1`
 * 账户信息
   * Username: `admin`
   * Initial Password: `admin`
