@@ -112,6 +112,7 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
   * 注册密码：固定：可以设置为默认的 Aa780780
   * 用户密码：固定：可以设置为默认的 Aa111111
   * 其他默认，批量创建
+  * 保存后，记得点击“应用”
 
 ## 国威 IP Phone(GW11P)分机注册 SIP
 
@@ -156,7 +157,7 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
       * 服务器地址：IP PBX 的 IP
       * 服务器端口：默认 5060
     * 提交
-    * 成功后状态更新为：已注册。如果提示注册失败 401，则注册密码输入错误
+    * 成功后状态更新为：已注册。如果提示注册失败 401，则注册密码输入错误(可能创建分机用户后没有点击“应用”)
 
 ## IP PBX FXO 模拟中继设置
 * 菜单 > PBX > 中继
