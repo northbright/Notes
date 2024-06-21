@@ -197,6 +197,9 @@ Go to Config Wizard > AP Going Online.
 #### Wireless Service Configuration
 Create a new SSID
 
+If you not click ""Continue With Wireless Service Configuration" in last section,
+Go to Config Wizard > Wireless Service
+
 1. Basic Information
   * SSID Name: e.g. `huawei`(VLAN 20) or `huawei-pc`(VLAN 10)
   * Service VLAN: Single VLAN
