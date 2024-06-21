@@ -159,11 +159,6 @@ But if we need to do some customization(e.g. 5 GHz DCA Channel Set), create a ne
 * AP Group Name: XX(e.g. `group1`)
 * Copy parameters from other groups: `default`
 
-#### Transfer All APs from One Group to Another(Optional)
-* Go to AP Config > AP Group
-* Select the Record of AP Group which Binds APs Already > Click the Number of Binded APs(e.g. 10)
-* It'll Pop a Dialog > Transfer All APs > Confirm
-
 #### Create Regulatory Domain Profile for Radio Management(Optional)
 Default frequency bandwidth of 5G DCA Channel Set is 20 MHz,
 We can set it to 40 MHz to increase the connection speed.
@@ -233,6 +228,12 @@ Create a new SSID
 * Expand "Radio Management" by Click "+"
 * Select Radio Name(e.g. "Radio 0" for 2.4G, "Radio 1" and "Radio 2" for 5G)
 * Modify Radio Settings and Apply
+
+#### Transfer All APs from One Group to Another(Optional)
+* Go to AP Config > AP Group
+* Select the Record of AP Group which Binds APs Already > Click the Number of Binded APs(e.g. 10)
+* It'll Pop a Dialog > Transfer All APs > Confirm
+
 
 ## References
 * [Web示例(V2R19C00版本)：旁挂二层组网直接转发【AP+L3+旁挂AC+出口网关】](https://forum.huawei.com/enterprise/zh/thread/580934502589546496)
