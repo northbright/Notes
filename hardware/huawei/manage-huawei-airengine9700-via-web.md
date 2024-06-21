@@ -161,7 +161,7 @@ But if we need to do some customization(e.g. 5 GHz DCA Channel Set), create a ne
 
 #### Create Regulatory Domain Profile for Radio Management
 Default frequency bandwidth of 5G DCA Channel Set is 20 MHz,
-We can set it to 80 MHz to increase the connection speed.
+We can set it to 40 MHz to increase the connection speed.
 To do this, create a Regulatory Domain Profile and apply it to `group1`.
 
 * Go to AP Config > AP Group > Click the group(e.g. `group1`)
@@ -171,7 +171,7 @@ To do this, create a Regulatory Domain Profile and apply it to `group1`.
 * Copy parameters from other profiles: e.g. `default`
 * Click OK and `group1` Use `radio1` as Regulatory Domain Profile
 * Go to "5 GHz DCA Channel Set"
-  * Frequency bandwidth > Select 80 MHz
+  * Frequency bandwidth > Select 40 MHz
   * Channel Set: Check All Channels
 * Apply
 
