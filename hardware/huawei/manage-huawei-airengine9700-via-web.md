@@ -166,23 +166,19 @@ Go to Config Wizard > AP Going Online.
   * AP authentication mode: Non-authentication(Already Set via AC Config)
   * Check Total Number of APs
   * Check Status is `normal` of APs in the List
-  * Select the APs
-    * To Select All APs, Click "AP ID" Column HEAD
   * Click Next
 
 2. Group APs
-  * Use `group1` Group
-  * Check the APs in `group1` Group
+  * Select "default" Group and Its APs
   * Click Next
 
 3. Confirm Configurations
-  * Click "Continue With Wireless Service Configuration"
+  * Click "Done"
 
 #### Wireless Service Configuration
 Create a new SSID
 
-If you not click ""Continue With Wireless Service Configuration" in last section,
-Go to Config Wizard > Wireless Service
+Go to Config Wizard > Wireless Service > Create
 
 1. Basic Information
   * SSID Name: e.g. `huawei`(VLAN 20) or `huawei-pc`(VLAN 10)
