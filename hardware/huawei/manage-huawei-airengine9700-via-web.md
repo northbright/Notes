@@ -182,6 +182,8 @@ Go to Config Wizard > AP Going Online.
   * AP authentication mode: Non-authentication(Already Set via AC Config)
   * Check Total Number of APs
   * Check Status is `normal` of APs in the List
+  * Select the APs
+    * To Select All APs, Click "AP ID" Column HEAD
   * Click Next
 
 2. Group APs
