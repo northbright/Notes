@@ -250,8 +250,8 @@ sudo vi /etc/samba/smb.conf
     valid users = @sambashare @admins
 ```
 
-* Hide Samba Share from Browse List for Unauthorized Users(Optional)
-  * [Hide Samba Share from Browse List for Unauthorized Users](https://github.com/northbright/Notes/blob/master/Linux/Ubuntu/samba/hide-samba-share-from-browse-list-for-unauthorized-users.md)
+* Hide Samba Share(Optional)
+  If you want to hide the share for all users, set `browseable = no`
 
 * Test the Configuration
 
