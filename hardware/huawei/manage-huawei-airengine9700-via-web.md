@@ -159,22 +159,6 @@ But if we need to do some customization(e.g. 5 GHz DCA Channel Set), create a ne
 * AP Group Name: XX(e.g. `group1`)
 * Copy parameters from other groups: `default`
 
-#### Create Regulatory Domain Profile for Radio Management(Optional)
-Default frequency bandwidth of 5G DCA Channel Set is 20 MHz,
-We can set it to 40 MHz to increase the connection speed.
-To do this, create a Regulatory Domain Profile and apply it to `group1`.
-
-* Go to AP Config > AP Group > Click the group(e.g. `group1`)
-* Click Radio Managment > Regulatory Domain Profile
-* Regulatory Domain Profile > Click "Create" Button
-* Profile Name: e.g. `radio1`
-* Copy parameters from other profiles: e.g. `default`
-* Click OK and `group1` Use `radio1` as Regulatory Domain Profile
-* Go to "5 GHz DCA Channel Set"
-  * Frequency bandwidth > Select 40 MHz
-  * Channel Set: Check All Channels
-* Apply
-
 #### AP Going Online
 Go to Config Wizard > AP Going Online.
 
@@ -229,10 +213,40 @@ Go to Config Wizard > Wireless Service
   * Finish
 
 #### Radio Planning / Calibration(Optional)
-* Go to AP Config > AP Group > Click the group(e.g. `group1`)
-* Expand "Radio Management" by Click "+"
-* Select Radio Name(e.g. "Radio 0" for 2.4G, "Radio 1" and "Radio 2" for 5G)
-* Modify Radio Settings and Apply
+1. Turn On Calibration
+  * Go to AP Config > Radio Planning / Calibration > Radio Calibration Configuration Tab
+  * Turn On "Calibration"
+  * Set Triggering condition to "Scheduled"
+
+2. 2.4G / 5G DCA Channel Set
+  * Go to AP Config > Radio Planning / Calibration > Radio Planning Tab
+  * Go to 2.4 GHz DCA Channel Set and 5 GHz DCA Channel Set
+  * Apply and Save
+
+3. Turn Off Forcibly Disconnecting STAs(强制用户下线) and Dynamic Load Balancing(动态负载均衡)
+  * Go to AP Config > Profile > Radio Management > 2G / 5G Radio Profile > default > RRM Profile
+  * Go to Forcibly Disconnecting STAs > Turn Off
+  * Go to Dynamic Load Balancing > Turn Off
+  * Apply and Save
+
+4. Radio Calibration
+  * 2G Radio Calibration
+    * Go to AP Config > Profile > Radio Management > 2G Radio Profile > default > RRM Profile
+    * Go to Advanced Configuration Tab > Radio Calibration
+    * Set "2.4G Upper calibration power threshold (dBm)" to `12`
+    * Set "2.4G Lower calibration power threshold (dBm)" to `9`
+  * 5G Radio Calibration
+    * Go to AP Config > Profile > Radio Management > 5G Radio Profile > default > RRM Profile
+    * Go to Advanced Configuration Tab > Radio Calibration
+    * Set "5G Upper calibration power threshold (dBm)" to `17`
+    * Set "5G Lower calibration power threshold (dBm)" to `13`
+  * Apply and Save
+
+5. Storm Suppression（风暴抑制）
+  * Go to AP Config > Profile > Wireless Service > Traffic Profile > default > Advanced Configuration
+  * Set "Broadcast packet rate limit (pps)" to `128`
+  * Set "Multicast packet rate limit (pps)" to `128`
+  * Set "Unknown unicast packet rate limit (pps)" to `64`
 
 #### Transfer All APs from One Group to Another(Optional)
 * Go to AP Config > AP Group
