@@ -164,7 +164,7 @@ But if we need to do some customization(e.g. 5 GHz DCA Channel Set), create a ne
 * Select the Record of AP Group which Binds APs Already > Click the Number of Binded APs(e.g. 10)
 * It'll Pop a Dialog > Transfer All APs > Confirm
 
-#### Create Regulatory Domain Profile for Radio Management
+#### Create Regulatory Domain Profile for Radio Management(Optional)
 Default frequency bandwidth of 5G DCA Channel Set is 20 MHz,
 We can set it to 40 MHz to increase the connection speed.
 To do this, create a Regulatory Domain Profile and apply it to `group1`.
