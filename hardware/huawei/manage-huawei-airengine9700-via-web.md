@@ -244,6 +244,8 @@ Go to Config Wizard > Wireless Service > Create
   * Set "Multicast packet rate limit (pps)" to `128`
   * Set "Unknown unicast packet rate limit (pps)" to `64`
 
+Please check [WLAN网络优化三板斧](https://support.huawei.com/enterprise/zh/doc/EDOC1100260922#ZH-CN_TOPIC_0000001225645370) for more information.
+
 #### Transfer All APs from One Group to Another(Optional)
 * Go to AP Config > AP Group
 * Select the Record of AP Group which Binds APs Already > Click the Number of Binded APs(e.g. 10)
@@ -253,3 +255,4 @@ Go to Config Wizard > Wireless Service > Create
 ## References
 * [Web示例(V2R19C00版本)：旁挂二层组网直接转发【AP+L3+旁挂AC+出口网关】](https://forum.huawei.com/enterprise/zh/thread/580934502589546496)
 * [AirEngine 9700-射频资源管理（SmartRadio）](https://support.huawei.com/enterprise/zh/doc/EDOC1100278107/c349ef2)
+* [WLAN网络优化三板斧](https://support.huawei.com/enterprise/zh/doc/EDOC1100260922#ZH-CN_TOPIC_0000001225645370)
