@@ -18,7 +18,7 @@
   * Save
 
 3. Check
-  * Playback > Select One Channel > Select the Date with Purple Flag(means Event Storage Plan) > Search
+  * Playback > Select One Channel > Select the Date with Purple Flag(means Event Storage Plan) > Query
   * Red Rectangles in the Timeline are Recorded Videos for Motion Detection
 
 --------
