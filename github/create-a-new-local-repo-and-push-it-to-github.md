@@ -5,7 +5,7 @@
 * Need to Push the New Created Dir(repo) to Github
 
 ## Solution
-* Create a New Empty Repo(NO `README.md`, `.gitignore`, LICENSE)
+* Create a New Empty Repo(NO `README.md`, `.gitignore`, LICENSE) on Github
 * After the Repo was Created Successfully, You'll See the Instruction
 
   > …or create a new repository on the command line
