@@ -13,6 +13,9 @@
 * Try to Reboot Telecom Gateway
 * Call Telecom Service to Check Lines and Gateway Device
 
+## References
+* Service Contact of Guowei: `400-800-5056`
+
 ------------------
 
 # 来电显示的号码为 IP PBX 的 IP 是由于电信网关设备没有发送正确的来电号码(Caller ID)
@@ -29,3 +32,6 @@
 ## 解决方案
 * 尝试重启电信的网关设备
 * 报修电信服务来检查线路和电信网关设备
+
+## 参考资料
+* 国威售后电话：`400-800-5056`
