@@ -7,6 +7,10 @@
 * Run `node -v` and `npm -v` to check
 
 ## Set npm Registry(Optional)
+**UPDATE: 2024/07/04**
+Run `sudo yarn global add @quasar/cli` to install [Quasar](https://quasar.dev/) and got Error: `certificate has expired` after use taobao registry.
+Remove taobao registry and it works.
+
 `npm install` is very slow for China developers.
 To speed up the installation, we can set registry located in China.
 
