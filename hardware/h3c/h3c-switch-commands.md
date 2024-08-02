@@ -301,6 +301,16 @@ reboot
     expired 0 12 0 0
     gateway-list 192.168.30.1
     ```
+13. Reset DHCP Server's IP in Use for Pool
+
+```bash
+reset dhcp server ip-in-use pool <POOL_NAME>
+```
+e.g. Reset DHCP Server's IP in Use for Pool：VLAN30
+```bash
+reset dhcp server ip-in-use pool vlan30
+```
+
 ## Add Static Route
 
     // under system-view
