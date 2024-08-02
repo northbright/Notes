@@ -272,9 +272,20 @@ reboot
 
 10. Check DHCP IP in Use
 
-   ```
-   display dhcp server ip-in-use
-   ```
+  * Show DHCP Server's IP in Use for All Pools
+
+    ```bash
+    display dhcp server ip-in-use
+    ```
+  * Show DHCP Server's IP in Use for Specified Pool
+
+    ```bash
+    display dhcp server ip-in-use pool <POOL_NAME>
+    ```
+    e.g.
+    ```bash
+    display dhcp server ip-in-use pool vlan30
+    ```
 
 11. Reset(Clean) DHCP IP in Use
 
