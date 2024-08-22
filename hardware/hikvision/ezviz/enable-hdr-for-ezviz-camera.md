@@ -1,7 +1,7 @@
-# Enable HDR for Yingshiyun Camera
+# Enable HDR for Ezviz Camera
 
 ## Problem
-* Yingshiyun Camera C4X
+* Ezviz Camera C4X
 * It's Hard to See the Face Clear when One Person is in a Dark Corner
 
 ## Solution

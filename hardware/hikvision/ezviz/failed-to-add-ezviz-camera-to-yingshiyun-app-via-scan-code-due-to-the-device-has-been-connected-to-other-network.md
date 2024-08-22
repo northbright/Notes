@@ -1,7 +1,7 @@
-# Failed to Add Camera to Yingshiyun App via Scan Code due to the Device has been Connected to Other Network
+# Failed to Add Ezviz Camera to Yingshiyun App via Scan Code due to the Device has been Connected to Other Network
 
 ## Problem
-* Yingshiyun Camera: C4X
+* Ezviz Camera: C4X
 * Scan the Code on the Camera to Add it to Yingshiyun App
 * Got "Please check the device is powered on" message
 * Click "Next" to Configure Network and Got "Failed to Configure Network" Error
