@@ -8,7 +8,7 @@
 vi package.json
 ```
 
-```bash
+```json
 ......
 "engines": {
   "node": "^20 || ^18 || ^16",
