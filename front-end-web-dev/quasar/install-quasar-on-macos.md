@@ -54,6 +54,9 @@ git commit -m "first commit"
 git push -u origin master
 ```
 
+#### Add Github Action to Build the Quasar Project(Optional)
+* [Add Github Action to Build Quasar Project](https://github.com/northbright/Notes/blob/master/front-end-web-dev/quasar/add-github-action-to-build-quasar-project.md)
+
 ## References
 * [Quick Start](https://quasar.dev/start/quick-start)
 * [Create a New Local Repo and Push It to Github](https://github.com/northbright/Notes/blob/master/github/create-a-new-local-repo-and-push-it-to-github.md)
