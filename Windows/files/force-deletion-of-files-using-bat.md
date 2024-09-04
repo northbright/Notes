@@ -15,6 +15,10 @@
   * Rename the `del.txt` to `del.bat`
 * Drag the folders or files to the icon of the BAT file and release it
 
+## Warnings
+If this solution does not work, run `del` or `rd` command in a CMD window directly.
+See [Delete File or Dir which Name Ends with Dots](https://github.com/northbright/Notes/blob/master/Windows/files/delete-file-or-dir-ends-with-dots.md)
+
 ## References
 * [6 Ways to Delete a File or Folder That Can’t Be Deleted on Windows 10](https://www.reneelab.com/cant-delete-folder-windows-10.html)
 * [del](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/del)
