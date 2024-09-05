@@ -116,7 +116,14 @@ jobs:
 `my_book.tex`
 
 ```latex
+\documentclass[UTF8,nofonts]{ctexart}
+\setCJKmainfont[BoldFont=FandolSong-Bold.otf,ItalicFont=FandolKai-Regular.otf]{FandolSong-Regular.otf}
+\setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
+\setCJKmonofont{FandolFang-Regular.otf}
 
+\begin{document}
+你好，世界！
+\end{document}
 ```
 
 ## Example of Github Action
