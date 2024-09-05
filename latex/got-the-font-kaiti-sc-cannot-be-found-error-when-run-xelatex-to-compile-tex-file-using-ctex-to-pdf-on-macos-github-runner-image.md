@@ -24,8 +24,6 @@ jobs:
       matrix:
         os:
         - macos-14
-        go:
-        - "1.23"
 
       fail-fast: false
     steps:
