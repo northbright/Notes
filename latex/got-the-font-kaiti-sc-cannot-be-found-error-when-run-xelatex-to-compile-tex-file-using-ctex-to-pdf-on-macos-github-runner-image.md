@@ -39,22 +39,6 @@ jobs:
           ctex
           fandol
           minted
-          keyval
-          ifthen
-          kvoptions
-          calc
-          fancyvrb
-          ifplatform
-          fvextra
-          pdftexcmds
-          upquote
-          etoolbox
-          float
-          xstring
-          xcolor
-          lineno
-          framed
-          shellesc
 
     - name: Setup Python
       uses: actions/setup-python@v5
@@ -160,22 +144,6 @@ jobs:
           ctex
           fandol
           minted
-          keyval
-          ifthen
-          kvoptions
-          calc
-          fancyvrb
-          ifplatform
-          fvextra
-          pdftexcmds
-          upquote
-          etoolbox
-          float
-          xstring
-          xcolor
-          lineno
-          framed
-          shellesc
 
     - name: Setup Python
       uses: actions/setup-python@v5
