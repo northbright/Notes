@@ -63,8 +63,6 @@ jobs:
 * Use free Fandol fonts for Chinese documents, which are preinstlled in latest TeX Live (MacTeX).
 
   ```latex
-  % !TEX program = XeLaTeX
-  % !TEX encoding = UTF-8
   \documentclass[UTF8,nofonts]{ctexart}
   \setCJKmainfont[BoldFont=FandolSong-Bold.otf,ItalicFont=FandolKai-Regular.otf]{FandolSong-Regular.otf}
   \setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
