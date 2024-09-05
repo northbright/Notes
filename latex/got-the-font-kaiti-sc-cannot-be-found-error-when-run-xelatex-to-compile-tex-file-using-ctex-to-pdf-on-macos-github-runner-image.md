@@ -160,3 +160,4 @@ jobs:
 * [Issue with Chinese Font Detection in Quarto GitHub Action for PDF Output #103](https://github.com/quarto-dev/quarto-actions/issues/103)
 * [quarto-publish.yml](https://github.com/TomBener/quarto-action-pdf/blob/main/.github/workflows/quarto-publish.yml)
 * [New Mac cannot find fonts Kaiti SC #540](https://github.com/CTeX-org/ctex-kit/issues/540)
+* [Latex with Github Actions](https://dev.to/mrturkmen/latex-with-github-actions-4580)
