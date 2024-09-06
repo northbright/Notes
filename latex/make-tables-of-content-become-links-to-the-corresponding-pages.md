@@ -10,7 +10,7 @@ Use "hyperref" package in the preamble of the document.
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
 }
 
