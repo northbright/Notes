@@ -61,7 +61,7 @@
 
 4. Check `ufw` status
 
-   Use `ufw status verbose` to show firewall status.
+   Use `sudo ufw status verbose` to show firewall status.
 
    ```
    sudo ufw status verbose
