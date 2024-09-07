@@ -15,4 +15,7 @@ echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://pack
 
 sudo apt update
 sudo apt install redis
+
+sudo systemctl enable redis-server
+sudo systemctl start redis-server
 ```
