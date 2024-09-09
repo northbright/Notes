@@ -3,6 +3,7 @@
 ## Problem
 * Write a Web Server(backend: Golang app, frontend: Quasar(Vue) SPA)
 * Need to Start the HTTP Server as Service
+* Depend on `redis-server.service`
 
 ## Solution
 Create a `systemd` service.
@@ -17,7 +18,7 @@ Create a `systemd` service.
   ```
   [Unit]
   Description=MY_APP-service
-  After=redis.service
+  After=redis-server.service
 
   [Service]
   Type=simple
