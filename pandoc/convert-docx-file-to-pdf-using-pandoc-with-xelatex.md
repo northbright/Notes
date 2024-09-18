@@ -16,6 +16,7 @@ Main font does not contain International Phonetic Alphabet(IPA) symbols.
 ## Solution
 * Download the fonts support IPA(e.g. [Gentium Plus](https://software.sil.org/gentium/)).
 * Install the font on macOS.
+  * [Install Font on macOS](https://github.com/northbright/Notes/blob/master/macos/font/install-font-on-macos.md)
 * Run Pandoc and set main font to the downloaded font.
 
   ```bash
