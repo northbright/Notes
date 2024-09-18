@@ -23,6 +23,27 @@ Main font does not contain International Phonetic Alphabet(IPA) symbols.
   pandoc "考纲词汇默写01.docx" -o "考纲词汇默写01.pdf" --pdf-engine=xelatex -V CJKmainfont="苹方-简" -V mainfont="Gentium Plus"
   ```
 
+* Use bach script to convert batch of `"*.docx"` files to PDF files
+
+  ```
+  vi convert-docx-to-pdf.sh
+  ```
+
+  ```bash
+  #! /bin/bash
+  for file in *.docx; do
+    echo "${file}" "${file%.docx}"
+    #pandoc "${file}" -o "${file%.docx}.pdf" \
+    #--pdf-engine=xelatex \
+    #-V CJKmainfont="苹方-简" \
+    #-V mainfont="Gentium Plus" 
+  done
+  ```
+
+  ```bash
+  chmod a+x convert-docx-to-pdf.sh
+  ```
+
 ## References
 * [Converting Markdown to Beautiful PDF with Pandoc](https://jdhao.github.io/2019/05/30/markdown2pdf_pandoc/)
 * [Adding complex phonetic symbols to LaTeX](https://tex.stackexchange.com/questions/304284/adding-complex-phonetic-symbols-to-latex)
