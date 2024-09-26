@@ -2,7 +2,7 @@
 
 ## Solution
 Use `rm ./XX` to delete file / folder
-```
+```bash
 // "-p" is a folder
 rm -rf ./-p
 ```
