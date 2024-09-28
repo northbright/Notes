@@ -6,11 +6,11 @@
 * Use <q-dialog style="width=XXvw"> does not work
 
 ## Solution
-Set "width" in "style" of q-card in the q-dialog.
+Set "width" and "max-width" in "style" of q-card in the q-dialog.
 
 ```vue
       <q-dialog v-model="showDialog">
-      <q-card style="width: 33vw">
+      <q-card style="width: 33vw; max-width: 33vw;">
         <q-card-section>
           <div class="text-h2">{{ text }}</div>
         </q-card-section>
