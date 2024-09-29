@@ -36,6 +36,8 @@ const onUploadOK = (info) => {
 
 ```
 
+Warning: do NOT close the container of QUploader in @uploaded or @failed for multiple files upload. See [QUploader Indicates the First File Uploaded Successfully But All Other Files Uploaded Failed when Upload Multiple Files](https://github.com/northbright/Notes/blob/master/front-end-web-dev/quasar/quploader-indicates-the-first-file-uploaded-successfully-but-all-other-files-uploaded-failed-when-upload-multiple-files.md)
+
 You may set the "batch" prop for QUploader to make all files uploaded in one request.
 
 ## Go Server Code
