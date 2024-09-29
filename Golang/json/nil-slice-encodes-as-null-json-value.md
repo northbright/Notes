@@ -49,3 +49,4 @@ func main() {
 
 #### References
 * <https://godoc.org/encoding/json#Marshal>
+* [Surprises and Gotchas When Working With JSON](https://www.alexedwards.net/blog/json-surprises-and-gotchas)
