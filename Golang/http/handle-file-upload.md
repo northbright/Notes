@@ -168,3 +168,4 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 ## References
 * [How to process file uploads in Go](https://freshman.tech/file-upload-golang/)
 * [Uploading and downloading files using multipart/form-data](https://www.sobyte.net/post/2022-03/go-multipart-form-data/)
+* [Fix 413 Payload Too Large Error when Upload Files to Go App Using Nginx as Reverse Proxy](https://github.com/northbright/Notes/blob/master/nginx/fix-413-payload-too-large-error-when-upload-files-to-go-server-using-nginx-as-reverse-proxy.md)
