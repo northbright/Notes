@@ -39,7 +39,7 @@ ffmpeg -i input.jpg -vf scale=iw/2:ih/2 output.jpg
   find . -type f -name "*.jpg" -exec sh -c '
       name="${1%.*}"
       echo "$name"
-      ffmpeg -i "$1" -vf scale=3840:2160 "$name"_4k.jpg
+      ffmpeg -i "$1" -vf scale=3840:2160 "$name"_2k.jpg
       rm -f $1
   ' find-sh {} \;
   ```
