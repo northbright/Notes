@@ -13,3 +13,6 @@ for /r %%i in (*.jpg *.jpeg *.png) do (
     ffmpeg -i "%%i" -vf scale=3840:2160 "%%~ni"_2k."%%~xi"
 )
 ```
+
+## References
+* [How can I get the name of a windows .bat script from within the script itself?](https://serverfault.com/questions/65675/how-can-i-get-the-name-of-a-windows-bat-script-from-within-the-script-itself)
