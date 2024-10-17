@@ -10,7 +10,7 @@
 ## Example
 ```bat
 for /r %%i in (*.jpg *.jpeg *.png) do (
-    ffmpeg -i "%%i" -vf scale=3840:2160 "%%~ni"_2k."%%~xi"
+    ffmpeg -i "%%i" -vf scale=-1:2160 "%%~ni"_2k."%%~xi"
 )
 ```
 
