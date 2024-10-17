@@ -26,6 +26,7 @@ ffmpeg -i input.jpg -vf scale=iw/2:ih/2 output.jpg
 ```
 
 ## Solution(Batch Resize)
+#### Linux and macOS
 * Create a Shell Script
 
   ```
@@ -48,6 +49,15 @@ ffmpeg -i input.jpg -vf scale=iw/2:ih/2 output.jpg
   `chmod a+x batch-resize.sh`
 
 * Copy the Shell Script to the Dir Contains Image Files(.jpg) and Run it
+
+#### Windows
+* Create a BAT file
+
+```bat
+for /r %%i in (*.jpg *.jpeg *.png) do (
+    ffmpeg -i "%%i" -vf scale=3840:2160 "%%~ni"_2k."%%~xi"
+)
+```
 
 ## References
 * [Use ffmpeg to resize image](https://newbedev.com/use-ffmpeg-to-resize-image)
