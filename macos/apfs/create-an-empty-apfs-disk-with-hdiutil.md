@@ -10,5 +10,11 @@ Use `hdiutil` to create an empty APFS disk image get automatically mounted as `/
 hdiutil create -fs apfs -size 10m -type UDIF -attach ~/apfs.dmg
 ```
 
+* Use `diskutil` to list APFS disks
+
+```bash
+diskutil apfs list
+```
+
 ## References
 * [Vido of Jonathan Levin demonstrated in this lecture](http://docs.macsysadmin.se/2018/video/Day4Session2.mp4)
