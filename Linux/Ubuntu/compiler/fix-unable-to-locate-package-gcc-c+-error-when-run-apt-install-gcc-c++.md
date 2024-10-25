@@ -22,3 +22,4 @@ sudo apt install gcc g++
 * [linux安装gcc-c++报错Unable to locate package gcc-c+](https://blog.csdn.net/changyana/article/details/123288128)
 * [How to Install G++ (C++ Compiler) on Ubuntu](https://linuxconfig.org/how-to-install-g-the-c-compiler-on-ubuntu-20-04-lts-focal-fossa-linux)
 * [How to Install GCC on Ubuntu 24.04, 22.04, or 20.04](https://linuxcapable.com/how-to-install-gcc-compiler-on-ubuntu-linux/)
+* [g++ instead of gcc-c++ #201](https://github.com/sgan81/apfs-fuse/issues/201)
