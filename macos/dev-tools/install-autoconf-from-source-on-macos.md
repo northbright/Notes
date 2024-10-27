@@ -1,4 +1,4 @@
-# Install autoconf on macOS from Source
+# Install autoconf from Source on macOS
 
 ## Install [automake](https://www.gnu.org/software/automake/)
 * Download [latest release](https://ftp.gnu.org/gnu/automake/automake-1.17.tar.gz)
