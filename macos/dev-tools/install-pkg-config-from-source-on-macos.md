@@ -1,4 +1,4 @@
-# Install pkg-config on macOS from Source
+# Install pkg-config from Source on macOS
 
 ## Steps
 * Download [latest release](https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz) of [pkg-config](https://pkgconfig.freedesktop.org/)
