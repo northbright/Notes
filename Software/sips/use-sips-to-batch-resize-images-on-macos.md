@@ -6,7 +6,7 @@
 ## Solution
 Run "sips" to batch resize images.
 
-* Batch Resize Images(`*.jpg`) with Max Height Set to 2160 and keep the aspect ratio(`-Z` option) in a Dir
+* Batch Resize Images(`*.jpg`) with Max Size(Width / Height) Set to 2160 and Keep the Aspect Ratio(`-Z` option) in a Dir
 
 ```bash
 cd ~/images
@@ -24,23 +24,23 @@ vi batch-resize.sh
 ```bash
 #!/bin/sh
 
-# Get 1st arg as max height passed to SIPS
-maxheight="$1"
+# Get 1st arg as max width / height passed to SIPS
+maxWH="$1"
 
 # Make a dir to store resized images.
 mkdir -p "./resized"
 
-# Use default max height if max height is not set.
-if [ "$maxheight" = "" ]; then
-    maxheight="1080"
+# Use default max height if max width / height is not set.
+if [ "$maxWH" = "" ]; then
+    maxWH="1080"
 fi
 
-echo "resize images with max height = $maxheight"
+echo "resize images with max width / height = $maxWH"
 
 for file in *.jpg; 
   do
-    echo "run sips -Z ${maxheight}";
-    sips -Z "$maxheight" "$file" --out "resized/${file}";
+    echo "run sips -Z ${maxWH}";
+    sips -Z "$maxWH" "$file" --out "resized/${file}";
 done
 ```
 
@@ -48,7 +48,7 @@ done
 chmod a+x batch-resize.sh
 ```
 
-e.g. Resize all images with max height set to 2160 and keep the aspect ratio.
+e.g. Resize all images with max width / height set to 2160 and keep the aspect ratio.
 The resized images are output under "./resized" dir.
 ```bash
 cd ~/images
@@ -58,3 +58,4 @@ cd ~/images
 
 ## References
 * [How to Use macOS SIPS to Batch Resize Images](https://havecamerawilltravel.com/macos-sips-batch-resize-images/)
+* [Resize Multiple Images Quickly with the Mac Terminal](https://vanderbergh.com/tips/2019/05/07/posts-resize-multiple-images-quickly-with-the-mac-terminal.html)
