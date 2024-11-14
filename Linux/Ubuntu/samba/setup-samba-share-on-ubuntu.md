@@ -140,7 +140,7 @@ sudo apt install samba
   ```
 
 ## Create Users
-The samba / system users will be created: `ppt`, `share`, `admin`.
+The samba / system users will be created: `ppt`, `my`, `admin`.
 
 * Create a Directory to Store Data(`/data/samba/`) and Set its Group Ownership to `sambashare`
 
@@ -191,7 +191,7 @@ The samba / system users will be created: `ppt`, `share`, `admin`.
   sudo smbpasswd -e ppt
   ```
 
-## Repeat above steps for `share` user
+## Repeat above steps for `my` user
 
 ## Create the `admin` User
 * Create Home Directory of `admin`
@@ -242,12 +242,12 @@ sudo vi /etc/samba/smb.conf
     valid users = ppt @admins
 
 [share]
-    path = /data/samba/share
+    path = /data/samba/my
     browseable = yes
     read only = no
     force create mode = 0660
     force directory mode = 2770
-    valid users = share @admins
+    valid users = my @admins
 
 [everyone]
     path = /data/samba/everyone
