@@ -140,58 +140,56 @@ sudo apt install samba
   ```
 
 ## Create Users
-The samba / system users will be created: `frank`, `sonny`, `admin`.
+The samba / system users will be created: `ppt`, `admin`.
 
-* Create a Directory to Store Data(`/data/samba/`) and Set the Group Ownership to `sambashare`
+* Create a Directory to Store Data(`/data/samba/`) and Set its Group Ownership to `sambashare`
 
   The user group `sambashare` will be created after `samba` is installed.
 
   ```
-  sudo mkdir /data/samba/
+  sudo mkdir -p /data/samba/
   sudo chown :sambashare /data/samba/
   ```
 
-* Create User(e.g. `frank`)
+* Create User(e.g. `ppt`)
 
-  * Create home directory for `frank`
-
-    ```
-    sudo mkdir /data/samba/frank
-    ```
-
-  * Create system user: `frank`
+  * Create home directory for `ppt`
 
     ```
-    sudo adduser --home /data/samba/frank \
+    sudo mkdir /data/samba/ppt
+    ```
+
+  * Create system user: `ppt`
+
+    ```
+    sudo adduser --home /data/samba/ppt \
     --no-create-home \
     --shell /usr/sbin/nologin \
-    --ingroup sambashare frank
+    --ingroup sambashare ppt
     ```
 
     Input password and press `y` to create the user.
 
-* Set Ownership and Permissions of `frank`'s Home
+* Set Ownership and Permissions of `ppt`'s Home
 
   ```
-  sudo chown frank:sambashare /data/samba/frank
-  sudo chmod 2770 /data/samba/frank
+  sudo chown ppt:sambashare /data/samba/ppt
+  sudo chmod 2770 /data/samba/ppt
   ```
 
-  The first digit: `2` of `2770` means that new files or directories created under `/samba/frank/` will inherit the group ownership of the parent directory rather than the **PRIMARY** group of the user that created the file or directory.
+  The first digit: `2` of `2770` means that new files or directories created under `/samba/ppt/` will inherit the group ownership of the parent directory rather than the **PRIMARY** group of the user that created the file or directory.
 
-  This means, for example, that if the admin user were to create a new directory in `frank`’s share, `frank` would be able to read and write to it.
+  This means, for example, that if the admin user were to create a new directory in `ppt`’s share, `ppt` would be able to read and write to it.
 
-* Add `frank` to Samba Server
+* Add `ppt` to Samba Server
 
   ```
   // -a: adds the user to the Samba server without enabling them.
-  sudo smbpasswd -a frank
+  sudo smbpasswd -a ppt
 
   // -e: enables a previously-added user.
-  sudo smbpasswd -e frank
+  sudo smbpasswd -e ppt
   ```
-
-* Repeat The Process for `sonny`
 
 ## Create the `admin` User
 * Create Home Directory of `admin`
@@ -233,13 +231,13 @@ sudo vi /etc/samba/smb.conf
 ```
 
 ```
-[frank]
-    path = /data/samba/frank
+[ppt]
+    path = /data/samba/ppt
     browseable = yes
     read only = no
     force create mode = 0660
     force directory mode = 2770
-    valid users = frank @admins
+    valid users = ppt @admins
 
 [everyone]
     path = /data/samba/everyone
@@ -276,20 +274,20 @@ sudo systemctl restart smbd.service
 Use `sudo sambapasswd -U USER_NAME` command to reset password for user.
 
 ```
-// e.g. Reset password for frank.
-sudo sambapasswd -U frank
+// e.g. Reset password for ppt.
+sudo sambapasswd -U ppt
 ```
 
 ## Delete / Disable Samba User(optional)
 
 ```
-// Disable user frank.
-sudo sambapasswd -d frank
+// Disable user ppt.
+sudo sambapasswd -d ppt
 ```
 
 ```
-// Delete user frank.
-sudo sambapasswd -x frank
+// Delete user ppt.
+sudo sambapasswd -x ppt
 ```
 
 ## References
