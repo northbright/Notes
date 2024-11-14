@@ -257,11 +257,11 @@ sudo vi /etc/samba/smb.conf
   testparm
   ```
 
-## Start and Enable Samba Service
+## Enable and Start Samba Service
 
 ```
-sudo systemctl start smbd.service
 sudo systemctl enable smbd.service
+sudo systemctl start smbd.service
 ```
 
 ## Restart Samba Service(optional)
