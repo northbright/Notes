@@ -1,0 +1,19 @@
+# HP Z238 Failed to Boot from USB Disk when It is Plugged into USB 3.0 Port
+
+## Problem
+* HP Z238 with BIOS version: 2016/XX/XX
+* Create a bootable WinPE USB disk via [WePE](https://www.wepe.cn/)
+* Legacy boot is enabled and secure boot is disabled in BIOS
+* Plugged USB disk to the USB 3.0 port(blue)
+* Press F9 to enter the boot menu when power on the pc
+* It failed to find USB disk in the boot menu
+
+## Solution A
+Update latest HP Z238 BIOS.
+
+* Download [HP Z240 工作站系统 BIOS](https://ftp.hp.com/pub/softpaq/sp154001-154500/sp154352.exe)
+* Run the exe file to update the BIOS
+* Reboot and wait until BIOS update is done
+
+## Solution B(workaround)
+Plug the USB disk to USB 2.0 port of HP Z238
