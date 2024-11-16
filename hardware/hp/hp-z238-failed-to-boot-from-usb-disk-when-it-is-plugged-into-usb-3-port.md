@@ -10,10 +10,7 @@
 
 ## Solution A
 Update latest HP Z238 BIOS.
-
-* Download [HP Z240 工作站系统 BIOS](https://ftp.hp.com/pub/softpaq/sp154001-154500/sp154352.exe)
-* Run the exe file to update the BIOS
-* Reboot and wait until BIOS update is done
+* [Update BIOS of HP Z238](https://github.com/northbright/Notes/blob/master/hardware/hp/update-bios-of-hp-z238.md)
 
 ## Solution B(workaround)
 Plug the USB disk to USB 2.0 port of HP Z238
