@@ -60,6 +60,11 @@ We may create static routes back to switch via Vlanif 1 for all subnets(e.g. VLA
 * Outbound Interface: `Vlanif 1`(switch uses an access port(VLAN 1) connect to S380).
 * Next Hop: IP address of Vlanif 1 of the switch(e.g.`192.168.112.1`)
 
+## LAN Configuration(connect to switch)
+* LAN > LAN Interface > select a port to connect to switch(e.g. `GE0/0/1`)
+* Set "Interface mode" to "access"
+* Set "Default VLAN"(e.g. 1)
+
 ## Approve AP
 * Configuration > Device List
 * Select AP(s) > Approve
