@@ -60,6 +60,17 @@ We may create static routes back to switch via Vlanif 1 for all subnets(e.g. VLA
 * Outbound Interface: `Vlanif 1`(switch uses an access port(VLAN 1) connect to S380).
 * Next Hop: IP address of Vlanif 1 of the switch(e.g.`192.168.112.1`)
 
+## Approve AP
+* Configuration > Device List
+* Select AP(s) > Approve
+
+## Wireless Management
+* Select "Wireless Management" > Wireless Service
+* Create > set SSID(e.g. `huawei`) > set Service VLAN ID(e.g. `10`)
+* set WPA2 key
+* Select AP group(e.g. `default`)
+* Select radio to apply to(e.g. `2.4G`)
+
 ## Save Configuration
 * Click top-right "Save" button to save current configuration.
 
