@@ -123,6 +123,19 @@ quit
 ip route-static 0.0.0.0 0.0.0.0 10.0.100.2
 ```
 
+```
+ip route-static 10.0.10.0 255.255.255.0 10.0.100.2
+```
+
+```
+ip route-static 10.0.20.0 24 10.0.100.2
+```
+
+## Display IP Routing Table
+```
+display ip routing-table
+```
+
 ## Display IP Interface
 ```
 display ip interface brief
