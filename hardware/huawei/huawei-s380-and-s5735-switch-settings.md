@@ -121,7 +121,7 @@ Create a staic route: LAN > Static Route > Create
   * Outbound interface: `VlanIf100`
   * Next hop: `10.0.100.1`
 
-## LAN Interface Settings
+#### LAN Interface Settings
 Use LAN 1 to connect Huawei core switch and Huawei S380.
 
 LAN > LAN Interface > Select LAN 1 > Phyical Interface Configuration
