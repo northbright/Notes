@@ -1,6 +1,6 @@
 # Huawei S380 and S5735 Switch Settings
 
-## Network Toplogy
+## Network Topology
 ```
                                            +-----------------------+                   
                                            |       S380-S8P2T      |                   
