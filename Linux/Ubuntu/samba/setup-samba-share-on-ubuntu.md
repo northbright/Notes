@@ -285,19 +285,19 @@ Use `sudo sambapasswd -U USER_NAME` command to reset password for user.
 
 ```
 // e.g. Reset password for ppt.
-sudo sambapasswd -U ppt
+sudo smbpasswd -U ppt
 ```
 
 ## Delete / Disable Samba User(optional)
 
 ```
 // Disable user ppt.
-sudo sambapasswd -d ppt
+sudo smbpasswd -d ppt
 ```
 
 ```
 // Delete user ppt.
-sudo sambapasswd -x ppt
+sudo smbpasswd -x ppt
 ```
 
 ## References
