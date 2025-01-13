@@ -68,3 +68,7 @@ public-key local create ecdsa secp256r1
 ## References
 * [h3c交换机配置ssh密码验证登录方式](https://blog.csdn.net/skyxmstar/article/details/83828313)
 * [H3C S5130S-EI系列以太网交换机 - 配置指导 - 08安全配置指导](http://www.h3c.com/cn/d_201710/1038136_30005_0.htm)
+* [Fix "no matching host key type found" Issue when SSH into H3C Switch](https://github.com/northbright/Notes/blob/master/hardware/h3c/fix-no-matching-host-key-type-found-issue-when-ssh-into-h3c-switch.md)
+* [SSH returns: no matching host key type found. Their offer: ssh-dss](https://askubuntu.com/questions/836048/ssh-returns-no-matching-host-key-type-found-their-offer-ssh-dss)
+* [OpenSSH declares ssh-rsa deprecated. What do I do next?](https://security.stackexchange.com/questions/226131/openssh-declares-ssh-rsa-deprecated-what-do-i-do-next)
+* [H3C交换机SSH使用RSA公钥免密登录配置](https://www.cnblogs.com/powpoia/p/18459875)
