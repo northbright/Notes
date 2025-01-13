@@ -23,10 +23,11 @@
 
        ssh server enable
 
-## Create RSA / DSA Keys for SSH
+## Create Publick Keys
 
-    public-key local create rsa
-    public-key local create dsa
+```
+public-key local create ecdsa secp256r1
+```
 
 ## Set User Interface
 
