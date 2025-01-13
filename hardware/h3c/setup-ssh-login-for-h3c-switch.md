@@ -39,6 +39,9 @@
     // Set protocol
     protocol inbound ssh
 
+    // Quit
+    quit
+
 ## Create SSH User
 
     // Create user xx
