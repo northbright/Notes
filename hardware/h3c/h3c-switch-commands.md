@@ -233,7 +233,16 @@ reboot
    dns-list 223.5.5.5 223.6.6.6
    ```
 
-6. Add an forbidden IP(optional)
+6. Set the DHCP Expiration Time(Lease Time)
+
+   * The DHCP Expiration Time is Set to 1 Day by Default
+   * e.g. Change it to 12 Hour
+
+   ```
+   expired day 0 hour 12
+   ```
+
+7. Add an forbidden IP(optional)
    * Warning: this command will add single IP but NOT IP range
    * To add forbidden IP range, quit to system-view
    * Use `dhcp server forbidden-ip LOW-IP HIGH-IP`
@@ -242,7 +251,7 @@ reboot
    forbidden-ip 192.168.1.4 192.168.1.5
    ```
 
-7. Add forbidden IP range(optional)
+8. Add forbidden IP range(optional)
    * quit to system-view first
 
      ```
@@ -254,15 +263,6 @@ reboot
      ```
      dhcp server forbidden-ip 192.168.1.2 192.168.1.50
      ```
-
-8. Set the DHCP Expiration Time(Lease Time)
-
-   * The DHCP Expiration Time is Set to 1 Day by Default
-   * e.g. Change it to 12 Hour
-   
-   ```
-   expired day 0 hour 12
-   ```
 
 9. Check DHCP Free IPs
 
