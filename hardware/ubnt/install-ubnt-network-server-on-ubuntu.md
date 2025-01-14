@@ -43,27 +43,5 @@ sudo ufw allow 8080
 * Click "Skip" on "Create a UI Account" page
 * Create a local admin account
 
-## Use New Server to Replace Old One(Optional)
-* Go to old server(controller) > Select AP > Settings > Remove
-* It will do a factory reset
-  * default user: `ubnt`
-  * default password: `ubnt`
-* Record the IP of removed AP
-* Login the removed AP via SSH
-  ```
-  ssh ubnt@10.0.2.x
-  ```
-
-* Run `set-inform` on AP
-
-  ```
-  set-inform http://IP_of_new_server:8080/inform
-  ```
-
-* Adopt the AP in New Server
-  * Visit `https://IP_of_new_server:8443`
-  * It'll show the APs to adopt
-  * Click "Adopt"
-
 ## References
 * [Install UniFi Controller (Network Application) on Ubuntu 20.04](https://computingforgeeks.com/install-unifi-controller-network-application-on-ubuntu/)
