@@ -1,7 +1,7 @@
 # Amber LED Blinks 2 Times and White LED Blinks 3 Times Means No RAM Installed
 
 ## Problem
-* Dell T3450 failed to boot
+* Dell T3440 failed to boot
 * Amber LED blinks 2 times and white LED blinks 3 times
 
 ## Root Cause
