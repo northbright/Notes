@@ -9,6 +9,6 @@
 ## Solution
 * Unplug the power cable
 * Keep Pressing the power button for 30 seconds to drain the power left
-* Press the YELLOW button on the mainboard
+* Press the YELLOW button on the mainboard to clear the BIOS
 * Plug the power cable and press power button again
 * If it still fail to boot, try to wait 5 minutes to see if the CPU fan works
