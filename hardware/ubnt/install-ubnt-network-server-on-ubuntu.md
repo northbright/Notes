@@ -1,5 +1,8 @@
 # Install UBNT Network Server on Ubuntu 
 
+## Install MongoDB
+* [Install MongoDB Community Edition on Ubuntu](https://github.com/northbright/Notes/blob/master/mongodb/install-mongodb-community-edition-on-ubuntu.md)
+
 ## Download .deb File
 * Goto <https://www.ui.com/download> and download latest Linux release
 
@@ -9,7 +12,20 @@
   wget https://dl.ui.com/unifi/9.0.108/unifi_sysvinit_all.deb
   ``` 
 
-## Install
+## Check if port `8080` and `8443` are used by other apps
+Port `8080` and `8443` are used by Unifi service.
+Check if they are used by other apps.
+
+## Configure Firewall(Optional)
+
+```
+// Allow ports used by Unifi Network Server
+sudo ufw allow 8443
+sudo ufw allow 8080
+```
+
+## Install Unifi Network Server
+
 ```
 sudo apt install ./unifi_sysvinit_all.deb
 ```
@@ -26,14 +42,6 @@ sudo systemctl start unifi
 sudo systemctl status unifi
 ```
 
-## Configure Firewall(Optional)
-
-```
-// Allow ports used by Unifi Network Server
-sudo ufw allow 8443
-sudo ufw allow 8080
-```
-
 ## Visit Unifi Network Server
 * Visit `https://IP_of_Server:8443`
 
@@ -48,3 +56,4 @@ sudo ufw allow 8080
 
 ## References
 * [Install UniFi Controller (Network Application) on Ubuntu 20.04](https://computingforgeeks.com/install-unifi-controller-network-application-on-ubuntu/)
+* [Updating and Installing Self-Hosted UniFi Network Servers (Linux)](https://help.ui.com/hc/en-us/articles/220066768-Updating-and-Installing-Self-Hosted-UniFi-Network-Servers-Linux)
