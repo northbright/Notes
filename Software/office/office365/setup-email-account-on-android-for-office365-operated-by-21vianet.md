@@ -31,6 +31,7 @@
 * 解决方法
   * 方法 A: 在 Android 上安装微软 Outlook App，然后设置账户
   * 方法 B: [在iOS上设置由世纪互联运营的Office 365帐号](https://github.com/northbright/Notes/blob/master/Software/office/office365/setup-email-account-on-ios-for-office365-operated-by-21vianet/setup-email-account-on-ios-for-office365-operated-by-21vianet.md)
+* 查看 [Native Mail App on iOS or Android Does Not Work since May 2023 Due to Office 365 Operated by 21vianet Disable Exchange Basic Auth](https://github.com/northbright/Notes/blob/master/Software/office/office365/native-mail-app-on-ios-or-android-does-not-work-since-may-2023-due-to-office365-operated-by-21vianet-disable-exchange-basic-auth.md) 获取更多信息
 
 ## 步骤（已经废弃）
 * ~~进入 "设置" -> "帐号" -> "添加帐号"~~
