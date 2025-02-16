@@ -1,7 +1,7 @@
-# Reboot Mi TV to Fix the Issue that Air Mirroring is Stuck
+# Reboot Mi TV to Fix the Issue that Screen Mirroring is Stuck
 
 ## Problem
-* Air mirror iPhone to Mi TV
+* Mirror screen from iPhone to Mi TV
 * Connected successfully
 * Screen on Mi TV is stuck
 
