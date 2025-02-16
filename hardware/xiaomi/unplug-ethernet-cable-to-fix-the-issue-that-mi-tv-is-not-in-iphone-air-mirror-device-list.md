@@ -1,8 +1,8 @@
-# Unplug Ethernet Cable to Fix the Issue that Mi TV is Not in iPhone's Airplay Device List
+# Unplug Ethernet Cable to Fix the Issue that Mi TV is Not in iPhone's Air Mirror Device List
 
 ## Problem
 * Mi TV uses ethernet cable to connect local network 
-* Mi TV is not in iPhone's Airplay device list
+* Mi TV is not in iPhone's Air Mirror device list
 
 ## Root Cause
 * Ehternet connection may be slow
