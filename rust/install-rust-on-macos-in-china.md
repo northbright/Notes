@@ -11,10 +11,10 @@
 ## Solution
 Set mirrors of Rust resources.
 
-* Modify `.zshrc`
+* Modify `~/.zprofile`
 
   ```shell
-  vi ~/.zshrc
+  vi ~/.zprofile
   ```
 
 * Add mirrors for Rust
@@ -26,7 +26,7 @@ Set mirrors of Rust resources.
   ```
 
   ```shell
-  source ~/.zshrc
+  source ~/.zprofile
   ```
 
 * Run install script
