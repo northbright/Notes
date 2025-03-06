@@ -29,9 +29,25 @@ It'll generate the lib: `target/release/librejson.dylib`
 
 ## Run `redis-server` with `librejson.dylib` Module Loaded
 
-```shell
-redis-server PATH/to/redis.conf --loadmodule PATH/to/librejson.dylib &
-```
+* Method A
+
+  Run `redis-server` with `--loadmodule` option.
+
+  ```shell
+  redis-server /path/to/redis.conf --loadmodule /path/to/librejson.dylib &
+  ```
+
+* Method B
+
+  Set `loadmodule` for `librejson.dylib` in `redis.conf`
+
+  ```shell
+  vi /path/to/redis.conf
+  ```
+
+  ```shell
+  loadmodule /path/to/librejson.dylib
+  ```
 
 ## Run `redis-cli` to Test
 
