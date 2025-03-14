@@ -7,7 +7,7 @@
 * [Install Rust on macOS in China](https://github.com/northbright/Notes/blob/master/rust/install-rust-on-macos-in-china.md)
 
 ## Download RedisJSON Source
-To make `git clone` faster in China, it's better to use "git" protocol instead "https" to run `git clone`.
+To make `git clone` faster in China, it's better to use SSH protocol instead "https" to run `git clone`.
 
 * Fork [RedisJSON](https://github.com/RedisJSON/RedisJSON)
 
@@ -68,3 +68,4 @@ ReJSON
 
 ## References
 * [RedisJSON](https://github.com/RedisJSON/RedisJSON)
+* [Git on the Server - The Protocols](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols)
