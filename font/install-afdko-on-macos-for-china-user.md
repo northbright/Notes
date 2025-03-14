@@ -13,12 +13,29 @@
 
 * Install [afdko](https://github.com/adobe-type-tools/afdko/)
 
-  ```shell
-  cd ~/download
+  * Use virtual environment to install adfko
 
-  python -m venv afdko_env
-  source afdko_env/bin/activate
-  python -m pip install afdko
-  ```
+    ```shell
+    cd ~/download
 
-  It'll generates binaries(e.g. `makeotf`) under `afdko_env/bin`.
+    python -m venv afdko_env
+    source afdko_env/bin/activate
+    python -m pip install afdko
+    ```
+
+    It'll generates binaries(e.g. `makeotf`) under `afdko_env/bin`.
+
+  * Export afdko binary path
+
+    ```shell
+    vi ~/.zprofile
+    ```
+
+    ```shell
+    # afdko
+    export PATH=$PATH:/path/to/afdko_env/bin
+    ```
+
+    ```shell
+    source ~/.zprofile
+    ```
