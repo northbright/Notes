@@ -22,7 +22,7 @@ Set mirrors of Rust resources.
   ```shell
   # Rust
   export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
-  export export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static  
+  export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static  
   ```
 
   ```shell
