@@ -18,9 +18,9 @@
     ```shell
     cd ~/download
 
-    python -m venv afdko_env
+    python3 -m venv afdko_env
     source afdko_env/bin/activate
-    python -m pip install afdko
+    python3 -m pip install afdko
     ```
 
     It'll generates binaries(e.g. `makeotf`) under `afdko_env/bin`.
