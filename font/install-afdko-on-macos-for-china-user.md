@@ -57,4 +57,5 @@
   ```
 
 ## References
+* [afdko](https://github.com/adobe-type-tools/afdko/)
 * <https://adobe-type-tools.github.io/afdko/>
