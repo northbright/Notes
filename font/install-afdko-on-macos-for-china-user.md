@@ -55,3 +55,6 @@
   // Output:
   /usr/local/afdko/bin/makeotf
   ```
+
+## References
+* <https://adobe-type-tools.github.io/afdko/>
