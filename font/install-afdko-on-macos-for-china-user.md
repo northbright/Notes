@@ -25,6 +25,13 @@
 
     It'll generates binaries(e.g. `makeotf`) under `afdko_env/bin`.
 
+  * Copy binaries to `/usr/local/afdko/bin`
+
+    ```shell
+    sudo mkdir -p /usr/local/afdko
+    sudo cp -rf afdko_env/bin /usr/local/afdko
+    ```
+
   * Export afdko binary path
 
     ```shell
@@ -33,9 +40,18 @@
 
     ```shell
     # afdko
-    export PATH=$PATH:/path/to/afdko_env/bin
+    export PATH=$PATH:/usr/local/afdko/bin
     ```
 
     ```shell
     source ~/.zprofile
     ```
+
+* Test
+
+  ```shell
+  which makeotf
+
+  // Output:
+  /usr/local/afdko/bin/makeotf
+  ```
