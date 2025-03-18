@@ -139,3 +139,6 @@ It'll output `test.pdf`
 * [What's the Difference Between TrueType and OpenType Fonts?](https://www.high-logic.com/font-editor/fontcreator/tutorials/the-difference-between-truetype-and-opentype-fonts)
 * [如何打包或解包 TrueType Collection (TTC) 文件？](https://www.zhihu.com/question/24071424)
 * [Adding page breaks in the doc definition #25](https://github.com/bpampuch/pdfmake/issues/25)
+* [Build Source Han Serif Font from Source on macOS for China User](https://github.com/northbright/Notes/blob/master/font/build-source-han-serif-font-from-source-on-macos-for-china-user.md)
+* [Build Source Han Sans Font from Source on macOS for China User](https://github.com/northbright/Notes/blob/master/font/build-source-han-sans-font-from-source-on-macos-for-china-user.md)
+* [Use otf2otc to Build ttc from Mutiple otfs](https://github.com/northbright/Notes/blob/master/font/use-otf2otc-to-build-ttc-from-mutiple-otfs.md)
