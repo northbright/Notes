@@ -29,7 +29,7 @@ Build Source Han Serif font from source.
   source ~/download/afdko_env/bin/activate
   ```
 
-* Build language-specific OTFs
+* Build language-specific OTFs and OpenType Collection(.ttc)
 
   Follow [COMMANDS.txt](https://github.com/adobe-fonts/source-han-serif/blob/master/COMMANDS.txt)
  to run build command in the specific **WEIGHT**/OTC dir
@@ -74,6 +74,8 @@ Build Source Han Serif font from source.
  
     It'll generate a "SourceHanSerifSC.ttc" under `~/download/source-han-serif/Masters`.
 
+    The font names are `SourceHanSerifSC-Regular` and `SourceHanSerifSC-Bold`.
+
 * Build all variable fonts(VF OTF)(optional)
 
   * Run build scripts
@@ -96,3 +98,4 @@ Build Source Han Serif font from source.
 ## References
 * [Source Han Serif 思源宋体](https://source.typekit.com/source-han-sans/cn/)
 * [Source Han Serif](https://github.com/adobe-fonts/source-han-serif)
+* [Get Font Name in CIDFont File](https://github.com/northbright/Notes/blob/master/font/get-font-name-in-cidfont-file.md)
