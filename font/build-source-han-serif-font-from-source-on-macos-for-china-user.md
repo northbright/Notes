@@ -5,7 +5,7 @@
 * It'll encounter problem when download Github release in China
   * Very slow download speed
   * Network connection may be reset
-* You don't want to use Github proxy / mirrors or tools to accelarate the Github download
+* Don't want to use Github proxy / mirrors or tools to accelarate the Github download
 
 ## Solution
 Build Source Han Serif font from source.
