@@ -20,26 +20,38 @@ Use Pull Request to make a bug fix for someone else's project.
 
         git clone git@github.com:YOUR_NAME/FORK_REPO.git
 
-4. Add **"upstream"** remote to make it possible to keep your fork repo synced
+4. Sync fork before making any bug fix
 
-        git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
-        // check remote
-        git remote -v
+  * Method A - from Web UI
 
-5. Keep your fork repo **synced** before make any bug fix
+    Click "Sync fork" button
 
-         // fetch upstream
-         git fetch upstream
+  * Method B - from the command line
 
-         // switch to local master branch
-         git checkout master
-         
-         // merge
-         git merge upstream/master
+    * Add **"upstream"** remote to make it possible to keep your fork repo synced
 
-6. Make the bug fix
+      ```shell
+      git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+      // check remote
+      git remote -v
+      ```
 
-7. Make sure add `#ISSUE_ID`in your commit message when `git commit`
+    * Fetch new commits from upstream and merge
+
+      ```shell
+      // fetch upstream
+      git fetch upstream
+
+      // switch to local master branch
+      git checkout master
+
+      // merge
+      git merge upstream/master
+      ```
+
+5. Make the bug fix
+
+6. Make sure add `#ISSUE_ID`in your commit message when `git commit`
 
    Add `#ISSUE_ID` into the commit message that will auto generate a reference to the open issue created when you push to your fork repo. See [Notifications, @mentions, and references](https://guides.github.com/features/issues/#notifications) for more information.
 
@@ -49,19 +61,19 @@ Use Pull Request to make a bug fix for someone else's project.
         // will make Github link issue to this comment automatically.
         Fix #305 Add missing comma in comment 
 
-8. Push commit to remote fork repo
+7. Push commit to remote fork repo
 
         git push origin HEAD:master
   
-9.  Create `Pull Request`
+8.  Create `Pull Request`
      * Go to your fork repo, click `New Pull Request`
      * Input your open issue id and description
 
-10. Wait author to merge the pull request if he likes it.
+9. Wait author to merge the pull request if he likes it.
 
 #### References
 * [Fork A Repo](https://help.github.com/articles/fork-a-repo/)
 * [working-with-forks](https://help.github.com/articles/working-with-forks/)
 * [Mastering Issues](https://guides.github.com/features/issues/)
 * [Github上git commit 提交注释的规范](https://segmentfault.com/q/1010000000395039)
-
+* [Syncing a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork)
