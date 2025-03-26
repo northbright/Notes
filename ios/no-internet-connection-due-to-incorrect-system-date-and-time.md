@@ -12,4 +12,6 @@
 * It reports that system date and time are incorrect(`1969/12/31`)
 
 ## Solution
-Set correct system date and time and try again.
+Set correct system date and time.
+
+Go to Settings > General > Date and Time > Turn "Set Automatically" on
