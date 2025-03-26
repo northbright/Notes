@@ -10,6 +10,9 @@
 ## Solution
 Build Source Han Serif font from source.
 
+* Accelerate Github Access on macOS
+  * [Accelerate Access to Github on macOS by Updating etc/hosts for China User](https://github.com/northbright/Notes/blob/master/github/accelerate-access-to-github-on-macos-by-updating-etc-hosts-for-china-user.md)
+
 * Install Python on macOS
   * [Install Python 3 on macOS](https://github.com/northbright/Notes/blob/master/python/install-python3-on-macos.md)
 
