@@ -1,4 +1,4 @@
-# Xiaomi Box and TV Remote Control Repairing
+# Xiaomi TV Remote Control Repairing
 
 ## Solution
 * Keep pressing the power button(on the bottom of Mi TV) until 5 icons(menu) are displayed
@@ -8,7 +8,7 @@
 
 -------------------------------------
 
-# 小米盒子（电视）遥控器重新配对
+# 小米电视遥控器重新配对
 
 ## 方法
 * 长按小米电视机底部的电源键直到出现 5 个图标（菜单）
