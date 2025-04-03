@@ -30,7 +30,7 @@ function genList(tasks) {
     let taskContent = {
       stack: [
         { text: task.name, bold: true, marginTop: 5 },
-	{ text: task.desc, marginBotton: 2 }
+        { text: task.desc, marginBotton: 2 }
       ]
     }
 
