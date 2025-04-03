@@ -85,3 +85,4 @@ pdfDoc.end();
 * <https://github.com/bpampuch/pdfmake/tree/0.1/examples>
 * [STACK OF PARAGRAPHS](https://pdfmake.github.io/docs/0.1/document-definition-object/stack/)
 * [Generating Complex PDF files with Node.js and PDFMake](https://www.appgambit.com/blog/nodejs-with-pdfmake)
+* [List Item Can Be Stack in pdfmake](https://github.com/northbright/Notes/blob/master/front-end-web-dev/pdfmake/list-item-can-be-stack-in-pdfmake.md)
