@@ -198,7 +198,7 @@ Tomas(Team B)
 #### Add Audio Track
 
 ```bash
-ffmpeg -i output.mp4 -i bgm.m4a -shortest -c:v copy -map 0:v:0 -map 1:a:0 output-with-bgm.mp4
+ffmpeg -i output-subtitled.mp4 -i bgm.m4a -shortest -c:v copy -map 0:v:0 -map 1:a:0 output-subtitled-bgm.mp4
 ```
 
 * The `-shortest` option: cut the audio if it's longer than the video.
@@ -208,7 +208,7 @@ ffmpeg -i output.mp4 -i bgm.m4a -shortest -c:v copy -map 0:v:0 -map 1:a:0 output
 #### Fade Out the Audio
 
 ```bash
-ffmpeg -i output-with-bgm.mp4 -c:v copy -af "afade=t=out:st=86:d=5" output-with-bgm-fade-out.mp4
+ffmpeg -i output-subtitled-bgm.mp4 -c:v copy -af "afade=t=out:st=86:d=5" output-subtitled-bgm-fade-out.mp4
 ```
 
 * `-af "afade=t=out:st=86:d=5"`
