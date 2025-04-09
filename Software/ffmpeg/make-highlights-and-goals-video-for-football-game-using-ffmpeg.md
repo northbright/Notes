@@ -108,6 +108,9 @@ To avoid "Non-monotonous DTS in output stream" errors, we need to convert all vi
 
 ```bash
 ffmpeg -i 01.mp4 -q 0 01.mts
+
+ffmpeg -i opening-fade-out.mp4 -q 0 opening-fade-out.mts
+ffmpeg -i ending-fade-out.mp4 -q 0 ending-fade-out.mts
 ```
 
 * The `-q 0` specifies the output file's quality. 0 is the hightest quality.
