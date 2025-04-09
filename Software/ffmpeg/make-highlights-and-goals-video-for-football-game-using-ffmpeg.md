@@ -214,6 +214,12 @@ ffmpeg -i output-subtitled-bgm.mp4 -c:v copy -af "afade=t=out:st=86:d=5" output-
 * `-af "afade=t=out:st=86:d=5"`
   The audio starts to fade out at 86th seconds and the duration is 5 seconds.
 
+#### Make File Size Small to Share it to WeChat
+
+```bash
+ffmpeg -i output-subtitled-bgm-fade-out.mp4 -vf scale=854x480:flags=lanczos -c:v h264 -b:v 800k -c:a copy output-subtitled-bgm-fade-out-480p.mp4
+```
+
 ## References
 * [ffmpeg 给视频添加字幕，在视频的某个时间段加入声音特效和动画](https://blog.csdn.net/qq_39962403/article/details/114897352)
 * [Cutting Videos Based on Start and End Time using FFmpeg](https://www.baeldung.com/linux/ffmpeg-cutting-videos)
