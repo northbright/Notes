@@ -188,7 +188,7 @@ Tomas(Team B)
   -c:v libx264 -c:a aac -b 128k -preset slow -crf 18 \
   -filter_complex \
   "subtitles=sub.srt:force_style='Fontsize=18'" \
-  output.mp4
+  output-subtitled.mp4
   ```
 
   It encodes the video only once to concat all videos and rending subtitles for the output video.
