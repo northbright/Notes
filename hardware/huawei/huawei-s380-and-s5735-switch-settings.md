@@ -51,7 +51,14 @@
 
 #### Internet Access Configuration
 * Internet Access Configuration > Broadband Internet Access
+* Select Internet access port(e.g. `GE0/0/10`
 * Interface Configuration: select access mode(e.g. PPPoE)
+  
+  You may choose DHCP firstly if you have not get PPPoE account.
+  Switch access mode to PPPoE when you get the account.
+
+* Click "Deliver Configuration"
+* Click "Run to Dashboard"
 
 #### VLAN Configuration
 Create a VLAN: LAN  > VLAN > Create > Check "Create a VLANIF interface" 
