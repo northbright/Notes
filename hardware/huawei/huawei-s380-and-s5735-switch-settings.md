@@ -46,7 +46,8 @@
 ## S380 Settings
 #### Web Portal
 * Default manage IP(VlanIf1): `192.168.112.1`(web portal: `https://192.168.112.1`)
-* Register admin account
+* Register admin account and login
+* Select "Local Management" > next
 
 #### Internet Access Configuration
 * Internet Access Configuration > Broadband Internet Access
