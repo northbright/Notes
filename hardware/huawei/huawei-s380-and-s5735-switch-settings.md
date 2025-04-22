@@ -78,10 +78,13 @@ Huawei upgrades the software frequently and many new features require new versio
 * Click "Upload" button > select downloaded software(e.g. `S380_V600R024C10SPC100.cc`)
 * Select the latest software for next startup > OK > Save and Restart
 
-#### VLAN Configuration
-Create a VLAN: LAN  > VLAN > Create > Check "Create a VLANIF interface" 
+#### Set Parameter for S380
+Top menu > Configuration > Device List > go to the S380 record > Operation > Set Parameter
 
-* VLAN 1(AC and AP management VLAN)
+#### VLAN Configuration
+Create a VLAN: LAN  > VLAN > Create > Input VLAN ID and Check "Create a VLANIF interface"
+
+* Edit VLAN 1(AC and AP management VLAN)
   * IP: `192.168.112.1` / `255.255.255.0`
   * DHCP server > enable
   * Reserved IPs
@@ -115,7 +118,7 @@ Create a VLAN: LAN  > VLAN > Create > Check "Create a VLANIF interface"
 #### Static Route
 VLAN 3, 6, 10, 20, 30's next hop is `10.0.100.1`(VlanIf100 on core switch).
 
-Create a staic route: LAN > Static Route > Create
+Create a staic route: LAN > Route > Static Routing Tab > Create
 
 * VLAN 3
   * Destination IP address: `10.0.3.0`
@@ -176,6 +179,8 @@ LAN > LAN Interface > Select LAN 1 > Phyical Interface Configuration
   
   * Set Security Authentication and go next.
   * Select AP group(`default`) and radio to apply(`5G`, `5GHz/6GHz`)
+  * SSID-based rate limiting for uplink / downlink
+    * Unlimited(default) or User-defined(e.g. `8Mbit/s` for downlink and `2Mbit/s` for uplink)
 
 #### Rate Limit Based on IP(VLAN)
 Set rate limit for VLAN 30(guest) for downloading and uploading.
@@ -410,7 +415,6 @@ quit
 
 #### LAN Interface to Connect to Samba Server(Dual Ethernet Interfaces)
 * GigabitEthernet0/0/22: connect to enp1s0f0 of samba server(VLAN 10)
-务器。
 
 ```
 interface GigabitEthernet0/0/22
