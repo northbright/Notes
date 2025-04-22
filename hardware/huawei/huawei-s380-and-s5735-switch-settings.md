@@ -60,6 +60,24 @@
 * Click "Deliver Configuration"
 * Click "Run to Dashboard"
 
+#### Software Upgrade
+Huawei upgrades the software frequently and many new features require new version of software.
+
+* Download latest software and patch
+  * Visit <https://support.huawei.com/enterprise> and login Huawei account
+  * Input "S380" and search > select "Software" category
+  * Click latest software(e.g. "S100&S200&S300&S500&S600 V600R024C10SPC100")
+  * Check sofware and patches and click download
+  * You may asked to register the product("s380") before download
+  * Input S380 for the product name and the S/N to register the product
+  * Now we can download the software and patches
+
+* Click top menu > Configuration > Device List
+* Go to S380-S8P2T record > operation > Set Parameter
+* Select System Management Tab > Software Upgrade > Local Upgrade > Click "Local Upgrade"
+* Click "Upload" button > select downloaded software(e.g. `S380_V600R024C10SPC100.cc`)
+* Select the latest software for next startup > OK > Save and Restart
+
 #### VLAN Configuration
 Create a VLAN: LAN  > VLAN > Create > Check "Create a VLANIF interface" 
 
