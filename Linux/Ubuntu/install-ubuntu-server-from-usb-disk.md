@@ -51,7 +51,7 @@ sudo apt install vim
 * Modify `/etc/ssh/sshd_config`.
 
   ```bash
-  vi /etc/ssh/sshd_config
+  sudo vi /etc/ssh/sshd_config
   ```
 
   ```
