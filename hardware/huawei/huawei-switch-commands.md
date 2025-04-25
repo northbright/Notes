@@ -170,6 +170,8 @@ display factory-configuration reset-result
 
   Alert orignal policy is enabled by default. It'll force new created user to change initial password for the first login via SSH(默认开启，会强制新创建的 SSH 用户第一次登陆时修改原始密码).
 
+  Reference: [S5731登录提示修改密码，不修改无法登陆](https://support.huawei.com/enterprise/zh/knowledge/EKB1100060188)
+
 ```
 aaa
 local-aaa-user password policy administrator
