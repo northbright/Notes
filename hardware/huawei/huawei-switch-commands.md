@@ -149,3 +149,107 @@ reset factory-configuration
 // Check latest factory recovery result in user-view.
 display factory-configuration reset-result
 ```
+
+## Enable Login via SSH
+* Enter system-view
+
+  ```
+  system-view
+  ```
+
+* Create RSA key pair
+
+  ```
+  rsa local-key-pair create
+  ```
+
+  * Input `y` to replace already defined RSA key
+  * Input public key size(default: 2048)
+
+* Disable alert original in policy administrator(进入 AAA 本地管理员的密码策略，关闭原始密码报警)
+
+  Alert orignal policy is enabled by default. It'll force new created user to change initial password for the first login via SSH(默认开启，会强制新创建的 SSH 用户第一次登陆时修改原始密码).
+
+```
+aaa
+local-aaa-user password policy administrator
+undo password alert original
+quit
+```
+
+* Create local user
+
+```
+aaa
+
+// Create 'admin' user with 'YOUR_PASSWORD'
+local-user admin password cipher YOUR_PASSWORD
+
+// Set service type to SSH
+local-user admin service-type ssh
+
+// Set privilege level
+local-user admin privilege level 15
+
+quit
+```
+
+* Set SSH user authentication and service type
+
+```
+ssh user admin authentication-type password
+ssh user admin service-type stelnet
+```
+
+* Start SSH server
+
+```
+stelnet server enable
+```
+
+* Configure VTY
+
+```
+user-interface vty 0 4
+authentication-mode aaa
+protocol inbound ssh
+quit
+```
+
+* Enable Login via SSH from Vlan interfaces
+
+```
+// Enable all interfaces.
+ssh server-source all-interface
+```
+
+```
+// Enable Vlanif10
+ssh server-source -i Vlanif 10
+```
+
+* Save
+```
+quit
+save
+```
+
+* Login via SSH
+
+```
+// User: admin, Vlanif10: 10.0.10.1
+ssh admin@10.0.10.1
+```
+
+## Change user password
+
+```
+aaa
+
+// It requires to use irreversible-cipher instead of cipher to change administrator's password since V200R007
+local-user admin password irreversible-cipher NEW_PASSWORD
+```
+
+* References
+  * [S12700修改管理员账号密码时报错](https://support.huawei.com/enterprise/zh/knowledge/EKB1000478063)
+  * [华为交换机-修改密码时报错](https://www.cnblogs.com/subsea/p/15489517.html)
