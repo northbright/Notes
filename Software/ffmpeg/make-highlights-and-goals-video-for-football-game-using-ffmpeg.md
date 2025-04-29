@@ -221,7 +221,7 @@ Tomas(Team B)
 ffmpeg -i output-subtitled.mp4 -i bgm.m4a -shortest -c:v copy -map 0:v:0 -map 1:a:0 output-subtitled-bgm.mp4
 ```
 
-* Method B: Mix BGM and original audio track
+* Method B: Mix BGM and audio stream of original video
 ```bash
 ffmpeg -i output-subtitled.mp4 -i bgm.m4a -c:v copy \
 -filter_complex \
