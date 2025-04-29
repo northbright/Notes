@@ -14,3 +14,4 @@
 * Reference:  
   <http://superuser.com/questions/607383/concat-two-mp4-files-with-ffmpeg-without-losing-quality>
 * [ffmpeg concat: “Unsafe file name”](https://stackoverflow.com/questions/38996925/ffmpeg-concat-unsafe-file-name)
+* [Concatenating media files](https://trac.ffmpeg.org/wiki/Concatenate)
