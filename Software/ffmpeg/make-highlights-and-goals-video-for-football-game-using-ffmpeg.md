@@ -32,17 +32,25 @@ Highlights and Goals
 
 ```bash
 ffmpeg -framerate 1/3 -i opening.JPG \
+-f lavfi -i "aevalsrc=0" \
 -filter_complex \
 "scale=1280:720:force_original_aspect_ratio=decrease, \
 pad=1280:720:(ow-iw)/2:(oh-ih)/2, \
-subtitles=opening.srt:force_style='Fontsize=18'", \
--pix_fmt yuv420p -r 30 opening.mp4
+subtitles=opening.srt:force_style='Fontsize=18'" \
+-pix_fmt yuv420p -r 30 \
+-map 0:v -map 1:a -shortest \
+opening.mp4
 ```
 
 * `-framerate`
 
   The duration of one image, in this case it’s 3 seconds.
 
+* `-f lavfi -i "aevalsrc=0"`
+
+  Add a silence audio stream.
+  FFmpeg won't initialize audio encoder if first input has no audio stream.
+  
 * `-fliter_complex`
 
   ```
@@ -62,6 +70,14 @@ subtitles=opening.srt:force_style='Fontsize=18'", \
 * `-r 30`
 
   The frame rate of the output video. Default is 25.
+
+* `-map 0:v -map 1:a`
+
+  Use the first input's video stream and the second input's audio stream in the ouput.
+
+* `-shortest`
+
+  Ensure that the output file stops when the shortest input stream ends.
 
 #### Add Fade Out Effect
 ```bash
@@ -89,11 +105,14 @@ vi ending.srt
 
 ```bash
 ffmpeg -framerate 1/5 -i ending.JPG \
+-f lavfi -i "aevalsrc=0" \
 -filter_complex \
 "scale=1280:720:force_original_aspect_ratio=decrease, \
 pad=1280:720:(ow-iw)/2:(oh-ih)/2, \
 subtitles=ending.srt:force_style='Fontsize=18'" \
--pix_fmt yuv420p -r 30 ending.mp4
+-pix_fmt yuv420p -r 30 \
+-map 0:v -map 1:a -shortest \
+ending.mp4
 ```
 
 #### Add Fade In and Out Effect
@@ -197,13 +216,19 @@ Tomas(Team B)
 
 #### Add Audio Track
 
+* Method A: Use BGM as audio track only
 ```bash
 ffmpeg -i output-subtitled.mp4 -i bgm.m4a -shortest -c:v copy -map 0:v:0 -map 1:a:0 output-subtitled-bgm.mp4
 ```
 
-* The `-shortest` option: cut the audio if it's longer than the video.
-* The `-map 0:v:0` option: map the video stream of output.mp4(which index is 0) to the output video stream
-* The `-map 1:a:0` option: map the audio stream of bgm.m4a(which index is 1) to the output audio stream
+* Method B: Mix BGM and original audio track
+```bash
+ffmpeg -i output-subtitled.mp4 -i bgm.m4a -c:v copy \
+-filter_complex \
+"[0:a:0][1:a:0]amerge=inputs=2,pan=stereo|c0<c0+c2|c1<c1+c3[a]" \
+-map 0:v -map "[a]" -c:v copy -shortest \
+output-subtitled-bgm.mp4
+```
 
 #### Fade Out the Audio
 
@@ -227,3 +252,4 @@ ffmpeg -i output-subtitled-bgm-fade-out.mp4 -vf scale=854x480:flags=lanczos -c:v
 * [What is -crf used for in FFmpeg?](https://superuser.com/questions/677576/what-is-crf-used-for-in-ffmpeg)
 * [Trim video and concatenate using ffmpeg - getting "Non-monotonous DTS in output stream" errors](https://superuser.com/questions/1150276/trim-video-and-concatenate-using-ffmpeg-getting-non-monotonous-dts-in-output)
 * [Scaling](https://trac.ffmpeg.org/wiki/Scaling)
+* [Manipulating audio channels](https://trac.ffmpeg.org/wiki/AudioChannelManipulation)
