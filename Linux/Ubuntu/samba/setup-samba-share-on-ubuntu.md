@@ -161,14 +161,13 @@ The samba / system users will be created: `ppt`, `my`, `admin`.
 
   * Create system user: `ppt`
 
-    ```
-    sudo adduser --home /data/samba/ppt \
+    ```bash
+    sudo adduser --disabled-password --gecos "" \
+    --home /data/samba/ppt \
     --no-create-home \
     --shell /usr/sbin/nologin \
     --ingroup sambashare ppt
     ```
-
-    Input password and press `y` to create the user.
 
 * Set Ownership and Permissions of `ppt`'s Home
 
