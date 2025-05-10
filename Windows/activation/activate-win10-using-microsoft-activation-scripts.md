@@ -12,3 +12,5 @@
 ## References
 * [Microsoft Activation Scripts (MAS)](https://github.com/massgravel/Microsoft-Activation-Scripts)
 * <https://massgrave.dev/>
+* [Error when using new Activation Code irm https://get.activated.win | iex #507](https://github.com/massgravel/Microsoft-Activation-Scripts/issues/507)
+* [irm : Unable to resolve remote name #498](https://github.com/massgravel/Microsoft-Activation-Scripts/issues/498)
