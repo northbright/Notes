@@ -1,5 +1,9 @@
 # Setup Samba Share on Ubuntu
 
+## Update
+* Use bash script to setup Samba share on Ubuntu
+  * [samba.sh](https://github.com/northbright/samba.sh/)
+
 ## Configure Network(Optional)
 If the samba server has 2 or more network interfaces and need to be accessed from different subnets, we need to configure the network interfaces.
 
