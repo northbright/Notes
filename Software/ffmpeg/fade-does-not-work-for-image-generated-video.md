@@ -35,10 +35,10 @@ Use `-loop 1` and `-t` options.
 ffmpeg -framerate 30 -loop 1 -t 3 -i opening.png \
 -f lavfi -i "aevalsrc=0" \
 -filter_complex \
-"[0:v:0]scale=1280:720:force_original_aspect_ratio=decrease[v1],
-[v1]pad=1280:720:(ow-iw)/2:(oh-ih)/2[v2],
-[v2]subtitles=opening.srt:force_style='Fontsize=18'[v3],
-[v3]fade=t=out:st=2:d=1[outv]," \
+"scale=1280:720:force_original_aspect_ratio=decrease,
+pad=1280:720:(ow-iw)/2:(oh-ih)/2,
+subtitles=opening.srt:force_style='Fontsize=18',
+fade=t=out:st=2:d=1[outv]," \
 -pix_fmt yuv420p -r 30 \
 -map "[outv]" -map 1:a -shortest \
 ./opening.mp4

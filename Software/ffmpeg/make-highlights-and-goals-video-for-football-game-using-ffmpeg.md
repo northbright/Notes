@@ -31,20 +31,20 @@ Highlights and Goals
 #### Convert the Photo to a Video
 
 ```bash
-ffmpeg -framerate 1/3 -i opening.JPG \
+echo "y" | ffmpeg -framerate 30 -loop 1 -t 3 -i opening.png \
 -f lavfi -i "aevalsrc=0" \
 -filter_complex \
-"scale=1280:720:force_original_aspect_ratio=decrease, \
-pad=1280:720:(ow-iw)/2:(oh-ih)/2, \
-subtitles=opening.srt:force_style='Fontsize=18'" \
+"scale=1280:720:force_original_aspect_ratio=decrease,
+pad=1280:720:(ow-iw)/2:(oh-ih)/2,
+subtitles=opening.srt:force_style='Fontsize=18',
+fade=t=out:st=2:d=1[outv]," \
 -pix_fmt yuv420p -r 30 \
--map 0:v -map 1:a -shortest \
-opening.mp4
+-map "[outv]" -map 1:a -shortest \
+./opening.mp4
 ```
 
-* `-framerate`
-
-  The duration of one image, in this case it’s 3 seconds.
+* `-loop 1` and `-t 3`
+  Use one image to create a video which duration is 3 seconds.
 
 * `-f lavfi -i "aevalsrc=0"`
 
@@ -53,15 +53,17 @@ opening.mp4
   
 * `-fliter_complex`
 
+  ```bash
+  -filter_complex \
+  "scale=1280:720:force_original_aspect_ratio=decrease,
+  pad=1280:720:(ow-iw)/2:(oh-ih)/2,
+  subtitles=opening.srt:force_style='Fontsize=18',
+  fade=t=out:st=2:d=1[outv],"
   ```
-  -fliter_complex \
-  "scale=1280:720:force_original_aspect_ratio=decrease, \
-  pad=1280:720:(ow-iw)/2:(oh-ih)/2, \
-  subtitles=opening.srt:force_style='Fontsize=30"` 
-  ```
-
   * Resize the Photo to 1280x720 to Create the Video Frame
   * Embed the Subtitle File(`opening.srt`) and Set the Font Size to 30
+  * Apply fade out effect from 00:00:02 and duration is 1 second.
+  * The video output is labeled as [outv].
 
 * `-pix_fmt yuv 420p`
 
@@ -71,22 +73,13 @@ opening.mp4
 
   The frame rate of the output video. Default is 25.
 
-* `-map 0:v -map 1:a`
+* `-map "[outv]" -map 1:a`
 
-  Use the first input's video stream and the second input's audio stream in the ouput.
+  Select the labeled output video stream from filter and the second input's audio stream(silence).
 
 * `-shortest`
 
   Ensure that the output file stops when the shortest input stream ends.
-
-#### Add Fade Out Effect
-```bash
-ffmpeg -i opening.mp4 -vf "fade=t=out:st=2:d=1" opening-fade-out.mp4
-```
-
-* `"fade=t=out:st=2:d=1"`
-
-  The vides starts to fade out at the beginning of 3rd second(index=2) and the duration is 1 second.
 
 ## Make the Ending Video from a Photo
 
@@ -104,20 +97,16 @@ vi ending.srt
 #### Convert the Photo to a Video
 
 ```bash
-ffmpeg -framerate 1/5 -i ending.JPG \
+ffmpeg -framerate 30 -loop 1 -t 5 -i ending.JPG \
 -f lavfi -i "aevalsrc=0" \
 -filter_complex \
-"scale=1280:720:force_original_aspect_ratio=decrease, \
-pad=1280:720:(ow-iw)/2:(oh-ih)/2, \
-subtitles=ending.srt:force_style='Fontsize=18'" \
+"scale=1280:720:force_original_aspect_ratio=decrease,
+pad=1280:720:(ow-iw)/2:(oh-ih)/2,
+subtitles=opening.srt:force_style='Fontsize=18',
+fade=t=out:st=4:d=1[outv]," \
 -pix_fmt yuv420p -r 30 \
--map 0:v -map 1:a -shortest \
-ending.mp4
-```
-
-#### Add Fade In and Out Effect
-```bash
-ffmpeg -i ending.mp4 -vf "fade=t=in:st=0:d=1,fade=t=out:st=3:d=2" ending-fade-out.mp4
+-map "[outv]" -map 1:a -shortest \
+./ending.mp4
 ```
 
 ## Concat All Videos into One Video File
