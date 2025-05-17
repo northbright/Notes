@@ -54,9 +54,15 @@ In this case, `enp0s31f6` is the ethernet interface.
 
 * Save and Try to Apply New `netplan` Settings 
 
+  ```bash
+  sudo netplan try --timeout 5
   ```
-  sudo netplan try
-  ```
+
+  * Warning: `sudo netplan try` may fail If you run the command from a remote PC from SSH with IP changed
+
+    `netplan try` will revert changings within given timeout(default: 120 seconds) if no ENTER is pressed to confirm
+
+    Run `echo -ne "\n" | sudo netplan try --timeout 5` to simulating pressing ENTER in this case.
 
 ## References
 * [How to Configure Static IP Address on Ubuntu 20.04](https://www.rosehosting.com/blog/how-to-configure-static-ip-address-on-ubuntu-20-04/)
