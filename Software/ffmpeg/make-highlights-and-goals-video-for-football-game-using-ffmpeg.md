@@ -1,5 +1,59 @@
 # Make Highlights and Goals Video for Football Game using FFmpeg
 
+## Update(2025/05/17)
+Use one-line command to generate an highlights and goals video.
+
+* Opening image
+* Ending image
+* BGM
+* Record duration of each clip
+* Record top order of each clip
+* Create SRT subtitle file for each clip
+
+```bash
+echo "y" | ffmpeg \
+-i "./01-top2.MOV" \
+-i "./02-top1.MOV" \
+-i "./opening.png" \
+-i "./ending.JPG" \
+-i "./bgm.m4a" \
+-filter_complex \
+"[0:v]trim=start=08,
+setpts=PTS-STARTPTS,
+subtitles=01.srt:force_style='Fontsize=18'[00_v],
+[0:a]atrim=start=08,
+asetpts=PTS-STARTPTS[00_a],
+
+[1:v]trim=start=00,
+setpts=PTS-STARTPTS,
+subtitles=02.srt:force_style='Fontsize=18'[01_v],
+[1:a]atrim=start=00,
+asetpts=PTS-STARTPTS[01_a],
+
+[2]fps=30[v],
+[v]loop=loop=90:size=1,
+scale=1280:720:force_original_aspect_ratio=decrease,
+pad=1280:720:(ow-iw)/2:(oh-ih)/2,
+format=pix_fmts=yuv420p,
+subtitles=opening.srt:force_style='Fontsize=18',
+fade=t=out:st=2:d=1[opening_v],
+aevalsrc=0:d=3[opening_a],
+
+[3]fps=30[v],
+[v]loop=loop=150:size=1,
+scale=1280:720:force_original_aspect_ratio=decrease,
+pad=1280:720:(ow-iw)/2:(oh-ih)/2,
+format=pix_fmts=yuv420p,
+subtitles=ending.srt:force_style='Fontsize=18',
+fade=t=out:st=4:d=1[ending_v],
+aevalsrc=0:d=5[ending_a],
+
+[opening_v][opening_a][00_v][00_a][01_v][01_a][ending_v][ending_a]concat=4:v=1:a=1[outv][a],
+[4:a:0][a]amerge=inputs=2,pan=stereo|c0<c0+c2|c1<c1+c3[outa]," \
+-map "[outv]" -map "[outa]" -shortest \
+./output.MOV
+```
+
 ## Cut the Original Recorded Videos
 Some highlighs and goals videos are too long, need to cut.
 
