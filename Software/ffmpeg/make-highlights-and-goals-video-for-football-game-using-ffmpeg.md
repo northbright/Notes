@@ -51,7 +51,7 @@ aevalsrc=0:d=5[ending_a],
 [opening_v][opening_a][00_v][00_a][01_v][01_a][ending_v][ending_a]concat=4:v=1:a=1[outv][a],
 [4:a:0][a]amerge=inputs=2,pan=stereo|c0<c0+c2|c1<c1+c3[outa]," \
 -map "[outv]" -map "[outa]" -shortest \
-./output.MOV
+./output.mp4
 ```
 
 ## Cut the Original Recorded Videos
