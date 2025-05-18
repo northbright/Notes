@@ -51,6 +51,15 @@ var tmpl = `
 `
 ```
 
+* Output
+```bash
+go run main.go
+
+// Output:
+Hello, I'm Jacky, my teacher is Miss Su
+Hello, I'm Andy, my teacher is Miss Su
+```
+
 ## References
 * [golang模板语法简明教程](https://studygolang.com/articles/3071)
 * [golang template(数组循环、在循环内使用外部变量、索引从1开始)](https://blog.csdn.net/u010918487/article/details/113555891)
