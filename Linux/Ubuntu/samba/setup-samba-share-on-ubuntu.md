@@ -284,7 +284,7 @@ sudo systemctl restart smbd.service
 ```
 
 ## Change Samba User Password(optional)
-Use `sudo sambapasswd -U USER_NAME` command to reset password for user.
+Use `sudo smbpasswd -U USER_NAME` command to reset password for user.
 
 ```
 // e.g. Reset password for ppt.
