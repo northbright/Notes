@@ -2,6 +2,7 @@
 
 ## Update
 * Use bash script to setup Samba share on Ubuntu
+  * [static-ip.sh](https://github.com/northbright/static-ip.sh)
   * [samba.sh](https://github.com/northbright/samba.sh/)
 
 ## Configure Network(Optional)
