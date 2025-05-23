@@ -12,9 +12,9 @@
   ```
 
 ## Root Cause
-* `smbd.service` failed to get address, see `/var/log/samba/smb.log`:
+* `smbd.service` uses old address and new address does not take effect, see `/var/log/samba/smb.log`:
 
-   > can't find address for eno1
+   > added interface eno1 ip=xx(old one)
 
 ## Solution
 * Restart `smbd.service` after IP changed
