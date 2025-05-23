@@ -11,13 +11,14 @@
   smbclient //localhost/share --user XX
   ```
 
-## Root
-* `smbd.service` is NOT restarted after IP changed
+## Root Cause
+* `smbd.service` failed to get address, see `/var/log/samba/smb.log`:
+
+   > can't find address for eno1
 
 ## Solution
-* Restart `smbd.service` or reboot server after IP changed
+* Restart `smbd.service` after IP changed
 
   ```bash
   sudo systemctl restart smbd
   ```
-
