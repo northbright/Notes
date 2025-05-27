@@ -9,6 +9,11 @@ Use one-line command to generate an highlights and goals video.
 * Record duration of each clip
 * Record top order of each clip
 * Create SRT subtitle file for each clip
+* Specify duration of openging / ending video by using loop filter 
+  * set loop size=1(first frame)
+  * set fps
+  * set loop(loop times) for first frame = fps * duration
+  * e.g. `loop=loop=90:size=1`(fps=30, duration=3 seconds, loop=30 * 3=90)
 
 ```bash
 echo "y" | ffmpeg \
