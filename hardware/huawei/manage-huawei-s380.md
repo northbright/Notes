@@ -22,20 +22,6 @@ Select "Local Management".
 * Select "System Management" tab > "Software Upgrade" > "Automatic Upgrade"
 * The "Immediate Upgrade" button will be available if new version is detected, just click it to update.
 
-## Change VLAN 1 IP(WLAN Management IP)
-VLAN 1 IP and WLAN management IP must be the same.
-
-#### Change VLAN 1 IP
-* Select "LAN" tab > VLAN > select VLAN 1 > click "Modify" icon
-* Set the IP(e.g. `192.168.112.2`)
-* Apply
-
-#### Change WLAN Management IP
-* Re-login web portal using the new IP
-* Select "LAN" tab > Wireless Management > Wireless Management Address
-* Set the same IP as VLAN 1(e.g. `192.168.112.2`)
-* Apply
-
 ## WAN Configuration
 * Select "Internet Access Configuration" tab > select WAN port(e.g. `ge/0/0/10`)
 * Interface Configuration > select "Internet access mode"
@@ -70,14 +56,21 @@ We may create static routes back to switch via Vlanif 1 for all subnets(e.g. VLA
 * Select AP(s) > Approve
 
 ## Wireless Management
-* Select "Wireless Management" > Wireless Service
-* Create > set SSID(e.g. `huawei`) > set Service VLAN ID(e.g. `10`)
-* set WPA2 key
-* Select AP group(e.g. `default`)
-* Select radio to apply to(e.g. `2.4G`)
+
+* WLAN Management IP
+  VLAN 1 IP and WLAN management IP must be the same.
+
+* Create Wireless Service
+  * Select "Wireless Management" > Wireless Service
+  * Create > set SSID(e.g. `huawei`) > set Service VLAN ID(e.g. `10`)
+  * Select auth method: PSK(WPA2), SAE(WPA3), PSK-SAE(WPA2-WPA3 mixed)
+  * Select crypto method: WPA2, WPA3, WPA2-WPA3 and set key(password)
+  * Select AP group(e.g. `default`)
+  * Select radio to apply to(e.g. `2.4G`)
 
 ## Save Configuration
 * Click top-right "Save" button to save current configuration.
 
 ## References
 * [S380 产品文档](https://support.huawei.com/hedex/hdx.do?docid=EDOC1100409534&tocURL=resources%2Fhedex-homepage.html)
+* [S380 V600R024C10 配置指南（Web网管）](https://support.huawei.com/enterprise/zh/doc/EDOC1100460452/531f26f6)
