@@ -177,7 +177,8 @@ LAN > LAN Interface > Select LAN 1 > Phyical Interface Configuration
   | xx | 20 | for phone and TV |
   | guest | 30 | for guest |
   
-  * Set Security Authentication and go next.
+  * Select Security Authentication: PSK(WPA2), SAE(WPA3), PSK-SAE(WPA2-WPA3 mixed)
+  * Select crypto method: e.g. WPA2 and key(password) and go next.
   * Select AP group(`default`) and radio to apply(`5G`, `5GHz/6GHz`)
   * SSID-based rate limiting for uplink / downlink
     * Unlimited(default) or User-defined(e.g. `8Mbit/s` for downlink and `2Mbit/s` for uplink)
@@ -530,3 +531,5 @@ save
 
 ## References
 * [S380 Product Documentation](https://support.huawei.com/hedex/hdx.do?docid=EDOC1100409535&tocURL=resources%2Fhedex-homepage.html)
+* [S380 V600R024C10 配置指南（Web网管）](https://support.huawei.com/enterprise/zh/doc/EDOC1100460452/531f26f6)
+* [S380 V600R024C10 MD-CLI配置参考(包含 WPA 相关知识)](https://support.huawei.com/enterprise/zh/doc/EDOC1100460455/f4d700ce)
