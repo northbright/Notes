@@ -78,6 +78,17 @@ Huawei upgrades the software frequently and many new features require new versio
 * Click "Upload" button > select downloaded software(e.g. `S380_V600R024C10SPC100.cc`)
 * Select the latest software for next startup > OK > Save and Restart
 
+#### Time Settings
+* Select "System" tab > "Entire Network Managment" > Time > Modify
+* Set Time Zone to UTC+8(Beijing)
+* Set Mode to Automatic
+  * Create NTP server
+    * Server address: `203.107.6.88`(`ntp.aliyun.com`)
+    * Key configuration: turn off(no key)
+    * Server source port: Vlanif1(default VLAN)
+    * OK
+    * Wait for one minute and it'll sync local time with NTP server
+
 #### Set Parameter for S380
 Top menu > Configuration > Device List > go to the S380 record > Operation > Set Parameter
 
