@@ -22,6 +22,17 @@ Select "Local Management".
 * Select "System Management" tab > "Software Upgrade" > "Automatic Upgrade"
 * The "Immediate Upgrade" button will be available if new version is detected, just click it to update.
 
+## Time Settings
+* Select "System" tab > "Entire Network Managment" > Time > Modify
+* Set Time Zone to UTC+8(Beijing)
+* Set Mode to Automatic
+  * Create NTP server
+    * Server address: `203.107.6.88`(`ntp.aliyun.com`)
+    * Key configuration: turn off(no key)
+    * Server source port: Vlanif1(default VLAN)
+    * OK
+    * Wait for one minute and it'll sync local time with NTP server
+
 ## WAN Configuration
 * Select "Internet Access Configuration" tab > select WAN port(e.g. `ge/0/0/10`)
 * Interface Configuration > select "Internet access mode"
