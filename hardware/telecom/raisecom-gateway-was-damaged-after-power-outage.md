@@ -11,4 +11,5 @@
 * Call 10000 to replace the damaged device
 
 ## Suggestion
-* Poweroff the gateway **BEFORE** expected power loss
+1. Poweroff the gateway **BEFORE** expected power loss
+2. **UNPLUG** the power cable
