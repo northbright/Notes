@@ -12,3 +12,4 @@ Output:
 
 ## References
 * [How to Evaluate Arithmetic Expressions in Bash](https://www.baeldung.com/linux/bash-arithmetic-expressions)
+* [Bash Scripting: Understanding the Use of Parentheses, Brackets, and Braces](https://linuxconfig.org/bash-scripting-parenthesis-explained)
