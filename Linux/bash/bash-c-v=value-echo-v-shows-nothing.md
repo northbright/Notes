@@ -43,11 +43,12 @@ func main() {
     buf, _ := cmd.CombinedOutput()
     fmt.Printf("output: %s\n", buf)
 }
+```
 
-// Output:
+Output:
+```bash
 cmd.String(): /bin/bash -c v=value; echo $v
 output: value
-
 ```
 
 ## References
