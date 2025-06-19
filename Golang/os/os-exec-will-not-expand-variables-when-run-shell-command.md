@@ -35,3 +35,4 @@ output: value
 
 ## References
 * [bash -c "v=value; echo $v" displays nothing](https://askubuntu.com/questions/786816/bash-c-v-value-echo-v-displays-nothing)
+* [Executing Shell Commands in Golang](https://www.sohamkamani.com/golang/exec-shell-command/)
