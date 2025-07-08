@@ -1,7 +1,7 @@
 # Got`dquote` due to Exclamation Mark Not Escaped in Bash
 
 ## Problem
-* Run bash command:
+* Run command on macOS(default shell is "zsh")
 
 ```bash
 echo -ne "1\n00:00:08,000 --> 00:00:22,000\nGoal from Wugui!" > "01.srt"
