@@ -28,3 +28,4 @@ output_480p.mp4
 * [ffmpeg Documentation](https://ffmpeg.org/ffmpeg.html)
 * [Optimizing FFmpeg Settings for H.264 Encoding](https://toxigon.com/optimizing-ffmpeg-settings-for-h264-encoding)
 * [H.264 Video Encoding Guide](https://trac.ffmpeg.org/wiki/Encode/H.264)
+* [In FFMPEG's H.265 encoder, which CRF value leads to "visually lossless" results?](https://video.stackexchange.com/questions/36071/in-ffmpegs-h-265-encoder-which-crf-value-leads-to-visually-lossless-results)
