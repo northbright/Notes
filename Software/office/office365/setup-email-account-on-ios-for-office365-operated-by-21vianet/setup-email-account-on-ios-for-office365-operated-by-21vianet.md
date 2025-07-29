@@ -10,6 +10,7 @@
 * Goto "Settings" > "Mail" > "Account" > "New Account"
 * Select "Exchange"
   Update: on iOS 18.6, a Security Delay(1 hour) is required before adding an Exchange account.
+  You may [Turn Off Security Delay on iOS](https://github.com/northbright/Notes/blob/master/ios/turn-off-security-delay-on-ios.md).
 
 * Input Email Account and Click "Login"
 * It'll Popup a Dialog to Accecpt the Permission for "Apple Internet Accounts"
@@ -38,6 +39,7 @@
 ## References
 * [Microsoft and Apple Working Together to Improve Exchange Online Security](https://techcommunity.microsoft.com/t5/exchange-team-blog/microsoft-and-apple-working-together-to-improve-exchange-online/ba-p/3513846)
 * [将 Apple 设备与 Microsoft Exchange 集成](https://support.apple.com/zh-cn/guide/deployment/dep158966b23/web)
+* [Turn Off Security Delay on iOS](https://github.com/northbright/Notes/blob/master/ios/turn-off-security-delay-on-ios.md)
 
 -----------------------------------------------
 
@@ -52,7 +54,8 @@
 ## 使用 Modern Auth(OAuth 2.0) 的步骤
 * 进入 "设置" > "邮件" > "账户" > "添加账户"
 * 选择 "Exchange" 类型
-  Update: iOS 18.6 会提示 1 小时安全延迟，结束收到通知后才能添加账户
+  Update: iOS 18.6 会提示 1 小时安全延迟，结束收到通知后才能添加账户。
+  你可以[Turn Off Security Delay on iOS](https://github.com/northbright/Notes/blob/master/ios/turn-off-security-delay-on-ios.md)。
 
 * 输入 Email 后点击"登录"
 * 会弹出"Apple Internet Accounts"的授权请求的页面
@@ -81,3 +84,4 @@
 ## 参考资料
 * [Microsoft and Apple Working Together to Improve Exchange Online Security](https://techcommunity.microsoft.com/t5/exchange-team-blog/microsoft-and-apple-working-together-to-improve-exchange-online/ba-p/3513846)
 * [将 Apple 设备与 Microsoft Exchange 集成](https://support.apple.com/zh-cn/guide/deployment/dep158966b23/web)
+* [Turn Off Security Delay on iOS](https://github.com/northbright/Notes/blob/master/ios/turn-off-security-delay-on-ios.md)
