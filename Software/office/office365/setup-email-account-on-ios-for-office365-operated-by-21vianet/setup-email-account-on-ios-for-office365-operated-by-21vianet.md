@@ -9,6 +9,8 @@
 ## Steps for Modern Auth(OAuth 2.0)
 * Goto "Settings" > "Mail" > "Account" > "New Account"
 * Select "Exchange"
+  Update: on iOS 18.6, a Security Delay(1 hour) is required before adding an Exchange account.
+
 * Input Email Account and Click "Login"
 * It'll Popup a Dialog to Accecpt the Permission for "Apple Internet Accounts"
 
@@ -50,6 +52,8 @@
 ## 使用 Modern Auth(OAuth 2.0) 的步骤
 * 进入 "设置" > "邮件" > "账户" > "添加账户"
 * 选择 "Exchange" 类型
+  Update: iOS 18.6 会提示 1 小时安全延迟，结束收到通知后才能添加账户
+
 * 输入 Email 后点击"登录"
 * 会弹出"Apple Internet Accounts"的授权请求的页面
 
