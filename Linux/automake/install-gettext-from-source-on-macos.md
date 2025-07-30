@@ -15,19 +15,11 @@
 
 * Configure
 
+  Default `prefix=/usr/local`
+
   ```sh
   ./configure
   ```
-
-  * Default prefix is `/usr/local`.
-  * gettext `.m4` files install dir
-    * Before v0.25
-  * Wanning: gettext v0.25 and later moves m4 files from `${prefix}/share/aclocal` to `${prefix}/share/gettext/m4`
-    e.g.
-    * for gettext before v0.25
-      m4 files are put in `/usr/local/share/gettext/m4/`
-  * Macro search path of "aclocal" is `${prefix}/share/aclocal`
-  * Need to specify `-I ${prefix}/usr/share/gettext/m4` when run `autoreconf`
 
 * Make and Install
 
