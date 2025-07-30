@@ -27,3 +27,7 @@ The GNU Autoconf Archive is a collection of more than 500 macros for GNU Autocon
   ```
 
   It'll put all m4 files to `/usr/local/share/aclocal/` which is the macro search path of automake tools(e.g. aclocal, autoreconf, configure). 
+
+## References
+* [autoconf-archive Homebrew Formulae](https://formulae.brew.sh/formula/autoconf-archive)
+* [autoconf-archive.rb](https://github.com/Homebrew/homebrew-core/blob/12466756ef412ae7ec3496448b16d26f746ebc42/Formula/a/autoconf-archive.rb)
