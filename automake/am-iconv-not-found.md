@@ -34,7 +34,7 @@ Install [gettext](https://www.gnu.org/software/gettext/) on macOS.
   ./autogen.sh
   ```
 
-* Method B: [Install gettext from Source on macOS](https://github.com/northbright/Notes/blob/master/Linux/automake/install-gettext-from-source-on-macos.md)
+* Method B: [Install gettext from Source on macOS](https://github.com/northbright/Notes/blob/master/automake/install-gettext-from-source-on-macos.md)
 
   Warning: gettext v0.25 and later moves m4 files from `${prefix}/share/aclocal` to `${prefix}/share/gettext/m4`.
 

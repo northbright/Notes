@@ -20,7 +20,7 @@
   brew install autoconf-archive
   ```
 
-* Method B: [Install autoconf-archive from Source on macOS](https://github.com/northbright/Notes/blob/master/Linux/automake/install-autoconf-archive-from-source-on-macos.md)
+* Method B: [Install autoconf-archive from Source on macOS](https://github.com/northbright/Notes/blob/master/automake/install-autoconf-archive-from-source-on-macos.md)
 
 ## References
 * [autoconf-archive](https://www.gnu.org/software/autoconf-archive/)
