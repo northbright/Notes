@@ -1,4 +1,4 @@
-# Install [gettext](https://www.gnu.org/software/gettext/) on macOS
+# Install [gettext](https://www.gnu.org/software/gettext/) from Source on macOS
 
 ## Steps
 * Download [gettext-v0.26](https://ftp.gnu.org/pub/gnu/gettext/gettext-0.26.tar.gz)
