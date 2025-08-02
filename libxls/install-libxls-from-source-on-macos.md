@@ -25,13 +25,16 @@
 
 ## Method B: Compile and install [libxls](https://github.com/libxls/libxls) by cloning repo
 * Install Dependencies
-  * Install gettext
+  * libiconv
+    * [Install libiconv from Source on macOS](https://github.com/northbright/Notes/blob/master/libiconv/install-libiconv-from-source-on-macos.md)
+
+  * gettext
     * [Install gettext from Source on macOS](https://github.com/northbright/Notes/blob/master/automake/install-gettext-from-source-on-macos.md)
 
-  * Install libtool
+  * libtool
     * [Install libtool from Source on macOS](https://github.com/northbright/Notes/blob/master/automake/install-libtool-from-source-on-macos.md)
 
-  * Install autoconf-archive
+  * autoconf-archive
     * [Install autoconf-archive from Source on macOS](https://github.com/northbright/Notes/blob/master/automake/install-autoconf-archive-from-source-on-macos.md)
 
 * Git clone [libxls](https://github.com/libxls/libxls)
