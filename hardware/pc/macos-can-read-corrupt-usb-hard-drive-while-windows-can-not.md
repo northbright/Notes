@@ -2,7 +2,7 @@
 
 ## Problem
 * A portable USB hard drive formatted with NTFS
-* Windows PC can not recognize the disk and its partitions
+* Windows PC(or WinPE) can not recognize the disk and its partitions
 * Plug the USB hard drive to an iMac
 * macOS can recognize the disk and its partitions included all files
 * Can copy some dirs(files) to mac successfully
