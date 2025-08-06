@@ -3,7 +3,7 @@
 ## Steps
 
 #### Download latest release
-Download latest release of [libiconv](https://www.gnu.org/software/libiconv/) on [offical site](https://ftp.gnu.org/pub/gnu/libiconv/)
+Download latest release of [libiconv](https://www.gnu.org/software/libiconv/) from <https://ftp.gnu.org/pub/gnu/libiconv/>
 
 ```sh
 cd download

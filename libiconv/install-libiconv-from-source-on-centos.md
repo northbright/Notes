@@ -1,7 +1,7 @@
 # Install libiconv from Source on CentOS
 
 ## Download
-* Get source code on [offical site](https://ftp.gnu.org/pub/gnu/libiconv/)
+* Get source code from <https://ftp.gnu.org/pub/gnu/libiconv/>
 
        cd download
        wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.16.tar.gz
