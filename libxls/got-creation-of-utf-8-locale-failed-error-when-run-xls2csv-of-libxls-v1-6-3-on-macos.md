@@ -2,7 +2,7 @@
 
 ## Problem
 * Download [latest release(v1.6.3)](https://github.com/libxls/libxls/releases/download/v1.6.3/libxls-1.6.3.tar.gz) of [libxls](https://github.com/libxls/libxls)
-* Compile libxls on macOS(Sonoma 14.0, iMac, Intel i7)
+* Compile libxls on macOS(Sonoma 14.0, iMac, Intel i7) without [libiconv](https://www.gnu.org/software/libiconv/) installed
 
   ```
   ./configure
@@ -18,9 +18,15 @@
   | Goodbye | 再见 | さようなら |
 
 * Run `xls2csv` to convert an UTF-8 encoded XLS file to CSV
+
+  ```sh
+  xls2csv hello-goodbye.xls
+  ```
+
 * It failed to show the UTF-8 string and got error:
 
   > creation of UTF-8 locale failed
+  > "*failed to decode utf16*"
 
 ## Root Cause
 * [unicode_decode()](https://github.com/libxls/libxls/blob/v1.6.3/src/xlstool.c#L351) calls [xls_createlocale](https://github.com/libxls/libxls/blob/v1.6.3/src/locale.c#L35) if [libiconv](https://www.gnu.org/software/libiconv/) is not installed when compiling libxls.
