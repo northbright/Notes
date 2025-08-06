@@ -1,6 +1,12 @@
 # Install libxls from Source on macOS
 
 ## Method A: Compile and install [libxls](https://github.com/libxls/libxls) from latest release
+* Install Dependencies
+  * libiconv(Optional)
+    * [Install libiconv from Source on macOS](https://github.com/northbright/Notes/blob/master/libiconv/install-libiconv-from-source-on-macos.md)
+
+      libiconv installation is recommended even libxls can be compiled successfully without it.
+
 * Download latest release
 
   ```sh
