@@ -65,7 +65,7 @@ char* unicode_decode(const char *s, size_t len, xlsWorkBook *pWB)
 
 ```
 
-* [xls_createlocale](https://github.com/libxls/libxls/blob/v1.6.3/src/locale.c#L35) calls newlocale(LC_CTYPE_MASK, "C.UTF-8", NULL) on macOS
+* [xls_createlocale](https://github.com/libxls/libxls/blob/v1.6.3/src/locale.c#L35) calls `newlocale(LC_CTYPE_MASK, "C.UTF-8", NULL)` on macOS
 
 ```c
 xls_locale_t xls_createlocale(void) {
@@ -77,13 +77,13 @@ xls_locale_t xls_createlocale(void) {
 }
 ```
 
-* It fails on macOS Sonoma 14.0 due to the locale: "C.UTF-8" is not found
+* It fails on macOS Sonoma 14.0 due to "C.UTF-8" is not found
 
 ## Solution
 * Method A: Install libiconv on macOS
   * [Install libiconv from Source on macOS](https://github.com/northbright/Notes/blob/master/libiconv/install-libiconv-from-source-on-macos.md)
 
-* Method B: Use "UTF-8" instead of "C.UTF-8" when call newlocale() on macOS
+* Method B: Use "UTF-8" instead of "C.UTF-8" when call `newlocale()` on macOS
 
   ```c
   xls_locale_t xls_createlocale(void) {
