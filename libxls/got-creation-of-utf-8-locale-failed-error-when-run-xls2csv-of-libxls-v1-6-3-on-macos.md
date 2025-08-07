@@ -1,5 +1,9 @@
 # Got "creation of UTF-8 locale failed" Error when Run xls2csv of libxls v1.6.3 on macOS
 
+## Update
+* Created an issue: [Got "creation of UTF-8 locale failed" when run "xls2csv" to convert an UTF-8 encoded XLS #151](https://github.com/libxls/libxls/issues/151)
+* Created a [PR](https://github.com/libxls/libxls/commit/ffe363c42887eab96a30d20a3dd3eb6e99cce7e7) and it was merged
+
 ## Problem
 * Download [latest release(v1.6.3)](https://github.com/libxls/libxls/releases/download/v1.6.3/libxls-1.6.3.tar.gz) of [libxls](https://github.com/libxls/libxls)
 * Compile libxls on macOS(Sonoma 14.0, iMac, Intel i7) without [libiconv](https://www.gnu.org/software/libiconv/) installed
