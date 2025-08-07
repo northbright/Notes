@@ -16,9 +16,7 @@
 * Add the new zlib lib path(e.g. /usr/local/zlib/lib)
 
 ```
-su
-echo '/usr/local/zlib/lib/' > /etc/ld.so.conf.d/zlib.conf
-exit
+echo "/usr/local/zlib/lib/" | sudo tee /etc/ld.so.conf.d/zlib.conf
 sudo ldconfig
 ````
 
