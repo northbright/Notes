@@ -1,18 +1,26 @@
 # Make `/usr/local/lib` Searched for Shared Libraries
 
-## Create a conf file under `/etc/ld.so.conf.d/`:
+## Steps
+
+## Write `/usr/local/lib` to `/etc/ld.so.conf.d/usrlocallib.conf`
    
-    sudo vi /etc/ld.so.conf.d/usrlocallib.conf
-    ## add below line:
-    /usr/local/lib
+```sh
+echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/usrlocallib.conf
+```
 
 ## Reload ldconfig cache
 
-    sudo ldconfig
+```sh
+sudo ldconfig
+```
 
 ## Check
 
-    ldconfig -p | grep xx.so
+```sh
+ldconfig -p | grep xx.so
+```
 
 ## References
 * <http://stackoverflow.com/questions/4743233/is-usr-local-lib-searched-for-shared-libraries>
+* [Sudo Echo “To” > File: Permission Denied](https://www.shellhacks.com/sudo-echo-to-file-permission-denied/)
+* [How to solve "permission denied" when using sudo with redirection in Bash?](https://askubuntu.com/questions/230476/how-to-solve-permission-denied-when-using-sudo-with-redirection-in-bash)
