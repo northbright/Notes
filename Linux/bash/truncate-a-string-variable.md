@@ -24,3 +24,4 @@ d=3.1415 && frac=$(echo $d | awk -F. '{ print $2}') && if [[ ${#frac} -ge 3 ]]; 
 
 ## References
 * [Demystifying the Art of Truncating String Variables in Bash](https://thelinuxcode.com/bash-truncate-string-variable/)
+* [Extracting a Substring in Bash](https://www.baeldung.com/linux/bash-substring)
