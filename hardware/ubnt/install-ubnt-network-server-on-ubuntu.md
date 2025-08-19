@@ -52,7 +52,7 @@ sudo systemctl status unifi
 * Create a local admin account
 
 ## Export Site and Migrate Old Devices from Old Server to a New One(Optional)
-* [Export Site and Migrate Devices from Old Unifi Network Server to a New One](export-site-and-migrate-devices-from-old-unifi-network-server-to-a-new-one.md)
+* [Export Site and Migrate Devices from Old Unifi Network Server to a New One](https://github.com/northbright/Notes/blob/master/hardware/ubnt/export-site-and-migrate-devices-from-old-unifi-network-server-to-a-new-one.md)
 
 ## References
 * [Install UniFi Controller (Network Application) on Ubuntu 20.04](https://computingforgeeks.com/install-unifi-controller-network-application-on-ubuntu/)
