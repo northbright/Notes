@@ -9,29 +9,49 @@ Install and Run `apt-file`
 
 * Install `apt-file`
 
-  ```
+  ```sh
   sudo apt install apt-file
   ```
 
 * Update `apt-file`
 
-  ```
+  ```sh
   sudo apt-file update
   ```
 
 * Search package that provides the file
 
-  ```
-  apt-file search ifconfig
+  * Find which package provides `ifconfig`
 
-  // Output:
-  // ...
-  // net-tools: /sbin/ifconfig
-  // ...
-  ```
+    ```sh
+    apt-file search ifconfig
 
-  `net-tools` is the package provides `ifconfig`.
-  Run `sudo apt install net-tools` to install it.
+    // Output:
+    // ...
+    // net-tools: /sbin/ifconfig
+    // ...
+    ```
+
+    `net-tools` is the package provides `ifconfig`.
+    Run `sudo apt install net-tools` to install it.
+
+  * Find which package provides `ping`
+
+    Use `/usr/bin/ping` as the keyword instead `ping` to get less results.
+
+    ```sh
+    apt-file search /usr/bin/ping
+
+    // Output
+    ...
+    iputils-ping: /usr/bin/ping
+    ...
+    
+    ```
+
+    ```sh
+    sudo apt install iputils-ping -y
+    ```
 
 ## References
 * [Debian / Ubuntu Linux: Find Out What Package Provides a File](https://www.cyberciti.biz/faq/equivalent-of-rpm-qf-command/)
