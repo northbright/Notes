@@ -10,3 +10,6 @@ Run `sudo apt install iputils-ping` to get `ping`.
 ```bash
 sudo apt install iputils-ping -y
 ```
+
+## References
+* [Install ping Command on Ubuntu](https://learnubuntu.com/install-ping/)
