@@ -6,7 +6,7 @@
 ## Download .deb File
 * Goto <https://www.ui.com/download> and download latest Linux release
 
-  ```
+  ```sh
   // e.g. v9.0.108
   cd ~/download
   wget https://dl.ui.com/unifi/9.0.108/unifi_sysvinit_all.deb
@@ -18,7 +18,7 @@ Check if they are used by other apps.
 
 ## Configure Firewall(Optional)
 
-```
+```sh
 // Allow ports used by Unifi Network Server
 sudo ufw allow 8443
 sudo ufw allow 8080
@@ -26,12 +26,12 @@ sudo ufw allow 8080
 
 ## Install Unifi Network Server
 
-```
+```sh
 sudo apt install ./unifi_sysvinit_all.deb
 ```
 
 ## Enable and Start Unifi Service
-```
+```sh
 // Enable Unifi Service
 sudo systemctl enable unifi
 
