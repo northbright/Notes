@@ -10,6 +10,10 @@
 * Click "Download the Site Export File"
 
 #### Create a New Site via Import Site Data File on New Unifi Network Server
+* Enable "Multi-Site Management"
+  * Go to new server > Settings > System > Site Management
+  * Select "Multi-Site Management" > Apply
+  * Then it'll show "Site Switcher" on top-left
 * Go to new server > Site Switcher(Top-Left Icon) > Add New
 * Input "Site Name"
 * Click "Import Site"
