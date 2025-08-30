@@ -1,66 +1,99 @@
 # Setup SSH Login for H3C Switch
 
-## Setup IP Address
-* Select VLAN Interface(e.g. VLAN Interface 1)
+## Create VLAN Interfaces on Core Switch and Access Switches
 
-       interface vlan 1
-       ip address 192.168.1.240 24
+* Core Switch
 
-        // Check
-        display vlan 1
+  ```sh
+  interface vlan 1
+  ip address 10.0.1.1 24
 
-        // Outpout:
-        // ...
-        // IPv4 address: 192.168.1.240
-        // IPv4 subnet mask: 255.255.255.0
+  // Check
+  display vlan 1
+
+  // Outpout:
+  // ...
+  // IPv4 address: 10.0.1.1
+  // IPv4 subnet mask: 255.255.255.0
+  ```
+
+* Access Switch
+
+  ```sh
+  interface vlan 1
+  ip address 10.0.1.2 24
+  ```
+
+## Create a Default Route on Access Switch
+
+PC pings access switch from VLAN 10 and access switch needs a route to VLAN 10 from VLAN 1(ping back to PC).
+Create a default route to core switch for all VLAN on access switch.
+
+```sh
+ip route-static 0.0.0.0 0.0.0.0 10.0.1.1
+```
 
 ## Enable SSH Server
+* Enter System View
+
+  ```sh
+  system-view
+  ```
+
 * Check SSH Server Status
 
-       display ssh server status
+  ```sh
+  display ssh server status
+  ```
 
 * Enable SSH Server
 
-       ssh server enable
+  ```sh
+  ssh server enable
+  ```
 
 ## Create Publick Keys
 
-```
+```sh
 public-key local create ecdsa secp256r1
 ```
 
 ## Set User Interface
 
-    // 0, 4 means vty 0 - 4, total 5 user interfaces(lines) shared the same settings
-    user-interface vty 0 4
+```sh
+// 0, 4 means vty 0 - 4, total 5 user interfaces(lines) shared the same settings
+user-interface vty 0 4
 
-    // Set authentication mode to scheme(AAA) which is required for SSH login
-    authentication-mode scheme
+// Set authentication mode to scheme(AAA) which is required for SSH login
+authentication-mode scheme
 
-    // Set protocol
-    protocol inbound ssh
+// Set protocol
+protocol inbound ssh
 
-    // Quit
-    quit
+// Quit
+quit
+```
 
 ## Create SSH User
 
-    // Create user xx
-    local-user xx
+```sh
+// Create user xx
+local-user xx
     
-    // Set password for xx
-    password
+// Set password for xx
+password
 
-    // Set service type of the user
-    // use "service-type ?" to show all types
-    service-type ssh
+// Set service type of the user
+// use "service-type ?" to show all types
+service-type ssh
 
-    // Set user role to network-admin
-    // use "authorization-attribute user-role ?" to show all roles
-    authorization-attribute user-role network-admin
+// Set user role to network-admin
+// use "authorization-attribute user-role ?" to show all roles
+authorization-attribute user-role network-admin
 
-    // Check
-    display this
+// Check
+display this
+```
 
 ## Test
 * Login via [`putty`](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to Test
@@ -72,3 +105,4 @@ public-key local create ecdsa secp256r1
 * [SSH returns: no matching host key type found. Their offer: ssh-dss](https://askubuntu.com/questions/836048/ssh-returns-no-matching-host-key-type-found-their-offer-ssh-dss)
 * [OpenSSH declares ssh-rsa deprecated. What do I do next?](https://security.stackexchange.com/questions/226131/openssh-declares-ssh-rsa-deprecated-what-do-i-do-next)
 * [H3C交换机SSH使用RSA公钥免密登录配置](https://www.cnblogs.com/powpoia/p/18459875)
+* [Setup SSH Login for H3C Switch](https://github.com/northbright/Notes/blob/master/hardware/h3c/setup-ssh-login-for-h3c-switch.md)
