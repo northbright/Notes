@@ -5,6 +5,9 @@
 * Type `oobe\bypassnro` to reboot PC
 * Select "I have no internet connection" and create local user
 
+## Install Latest NVIDIA Driver
+Install latest NVIDIA Studio Driver to fix black screen with Dell U2723QX 4K display issue.
+
 ## Turn Off Device Encryption
 
 ## Uninstall Apps
