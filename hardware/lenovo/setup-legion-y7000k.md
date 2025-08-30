@@ -19,3 +19,4 @@ Press `F1`.
 
 ## References
 * [Setup Windows 11 without a Microsoft Account](https://github.com/northbright/Notes/blob/master/Windows/install/setup-win11-without-a-microsoft-account.md)
+* [Fix Black Screen or Flicker on Legion Y7000K(刃7000K) Problem by Installing Latest NVIDIA Driver](https://github.com/northbright/Notes/blob/master/hardware/lenovo/fix-black-screen-or-flicker-on-legion-y7000k-problem-by-installing-latest-nvidia-driver.md)
