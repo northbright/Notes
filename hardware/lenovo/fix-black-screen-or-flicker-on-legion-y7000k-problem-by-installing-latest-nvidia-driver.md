@@ -1,4 +1,4 @@
-# Fix Black Screen or Flicker on Legion Y7000K(刃7000K) Problem by Re Installing Latest NVIDIA Driver
+# Fix Black Screen or Flicker on Legion Y7000K(刃7000K) Problem by Installing Latest NVIDIA Driver
 
 ## Problem
 * Lenovo Legion Y7000K(刃7000K)
