@@ -6,6 +6,9 @@
 * Can see dirs and files in the Samba share successfully
 * It shows no content in Samba share on Mi TV after some days
 
+## Root Cause
+Mi TV ran into problem.
+
 ## Solution
 Reboot Mi TV.
 * Power off Mi TV and unplug the power cable
