@@ -9,4 +9,5 @@
 
 ## Solution
 * Method A: Run EPSON Scan 2 as administrator
+  * The "Add" button is enabled now
 * Method B: Try to download latest EPSON Scan 2
