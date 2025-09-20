@@ -1,4 +1,4 @@
-# Got`dquote` due to Exclamation Mark Not Escaped in Bash
+# Got `dquote` due to Exclamation Mark Not Escaped in Bash
 
 ## Problem
 * Run command on macOS(default shell is "zsh")
