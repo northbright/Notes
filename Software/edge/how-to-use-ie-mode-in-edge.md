@@ -7,7 +7,7 @@
 ## Solution
 
 #### Update: 2025/10/06
-* "Reload tab in Internet Explorer mode" is removed from the right-click menu in Edge v141.0.3537.57
+* "Reload tab in Internet Explorer mode" is removed from the "..." menu in Edge v141.0.3537.57
 * Need to add an IE mode "icon" on Toolbar
   * Turn on Settings > Appearance > Toolbar > Internet Explorer Mode(IE Mode)
   * The IE mode icon will be put on the right-top of the toolbar
