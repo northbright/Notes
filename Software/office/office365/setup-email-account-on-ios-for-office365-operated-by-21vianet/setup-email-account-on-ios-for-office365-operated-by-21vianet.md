@@ -12,8 +12,9 @@
   Update: on iOS 18.6, a Security Delay(1 hour) is required before adding an Exchange account.
   You may [Turn Off Security Delay on iOS](https://github.com/northbright/Notes/blob/master/ios/turn-off-security-delay-on-ios.md).
 
-* Input Email Account and Click "Login"
+* Input Email Account and Description > Click "Login"
 * It'll Popup a Dialog to Accecpt the Permission for "Apple Internet Accounts"
+* Click "Accept"
 
   ![](img/01.png)
 
