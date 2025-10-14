@@ -28,3 +28,4 @@
 ## References
 * [How to Use Internet Explorer Mode in Edge](https://www.howtogeek.com/791890/how-to-use-internet-explorer-mode-in-edge/)
 * [在 Internet Explorer 模式（IE 模式）下重新加载“允许”未显示？（需翻译日文为中文）](https://ilovetrend.hatenablog.com/entry/2025/10/06/122858)
+* [微软为防范零日漏洞攻击，收紧 Edge 浏览器 IE 模式访问限制](https://m.ithome.com/html/889219.htm)
