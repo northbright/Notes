@@ -6,6 +6,14 @@
 
 ## Solution
 
+#### Update: 2025/11/04
+IE mode icon was removed in v142.0.3595.53
+
+* Solution
+  * Click "..." > Settings > Default browser > Internet Explorer compatibility or visit "edge://settings/defaultBrowser"
+  * Internet Explorer Mode Pages > Add specific URLs manually
+    Make sure the added URL are the **SAME** as the one you need to visit using IE mode. If the URL will be redirected after visit the original URL, use the redirected URL.
+
 #### Update: 2025/10/06
 * "Reload tab in Internet Explorer mode" is removed from the "..." menu in Edge v141.0.3537.57
 * Need to add an IE mode "icon" on Toolbar
