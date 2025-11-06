@@ -38,3 +38,5 @@ IE mode icon was removed in v142.0.3595.53
 * [在 Internet Explorer 模式（IE 模式）下重新加载“允许”未显示？（需翻译日文为中文）](https://ilovetrend.hatenablog.com/entry/2025/10/06/122858)
 * [微软为防范零日漏洞攻击，收紧 Edge 浏览器 IE 模式访问限制](https://m.ithome.com/html/889219.htm)
 * [Reload in Internet explorer mode was just killed off?](https://learn.microsoft.com/en-gb/answers/questions/5607436/reload-in-internet-explorer-mode-was-just-killed-o)
+* [MICROSOFT REVAMPS INTERNET EXPLORER MODE IN EDGE AFTER AUGUST ATTACKS](https://securityaffairs.com/183333/security/microsoft-revamps-internet-explorer-mode-in-edge-after-august-attacks.html)
+* [MICROSOFT TIGHTENS IE MODE IN EDGE AFTER ATTACKS LEVERAGING CHAKRA ZERO-DAY](https://cybersecurefox.com/en/edge-restricts-ie-mode-after-chakra-zero-day-attacks/)
