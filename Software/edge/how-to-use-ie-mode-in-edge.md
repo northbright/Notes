@@ -40,3 +40,4 @@ IE mode icon was removed in v142.0.3595.53
 * [Reload in Internet explorer mode was just killed off?](https://learn.microsoft.com/en-gb/answers/questions/5607436/reload-in-internet-explorer-mode-was-just-killed-o)
 * [MICROSOFT REVAMPS INTERNET EXPLORER MODE IN EDGE AFTER AUGUST ATTACKS](https://securityaffairs.com/183333/security/microsoft-revamps-internet-explorer-mode-in-edge-after-august-attacks.html)
 * [MICROSOFT TIGHTENS IE MODE IN EDGE AFTER ATTACKS LEVERAGING CHAKRA ZERO-DAY](https://cybersecurefox.com/en/edge-restricts-ie-mode-after-chakra-zero-day-attacks/)
+* [Microsoft Patches Edge IE Mode After Hackers Exploited Chakra Zero-Day for Device Takeover](https://securityonline.info/microsoft-patches-edge-ie-mode-after-hackers-exploited-chakra-zero-day-for-device-takeover/)
