@@ -18,6 +18,7 @@
   * Install WPS App in AppStore
   * Open doc in WeChat > Click "..." > Open from Other Apps（用其他应用打开）
   * Select WPS
+  * Click "Tools"（工具） > Print（打印）> AirPrint > Select printer
 
 ## References
 * [iOS系统如何使用AirPrint打印功能打印文档？](https://www.epson.com.cn/faq/47aca4d82dc64f4abf7f853a6e1cb319.html?productId=b91cb44ec7214868a5e24b0541175ca4)
