@@ -185,7 +185,8 @@ quit
 aaa
 
 // Create 'admin' user with 'YOUR_PASSWORD'
-local-user admin password cipher YOUR_PASSWORD
+~~local-user admin password cipher YOUR_PASSWORD~~
+local-user admin password irreversible-cipher YOUR_PASSWORD
 
 // Set service type to SSH
 local-user admin service-type ssh
