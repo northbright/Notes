@@ -118,6 +118,12 @@ port trunk pvid vlan 2
 quit
 ```
 
+## Display VLAN Ports
+```
+// Display access ports(UT) and trunk ports(TG) of VLAN 10
+display vlan 10
+```
+
 ## Set Static Route
 ```
 ip route-static 0.0.0.0 0.0.0.0 10.0.100.2
