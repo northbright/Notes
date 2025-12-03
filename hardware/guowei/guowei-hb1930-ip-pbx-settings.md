@@ -242,6 +242,9 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
 * 分机 B 接听后，分机 A 听到分机 B 接通后，挂断分机 A
 * 用户可以与分机 B 进行通话
 
+## 重启设备
+* 右上角用户 > 重新启动
+
 ## 手册
 * [国威官网文档下载](https://www.gwtx.com.cn/download.html)
 * [国威HB100/HB1910/HB1930/HB1960配置文档下载](https://cdn055.yun-img.com/static/upload/guoweidz/download/20230520165902_66819.pdf)
