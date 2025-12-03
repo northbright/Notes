@@ -98,6 +98,8 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
 * NTP 服务器
   * `ntp.aliyun.com`
   * `ntp1.aliyun.com`
+* 点击右上角“同步”按钮测试
+  * 如果失败，请确认网关设置正确，以及路由器添加了该  VLAN 的回程路由
 * 勾选自动同步
 * 保存
 
