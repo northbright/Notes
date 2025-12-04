@@ -17,10 +17,35 @@ Disable "Automatic Firmware Update" for now.
 When admin logged in for the first time, you'll be asked to select "Management Mode".
 Select "Local Management".
 
-## Update Firmware
+## Upgrade S380
+Online upgrade is very slow, use local upgrade.
+
+* Visit <https://support.huawei.com/enterprise> with Huawei account
+* Search S380 and download latest firmware
+* If it says you have no permission to download, register product by SN to get the permission
 * Select "Configuration" tab > "Device List" > select "S380" > click "Set Parameter" icon
-* Select "System Management" tab > "Software Upgrade" > "Automatic Upgrade"
-* The "Immediate Upgrade" button will be available if new version is detected, just click it to update.
+* System Management tab > Software Upgrade > Local Upgrade
+* Click "Upload" to upload the firmware > Save and reboot  
+
+## Upgrade AP
+Online upgrade is very slow, use local upgrade.
+
+* Visit <https://support.huawei.com/enterprise> with Huawei account
+* Search AP model(e.g. AP160, AP362E) and download latest firmware
+* Select "Configuration" tab > "Device List" > select "S380" > click "Set Parameter" icon
+* System Management tab > Software Upgrade > Local Upgrade for AP（AP 本地升级）
+* Select AP Upgrade File Configuration（AP升级文件配置） tab > Add upgrade task（添加升级任务）
+
+  * Select AP model（选择 AP类型）(e.g. AP160, AP362E)
+  * Upgrade File（升级文件）: stored on AC(放置在 AC)
+  * Upgrade System File(升级系统文件): Upload > Select downloaded AP firmware
+  * Remove out of date firware if there's no disk space
+
+* The APs already on line won't be upgraded automatically and need to click "Upgrade Immediately" to upgrade manually.
+  * Select the new created AP upgrade task and click "Upgrade Immidiately"
+  * Go to AP Upgrade Status tab to check the upgrade status
+  * After all done, select APs and click "Reboot after upgrade"(升级重启)
+* The APs are going to adopt will be upgraded automatically.
 
 ## Time Settings
 * Select "System" tab > "Entire Network Managment" > Time > Modify
