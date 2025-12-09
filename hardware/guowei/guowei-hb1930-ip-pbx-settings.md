@@ -99,9 +99,7 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
   * `ntp.aliyun.com`
   * `ntp1.aliyun.com`
 * 点击右上角“同步”按钮测试
-  * 如果失败，请确认是否能访问外网
-  * 网关设置正确
-  * 路由器添加了对应  VLAN 的回程路由
+  * 如果失败，请确认是否能访问外网(e.g. 网关设置正确, 路由器添加了对应  VLAN 的回程路由)
 * 勾选自动同步
 * 保存
 
