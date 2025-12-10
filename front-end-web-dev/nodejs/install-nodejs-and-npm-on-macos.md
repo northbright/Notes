@@ -1,7 +1,30 @@
 # Install [Node.js](https://nodejs.org/en/) and `npm` on macOS
 
 ## Steps
-* Visit [Node.js](https://nodejs.org/en/) 
+
+#### Method A
+Visit [Download](https://nodejs.org/en/download/) to get official script to install latest version of Node.js(e.g. Run nvm v0.40.3 to install Node.js v24). 
+
+```sh
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+\# Download and install Node.js:
+nvm install 24
+
+# Verify the Node.js version:
+node -v # Should print "v24.11.1".
+
+# Verify npm version:
+npm -v # Should print "11.6.2".
+```
+
+#### Method B
+Visit [Download](https://nodejs.org/en/download/) to download prebuilt Node.js.
+
 * Select LTS or Current Version and download 
 * Click the `.pkg` file to install it on macOS
 * Run `node -v` and `npm -v` to check
