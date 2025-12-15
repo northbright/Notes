@@ -22,8 +22,9 @@ save
 ```
 
 ## Reset Configuration(Clear Saved Configuration and reboot)
-```
+```sh
 reset saved-configuration
+// Choose "n" when ask save current configruation?
 reboot
 ```
 
