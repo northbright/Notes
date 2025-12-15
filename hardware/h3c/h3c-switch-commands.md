@@ -27,8 +27,6 @@ reset saved-configuration
 reboot
 ```
 
-## Reset Configuration
-
 ## Display Current VLANs
 
     display vlan
