@@ -378,6 +378,12 @@ display mac-address | in d4f5
 display device manuinfo
 ```
 
+## Delete Local User
+```sh
+// Need to add "class manage" after username.
+undo local-user XX class manage
+```
+
 ## References
 * [04-三层技术-IP业务命令参考](https://www.h3c.com/cn/d_201901/1150027_30005_0.htm)
 * [华三交换dhcp+接口下没有引用地址池](https://zhiliao.h3c.com/questions/dispcont/266765)
