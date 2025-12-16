@@ -338,5 +338,10 @@ reset dhcp server ip-in-use pool vlan30
     // Output
     // 00:a1:b2:c3:d4:f5 xx LEARNED GigabitEthernet1/0/1
 
+## Display Device Manufacture Info
+```sh
+display device manuinfo
+```
+
 ## References
 * [04-三层技术-IP业务命令参考](https://www.h3c.com/cn/d_201901/1150027_30005_0.htm)
