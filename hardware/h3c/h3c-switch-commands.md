@@ -346,3 +346,4 @@ display device manuinfo
 ## References
 * [04-三层技术-IP业务命令参考](https://www.h3c.com/cn/d_201901/1150027_30005_0.htm)
 * [华三交换dhcp+接口下没有引用地址池](https://zhiliao.h3c.com/questions/dispcont/266765)
+* [H3C交换机怎么配置VLAN和DHCP](https://zhuanlan.zhihu.com/p/6230350609)
