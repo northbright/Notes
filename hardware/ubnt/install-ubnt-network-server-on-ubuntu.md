@@ -54,6 +54,19 @@ sudo systemctl status unifi
 ## Export Site and Migrate Old Devices from Old Server to a New One(Optional)
 * [Export Site and Migrate Devices from Old Unifi Network Server to a New One](https://github.com/northbright/Notes/blob/master/hardware/ubnt/export-site-and-migrate-devices-from-old-unifi-network-server-to-a-new-one.md)
 
+## Remove Installed Unifi Network Server
+* Use `dpkg --list | grep unifi` to get the package name: `unifi`
+* Remove the package
+
+  ```sh
+  // Stop the Unifi Server
+  sudo systemctl stop unifi
+
+  // Remove Unifi
+  sudo apt remove unifi
+  ```
+
 ## References
 * [Install UniFi Controller (Network Application) on Ubuntu 20.04](https://computingforgeeks.com/install-unifi-controller-network-application-on-ubuntu/)
 * [Updating and Installing Self-Hosted UniFi Network Servers (Linux)](https://help.ui.com/hc/en-us/articles/220066768-Updating-and-Installing-Self-Hosted-UniFi-Network-Servers-Linux)
+* [Ubuntu Linux Uninstall / Remove Any Installed Software](https://www.cyberciti.biz/faq/howto-delete-remove-software-using-apt-get-command/)
