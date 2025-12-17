@@ -22,7 +22,17 @@ Check if they are used by other apps.
 // Allow ports used by Unifi Network Server
 sudo ufw allow 8443
 sudo ufw allow 8080
+
+// UDP port 10001 is used for device discovery during adoption
+// If there's no AP found, check if 10001 is allowed.
+sudo ufw allow 10001
 ```
+
+* If there's still no AP found after all rules added, you may turn off ufw and try again to see if it's ufw problem
+
+  ```sh
+  sudo systemctl stop ufw
+  ```
 
 ## Install Unifi Network Server
 
