@@ -82,6 +82,35 @@
    443 (v6)                   ALLOW IN    Anywhere (v6)  
    ```
 
+5. Delete ufw rules
+
+   * Get rule number
+   
+     ```sh
+     sudo ufw status numbered
+
+     // Output:
+     Status: active
+ 
+     To                         Action      From
+     --                         ------      ----
+     [ 1] 22/tcp                     ALLOW IN    Anywhere                  
+     [ 2] 25/tcp                     ALLOW IN    Anywhere                   # accept email
+     [ 3] 80/tcp                     ALLOW IN    Anywhere                  
+     [ 4] 443/tcp                    ALLOW IN    Anywhere                  
+     [ 5] 22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+     [ 6] 25/tcp (v6)                ALLOW IN    Anywhere (v6)              # accept email
+     [ 7] 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+     [ 8] 443/tcp (v6)               ALLOW IN    Anywhere (v6)
+     ```
+
+   * Delete rule by number
+
+     ```sh
+     sudo ufw delete 2
+     ```
+
 ## References
 * [How To Set Up a Firewall with UFW on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04)
 * [UFW Essentials: Common Firewall Rules and Commands](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+* [How to delete a UFW firewall rule on Ubuntu / Debian Linux](https://www.cyberciti.biz/faq/how-to-delete-a-ufw-firewall-rule-on-ubuntu-debian-linux/)
