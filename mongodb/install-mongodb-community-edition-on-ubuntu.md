@@ -43,5 +43,18 @@ sudo systemctl enable mongod
 sudo systemctl start mongod
 ```
 
+## Uninstall MongoDB
+
+```sh
+// Stop MongoDB service
+sudo systemctl stop mongod
+
+// Remove MongoDB packages.
+sudo apt-get purge mongodb-org*
+
+// Check service status
+systemctl status mongod
+```
+
 ## References
 * [在 Ubuntu 上安装 MongoDB Community Edition](https://www.mongodb.com/zh-cn/docs/manual/tutorial/install-mongodb-on-ubuntu/)
