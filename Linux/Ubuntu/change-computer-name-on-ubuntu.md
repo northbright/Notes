@@ -18,6 +18,12 @@
   sudo hostnamectl set-hostname NEW_COMPUTER_NAME
   ```
 
+* Check
+
+  ```sh
+  hostname
+  ```
+
 * Reboot
 
   To make other PCs can access the pc with the new name(e.g. `ping XX` or visit samba share: `\\XX`), reboot the pc.
