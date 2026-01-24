@@ -6,6 +6,7 @@
 * Type `irm https://get.activated.win | iex`
 * Select `[1] HWID` and wait activation complete
 * Go to Settings > Activation > Check if Windows is activated
+* If Windows Defender blocks the powershell process, allow the threat and re-run the script
 
 ## References
 * [Microsoft Activation Scripts (MAS)](https://github.com/massgravel/Microsoft-Activation-Scripts)
@@ -21,6 +22,7 @@
 * 输入 `irm https://get.activated.win | iex`
 * 选择 `[1] HWID` 然后等待激活完成
 * 在 Windows 设置 > 激活 > 确认是否已经激活
+* 如果 Windows 防火墙提示发现威胁阻止了 Powershell 进程，允许该威胁后再次运行脚本
 
 ## 参考资料
 * [Microsoft Activation Scripts (MAS)](https://github.com/massgravel/Microsoft-Activation-Scripts)
