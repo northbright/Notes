@@ -23,6 +23,7 @@
 
 ## References
 * [电脑每次开机都会自动下载安装包并安装微软电脑管家](https://learn.microsoft.com/zh-cn/answers/questions/2405086/question-2405086?page=1#answers)
+* [微软电脑管家是个流氓软件吗？](https://www.zhihu.com/question/550630807)
 
 ------------------------
 # 微软电脑管家会通过 Edge 更新自动静默安装
@@ -47,3 +48,4 @@
 
 ## 参考资料
 * [电脑每次开机都会自动下载安装包并安装微软电脑管家](https://learn.microsoft.com/zh-cn/answers/questions/2405086/question-2405086?page=1#answers)
+* [微软电脑管家是个流氓软件吗？](https://www.zhihu.com/question/550630807)
