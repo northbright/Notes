@@ -48,5 +48,5 @@
 * PBX Configuration > System > Numbering Plan > Quick Dial
 * 第一条记录：Quick Dialing 1的Dial(8 digits), 设置为你想要的键（比如：`*#`）
 
-## 查看最近呼入电话
-* 在总机上按 Menu > 选择 Incoming Call Log > 查看最近呼入电话日志
+## 查看最近来电
+* 在总机上按 Menu > 选择 Incoming Call Log > 查看最近来电日志
