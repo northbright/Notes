@@ -10,3 +10,4 @@
 * Press power button to power off then power on again for 2 times
 * No prompt to input BitLocker key any more
 * Log on Windows successfully
+* Turn **OFF** "Device Encryption" ASAP
