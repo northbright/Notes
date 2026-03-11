@@ -3,7 +3,7 @@
 ## Steps
 
 #### Method A
-Visit [Download](https://nodejs.org/en/download/) to get official script to install latest version of Node.js(e.g. Run nvm v0.40.3 to install Node.js v24). 
+Visit [Download](https://nodejs.org/en/download/) to get official script to install latest version of nvm and Node.js(e.g. nvm v0.40.3 and Node.js v24).
 
 ```sh
 # Download and install nvm:
