@@ -195,7 +195,12 @@ Wait 30 minutes and try again.
 * 查看 App ID 和 App Secret
   * 凭证与基础信息 > 应用凭证 > 查看 App ID 和 App Secret，后面需要为 OpenClaw 配置
 * 应用能力 > 添加应用能力 > 机器人 > 点击下面的"添加"按钮
-* 权限管理 > 批量导入 > [官网最新的粘贴 JSON 配置一键导入所需权限](https://docs.openclaw.ai/zh-CN/channels/feishu)
+* 权限管理
+  * 基本权限
+
+    注意：飞书权限的名称在快速迭代，OpenClaw 官网教程中的 JSON 中的权限可能失效。
+
+    批量导入 > [官网最新的粘贴 JSON 配置一键导入所需权限](https://docs.openclaw.ai/zh-CN/channels/feishu)
 
 ```json
 {
@@ -228,6 +233,11 @@ Wait 30 minutes and try again.
   }
 }
 ```
+  * 云文档权限
+    创建编辑云文档，云文档权限的管理的权限等。
+
+    * 在飞书开发者后台 > 应用 > 权限管理 > 开通权限 > 左侧“云文档” > 勾选“权限名称”进行全选
+    * 可以根据需求删减和添加
 
 * 机器人 > 如何开始使用 > 输入机器人名称(e.g. OpenClaw-bot)
 
