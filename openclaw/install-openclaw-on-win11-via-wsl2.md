@@ -2,7 +2,7 @@
 
 ## Install WSL 2 and Use Ubuntu-24.04 as Default Linux Distro 
 * Press Win + R and type "PowerShell" to open a PowerShell window
-* Run `wsl --install -d Ubuntu-24.04`
+* Run `wsl --install Ubuntu-24.04`
   * Input user name and password 
 
 ## Start WSL Linux Distro
@@ -11,8 +11,7 @@
 
 ## Upgrade Packages and Install Dependencies
 ```sh
-sudo apt update
-sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 sudo apt install -y unzip
 ```
 
@@ -103,49 +102,33 @@ Get-NetFirewallRule -DisplayName "OpenClaw-Service" | Format-Table
 
   It'll retry if it reports: npm install failed for openclaw@latest.
 
-* Read security warning > "Yes"
-* Onboarding mode > QuickStart
-* Model/auth provider > MiniMax
-* MiniMax auth method > MiniMax OAuth(Oauth plugin for MiniMax)
-* Select MiniMax endpoint > CN
-* Open a browser(e.g. Edge) manually > visit the given OAUTH URL > Login MiniMax Account > Authorize（授权 OpenClaw)
-  * 在 [MiniMax > 套餐管理 > Coding Plan](https://platform.minimaxi.com/user-center/payment/coding-plan) 中，可以看到赠送的Trial 试用版(7 天）
-  * 在 MiniMax > 账户管理 > 接口密钥 > Coding Plan Key > Key 已经创建
-* Default model > Keep current(minimax-portal/MiniMax-M2.5)
-* Select channel (QuickStart) > Skip for now
-* Web search > Search provider > Skip for now
-* Skills status > Configure skills now? > No
-* Enable hooks > Skip for now
-* How do you want to hatch your bot
+* Interactive Onboard Setup
+  * Read security warning > "Yes"
+  * Onboarding mode > QuickStart
+  * Model/auth provider > MiniMax
+  * MiniMax auth method > MiniMax OAuth(Oauth plugin for MiniMax)
+  * Select MiniMax endpoint > CN
+  * Open a browser(e.g. Edge) manually > visit the given OAUTH URL > Login MiniMax Account > Authorize（授权 OpenClaw)
+    * 在 [MiniMax > 套餐管理 > Coding Plan](https://platform.minimaxi.com/user-center/payment/coding-plan) 中，可以看到赠送的Trial 试用版(7 天）
+    * 在 MiniMax > 账户管理 > 接口密钥 > Coding Plan Key > Key 已经创建
+  * Default model > Keep current(minimax-portal/MiniMax-M2.5)
+  * Select channel (QuickStart) > Skip for now
+  * Web search > Search provider > Skip for now
+  * Skills status > Configure skills now? > No
+  * Enable hooks > Skip for now
+  * How do you want to hatch your bot > Open the Web UI
+
+* If you want to cancel current onboard setup and restart
+
+  Press `CTRL + C` to exit and run:
+
+  ```sh
+  openclaw onboard
+  ```
 
 ## Install Skills
-#### Method A: Download Zip and Install Manually(recommended)
-* Find skill(e.g. `skill vetter`) and click the skill to go to skill home page
-* Click "Download zip" button
-* Get the skill slug by using the last path in the URL of the skill
-  e.g. The slug is `skill-vetter` for `https://clawhub.ai/spclaudehome/skill-vetter`
 
-* Make a skill dir which name is skill slug under `<workspace>/skills`(e.g. `~/.openclaw/workspace/skills`
-  ```sh
-  mkdir ~/.openclaw/workspace/skills/skill-vetter
-  ```
-
-* Unzip the downloaded zip to the skill dir 
-
-  ```sh
-  cd ~/.openclaw/skills/workspace/skill-vetter
-  
-  // Replace XX with your Windows user
-  unzip /mnt/c/Users/XX/Downloads/skill-vetter-1.0.0.zip
-  ```
-
-* Restart Gateway
-
-  ```sh
-  openclaw restart gateway
-  ```
-
-#### Method B: Use `clawhub` Cli
+#### Method A: Use `clawhub` Cli
 
 Warning: You may get "Rate limit exceed" error when using this method.
 Wait 30 minutes and try again.
@@ -182,12 +165,97 @@ Wait 30 minutes and try again.
   OK. Installed skill-vetter -> /home/XX/.openclaw/workspace/skills/skill-vetter
   ```
 
+#### Method B: Download Zip and Install Manually
+* Find skill(e.g. `skill vetter`) and click the skill to go to skill home page
+* Click "Download zip" button
+* Get the skill slug by using the last path in the URL of the skill
+  e.g. The slug is `skill-vetter` for `https://clawhub.ai/spclaudehome/skill-vetter`
+
+* Make a skill dir which name is skill slug under `<workspace>/skills`(e.g. `~/.openclaw/workspace/skills`
+  ```sh
+  mkdir ~/.openclaw/workspace/skills/skill-vetter
+  ```
+
+* Unzip the downloaded zip to the skill dir 
+
+  ```sh
+  cd ~/.openclaw/skills/workspace/skill-vetter
+  
+  // Replace XX with your Windows user
+  unzip /mnt/c/Users/XX/Downloads/skill-vetter-1.0.0.zip
+  ```
+
+* Restart Gateway
+
+  ```sh
+  openclaw restart gateway
+  ```
+
+#### Method B: Use `clawhub` Cli
+
+Warning: You may get "Rate limit exceed" error when using this method.
+Wait 30 minutes and try again.
+
+* Sign in [clawhub](https://clawhub.ai/) using a Github account
+
+* Create a clawhub token
+  * Go to settings > API Tokens > Create token
+
+* Run clawhub to Login and Install a Skill
+
+  ```sh
+  // Replace TOKEN with the created token in clawhub.ai > settings.
+  npx clawhub@latest login --token <TOKEN>
+  ```
+
+  ```sh
+  // It'll install skill under <workspace>/skills/<slug>
+  npx clawhub@latest install <slug>
+  ```
+
+  e.g.
+
+  ```sh
+  npx clawhub@latest install skill-vetter
+
+  // Output:
+  OK. Installed skill-vetter -> /home/XX/.openclaw/workspace/skills/skill-vetter
+  ```
+
 * Recommended Skills
   * `self-improving-agent`
   * `find-skills`
   * `ontology`
   * `weather`
   * `summarize`
+  * `multi-search-engine`
+
+## Install Tavily Search Plugin(NOT a SKILL)
+OpenClaw use Brave as search provider by default. It may be blocked in China.
+Use [Tavily Search](https://app.tavily.com/) instead. 
+
+* Visit <https://app.tavily.com/> to sign in with Github account
+* Copy the API key: `tvly-dev-***`
+* Select [openclaw-tavily](https://github.com/framix-team/openclaw-tavily) as the OpenClaw plugin
+* Export `TAVILY_API_KEY` to environment
+
+  ```sh
+  vi ~/.bashrc
+  ```
+
+  ```sh
+  # Tavily API Key for openclaw-tavily plugin
+  export TAVILY_API_KEY=tvly-dev-xxxx
+  ```
+
+  ```sh
+  source ~/.bashrc
+  ```
+* Install [openclaw-tavily](https://github.com/framix-team/openclaw-tavily) Plugin
+
+  ```sh
+  openclaw plugins install openclaw-tavily
+  ```
 
 ## Add Feishu Channel(接入飞书)
 * 访问 <https://open.feishu.cn/app> 注册账号
@@ -281,4 +349,26 @@ Wait 30 minutes and try again.
 
 ## Check Installed Skills
 * Go to dashboard > Skills > Installed Skills
+
+
+## Start Web Chat in Web UI
+* Visit the dashboard link with token for the **First Time** to control OpenClaw
+  e.g. `http://localhost:18789#token=xxxx`
+* Then you may use `http://localhost:18789` as the dashboard URL
+
+* Send "Hello, what can you do?" to the agent to setup it
+  * Name
+  * Style(e.g. 活泼的)
+  * Avatar
+    * Copy a JPG to openclaw's workspace
+      ```sh
+      cp /mnt/c/Users/XX/Downloads/avatar.jpg ~/.openclaw/workspace/avatar.jpg
+      ```
+    * Tell agent the path of the avatar(`~/.openclaw/workspace/avatar.jpg`)
+    * It can not show the avatar in Web UI if you use the path in `/mnt/PATH_TO_JPG`
+    * The avatar image MUST be small than 2M or it won't show
+
+## References
+* [[Bug] Webchat avatar endpoint /avatar/{agentId} returns 404 even with valid IDENTITY.md avatar #38439](https://github.com/openclaw/openclaw/issues/38439)
+* [openclaw-tavily](https://github.com/framix-team/openclaw-tavily)
 
