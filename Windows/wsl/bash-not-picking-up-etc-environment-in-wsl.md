@@ -46,3 +46,4 @@ wsl -d Ubuntu-24.04
 * [WSL run a non-login shell even with `--shell-type login`](https://superuser.com/questions/1829907/wsl-run-a-non-login-shell-even-with-shell-type-login)
 * [Add "Run as login shell" option for Bash. #816](https://github.com/microsoft/WSL/issues/816)
 * [Setting variable in /etc/environment has no effect](https://superuser.com/questions/1308298/setting-variable-in-etc-environment-has-no-effect)
+* [Has anyone gotten Linux-PAM to work on Microsoft's WSL2 (especially pam_env)? #481](https://github.com/linux-pam/linux-pam/issues/481)
