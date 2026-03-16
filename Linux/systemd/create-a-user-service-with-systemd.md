@@ -24,6 +24,7 @@ do
     now=$(date)
     me=$(whoami)
     echo "User $me at $now"
+    echo "API_KEY=$API_KEY"
     sleep 10
 done  
 ```
@@ -32,6 +33,17 @@ done
 # Add Executable Permission
 
 chmod a+x ~/example_service
+```
+
+#### Create an Environment File(optional)
+To set environment variable for systemd service, you can create a environment file then set `EnvironmentFile=xx` in the unit file.
+
+```sh
+vi ~/.env
+```
+
+```sh
+API_KEY="fake_api_key_abcdef1234567"
 ```
 
 #### Create a Unit File under `~/.config/systemd/user/`
@@ -52,6 +64,7 @@ Wants=
 ExecStart=/home/xx/example_service
 Restart=always
 Environment=HOME=/home/xx
+EnvironmentFile=/home/xx/.env
 
 [Install]
 WantedBy=default.target
@@ -82,6 +95,7 @@ Run `systemctl` with `--user` flag for enable / start / status / ...
 
   // Output:
   User xx at Mon Mar 16 13:53:32 CST 2026
+  API_KEY="fake_api_key_abcdef1234567"
   ```
 
 * Show Logs
