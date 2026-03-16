@@ -1,17 +1,16 @@
-# Add System Wide Environment Variable
+# Add System Wide Environment Variable for Bash
 
 ## Solution
 Create a `.sh` under `/etc/profile.d/`.
 
-For example, we can export API key to environment:  
+e.g. Add `/usr/local/xx/bin` to `$PATH`:
 
 ```sh
-sudo vi  /etc/profile.d/apikey.sh
+sudo vi  /etc/profile.d/path.sh
 ```
 
 ```sh
-# Tavily API Key
-export TAVILY_API_KEY="tvly-dev-xxxx"
+export PATH="$PATH:/usr/local/xx/bin"
 ```
 
 ## References
