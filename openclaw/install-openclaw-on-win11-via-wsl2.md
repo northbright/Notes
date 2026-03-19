@@ -191,37 +191,6 @@ Wait 30 minutes and try again.
   openclaw restart gateway
   ```
 
-#### Method B: Use `clawhub` Cli
-
-Warning: You may get "Rate limit exceed" error when using this method.
-Wait 30 minutes and try again.
-
-* Sign in [clawhub](https://clawhub.ai/) using a Github account
-
-* Create a clawhub token
-  * Go to settings > API Tokens > Create token
-
-* Run clawhub to Login and Install a Skill
-
-  ```sh
-  // Replace TOKEN with the created token in clawhub.ai > settings.
-  npx clawhub@latest login --token <TOKEN>
-  ```
-
-  ```sh
-  // It'll install skill under <workspace>/skills/<slug>
-  npx clawhub@latest install <slug>
-  ```
-
-  e.g.
-
-  ```sh
-  npx clawhub@latest install skill-vetter
-
-  // Output:
-  OK. Installed skill-vetter -> /home/XX/.openclaw/workspace/skills/skill-vetter
-  ```
-
 * Recommended Skills
   * `self-improving-agent`
   * `find-skills`
@@ -229,33 +198,6 @@ Wait 30 minutes and try again.
   * `weather`
   * `summarize`
   * `multi-search-engine`
-
-## Install Tavily Search Plugin(NOT a SKILL)
-OpenClaw use Brave as search provider by default. It may be blocked in China.
-Use [Tavily Search](https://app.tavily.com/) instead. 
-
-* Visit <https://app.tavily.com/> to sign in with Github account
-* Copy the API key: `tvly-dev-***`
-* Select [openclaw-tavily](https://github.com/framix-team/openclaw-tavily) as the OpenClaw plugin
-* Export `TAVILY_API_KEY` to environment
-
-  ```sh
-  vi ~/.bashrc
-  ```
-
-  ```sh
-  # Tavily API Key for openclaw-tavily plugin
-  export TAVILY_API_KEY=tvly-dev-xxxx
-  ```
-
-  ```sh
-  source ~/.bashrc
-  ```
-* Install [openclaw-tavily](https://github.com/framix-team/openclaw-tavily) Plugin
-
-  ```sh
-  openclaw plugins install openclaw-tavily
-  ```
 
 ## Add Feishu Channel(接入飞书)
 * 访问 <https://open.feishu.cn/app> 注册账号
@@ -347,10 +289,6 @@ Use [Tavily Search](https://app.tavily.com/) instead.
   * 在 Ubuntu 运行 `openclaw pairing approve feishu <XXXX>`
   * 输出: `Approved feishu sender xxxx` 说明配置成功 
 
-## Check Installed Skills
-* Go to dashboard > Skills > Installed Skills
-
-
 ## Start Web Chat in Web UI
 * Visit the dashboard link with token for the **First Time** to control OpenClaw
   e.g. `http://localhost:18789#token=xxxx`
@@ -367,6 +305,53 @@ Use [Tavily Search](https://app.tavily.com/) instead.
     * Tell agent the path of the avatar(`~/.openclaw/workspace/avatar.jpg`)
     * It can not show the avatar in Web UI if you use the path in `/mnt/PATH_TO_JPG`
     * The avatar image MUST be small than 2M or it won't show
+
+## Install Tavily Search Plugin(NOT a SKILL)
+OpenClaw use Brave as search provider by default. It may be blocked in China.
+Use [Tavily Search](https://app.tavily.com/) instead. 
+
+* Visit <https://app.tavily.com/> to sign in with Github account
+* Copy the API key: `tvly-dev-***`
+* Select [openclaw-tavily](https://github.com/framix-team/openclaw-tavily) as the OpenClaw plugin
+* Export `TAVILY_API_KEY` to environment of OpenClaw's user systemd service
+
+  ```sh
+  vi ~/.env
+  ```
+
+  ```sh
+  TAVILY_API_KEY="tvly-dev-xxxx"
+  ```
+
+  * Set owner of the file and add executable permission.
+  
+    ```sh
+    chown xx:xx ~/.env
+    chmod a+x ~/.env
+    ```
+
+  * Set `EnvironmentFile` in OpenClaw's systemd unit file.
+  
+    ```sh
+    vi ~/.config/systemd/user/openclaw-gateway.service
+    ```
+
+    ```sh
+    EnvironmentFile=/home/xx/.env
+    ```
+
+  * Restart OpenClaw Gateway
+
+    ```sh
+    openclaw gateway restart
+    ```
+
+* Install [openclaw-tavily](https://github.com/framix-team/openclaw-tavily) Plugin
+
+  ```sh
+  openclaw plugins install openclaw-tavily
+  ```
+
 
 ## References
 * [[Bug] Webchat avatar endpoint /avatar/{agentId} returns 404 even with valid IDENTITY.md avatar #38439](https://github.com/openclaw/openclaw/issues/38439)
