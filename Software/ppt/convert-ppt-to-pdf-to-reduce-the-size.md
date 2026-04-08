@@ -10,7 +10,7 @@ Convert PPT to PDF format via Keynote and re-export the PDF using Preview App wi
 
 1. Convert PPT to PDF format via Keynote
 
-  * Go to File > Export > to PDF > Image Quality > Good(lowest quality)
+  * Go to File > Export > to PDF > Image Quality > Good(lowest quality) > Save
   * The generated PDF' size is smaller(38 MB)
 
 2. Open the PDF in Preview App and **re-export** to another PDF
