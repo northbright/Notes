@@ -36,6 +36,12 @@
 * Method B: remove entire `_cacache` dir
 
   ```sh
+  sudo npm cache clean —force
+  ```
+
+  or
+
+  ```sh
   sudo rm -rf /Users/xx/.npm/_cacache/
   ```
 
