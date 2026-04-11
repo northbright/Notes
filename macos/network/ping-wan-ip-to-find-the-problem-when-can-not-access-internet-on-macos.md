@@ -11,12 +11,13 @@ Run `ping WAN IP` on macOS to test if WAN can be reached.
 
 * It failed to ping WAN IP
 
-  * Check macOS Preferences > Network > Select an Ethernet Interface > Details > Router(it's the gateway) and it is incorrect: `223.5.5.5`(Aliyun DNS)
+  * Check macOS Preferences > Network > Select an Ethernet Interface > Details > TCP/IP(left column) > Router(it's the gateway)
+  * I's incorrect: `223.5.5.5`(Aliyun DNS) but not router's IP(e.g. `10.0.1.x`)
   * Set it to `10.0.1.x`(IP of the router) and it can ping WAN IP successfully.
   * Find the next hop in router's route table of WAN IP
   * It succeeded to ping next hop of WAN IP
 
 * Try to ping `baidu.com` and it fails
 
-  * Check Preferences > Network > Select an Ethernet Interface > Details > DNS on the left column and it is not set
-  * Set it to `10.0.1.x`(IP of the router) and it can ping `baidu.com` successfully.
+  * Check Preferences > Network > Select an Ethernet Interface > Details > DNS(left column) and it is not set
+  * Set it to `223.5.5.6`(Aliyun DNS) and it can ping `baidu.com` successfully.
