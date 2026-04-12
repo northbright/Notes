@@ -11,3 +11,4 @@
 
 ## References
 * [Got Black Screen when Wake Up Surface after Sleep due to S0ix Model](got-black-screen-when-wake-up-surface-after-sleep-due-to-it-use-s0ix-model.md)
+* [关于微软苏菲SURFACE PRO/BOOK黑屏假死修复的一种思路/方法](https://zhuanlan.zhihu.com/p/573493215)

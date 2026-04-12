@@ -12,3 +12,6 @@ Do not let Surface sleep.
 
 * Power settings > Sleep time > Never
 * Power settings > Power button > Hibernate
+
+## References
+* [关于微软苏菲SURFACE PRO/BOOK黑屏假死修复的一种思路/方法](https://zhuanlan.zhihu.com/p/573493215)
