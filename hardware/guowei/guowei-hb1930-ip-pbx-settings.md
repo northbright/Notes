@@ -263,6 +263,13 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
   * 可以在电话机上输入 `*114#`，从服务器查询分机号，只要能查询到说明分机注册成功
   * 分机状态在修改 IP 后可能需要一定时间同步（几个小时或者 1 天）
 
+## 外线设置呼叫转移
+* 直接将电信网关的语音口连接电话机进行设置呼叫转移
+  * `*41*电话号码#` --> 无应答呼叫转移
+  * `*57*电话号码#` --> 强制呼叫转移
+  * `#57#` --> 取消呼叫转移
+* 在 IPPBX / IP Phone 上**不能**设置外线呼叫转移
+
 ## 手册
 * [国威官网文档下载](https://www.gwtx.com.cn/download.html)
 * [国威HB100/HB1910/HB1930/HB1960配置文档下载](https://cdn055.yun-img.com/static/upload/guoweidz/download/20230520165902_66819.pdf)
