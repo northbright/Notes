@@ -32,23 +32,27 @@ which go
   * `go get` packages from `"https://golang.org/x/XX"` will fail in China(golang.org is blocked in China)
   * `GOPROXY` is  set to `"https://proxy.golang.org,direct"` by default
   * `"https://proxy.golang.org"` is blocked in China
-  * Set `GOPROXY` to `"https://goproxy.io"` for gophers in China
+  * Recommended `GOPROXY` for gophers in China
+    * [aliyun gomodule mirror](https://developer.aliyun.com/mirror/goproxy): `export GOPROXY="https://mirrors.aliyun.com/goproxy/,direct"`
+    * [goproxy](https://goproxy.io): `export GOPROXY="https://goproxy.io,direct"`
 * `GOSUMDB`
   * Set `GOSUMDB` to `"sum.golang.google.cn"` for gophers in China
 * `GOPATH`
   * If you want to run the binary installed from `go get`(e.g. [staticcheck](https://staticcheck.io/)), we need to set `$GOPATH` and add `$GOPATH/bin` to `$PATH` in `~/.zprofile`
 
-```
+```sh
 // Mac OS X 10.15 use zsh as default shell which use ~/.zprofile
 vi ~/.zprofile
+
 ```
-```
-export GOPROXY="https://goproxy.io,direct"
+```sh
+export GOPROXY="https://mirrors.aliyun.com/goproxy/,direct"
 export GOSUMDB="sum.golang.google.cn"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 ```
-```
+
+```sh
 // Reload `~/.zprofile` in current terminal
 source ~/.zprofile
 ```
@@ -105,3 +109,4 @@ xcode-select --install
 * [谈谈gomod/goproxy/gosumdb](https://zhuanlan.zhihu.com/p/111722890)
 * <https://goproxy.io/>
 * [Set alias on Mac OS X which its Default Shell is zsh](https://github.com/northbright/Notes/blob/master/macos/shell/set-alias-on-mac-os-x-which-default-shell-is-zsh.md)
+* [欢迎访问阿里云Go Module代理仓库服务](https://developer.aliyun.com/mirror/goproxy)
