@@ -16,13 +16,16 @@
 
   ```sh
   vlan 10 20
+  ```
+
+  ```sh
   interface vlan 10
   ip address 192.168.10.1 24
   quit
   
   interface vlan 20
   ip address 192.168.20.1 24
-  quit  
+  quit
   ```
 
 * Create a specified Vlanif100(`192.168.100.1`) used to communicate with router
@@ -34,10 +37,44 @@
   quit
   ```
 
+* Create DHCP pools
+
+  ```sh
+  dhcp server ip-pool vlan10
+  network 10.0.10.0 mask 255.255.255.0
+  gateway-list 10.0.10.1
+  // Use Aliyun DNS
+  dns-list 223.5.5.5 223.6.6.6
+  // Lease time: 1 day for PC
+  expired day 1
+  quit
+
+  dhcp server ip-pool vlan20
+  network 10.0.20.0 mask 255.255.255.0
+  gateway-list 10.0.20.1
+  // Use Aliyun DNS
+  dns-list 223.5.5.5 223.6.6.6
+  // Lease time: 1 hour for mobile devices
+  expired day 0 hour 1
+  quit
+  ```
+
+* Apply DHCP Pool on Vlanif
+
+  ```sh
+  interface vlan10
+  dhcp server apply ip-pool vlan10
+  quit
+
+  interface vlan20
+  dhcp server apply ip-pool vlan20
+  quit
+  ```
+
 * Create a default(static) route on switch
 
   ```sh
-  ip route-static 0.0.0.0 0.0.0.0 192.168.100.2
+  ip route-static 0.0.0.0 0 192.168.100.2
   ```
 
   * Note:
@@ -69,14 +106,26 @@
 
 * Set the link-type of the port connected to the router to `trunk`
 
-  ```sh
-  // Permit VLAN 100 only and block all other VLANs
-  // to avoid switch flooding to router.
-  interface ge1/0/24
-  port link-type trunk
-  port trunk permit vlan 100
-  quit
-  ```
+  * Method A
+  
+    ```sh
+    // Permit VLAN 100 only and block all other VLANs
+    // to avoid switch flooding to router.
+    interface ge1/0/24
+    port link-type trunk
+    port trunk permit vlan 100
+    quit
+    ```
+  * Method B
+
+    If method A does not work: can not ping router IP from VLAN 10, 20, try to allow all VLANs.
+
+    ```sh
+    interface ge1/0/24
+    port link-type trunk
+    port trunk permit vlan 10 20 100
+    quit
+    ```
 
   * It should config the link type of both ports to **ACCESS**
   * H3C ER5200, ER8200 can only configure LAN as **TRUNK** port only
@@ -85,7 +134,9 @@
 
 ## H3C ER8300G2-X Router Setup
 * Create a specified Vlanif100(`192.168.100.2`) used to communicate with switch
-* Set the link-type of the LAN port which connected to the switch to `trunk`(permit VLAN100)
+* Set the link-type of the LAN port which connected to the switch to `trunk`
+  * for method A: permit VLAN 100
+  * for method B: permit all VLANs(10, 20, 100)
 * Add static routes for all business VLANs
 
   Set next hot to Vlanif100 of switch(`192.168.100.1`) and set out interface to Vlan100.
