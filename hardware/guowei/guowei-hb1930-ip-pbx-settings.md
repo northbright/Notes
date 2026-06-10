@@ -146,17 +146,7 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
 
 2. 注册 SIP 账号
 
-  * 第一种方法：在分机上注册
-    * 菜单  > 高级 > 输入密码（默认：123）> 账号
-    * 设置 > SIP1 > 设置 > 注册 > 开启
-    * 注册地址 > 10.0.6.3（IP PBX 的 IP 地址）
-    * 注册用户：选择创建好的分机（e.g. 7001）
-    * 注册密码：对应的注册密码
-    * SIP 用户：可以选择分机(e.g. 7001)
-    * 显示名字：可以选择分机(e.g. 7001)
-    * 端口：默认5060
-
-  * 第二种方法：通过网页登录 IP Phone 的管理地址（HTTP Server）
+  * 方法 1：通过网页登录 IP Phone 的管理地址（HTTP Server）
     * 浏览器地址输入 IP Phone 的 IP 地址(e.g. 10.0.6.6)
     * 用户名：admin
     * 默认密码：admin
@@ -170,7 +160,17 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
       * 服务器地址：IP PBX 的 IP
       * 服务器端口：默认 5060
     * 提交
-    * 成功后状态更新为：已注册。如果提示注册失败 401，则注册密码输入错误(可能创建分机用户后没有点击“应用”)
+    * 成功后状态更新为：已注册。如果提示注册失败 401，则注册密码输入错误(可能创建分机用户后没有>点击“应用”)
+
+  * 方法 2：在分机上注册
+    * 菜单  > 高级 > 输入密码（默认：123）> 账号
+    * 设置 > SIP1 > 设置 > 注册 > 开启
+    * 注册地址 > 10.0.6.3（IP PBX 的 IP 地址）
+    * 注册用户：选择创建好的分机（e.g. 7001）
+    * 注册密码：对应的注册密码
+    * SIP 用户：可以选择分机(e.g. 7001)
+    * 显示名字：可以选择分机(e.g. 7001)
+    * 端口：默认5060
 
 ## IP PBX FXO 模拟中继设置
 * 菜单 > PBX > 中继
@@ -241,10 +241,18 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
 * 分机 B 接听后，分机 A 听到分机 B 接通后，挂断分机 A
 * 用户可以与分机 B 进行通话
 
-## 分机使用 NTP 服务器同步时间
+## 国威 IP Phone 网页管理登录
+1. 在话机上完成网络设置（参考: 国威 IP Phone(GW11P)分机注册 SIP) 
+2. 在浏览器输入 IP Phone 的 IP(e.g. `10.0.6.8`)
+  * 用户: `admin`
+  * 初始密码: `admin`
+
+## 国威 IP Phone 使用 NTP 服务器同步时间
 * 默认不会同步 NTP 服务器
 * 时间不正确时，分机上不能显示未接来电
 * 使用分机 IP 登录 Web 管理
+  * 用户：admin
+  * 密码：admin（默认)
   * 电话设置 > 时间/日期
   * 勾选"使用SNTP同步时间"
   * 主要时间服务器地址: `ntp.aliyun.com`
