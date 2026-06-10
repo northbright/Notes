@@ -241,13 +241,13 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
 * 分机 B 接听后，分机 A 听到分机 B 接通后，挂断分机 A
 * 用户可以与分机 B 进行通话
 
-## 国威 IP Phone 网页管理登录
+## 国威 IP Phone(GW11P) 网页管理登录
 1. 在话机上完成网络设置（参考: 国威 IP Phone(GW11P)分机注册 SIP) 
 2. 在浏览器输入 IP Phone 的 IP(e.g. `10.0.6.8`)
   * 用户: `admin`
   * 初始密码: `admin`
 
-## 国威 IP Phone 使用 NTP 服务器同步时间
+## 国威 IP Phone(GW11P) 使用 NTP 服务器同步时间
 * 默认不会同步 NTP 服务器
 * 时间不正确时，分机上不能显示未接来电
 * 使用分机 IP 登录 Web 管理
