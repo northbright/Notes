@@ -207,6 +207,7 @@ Orange/White    Orange   Green/White    Blue    Blue/White   Green    Brown/Whit
 * 点击添加
 * 名称：可以输入 FXO 外线对应的真实电话号码(e.g 6200XXXX)
 * DID 号码：输入之前创建的绑定 FXO 外线的虚拟 DID 号码(e.g. 301)
+* 主叫号码：留空即可
 * 入局目的地：可以选择振铃组
 * 保存，并且“应用”
 
