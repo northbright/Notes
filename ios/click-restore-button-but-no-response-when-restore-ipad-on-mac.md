@@ -17,4 +17,7 @@
 * Click "Upgrade" to upgrade the software
 * When upgrade is done, it's ok to restore the iPad  
 
+## References
+* [如果你无法更新或恢复 iPad](https://support.apple.com/zh-cn/108925)
+
 
