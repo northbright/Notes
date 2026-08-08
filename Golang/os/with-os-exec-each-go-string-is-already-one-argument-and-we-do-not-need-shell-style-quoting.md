@@ -63,6 +63,12 @@
 
 * When run ffmpeg with Golang `os/exec`, ffmpeg does not recognize the `"concat:01.ts|02.ts"` concat protocl but treat it as a normal file path.
 * When pass args to `exec.Command`, each go string is **ALREADY** one argument, shell-style quoting is **NO** need
+  ```go
+  // concatArg := `"concat:01.ts|02.ts"`
+  concatArg := `concat:01.ts|02.ts`
+  args = append(args, "-i", concatArg, "-c", "copy", "-bsf:a", "aac_adtstoasc", "output.mp4")
+  cmd := exec.Command("ffmpeg", args...)
+  ```
 
 ## Solution
 Remove quotes in `exec.Command` concat arg.
