@@ -36,7 +36,7 @@ if err != nil {
 
 * When run ffmpeg in shell, shell parses the quotes before the the program runs.
   * Adding quotes for the file paths may contain spaces
-    `"concat:foo bar-01.ts|foo bar-02.ts"
+    `"concat:foo bar-01.ts|foo bar-02.ts"`
 
 * When pass args to `exec.Command`, each go string is **ALREADY** one argument, shell-style quoting is **NO** need 
 
