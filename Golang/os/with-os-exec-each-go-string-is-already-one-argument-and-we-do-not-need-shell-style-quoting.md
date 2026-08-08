@@ -59,7 +59,7 @@
 ## Root Cause
 * When run ffmpeg in shell, shell parses the quotes before the the program runs.
   * Adding quotes for the file paths may contain spaces
-    `"concat:foo bar-01.ts|foo bar-02.ts"
+    `"concat:foo bar-01.ts|foo bar-02.ts"`
 
 * When run ffmpeg with Golang `os/exec`, ffmpeg does not recognize the `"concat:01.ts|02.ts"` concat protocl but treat it as a normal file path.
 * When pass args to `exec.Command`, each go string is **ALREADY** one argument, shell-style quoting is **NO** need
