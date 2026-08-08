@@ -41,12 +41,10 @@ if err != nil {
 * When pass args to `exec.Command`, each go string is **ALREADY** one argument, shell-style quoting is **NO** need 
 
   ```go
-  // Incorrect
-  args = append(args, `"concat:01.ts|02.ts"`)
-  ```
-
-  // Correct
-  args = append(args, `concat:01.ts|02.ts`)
+  // concatArg := `"concat:01.ts|02.ts"`
+  concatArg := `concat:01.ts|02.ts`
+  args = append(args, "-i", concatArg, "-c", "copy", "-bsf:a", "aac_adtstoasc", "output.mp4")
+  cmd := exec.Command("ffmpeg", args...)
   ```
 
 ## References
