@@ -6,7 +6,7 @@
 
 * Get [cobra-cli](https://github.com/spf13/cobra-cli) command
 
-  ```
+  ```sh
   go install github.com/spf13/cobra-cli@latest
   ```
 
@@ -14,14 +14,14 @@
 
 * Check
   
-  ```
+  ```sh
   which cobra-cli
 
   // Output:
   /Users/XX/go/bin/cobra-cli
   ```
 
-  ```
+  ```sh
   cobra-cli
   // Output:
   // Cobra is a CLI library for Go that empowers applications.
@@ -31,7 +31,7 @@
   ```
 
 ## Create a Demo Go Module(App)
-```
+```sh
 mkdir ~/cobra-viper-demo
 cd ~/cobra-viper-demo
 go mod init demo
@@ -40,7 +40,7 @@ go mod init demo
 ## Init Go Module with [Cobra](https://github.com/spf13/cobra) and [Viper](https://github.com/spf13/viper)
 Use `cobra init` command to initialize a go module, run `cobra init -h` for more help
 
-```
+```sh
 cd ~/demo
 // Create a new app and use viper for configuration
 cobra-cli init --viper
@@ -49,18 +49,40 @@ cobra-cli init --viper
 It'll create `main.go` and `cmd/root.go`
 
 ## Implement Root Command
-* Go to `cmd/root.go` and find `rootCmd`, set `Short` / `Long` for brief / long description and implement the function for `Run`.
+* Go to `cmd/root.go` and find `rootCmd`
+* Set `Short` / `Long` for brief / long description
+* Add "Args: conbra.ExactArgs(N)" if necessary
+  * N: the count of arguments which root command MUST have
+* Implement the `Run` function
+* Parse flags if necessary
 
-```
+```go
 var rootCmd = &cobra.Command{
-        Use:   "demo",
-        Short: "My demo app",
+        Use:   "demo [name]",
+        Short: "My demo app to say Hello [name]!",
         Long: `My demo app, used to show how to create CLI interfaces for Golang apps using cobra and viper.
 
-It outputs "Hello World!" for root command`,
+It outputs "Hello [name]!" for root command`,
+        // Root command must have 1 arg: name to say Hi!.
+        Args: cobra.ExactArgs(1),
         Run: func(cmd *cobra.Command, args []string) {
-                fmt.Println("Hello World!")
+                name := args[0]
+                str := fmt.Sprintf("Hello %s!", name)
+                
+                // Add emoji when flag is set.
+                str += `🌐`
+                fmt.Printf("Hello %s!", name)
         },
+}
+
+......
+
+var (
+  showEarth bool
+)
+
+func init() {
+    rootCmd.Flags().BoolVarP(&showEarth, "earth", "e", false, "show earth emoji: 🌐")
 }
 ```
 
@@ -71,13 +93,13 @@ go run main.go
 
 ## Create a sub command: `demo goodbye [Name]`
 
-```
+```sh
 cobra-cli add goodbye
 ```
 
 Goto `cmd/goodbye.go` to implement `goodbyeCmd`
 
-```
+```go
 var goodbyeCmd = &cobra.Command{
         Use:   "goodbye [Name]",
         Short: "Say Goodbye",
@@ -93,7 +115,7 @@ var goodbyeCmd = &cobra.Command{
 
 * Test
 
-```
+```sh
 go run main.go goodbye Frank
 // Output:
 Goodbye, Frank
@@ -101,13 +123,13 @@ Goodbye, Frank
 
 ## Create another Sub Command with Flags: `demo goodnight [Name] --moon --sleepingface`
 
-```
+```sh
 cobra-cli add goodnight
 ```
 
 Goto `cmd/goodnight.go` to implement `goodnightCmd`
 
-```
+```go
 var (
         showMoon         bool
         showSleepingFace bool
@@ -142,7 +164,7 @@ func init() {
 ```
 
 * Test
-```
+```sh
 go run main.go goodnight Frank --moon --sleepingface
 // Output:
 goodnight, Frank🌙😴
@@ -150,13 +172,13 @@ goodnight, Frank🌙😴
 
 ## Create another Sub Command with Flag which Can Be Read From Config File Using Viper: `demo hi [Name] --emoji [emoji]`
 
-```
+```sh
 cobra-cli add hi
 ```
 
 Goto `cmd/hi.go` to implement `hiCmd`
 
-```
+```go
 import (
         ...
         // Import viper
@@ -193,24 +215,24 @@ func init() {
 ```
 
 * Download dependencies: viper
-```
+```sh
 go mod tidy
 ```
 
 * Init default config file:
-```
+```sh
 echo "emoji: 🐱" > ~/.demo.yaml
 ```
 
 * Test
-```
+```sh
 // With --emoji flag
 go run main.go hi Frank --emoji 😼
 // Output:
 Hi, Frank😼
 ```
 
-```
+```sh
 // Without --emoji flag and read "emoji" from config file(`~/.demo.yaml`)
 go run main.go hi Frank
 // Output:
