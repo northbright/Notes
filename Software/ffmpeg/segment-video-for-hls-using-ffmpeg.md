@@ -37,6 +37,11 @@ ffmpeg -i input.mov \
 
   Output `.m3u8` file
 
+## Show HLS Muxer help
+```sh
+ffmpeg -h muxer=hls
+```
+
 ## References
 * [使用FFmpeg命令进行hls切片，得到的ts文件时长不准确](https://blog.csdn.net/u014552102/article/details/103302731)
 * [FFmpeg hls设置hls_time切片时间不准确的解决方案-ts流强制gop](https://blog.csdn.net/u010029439/article/details/111186133)
