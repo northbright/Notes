@@ -81,7 +81,7 @@ func New(
 }
 ```
 
-```gp
+```go
 // Create a Copier with default buffer size and refresh rate.
 c := util.New(
     src,
