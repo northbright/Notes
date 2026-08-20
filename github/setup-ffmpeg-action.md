@@ -22,4 +22,4 @@
 ```
 
 ## References
-* <https://github.com/federicocarboni/setup-ffmpeg/issues/21#issuecomment-2480376403>
+* [Darwin ARM64: Unsupported architecture #21 - see cclauss‘s comment](https://github.com/federicocarboni/setup-ffmpeg/issues/21#issuecomment-2480376403)
