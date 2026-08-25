@@ -1,5 +1,8 @@
 # Control Number of Concurrent Worker Goroutines
 
+## Update(2026/08/25)
+* See [四、并发：用 channel 编排，而不是用 mutex 加锁](https://tonybai.com/2026/07/13/spf13-idiomatic-go/#%E5%9B%9B%E5%B9%B6%E5%8F%91%E7%94%A8-channel-%E7%BC%96%E6%8E%92%E8%80%8C%E4%B8%8D%E6%98%AF%E7%94%A8-mutex-%E5%8A%A0%E9%94%81)
+
 ## Pattern
 Use a channel of empty structs to control the number of concurrent worker goroutines.
 
@@ -41,4 +44,4 @@ Use a channel of empty structs to control the number of concurrent worker gorout
 ## References
 * [Limiting Concurrency in Go](http://jmoiron.net/blog/limiting-concurrency-in-go/)
 * [Go: Always have x number of goroutines running at any time(see artyom's answer)](https://stackoverflow.com/questions/25306073/go-always-have-x-number-of-goroutines-running-at-any-time)
-
+* [四、并发：用 channel 编排，而不是用 mutex 加锁](https://tonybai.com/2026/07/13/spf13-idiomatic-go/#%E5%9B%9B%E5%B9%B6%E5%8F%91%E7%94%A8-channel-%E7%BC%96%E6%8E%92%E8%80%8C%E4%B8%8D%E6%98%AF%E7%94%A8-mutex-%E5%8A%A0%E9%94%81)
