@@ -6,6 +6,10 @@
 
 ## Solution
 
+#### Update: 2026/08/25
+* Internet Explorer mode pages works only for 30 days after added in latest version of Edge
+* Need to re-added after 30 days
+
 #### Update: 2025/11/04
 IE mode icon was removed in v142.0.3595.53
 
