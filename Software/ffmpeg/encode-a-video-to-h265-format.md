@@ -12,7 +12,14 @@ ffmpeg -i input.mp4 -c:v libx265 \
 output.mp4
 ```
 
+## Use CRF for Rate Control Mode
+* Use CRF Mode
+  * Do **NOT** specify `-b:v` and it will use CRF mode(default value: 28) which is recommended
+* Do **NOT** use 1-Pass target bitrate Mode(by setting `-b:v xxxx`)
+* See [Constant Rate Factor (CRF)](https://trac.ffmpeg.org/wiki/Encode/H.265#crf)
+
 ## CRF Resolution-Specific Guidelines
+* Default CRF for h.265 is 28
 * Standard Definition (480p/576p): CRF 23–27 to counter artifacts on larger displays
 * 720p HD: CRF 24–28, with 25 for balanced streaming
 * 1080p Full HD: CRF 25–29, versatile for most consumer setups
