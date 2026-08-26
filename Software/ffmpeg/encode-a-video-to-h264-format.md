@@ -23,7 +23,7 @@ ffmpeg -i input.mov \
 output_480p.mp4
 ```
 
-## Use CRF for Rate Control Mode for Video
+## Use CRF for Rate Control Mode for Video Encoding
 * Use CRF Mode
   * Do **NOT** specify `-b:v` and it will use CRF mode(default value: 23) which is recommended
 * Do **NOT** use 1-Pass target bitrate Mode(by setting `-b:v xxxx`)
