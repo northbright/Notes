@@ -12,7 +12,7 @@ ffmpeg -i input.mp4 -c:v libx265 \
 output.mp4
 ```
 
-## Use CRF for Rate Control Mode
+## Use CRF for Rate Control Mode for Video Encoding
 * Use CRF Mode
   * Do **NOT** specify `-b:v` and it will use CRF mode(default value: 28) which is recommended
 * Do **NOT** use 1-Pass target bitrate Mode(by setting `-b:v xxxx`)
@@ -24,6 +24,9 @@ output.mp4
 * 720p HD: CRF 24–28, with 25 for balanced streaming
 * 1080p Full HD: CRF 25–29, versatile for most consumer setups
 * 4K UHD (2160p): CRF 26–32, leveraging HEVC's strengths; lower (22–26) for HDR/10-bit content
+
+## Default AAC Bitrate
+* AAC bitrate is 128k by default
 
 ## References
 * [x265 (HEVC) Encoder Guide](https://ffmpeg.party/guides/x265/)
