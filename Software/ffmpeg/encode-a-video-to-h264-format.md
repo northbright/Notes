@@ -23,6 +23,15 @@ ffmpeg -i input.mov \
 output_480p.mp4
 ```
 
+## Use CRF for Rate Control Mode for Video
+* Use CRF Mode
+  * Do **NOT** specify `-b:v` and it will use CRF mode(default value: 23) which is recommended
+* Do **NOT** use 1-Pass target bitrate Mode(by setting `-b:v xxxx`)
+* See [Constant Rate Factor (CRF)](https://trac.ffmpeg.org/wiki/Encode/H.264#crf)
+
+## Default AAC Bitrate
+* AAC bitrate is 128k by default
+
 ## References
 * [Upscaling and downscaling video with FFmpeg](https://write.corbpie.com/upscaling-and-downscaling-video-with-ffmpeg/)
 * [ffmpeg Documentation](https://ffmpeg.org/ffmpeg.html)
