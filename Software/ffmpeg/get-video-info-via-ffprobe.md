@@ -149,6 +149,14 @@ Output:
 }
 ```
 
+## Get All Streams
+
+It retreives all streams by default if no `-select_streams` specified.
+
+```sh
+ffprobe -v error -show_entries format:stream -of json input.mp4
+```
+
 ## References
 * [How to get video duration in seconds?](https://superuser.com/questions/650291/how-to-get-video-duration-in-seconds)
 * [ffprobe Documentation](https://ffmpeg.org/ffprobe.html)
