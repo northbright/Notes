@@ -7,3 +7,4 @@
 
 ## References
 * [How to Use IE Mode in Edge](https://github.com/northbright/Notes/blob/master/Software/edge/how-to-use-ie-mode-in-edge.md)
+* [Got "Failed to Playback or Preview" Error in IE Mode of Edge](got-failed-to-preview-or-playback-error-in-ie-mode-of-edge.md)
