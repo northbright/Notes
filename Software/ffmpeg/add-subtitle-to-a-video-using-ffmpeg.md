@@ -9,11 +9,11 @@ vi eng.srt
 ```srt
 1
 00:00:00,000 --> 00:00:05,090
-<b>What's mimao's playing?</b>
+What's mimao's playing?
 
 2
 00:00:05,100 --> 00:00:08,200
-<b>Does he realy like it?</b>
+Does he realy like it?
 ```
 
 ```sh
@@ -23,11 +23,11 @@ vi chi.srt
 ```srt
 1
 00:00:00,000 --> 00:00:05,090
-<b>咪毛在玩啥？</b>
+咪毛在玩啥？
 
 2
 00:00:05,100 --> 00:00:08,200
-<b>
+他真的喜欢这个吗？
 ```
 
 ## Hard Coding Subtitles
@@ -67,14 +67,17 @@ The Matroska (MKV) container natively supports SubRip (SRT) subtitles.
 
 * Add a subtitle stream(original video has NO subtitle stream)
 ```sh
-ffmpeg -i input.mkv -i eng.srt -c copy -map 0 -map 1 output.mkv
+ffmpeg -i input.mkv -i eng.srt -map 0 -map 1 -c copy -disposition:s:0 default output.mkv
 ```
 
-  * `-c copy`: do not recording video / audio, just copy the streams
   * `-map 0`: select all streams of input #1(input.mkv): video and audio streams
   * `-map 1`: select all streams of input #2(eng.srt): one subtitle stream
   * if no `-map 0` nor `-map 1`, ffmpeg will select only 1 stream for each type(video, audio, stream) automatically: select the highest quality stream in all streams of all inputs.
   * Adding `-map 0`, `-map 1` for mulitiple inputs in ffmpeg command is **recommended**
+  * `-c copy`: do not recording video / audio, just copy the streams
+  * `-disposition:s:0 default` sets the only subtitle stream as the **Default** subtitle stream
+    * The player shows the default subtitle stream
+    * If no default subtitle stream is set, the player will NOT show subtitle
 
 * Add multiple subtitle streams(English and Localized, original video has NO subtitle stream)
 ```sh
@@ -83,34 +86,40 @@ ffmpeg -i input.mkv -i eng.srt -i chi.srt \
 -c copy \
 -metadata:s:s:0 language=eng -metadata:s:s:0 title="English" \
 -metadata:s:s:1 language=chi -metadata:s:s:1 title="中文" \
+-disposition:s:1 default \
 output.mkv
 ```
 
   * `-map 0`: maps all the streams from the first input(video, audio)
   * `-map 1`: maps the second input(English subtitle) as the first subtitle stream(s:s:0)
   * `-map 2`: maps the third input(Chinese subtitle) as the second subtitle stream(s:s:1)
-  * `-c copy`: just copy tha video / audio stream without re-encoding
+  * `-c copy`: just copy the video / audio stream without re-encoding
   * `-metadata:s:s:x language=<CODE>`: set subtitle language to 3-letter ISO 639-2 code.
     * e.g. eng, spa, fra, chi
   * `-metadata:s:s:x title="TITLE"`: set menu title to select subtitle
+  * `-disposition:s:1 default` sets the Chinese subtitle stream(s:s:1) as the **Default** subtitle stream
 
 #### Add subtitle streams for `.MP4` format
 
 Unlike MKV, the MP4 container does not natively support raw SRT text format.
-To add subtitles to an MP4 container without re-encoding the video or audio, you must convert the SRT subtitle stream to the MP4-compatible Timed Text format (`mov_text`).
+To add subtitles to an MP4 container without re-encoding the video or audio, you must convert the SRT subtitle stream to the MP4-compatible Timed Text format (`mov_text`) with `-c:s mov_text` option.
 
 ```sh
-ffmpeg -i input.mkv -i eng.srt -i chi.srt \
+ffmpeg -i input.mp4 -i eng.srt -i chi.srt \
 -map 0 -map 1 -map 2 \
 -c copy \
 -c:s mov_text \
 -metadata:s:s:0 language=eng -metadata:s:s:0 title="English" \
 -metadata:s:s:1 language=chi -metadata:s:s:1 title="中文" \
+-disposition:s:1 default \
 output.mp4
 ```
-
-* You may need to enable subtitle track manually when playing `.mp4` using VLC player
-* IINA can show subtitle track automatically
+  
+  * `-c copy`: copy just copy the video / audio stream without re-encoding
+  * `-c:s mov_text`: converts the subtitle stream to Timed Text format compatible with MP4
+  * `-disposition:s:1 default` sets the Chinese subtitle stream(s:s:1) as the **Default** subtitle stream
+    * You may need to enable subtitle track manually when playing `.mp4` using VLC player even the subtitle stream is set to default.
+    * IINA can show the default subtitle track automatically
 
 ## References
 * [How to Embed Subtitles into a Video Using FFmpeg](https://www.baeldung.com/linux/subtitles-ffmpeg)
