@@ -4,6 +4,13 @@
 * Need to sort Golang map by keys or values.
 
 #### Solution
+* Update 2026/09/17
+
+  ```go
+  // Go 1.23 and later.
+  keys := slices.Sorted(maps.Keys(m))
+  ```
+
 * Use [sort.Slice(require Go1.8 and later)](https://godoc.org/sort#Slice)
 
 #### Example
