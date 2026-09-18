@@ -71,11 +71,11 @@ ffmpeg -i input.mkv -i eng.srt -map 0 -map 1 -c copy -disposition:s:0 default ou
 ```
 
   * `-map 0`: select all streams of input #1(input.mkv): video and audio streams
-  * `-map 1`: select all streams of input #2(eng.srt): one subtitle stream
+  * `-map 1`: select the second input(English subtitle) as the first subtitle stream(s:s:0) of output
   * if no `-map 0` nor `-map 1`, ffmpeg will select only 1 stream for each type(video, audio, stream) automatically: select the highest quality stream in all streams of all inputs.
   * Adding `-map 0`, `-map 1` for mulitiple inputs in ffmpeg command is **recommended**
   * `-c copy`: do not recording video / audio, just copy the streams
-  * `-disposition:s:0 default` sets the only subtitle stream as the **Default** subtitle stream
+  * `-disposition:s:0 default` sets the only subtitle stream as **Default** in **OUTPUT** subtitle stream(s)
     * The player shows the default subtitle stream
     * If no default subtitle stream is set, the player will NOT show subtitle
 
@@ -90,14 +90,14 @@ ffmpeg -i input.mkv -i eng.srt -i chi.srt \
 output.mkv
 ```
 
-  * `-map 0`: maps all the streams from the first input(video, audio)
-  * `-map 1`: maps the second input(English subtitle) as the first subtitle stream(s:s:0)
-  * `-map 2`: maps the third input(Chinese subtitle) as the second subtitle stream(s:s:1)
+  * `-map 0`: select all the streams from the first input(video, audio)
+  * `-map 1`: select the second input(English subtitle) as the first subtitle stream(s:s:0) of output
+  * `-map 2`: select the third input(Chinese subtitle) as the second subtitle stream(s:s:1) of output
   * `-c copy`: just copy the video / audio stream without re-encoding
-  * `-metadata:s:s:x language=<CODE>`: set subtitle language to 3-letter ISO 639-2 code.
+  * `-metadata:s:s:x language=<CODE>`: set subtitle language to 3-letter ISO 639-2 code in output subtitle stream
     * e.g. eng, spa, fra, chi
-  * `-metadata:s:s:x title="TITLE"`: set menu title to select subtitle
-  * `-disposition:s:1 default` sets the Chinese subtitle stream(s:s:1) as the **Default** subtitle stream
+  * `-metadata:s:s:x title="TITLE"`: set menu title to select subtitle in output subtitle stream
+  * `-disposition:s:1 default` sets Chinese(2nd subtitle stream) as **Default** in **OUTPUT** subtitle streams
 
 #### Add subtitle streams for `.MP4` format
 
@@ -115,9 +115,12 @@ ffmpeg -i input.mp4 -i eng.srt -i chi.srt \
 output.mp4
 ```
   
+  * `-map 0`: select all streams of input.mp4 to output
+  * `-map 1`: select the second input(English subtitle) as the first subtitle stream(s:s:0) of output
+  * `-map 2`: select the third input(Chinese subtitle) as the second subtitle stream(s:s:1) of output
   * `-c copy`: copy just copy the video / audio stream without re-encoding
   * `-c:s mov_text`: converts the subtitle stream to Timed Text format compatible with MP4
-  * `-disposition:s:1 default` sets the Chinese subtitle stream(s:s:1) as the **Default** subtitle stream
+  * `-disposition:s:1 default` sets Chinese(2nd subtitle stream) as **Default** in **OUTPUT** subtitle streams
     * You may need to enable subtitle track manually when playing `.mp4` using VLC player even the subtitle stream is set to default.
     * IINA can show the default subtitle track automatically
 
