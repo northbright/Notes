@@ -92,4 +92,4 @@ Output:
 | WebP | webp | 网页常用，支持有损/无损/动画 |
 | AVIF | av1 | 基于 AV1 帧内编码 |
 | JPEG XL | jpegxl | 较新格式，需要 FFmpeg 带 libjxl 支持 |
-| HEIC / HEIF | hevc 或其他 取决于内部编码，常见是 HEVC；FFmpeg 原生支持取决于版本和库 |
+| HEIC / HEIF | hevc | 或其他 取决于内部编码，常见是 HEVC；FFmpeg 原生支持取决于版本和库 |
