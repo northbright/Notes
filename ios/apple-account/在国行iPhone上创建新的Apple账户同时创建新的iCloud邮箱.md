@@ -24,5 +24,16 @@
   * 天气
 * iCloud 云备份: 关闭（没必要）
 
+## 信息打开 iMessage（可选）
+* 设置 > App > 信息 > iMessage 信息 > 打开
+* 如果需要添加“恢复联系人”，双方都需要打开 iMessage 信息
+
+## 设置恢复联系人(可选)
+* 在电话 > 通讯录 > 添加恢复人的手机号码
+* 确认该手机号的使用人也打开了 iMessage 信息
+* 设置 > 登录与安全性 > 恢复联系人 > 选取恢复联系人 > 点击+ > 选择联系人
+* 会发送请求给对方，对方接受后完成添加
+
 ## 参考资料
 * [如何创建新的 Apple 账户](https://support.apple.com/zh-cn/108647?device-type=iphone)
+* [为你的 Apple 账户设置恢复联系人](https://support.apple.com/zh-cn/102641)
