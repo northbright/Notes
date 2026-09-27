@@ -22,6 +22,7 @@
   * 提醒事项
   * 电话与 FaceTime 通话
   * 天气
+* iCloud 云备份: 关闭（没必要）
 
 ## 参考资料
 * [如何创建新的 Apple 账户](https://support.apple.com/zh-cn/108647?device-type=iphone)
