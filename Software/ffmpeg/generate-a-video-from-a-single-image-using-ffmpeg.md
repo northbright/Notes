@@ -1,5 +1,9 @@
 # Generate a Video from a Single Image using FFmpeg
 
+## Update
+* 2026/10/16
+  * See this: [Generate a Video Clip from an Image and Concatenate Multiple Clips to a Final Video using FFmpeg](generate-a-video-clip-from-an-image-and-concatenate-multiple-clips-to-a-final-video-using-ffmpeg.md)
+
 ## Problem
 * Generate video from 1 image for 3 seconds
 * Resolution: 1280x720
