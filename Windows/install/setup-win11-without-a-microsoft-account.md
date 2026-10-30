@@ -20,7 +20,7 @@
 * Run following commands:
 
   ```sh
-  net user "User Name" /add
+  net user "User Name" "Password" /add
   net localgroup "Administrators" "User Name" /add
   cd OOBE
   msoobe && shutdown -r
