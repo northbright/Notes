@@ -14,10 +14,17 @@
 * Press "Shift + F10" to Open a CMD Window
 * Run `reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0` instead
 
-#### Method B - Add Local User
+#### Method B - Add a Local User
 * Disconnect from the internet first
 * Press "Shift + F10" to Open a CMD Window
-* Run `net user "User Name" /addnet localgroup "Administrators" "User Name" /addcd OOBEmsoobe && shutdown -r`
+* Run following commands:
+
+  ```sh
+  net user "User Name" /add
+  net localgroup "Administrators" "User Name" /add
+  cd OOBE
+  msoobe && shutdown -r
+  ```sh
 
 ## References
 * [How to Install Windows 11 Without a Microsoft Account](https://www.tomshardware.com/how-to/install-windows-11-without-microsoft-account)
