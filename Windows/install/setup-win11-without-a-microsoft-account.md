@@ -23,7 +23,7 @@
   net user "User Name" "Password" /add
   net localgroup "Administrators" "User Name" /add
   cd OOBE
-  msoobe && shutdown -r
+  msoobe && shutdown /r /t 0
   ```sh
 
 ## References
