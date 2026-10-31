@@ -26,7 +26,10 @@
     ```sh
     shutdown /r /t 0
     ```  
-* It'll still ask you to connect a network after reboot, click "I have no internet connection"
+* It'll run OOBE again
+* But it shows a "I have no internet connection" link when asking to connect a network
+* Click it
+* Now you can input USER and PASSWORD and go through
 
 #### Method B - Add a Local User
 * 2026/10/31 Update:
