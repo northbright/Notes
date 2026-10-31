@@ -9,10 +9,24 @@
 * Need to Bypass the Microsoft Account Requirement
 
 ## Solution
-#### Method A - Add BypassNRO in registry
+#### Method A - Add BypassNRO in registry(recommended)
 * Disconnect from the internet first
-* Press "Shift + F10" to Open a CMD Window
-* Run `reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0` instead
+* Go through OOBE to select language and input method
+* Press "Shift + F10" to Open a CMD Window when it asks you to connect a network
+* Run the commands:
+
+  * Add Registry Key
+  
+    ```sh
+    reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f
+    ```
+
+  * Reboot
+  
+    ```sh
+    shutdown /r /t 0
+    ```  
+* It'll still ask you to connect a network after reboot, click "I have no internet connection"
 
 #### Method B - Add a Local User
 * Disconnect from the internet first
