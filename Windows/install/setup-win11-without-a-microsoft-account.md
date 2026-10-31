@@ -11,7 +11,7 @@
 ## Solution
 #### Method A - Add BypassNRO in registry(recommended)
 * Disconnect from the internet first
-* Go through OOBE to select language and input method
+* Go through OOBE to set country and keyboard layout(input method)
 * Press "Shift + F10" to Open a CMD Window when it asks you to connect a network
 * Run the commands:
 
@@ -29,6 +29,9 @@
 * It'll still ask you to connect a network after reboot, click "I have no internet connection"
 
 #### Method B - Add a Local User
+* 2026/10/31 Update:
+  * Not recommended
+  * You'll got the issue: [Ctrl + Alt + Delete Not Working due to Creating a Local User when Install Windows 11](../issues/ctrl-alt-delete-not-working-due-to-creating-a-local-user-when-install-windows-11.md)
 * Disconnect from the internet first
 * Press "Shift + F10" to Open a CMD Window
 * Run following commands:
@@ -44,3 +47,4 @@
 * [How to Install Windows 11 Without a Microsoft Account](https://www.tomshardware.com/how-to/install-windows-11-without-microsoft-account)
 * [微软承认移除 OOBE bypassnro 脚本，强制要求 Win11 设备联网激活](https://m.ithome.com/html/841597.htm)
 * [仍可绕过：新变通方案可实现微软 Win11 装机 OOBE 创建本地账号](https://m.ithome.com/html/888130.htm)
+* [Ctrl + Alt + Delete Not Working due to Creating a Local User when Install Windows 11](../issues/ctrl-alt-delete-not-working-due-to-creating-a-local-user-when-install-windows-11.md)
